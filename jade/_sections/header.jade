@@ -1,0 +1,42 @@
+header.header
+	.wrapper-simple
+		.header__inner
+			if headerMenu
+				button.toggle-mnu
+					+icon('burger')
+			a(href="#").header__logo
+				img(src=img + "logo.svg" alt="logo")
+			
+			if headerMenu
+				.header__menu
+					nav.header__nav
+						a(href="#").header__nav-logo
+							img(src=img + "mob-menu-logo.svg" alt="logo")
+						button.mob-menu-close
+							+icon('close')
+						+menu('main-menu', ['Курсы', 'Уроки и статьи', 'Наше всё', 'Конкурсы', 'Вакансии'])
+
+						.form.search.header__search
+							input(autocomplete="off" type="text" name="" class="form__input" placeholder="Поиск")
+							button.search__button#header-search-open
+								+icon('magnifier')
+				.header__account.account-header(data-da="header__nav,767.98,1")
+					if authorized
+						.account-header__avatar
+							img(src=img + "user.jpg" alt="user")
+						.account-header__name Константин Константинопольский
+						button.account-header__arrow#user-dropdown-toggler
+							+icon('chevron-down')
+						ul.account-header__dropdown
+							- var drops = ['Мой профиль', 'Мои курсы', 'Выход'];
+							each drop in drops
+								li.account-header__dropdown-item
+									a(href="#").account-header__dropdown-link= drop
+					else
+						button.btn.btn-bordered Войти
+
+			
+
+
+
+	//- include ../_misc/multilevel-dropdown

@@ -1,0 +1,40 @@
+footer.footer
+	.wrapper-simple
+		.wrapper-flex
+			.footer__left
+				a(href="#").footer__logo
+					img(src=img + "logo.svg")
+				p.footer__text © Учебный центр МЕРКУЛОВ.А, 2021 г
+				p.footer__text Все права защищены. Использование материалов данного сайта разрешено только с согласия правообладателей.
+
+			.footer__rigth
+				- var socs = ['Facebook', 'Twiter', 'VK', 'Youtube', 'Telegram'];
+
+				ul.socials(data-da="footer__left,767.98,1")
+					each soc in socs
+						li.socials__item
+							a(href="/").socials__link
+								+icon(soc)
+			
+				.footer__info
+					.footer__column
+						.footer__title Проектирование
+						+menu('footer-menu', ['Revit', 'Autocad', 'Archicad'])
+
+					.footer__column
+						.footer__title Визуализация
+						+menu('footer-menu', ['3Ds Max', 'Corona', 'Lumion'])
+
+					.footer__column
+						.footer__title Дизайн
+						+menu('footer-menu', ['SketchUp', 'Ладшафт', 'Интерьеры'])
+					
+					.footer__column
+						a(href="tel:80002000518").footer__phone 8–000–200–05–18
+						p.footer__text с 10.00 до 18.00 по мск
+						
+						.footer__links
+							p.footer__text
+								a(href="/") Политика конфиденциальности
+							p.footer__text
+								a(href="/") Публичная оферта

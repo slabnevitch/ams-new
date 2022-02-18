@@ -1,0 +1,375 @@
+/*------------------------------------------*/
+
+.header {}
+.wrapper-simple {}
+.header__inner {
+	padding: 30px 0 5px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include max-screen($md){
+		padding: 15px 0 0 0;
+		justify-content: flex-start;
+	}
+	@include max-screen($sm){
+		justify-content: space-between;
+	}
+}
+.header__logo,
+.header__nav-logo {
+	display: block;
+	max-width: 150px;
+	margin-right: 15px;
+	
+	@include max-screen($md){
+		margin-right: 0;
+	}
+
+	img{
+		width: 100%;
+	}
+
+}
+.header__nav-logo {
+	margin-bottom: 35px;
+	position: fixed;
+	top: 15px;
+	left: 20px;
+		z-index: 3;
+	@include min-screen($md){
+		display: none;
+	}
+}
+
+.header__menu{
+	display: flex;
+	margin-top: -12px;
+	margin-left: auto;
+	position: relative;
+
+	@include max-screen($md){
+		margin-top: 0;
+		display: none;
+		padding-top: 15px;
+		padding-left: 20px;
+		padding-right: 20px;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $accent;
+		overflow-y: auto;
+		z-index: 3;
+	}
+	&.active{
+		@include max-screen($md){
+			display: block;
+		}
+
+	}
+
+	&:before{
+		content: '';
+		position: fixed;
+		width: calc(100% - 70px);
+		height: 100px;
+		background-color: $accent;
+		z-index: 2;
+		left: 0;
+		top: 0;
+
+		@include min-screen($md){
+			display: none;
+		}
+	}
+
+	
+}
+.header__nav{
+	position: relative;
+	display: flex;
+
+	&:before{
+		content: '';
+		position: absolute;
+		display: none;
+		width: 70px;
+		// height: 100%;
+		bottom: 0;
+		top: -15px;
+		right: -20px;
+		background-color: #fff;
+
+		@include max-screen($md){
+			display: block;
+		}
+	}
+
+	@include max-screen($md){
+		display: block;
+		position: relative;
+			padding-top: 100px;
+			padding-right: 60px;
+			min-height: 100%;
+	}
+	.btn{
+		padding: 0 20px;
+	}
+	.search {
+		@include max-screen($md){
+			margin-top: 14px;
+			padding-bottom: 30px;
+		}  
+		.form__input {
+			@include max-screen($md){
+				position: static;
+				background-color: transparent;
+				display: block;
+			}
+		}
+
+	}
+}
+.mob-menu-close{
+	width: 36px;
+	height: 36px;
+	position: relative;
+	position: fixed;
+	top: 17px;
+	right: 20px;
+
+	@include min-screen($md){
+		display: none;
+	}
+	.icon{
+		@include absolute-center();
+		font-size: 15px;
+	}
+}
+.main-menu {
+	display: flex;
+	flex-wrap: wrap;
+	// height: 44px;
+
+	@include max-screen($md){
+		display: block;
+		// padding-right: 70px;
+		height: auto;
+	}
+	@include min-screen($md){
+		margin-right: 18px;
+	}  
+	
+}
+.main-menu__item {
+	list-style-type: none;
+	height: 44px;
+	// display: flex;
+	// align-items: center;
+
+	@include max-screen($md){
+		height: auto;
+	}
+
+	&:not(:last-child){
+		margin-right: 30px;
+		@include max-screen($lg){
+			margin-right: 20px;
+		}
+	}
+
+	&:first-child{
+		.main-menu__link{
+			padding: 0 20px;
+			background-color: $accent;
+			font-family: $semi;
+			border-radius: 5px;
+			transition: background-color .1s;
+
+			&:hover{
+				background-color: $yellow-accent;
+			}
+			
+
+			@include max-screen($md){
+				display: inline-block;
+				background-color: #fff;
+				padding: 11px 15px;
+				margin-bottom: 14px;
+				margin-right: 0;
+			}
+		}
+
+	}
+}
+.main-menu__link {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	text-decoration: none;
+	font-family: $ibm-reg;
+	font-size: 16px;
+	line-height: 140%;
+	color: $text;
+
+
+	
+	@include max-screen($md){
+		display: block;
+		// margin-bottom: 10px;
+		padding:11px 0;
+		font-family: $semi;
+	}
+}
+.form {}
+.search {
+	&.opened{
+		.form__input {
+			display: block;
+		}
+
+	}
+
+}
+.header__search{
+	.form__input{
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+		flex: 1 1 auto;
+		width: calc(100% - 40px);
+	}
+	@include max-screen($md){
+		display: flex;
+	}
+}
+.search__button {}
+.header__account {
+}
+.account-header {
+	margin-top: -12px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin-left: 30px;
+
+	@include min-screen($md){
+		margin-right: -10px;
+
+	}
+	@include max-screen($md){
+		margin-left: auto;
+		margin-bottom: 28px;
+		position: relative;
+		top: 12px;
+	}
+
+	@include max-screen($sm){
+		position: relative;
+		top: 0;
+	}
+	.btn{
+		padding: 0 20px;
+
+		@include min-screen($md){
+			margin-right: 10px;
+
+		}
+	}
+	&.active{
+		.account-header__dropdown{
+			display: block;
+		}
+	}
+}
+.account-header__name {
+	// margin-right: 10px;
+	max-width: 102px;
+	@include dots-family();
+	@include max-screen($sm){
+		font-family: $bold;
+		max-width: none;
+		white-space: normal;
+	}
+}
+.account-header__avatar {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	margin-right: 6px;
+	flex-shrink: 0;
+
+	@include max-screen($sm){
+		width: 48px;
+		height: 48px;
+		margin-right: 10px;
+	}  
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+.account-header__arrow {
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+	
+	@include max-screen($sm){
+		display: none;
+	}  
+
+	.icon{
+		font-size: 8px;
+	}
+
+}
+.icon-with-bg {}
+.btn {}
+.account-header__dropdown {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: none;
+	padding: 10px 20px;
+	width: 142px;
+	background-color: #F8F8FA;
+	border-radius: 5px;
+
+	@include max-screen($md){
+		width: 100%;
+	}  
+}
+.account-header__dropdown-item{
+	list-style-type: none;
+	&:first-child{
+		
+	}
+	&:not(:last-child){
+		margin-bottom: 8px;
+	}
+
+	&:last-child{
+		.account-header__dropdown-link{
+			color: #6F6F75;
+
+		}
+	}
+
+}
+.account-header__dropdown-link{
+	text-decoration: none;
+	color: $text;
+
+	@include max-screen($md){
+		display: block;
+	}  
+}
+/*--------------------END ----------------------*/ 
