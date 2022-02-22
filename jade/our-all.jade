@@ -138,12 +138,8 @@ block content
 											span laguta
 							
 							.tile-item__content
-								.popup-gallery
-									a(href="img/our-all-page/1.jpg").tile-item__media.tile-item__photo._fit
-										img._fit-img(src=img + "/our-all-page/1.jpg")
-									a(href="img/our-all-page/4.jpg").tile-item__media.tile-item__photo._fit
-									a(href="img/our-all-page/1.jpg").tile-item__media.tile-item__photo._fit
-									a(href="img/our-all-page/2.jpg").tile-item__media.tile-item__photo._fit
+								a(href="#popup-gallery-1").tile-item__media.tile-item__photo._fit
+									img._fit-img(src=img + "/our-all-page/1.jpg")
 
 								.tile-item__footer.footer-tile-item
 									.program-icon
@@ -191,12 +187,9 @@ block content
 											span laguta
 							
 							.tile-item__content
-								.popup-gallery
-									a(href="img/our-all-page/3.jpg").tile-item__media.tile-item__photo._fit
-										img._fit-img(src=img + "/our-all-page/3.jpg")
-									a(href="img/our-all-page/4.jpg").tile-item__media.tile-item__photo._fit
-									a(href="img/our-all-page/1.jpg").tile-item__media.tile-item__photo._fit
-									a(href="img/our-all-page/2.jpg").tile-item__media.tile-item__photo._fit
+								a(href="#popup-gallery-1").tile-item__media.tile-item__photo._fit
+									img._fit-img(src=img + "/our-all-page/3.jpg")
+	
 
 								.tile-item__footer.footer-tile-item
 									.program-icon
@@ -275,12 +268,8 @@ block content
 											span laguta
 							
 							.tile-item__content
-								.popup-gallery
-									a(href="img/our-all-page/3.jpg").tile-item__media.tile-item__photo._fit
-										img._fit-img(src=img + "/our-all-page/3.jpg")
-									a(href="img/our-all-page/4.jpg").tile-item__media.tile-item__photo._fit
-									a(href="img/our-all-page/1.jpg").tile-item__media.tile-item__photo._fit
-									a(href="img/our-all-page/2.jpg").tile-item__media.tile-item__photo._fit
+								a(href="#popup-gallery-1").tile-item__media.tile-item__photo._fit
+									img._fit-img(src=img + "/our-all-page/3.jpg")
 
 								.tile-item__footer.footer-tile-item
 									.program-icon
@@ -357,6 +346,7 @@ block content
 										.footer-tile-item__name 3ds Max + CORONA. Для дизайнеров и визуализаторов
 
 					button.btn.btn-bordered Показать ещё
+	include _misc/gallery-popup
 //- img(src=img + "demo.jpg")
 //- img(src=ico + "amex.svg")
 
@@ -393,10 +383,10 @@ block page-scripts
 	script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
 		
 	//- slick--------------------------
-	//- script(src="js/libs/slick/slick.min.js")
+	script(src="js/libs/slick/slick.min.js")
 		
 	//- slick-master (без лишних контейнеров)--------------------------
-	//- script(src="js/libs/slick-master/slick.js")
+	//- script(src="js/libs/slick/slick.js")
 
 	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
 

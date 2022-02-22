@@ -1,5 +1,7 @@
 /*-----------magnific-popup-----------*/
 /* Magnific Popup CSS */
+@import url(../js/libs/slick/slick.css);
+@import url(../js/libs/slick/slick-theme.css);
 .mfp-bg {
   top: 0;
   left: 0;

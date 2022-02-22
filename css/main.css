@@ -1,3 +1,5 @@
+@import url(../js/libs/slick/slick.css);
+@import url(../js/libs/slick/slick-theme.css);
 @font-face {
   font-family: "MontserratRegular";
   font-style: normal;
@@ -2117,7 +2119,22 @@ img.mfp-img {
   width: 1.71429em;
 }
 
+.icon-chevron-left {
+  font-size: 1.2rem;
+  width: 0.58333em;
+}
+
+.icon-chevron-right {
+  font-size: 1.2rem;
+  width: 0.58333em;
+}
+
 .icon-close {
+  font-size: 1.8rem;
+  width: 1em;
+}
+
+.icon-close-white {
   font-size: 1.8rem;
   width: 1em;
 }
@@ -2891,6 +2908,145 @@ h2 {
   font-size: 20px;
   line-height: -webkit-calc(27.2/20);
   line-height: calc(27.2/20);
+}
+
+.popup-gallery {
+  max-width: 1170px;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .popup-gallery {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.popup-gallery .popup__header {
+  margin-bottom: 30px;
+}
+
+.popup-gallery .popup__header .user-card {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .popup-gallery .popup__header .user-card {
+    display: block;
+  }
+}
+
+.popup-gallery .popup__header .user-card .tag {
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .popup-gallery .popup__header .user-card .tag {
+    margin-bottom: 15px;
+  }
+}
+
+.popup-gallery .popup__header .user-card__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.popup-gallery .popup__header .user-card__name {
+  margin-right: 10px;
+}
+
+.popup-gallery .popup__body {
+  position: relative;
+}
+
+.popup-gallery__slide {
+  padding-bottom: 64.86486%;
+}
+
+.slider-arrow-prev,
+.slider-arrow-next {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  margin-top: -40px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #FFEF68;
+  cursor: pointer;
+}
+
+.slider-arrow-prev .icon,
+.slider-arrow-next .icon {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.slider-arrow-prev {
+  left: -90px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .slider-arrow-prev {
+    left: 0px;
+  }
+}
+
+.slider-arrow-next {
+  right: -90px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .slider-arrow-next {
+    right: 0px;
+  }
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
+.slick-dots {
+  position: static;
+  margin-top: 15px;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+  width: auto;
+  height: auto;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #2D2D2F;
+}
+
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #DBDBDB;
+}
+
+.slick-dots li button:before {
+  content: '';
 }
 
 button.mfp-close {
@@ -3916,6 +4072,8 @@ button.mfp-close {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  text-decoration: none;
+  color: #2D2D2F;
 }
 
 .user-card__link .icon {

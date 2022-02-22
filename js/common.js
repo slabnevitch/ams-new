@@ -13,37 +13,41 @@
 	// End ibg class
 	$(document).ready(function() {
 		console.log('jQuery document ready');
+			if($('.tile-item__photo').length > 0){
 		
 		// Magnific popup
-			if($('.tile-item__photo').length > 0){
-			$('.popup-gallery').each(function() {
-				$(this).magnificPopup({
-					type: 'image',
-					delegate: 'a',
-					preloader: true,
-					fixedContentPos: false,
-					focus: '#name',
-					closeOnContentClick: false,
-					closeBtnInside: false,
-					mainClass: 'mfp-with-zoom mfp-img-mobile',
-					image: {
-						verticalFit: true,
-						titleSrc: ''
-					},
-					gallery: {
-						enabled: true
-					},
-					zoom: {
-						enabled: true,
-							duration: 300, // don't foget to change the duration also in CSS
-							opener: function(element) {
-								return element.find('img');
-							}
-						}
-						
-					});
-				});
+				$('.tile-item__photo').magnificPopup({
+						type: 'inline',
+						preloader: false,
+						focus: '#name',
 
+						// When elemened is focused, some mobile browsers in some cases zoom in
+						// It looks not nice, so we disable it:
+						callbacks: {
+							beforeOpen: function() {
+								if($(window).width() < 700) {
+									this.st.focus = false;
+								} else {
+									this.st.focus = '#name';
+								}
+							},
+							open: function() {
+								console.log($(this.currItem.src).find('.popup-gallery__slider'));
+								var $slider = $(this.currItem.src).find('.popup-gallery__slider');
+
+								$slider.slick({
+									prevArrow:  $slider.closest('.popup__body').find('.slider-arrow-prev'),
+									nextArrow: $slider.closest('.popup__body').find('.slider-arrow-next'),
+									dots: true
+								});
+						},
+						close: function() {
+							console.log(this.currItem.el);
+							$(this.currItem.src).find('.popup-gallery__slider').slick('unslick');
+						}
+					}
+				});
+		}
 			$('.popup-youtube').magnificPopup({
 				disableOn: 320,
 				type: 'iframe',
@@ -54,7 +58,6 @@
 				fixedContentPos: false
 			});
 
-		}
 		if($('.popup-with-form').length > 0){
 				$('.popup-with-form').magnificPopup({
 						type: 'inline',

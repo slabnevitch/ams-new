@@ -1,0 +1,19 @@
+.popup.popup-gallery#popup-gallery-1.mfp-hide
+		.popup__header
+			.user-card.user-card--horizontal
+				.tag.tag-mini.tag-misc-empty 6 место
+				.user-card__info								
+					.user-card__name Ирина Калинина
+					a(href="/").user-card__link
+						+icon('VK')
+						span laguta
+		.popup__body
+			.popup-gallery__slider
+				- for (var i=0; i < 8; i++)
+					.popup-gallery__slide._fit
+						img._fit-img(src=img + "work-student.jpg" alt="alt")
+
+			.slider-arrow-prev
+				+icon('chevron-left')
+			.slider-arrow-next
+				+icon('chevron-right')
