@@ -3068,6 +3068,16 @@ button.mfp-close {
   }
 }
 
+.mfp-close:active {
+  top: -40px;
+}
+
+@media only screen and (max-width: 991px) {
+  .mfp-close:active {
+    top: 0;
+  }
+}
+
 .mfp-close-btn-in .mfp-close {
   color: transparent;
 }
@@ -3542,12 +3552,6 @@ button.mfp-close {
   background-color: #F8F8FA;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-}
-
-@media only screen and (max-width: 991px) {
-  .account-header__dropdown {
-    width: 100%;
-  }
 }
 
 .account-header__dropdown-item {

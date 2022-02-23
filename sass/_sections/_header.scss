@@ -343,9 +343,9 @@
 	background-color: #F8F8FA;
 	border-radius: 5px;
 
-	@include max-screen($md){
-		width: 100%;
-	}  
+	// @include max-screen($md){
+	// 	width: 100%;
+	// }  
 }
 .account-header__dropdown-item{
 	list-style-type: none;
