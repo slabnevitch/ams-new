@@ -127,6 +127,7 @@
 				position: static;
 				background-color: transparent;
 				display: block;
+				max-width: 216px;
 			}
 		}
 
@@ -237,10 +238,10 @@
 	.form__input{
 		display: none;
 		position: absolute;
-		left: 0;
+		right: 40px;
 		top: 0;
 		flex: 1 1 auto;
-		width: calc(100% - 40px);
+		width: 680px;
 	}
 	@include max-screen($md){
 		display: flex;

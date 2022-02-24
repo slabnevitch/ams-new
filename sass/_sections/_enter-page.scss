@@ -120,6 +120,11 @@
 	margin-bottom: 30px;
 	font-size: 14px;
 	line-height: 18px;
+
+	a{
+		text-decoration: none;
+		color: $text;
+	}
 }
 .form__label {}
 .form__input {}

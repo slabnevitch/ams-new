@@ -48,6 +48,9 @@
 					}
 				});
 		}
+
+		if($('.popup-youtube').length > 0){
+			
 			$('.popup-youtube').magnificPopup({
 				disableOn: 320,
 				type: 'iframe',
@@ -57,6 +60,7 @@
 
 				fixedContentPos: false
 			});
+		}
 
 		if($('.popup-with-form').length > 0){
 				$('.popup-with-form').magnificPopup({

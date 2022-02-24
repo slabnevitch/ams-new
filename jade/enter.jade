@@ -10,23 +10,21 @@ block content
 			.page-enter__pict
 				img(src=img + "page-enter-visual.svg")
 			.page-enter__content
-				h1 Образовательная 
-					br
-					| платформа AMS3
+				h1 Образовательная платформа AMS3
 				p.page-enter__text	Войти, у меня уже есть аккаунт
-
+				p.page-enter__text.page-enter__error Вы уже зарегистрированы. Ведите логин и пароль.
 				form.form
 					label.form__label
 						input(autocomplete="off" type="text" name="" class="form__input" placeholder="Email")
 					label.form__label
 						input(autocomplete="off" type="text" name="" class="form__input" placeholder="Пароль")
-					label.form__label
-						input#phone(autocomplete="off" type="text" name="" class="form__input")
+					//- label.form__label
+					//- 	input#phone(autocomplete="off" type="text" name="" class="form__input")
 					.form__bottom
 						button(type="button").btn.btn-accented Войти
 						a(href="#popup-password").popup-with-form Забыли пароль?
 
-					p.page-enter__text	Нажимая кнопку, принимаю условия политики и пользовательского соглашения
+					p.page-enter__text Нажимая кнопку, принимаю #[a(href="#") условия политики] и #[a(href="#") пользовательского соглашения]
 
 					.page-enter__bottom
 						span Нет аккаунта?
@@ -102,8 +100,8 @@ block page-scripts
 	//- dynamic-adaptive--------------------------
 	//- script(src="js/libs/dynamic-adaptive/da.min.js")
 	
-	script(src="js/libs/intTelInput/js/intlTelInput.min.js")
-	script(src="js/libs/intTelInput/js/utils.js")
+	//- script(src="js/libs/intTelInput/js/intlTelInput.min.js")
+	//- script(src="js/libs/intTelInput/js/utils.js")
 		
 	//- slideout--------------------------
 	//- script(src="js/libs/slideout/slideout.js")

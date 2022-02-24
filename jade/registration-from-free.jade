@@ -10,9 +10,7 @@ block content
 			.page-enter__content
 				.page-enter__pict
 					img(src=img + "from-free-visual.svg")
-				h1 Образовательная 
-					br
-					| платформа AMS3
+				h1 Образовательная платформа AMS3
 
 				.your-choice
 					.your-choice__heading Вы выбрали:
@@ -38,12 +36,12 @@ block content
 						input(autocomplete="off" type="text" name="" class="form__input" placeholder="Пароль")
 					label.form__label
 						input(autocomplete="off" type="text" name="" class="form__input" placeholder="Повторите пароль")
-					label.form__label
-						input#phone(autocomplete="off" type="text" name="" class="form__input")
+					//- label.form__label
+					//- 	input#phone(autocomplete="off" type="text" name="" class="form__input")
 					.form__bottom
 						button(type="button").btn.btn-accented Зарегистрироваться
 
-					p.page-enter__text	Нажимая кнопку, принимаю условия политики и пользовательского соглашения
+					p.page-enter__text Нажимая кнопку, принимаю #[a(href="#") условия политики] и #[a(href="#") пользовательского соглашения]
 
 					.page-enter__bottom
 						span У меня есть аккаунт.

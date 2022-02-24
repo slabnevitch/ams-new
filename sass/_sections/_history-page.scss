@@ -61,7 +61,7 @@
 
 .card-page-history__role {
 	color: $gray-text;
-	margin: 5px;
+	margin-bottom: 5px;
 }
 .card-page-history__link {
 	margin-bottom: 10px;
@@ -105,22 +105,53 @@
 	h2{
 		margin-top: 50px;
 	}
-	.btn{
+	button{
 		margin-top: 15px;
+		display: inline-flex;
+	  align-items: center;
+	  justify-content: center;
+	  height: 43px;
+	  border: none;
+	  color: $text;
+	  text-decoration: none;
+	  background-color: transparent;
+	  padding: 0 30px;
+	  border-radius: 5px;
+	  font-family: $semi;
+	  text-align: center;
+	  position: relative;
+	  outline: none;
+	  transition: all .1s ease;
+	  cursor: pointer;
+		border: 2px solid  #2D2D2F;
+
+		 &:hover{
+		     border-color: #FFE400;
+		  }
+				
+		  &:active{
+		 	border-color: #DBDBDB;
+		 	color: #DBDBDB;
+	  	}
+	}
+	img{
+		max-width: 100%;
 	}
 	figure{
 		display: inline-block;
 		max-width: 100%;
 		margin-left: 0;
 		margin-right: 0;
-		img{
-			max-width: 100%;
-		}
 		figcaption{
 			// margin-bottom: 30px;
 			text-align: center;
 		}
 	}
+}
+.content-page__caption{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	text-align: center;
 }
 .card-page-history__list{
 	.link{

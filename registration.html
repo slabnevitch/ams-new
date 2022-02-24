@@ -22,8 +22,9 @@
           <div class="wrapper-simple">
             <div class="page-enter__pict"><img src="img/page-enter-visual.svg"></div>
             <div class="page-enter__content">
-              <h1>Образовательная <br>платформа AMS3</h1>
+              <h1>Образовательная платформа AMS3</h1>
               <p class="page-enter__text">	Регистрация нового пользователя</p>
+              <p class="page-enter__text page-enter__error">Вы уже зарегистрированы. Ведите логин и пароль.</p>
               <form class="form">
                 <label class="form__label">
                   <input autocomplete="off" type="text" name="" placeholder="Email" class="form__input">
@@ -34,13 +35,10 @@
                 <label class="form__label">
                   <input autocomplete="off" type="text" name="" placeholder="Повторите пароль" class="form__input">
                 </label>
-                <label class="form__label">
-                  <input id="phone" autocomplete="off" type="text" name="" class="form__input">
-                </label>
                 <div class="form__bottom">
                   <button type="button" class="btn btn-accented">Зарегистрироваться</button>
                 </div>
-                <p class="page-enter__text">	Нажимая кнопку, принимаю условия политики и пользовательского соглашения</p>
+                <p class="page-enter__text">Нажимая кнопку, принимаю <a href="#">условия политики</a> и <a href="#">пользовательского соглашения</a></p>
                 <div class="page-enter__bottom"><span>У меня есть аккаунт.</span><a href="/" class="link">Войти</a></div>
               </form>
             </div>
@@ -120,8 +118,6 @@
     
     <script src="js/libs/dynamic-adaptive/da.min.js"></script>
     
-    <script src="js/libs/intTelInput/js/intlTelInput.min.js"></script>
-    <script src="js/libs/intTelInput/js/utils.js"></script>
     
     <script src="js/common.js"></script>
   </body>

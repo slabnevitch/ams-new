@@ -3273,6 +3273,7 @@ button.mfp-close {
     position: static;
     background-color: transparent;
     display: block;
+    max-width: 216px;
   }
 }
 
@@ -3404,14 +3405,13 @@ button.mfp-close {
 .header__search .form__input {
   display: none;
   position: absolute;
-  left: 0;
+  right: 40px;
   top: 0;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  width: -webkit-calc(100% - 40px);
-  width: calc(100% - 40px);
+  width: 680px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -3721,7 +3721,7 @@ button.mfp-close {
 
 .card-page-history__role {
   color: #6F6F75;
-  margin: 5px;
+  margin-bottom: 5px;
 }
 
 .card-page-history__link {
@@ -3785,8 +3785,49 @@ button.mfp-close {
   margin-top: 50px;
 }
 
-.content-page-history .btn {
+.content-page-history button {
   margin-top: 15px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 43px;
+  border: none;
+  color: #2D2D2F;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 0 30px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "MontserratSemiBold", sans-serif;
+  text-align: center;
+  position: relative;
+  outline: none;
+  -webkit-transition: all .1s ease;
+  transition: all .1s ease;
+  cursor: pointer;
+  border: 2px solid  #2D2D2F;
+}
+
+.content-page-history button:hover {
+  border-color: #FFE400;
+}
+
+.content-page-history button:active {
+  border-color: #DBDBDB;
+  color: #DBDBDB;
+}
+
+.content-page-history img {
+  max-width: 100%;
 }
 
 .content-page-history figure {
@@ -3796,11 +3837,13 @@ button.mfp-close {
   margin-right: 0;
 }
 
-.content-page-history figure img {
-  max-width: 100%;
+.content-page-history figure figcaption {
+  text-align: center;
 }
 
-.content-page-history figure figcaption {
+.content-page__caption {
+  margin-top: 10px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -3973,6 +4016,17 @@ button.mfp-close {
   border-radius: 10px;
 }
 
+.history:first-of-type .history__card {
+  padding-top: -webkit-calc(117px - 34px);
+  padding-top: calc(117px - 34px);
+}
+
+@media only screen and (max-width: 767.98px) {
+  .history:first-of-type .history__card {
+    padding-top: 0;
+  }
+}
+
 @media only screen and (max-width: 991px) {
   .history {
     -webkit-flex-wrap: wrap;
@@ -4021,6 +4075,7 @@ button.mfp-close {
   -ms-flex: 0 0 170px;
   flex: 0 0 170px;
   max-width: 170px;
+  padding-top: 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -4030,6 +4085,7 @@ button.mfp-close {
 
 @media only screen and (max-width: 767.98px) {
   .history__card {
+    padding-top: 0;
     max-width: none;
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
@@ -4578,6 +4634,11 @@ button.mfp-close {
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 18px;
+}
+
+.page-enter__text a {
+  text-decoration: none;
+  color: #2D2D2F;
 }
 
 .form__bottom {

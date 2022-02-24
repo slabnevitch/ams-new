@@ -41,6 +41,17 @@
 	text-decoration: none;
 	color: $text;
 	border-radius: 10px;
+
+	&:first-of-type{
+		.history__card{
+			padding-top: calc(117px - 34px);
+
+			@include max-screen($sm){
+				padding-top: 0;
+			}
+		}
+	}
+
 	
 	@include max-screen($md){
 		flex-wrap: wrap;
@@ -71,8 +82,10 @@
 .history__card {
 	flex: 0 0 170px;
 	max-width: 170px;
+	padding-top: 10px;
 	@include col();
 	@include max-screen($sm){
+		padding-top: 0;
 		max-width: none;
 		flex-basis: 100%;
 		margin-left: 0;

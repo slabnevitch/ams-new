@@ -22,8 +22,9 @@
           <div class="wrapper-simple">
             <div class="page-enter__pict"><img src="img/page-enter-visual.svg"></div>
             <div class="page-enter__content">
-              <h1>Образовательная <br>платформа AMS3</h1>
+              <h1>Образовательная платформа AMS3</h1>
               <p class="page-enter__text">	Войти, у меня уже есть аккаунт</p>
+              <p class="page-enter__text page-enter__error">Вы уже зарегистрированы. Ведите логин и пароль.</p>
               <form class="form">
                 <label class="form__label">
                   <input autocomplete="off" type="text" name="" placeholder="Email" class="form__input">
@@ -31,13 +32,10 @@
                 <label class="form__label">
                   <input autocomplete="off" type="text" name="" placeholder="Пароль" class="form__input">
                 </label>
-                <label class="form__label">
-                  <input id="phone" autocomplete="off" type="text" name="" class="form__input">
-                </label>
                 <div class="form__bottom">
                   <button type="button" class="btn btn-accented">Войти</button><a href="#popup-password" class="popup-with-form">Забыли пароль?</a>
                 </div>
-                <p class="page-enter__text">	Нажимая кнопку, принимаю условия политики и пользовательского соглашения</p>
+                <p class="page-enter__text">Нажимая кнопку, принимаю <a href="#">условия политики</a> и <a href="#">пользовательского соглашения</a></p>
                 <div class="page-enter__bottom"><span>Нет аккаунта?</span><a href="/" class="link">Зарегистрироваться</a></div>
               </form>
             </div>
@@ -137,8 +135,6 @@
     
     <script src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     
-    <script src="js/libs/intTelInput/js/intlTelInput.min.js"></script>
-    <script src="js/libs/intTelInput/js/utils.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
