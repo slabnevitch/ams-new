@@ -9,7 +9,7 @@ block content
 		.wrapper-simple
 			.page-enter__content
 				.page-enter__pict
-					img(src=img + "from-free-visual.svg")
+					img(src=img + "from-free-visual.svg" alt="alt")
 				h1 Создайте личный кабинет или войдите под своими данными 
 
 				.your-choice
@@ -21,7 +21,7 @@ block content
 						.your-choice__body
 							.your-choice__title Базовый курс по 3ds Max + Corona Render
 							.your-choice__img._fit
-								img._fit-img(src=img + 'you-selection.jpg')
+								img._fit-img(src=img + 'you-selection.jpg' alt="alt")
 							.your-choice__bottom
 								.your-choice__label 13 уроков
 								.your-choice__label Без подготовки
@@ -32,9 +32,9 @@ block content
 
 				form.form
 					label.form__label
-						input(autocomplete="off" type="text" name="" class="form__input" placeholder="Email")
+						input(autocomplete="off" type="text" name="name" class="form__input" placeholder="Email")
 					label.form__label
-						input(autocomplete="off" type="text" name="" class="form__input" placeholder="Пароль")
+						input(autocomplete="off" type="text" name="name" class="form__input" placeholder="Пароль")
 					//- label.form__label
 					//- 	input(autocomplete="off" type="text" name="" class="form__input" placeholder="Повторите пароль")
 					//- label.form__label
@@ -53,7 +53,7 @@ block content
 	.popup.popup-password#popup-password.mfp-hide
 		.popup__header
 			.popup__logo
-				img(src=img + "logo.svg")
+				img(src=img + "logo.svg" alt="alt")
 		.popup__body
 			.popup__title Восстановить пароль
 		
@@ -62,7 +62,7 @@ block content
 
 			form.form
 				label.form__label
-					input(autocomplete="off" type="text" name="" class="form__input" placeholder="Ваш email")
+					input(autocomplete="off" type="text" name="name" class="form__input" placeholder="Ваш email")
 
 				.form__bottom
 					button(type="button").btn.btn-accented Восстановить пароль

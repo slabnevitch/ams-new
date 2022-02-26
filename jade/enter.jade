@@ -8,16 +8,16 @@ block content
 	.page.page-enter
 		.wrapper-simple
 			.page-enter__pict
-				img(src=img + "page-enter-visual.svg")
+				img(src=img + "page-enter-visual.svg" alt="alt")
 			.page-enter__content
 				h1 Образовательная платформа AMS3
 				p.page-enter__text	Войти, у меня уже есть аккаунт
 				p.page-enter__text.page-enter__error Вы уже зарегистрированы. Ведите логин и пароль.
 				form.form
 					label.form__label
-						input(autocomplete="off" type="text" name="" class="form__input" placeholder="Email")
+						input(autocomplete="off" type="text" name="name" class="form__input" placeholder="Email")
 					label.form__label
-						input(autocomplete="off" type="text" name="" class="form__input" placeholder="Пароль")
+						input(autocomplete="off" type="text" name="name" class="form__input" placeholder="Пароль")
 					//- label.form__label
 					//- 	input#phone(autocomplete="off" type="text" name="" class="form__input")
 					.form__bottom
@@ -33,7 +33,7 @@ block content
 	.popup.popup-password#popup-password.mfp-hide
 		.popup__header
 			.popup__logo
-				img(src=img + "logo.svg")
+				img(src=img + "logo.svg" alt="alt")
 		.popup__body
 			.popup__title Восстановить пароль
 		
@@ -42,7 +42,7 @@ block content
 
 			form.form
 				label.form__label
-					input(autocomplete="off" type="text" name="" class="form__input" placeholder="Ваш email")
+					input(autocomplete="off" type="text" name="name" class="form__input" placeholder="Ваш email")
 
 				.form__bottom
 					button(type="button").btn.btn-accented Восстановить пароль
