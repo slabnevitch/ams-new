@@ -3471,6 +3471,10 @@ button.mfp-close {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #fff;
   padding: 34px 15px;
   margin-bottom: 30px;
@@ -3480,18 +3484,12 @@ button.mfp-close {
   border-radius: 10px;
 }
 
-.history:first-of-type .history__card {
-  padding-top: -webkit-calc(117px - 34px);
-  padding-top: calc(117px - 34px);
-}
-
 .history__card {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 170px;
   -ms-flex: 0 0 170px;
   flex: 0 0 170px;
   max-width: 170px;
-  padding-top: 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -3756,6 +3754,10 @@ button.mfp-close {
   position: relative;
 }
 
+.page-enter h1 {
+  max-width: 600px;
+}
+
 .page-enter__pict {
   position: absolute;
   width: 94.95726%;
@@ -3768,10 +3770,6 @@ button.mfp-close {
 
 .page-enter__pict img {
   max-width: 100%;
-}
-
-.page-reg-from-free .page-enter__content h1 {
-  max-width: 600px;
 }
 
 .page-reg-from-free .page-enter__pict {
@@ -4503,10 +4501,6 @@ button.mfp-close {
     padding-right: 0;
   }
 
-  .history:first-of-type .history__card {
-    padding-top: 0;
-  }
-
   .history {
     padding-left: 20px;
     padding-right: 20px;
@@ -4571,6 +4565,14 @@ button.mfp-close {
     padding: 0;
   }
 
+  .page-enter h1 {
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    order: -1;
+    margin-bottom: 80px;
+  }
+
   .page-enter__pict {
     width: 537px;
     left: 0;
@@ -4595,14 +4597,6 @@ button.mfp-close {
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-  }
-
-  .page-reg-from-free .page-enter__content h1 {
-    -webkit-box-ordinal-group: 0;
-    -webkit-order: -1;
-    -ms-flex-order: -1;
-    order: -1;
-    margin-bottom: 80px;
   }
 
   .page-reg-from-free .page-enter__pict {
@@ -4748,7 +4742,7 @@ button.mfp-close {
 }
 
 @media only screen and (max-width: 480px) {
-  .page-reg-from-free .page-enter__content h1 br {
+  .page-enter h1 br {
     display: none;
   }
 
