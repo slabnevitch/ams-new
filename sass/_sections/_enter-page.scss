@@ -11,7 +11,19 @@
 	}
 	.wrapper-simple {
 		position: relative;		
-	}			
+	}
+	h1{
+			max-width: 600px;
+			@include max-screen($sm){
+				order: -1;
+				margin-bottom: 80px;
+			} 
+			br{
+				@include max-screen($xss){
+					display: none;
+				}  
+			} 
+		}			
 
 }
 
@@ -46,18 +58,7 @@
 			flex-direction: column;	
 			justify-content: flex-start;		
 		}  		
-		h1{
-			max-width: 600px;
-			@include max-screen($sm){
-				order: -1;
-				margin-bottom: 80px;
-			} 
-			br{
-				@include max-screen($xss){
-					display: none;
-				}  
-			} 
-		}
+		
 	}	
 	.page-enter__pict {
 		top: 200px;

@@ -35,6 +35,7 @@
 .page-our-all__content {}
 .history {
 	display: flex;
+	align-items: center;
 	background-color: #fff;
 	padding: 34px 15px;
 	margin-bottom: 30px;
@@ -42,15 +43,15 @@
 	color: $text;
 	border-radius: 10px;
 
-	&:first-of-type{
-		.history__card{
-			padding-top: calc(117px - 34px);
+	// &:first-of-type{
+	// 	.history__card{
+	// 		padding-top: calc(117px - 34px);
 
-			@include max-screen($sm){
-				padding-top: 0;
-			}
-		}
-	}
+	// 		@include max-screen($sm){
+	// 			padding-top: 0;
+	// 		}
+	// 	}
+	// }
 
 	
 	@include max-screen($md){
@@ -82,7 +83,6 @@
 .history__card {
 	flex: 0 0 170px;
 	max-width: 170px;
-	padding-top: 10px;
 	@include col();
 	@include max-screen($sm){
 		padding-top: 0;
