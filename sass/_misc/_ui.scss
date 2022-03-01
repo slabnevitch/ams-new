@@ -444,4 +444,10 @@ button.mfp-close{
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .iti__flag {background-image: url($img + "tel-flags/flags@2x.png");}
 }
+
+.wide-container{
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #F8F8FA;
+}
 /*--------------------END UI----------------------*/ 

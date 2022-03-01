@@ -1,0 +1,83 @@
+/*--------------------contest-banner----------------------*/
+.contest-banner {
+}
+.contest-banner__wrapper {
+	@include adaptive-value('padding-top', 70, 40, 1);
+	@include adaptive-value('padding-bottom', 70, 40, 1);
+	max-width: 1440px;
+	margin: 0 auto;
+	background-color: $accent;
+}
+.wrapper-simple {}
+.wrapper-flex {}
+.contest-banner__content {
+	@include col();
+	@include size(5);
+	@include size-lg(6);
+	@include size-md(12);
+
+	@include max-screen($md){
+		margin-bottom: 30px;
+	}  
+
+	.tag{
+		margin-bottom: 10px;
+	}
+}
+.contest-banner__title {
+	@include adaptive-value('font-size', 36, 27, 1);
+	line-height: calc(43.88/36);
+	margin-bottom: 10px;
+	font-family: $bold;
+}
+.contest-banner__text {
+	margin-bottom: 10px;
+}
+.contest-banner__found {
+	margin-bottom: 30px;
+	font-family: $bold;
+
+}
+.contest-banner__logos {
+}
+.contest-banner__logo {
+	margin-bottom: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.contest-banner__logos-row{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+	
+}
+.btn {}
+.btn-wht {}
+.btn-sm {}
+.contest-banner__img {
+	@include col();
+	@include size(6);
+	@include shift-left(1);
+	@include shift-lg-left(0);
+	@include size-md(12);
+	
+	._fit {
+		border-radius: 10px;
+		overflow: hidden;
+		padding-bottom: prc(354, 570);
+
+		@include max-screen($md){
+			padding-bottom: 52.25%;
+		}  
+		@include max-screen($xs){
+
+			padding-bottom: prc(320, 354);
+		}
+
+		._fit-img{
+	    object-position: left top;
+		}
+	}
+}
+/*--------------------END contest-banner----------------------*/ 

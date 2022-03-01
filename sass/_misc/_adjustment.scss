@@ -104,6 +104,11 @@ button{
   cursor: pointer;
 	border: 2px solid transparent;
 
+	&-sm{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
   &-bordered{
 	border-color: #2D2D2F;
 	  &:hover{
@@ -120,6 +125,13 @@ button{
   	background-color: $accent;
   	&:hover{
   		background-color: $yellow-accent;
+	  }
+  }
+
+  &-wht{
+  	background-color: #fff;
+  	&:hover{
+  		background-color: $gray-bg;
 	  }
   }
 	

@@ -2318,6 +2318,11 @@ button {
   border: 2px solid transparent;
 }
 
+.btn-sm {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .btn-bordered {
   border-color: #2D2D2F;
 }
@@ -2337,6 +2342,14 @@ button {
 
 .btn-accented:hover {
   background-color: #FFE400;
+}
+
+.btn-wht {
+  background-color: #fff;
+}
+
+.btn-wht:hover {
+  background-color: #F8F8FA;
 }
 
 .hidden {
@@ -3098,6 +3111,12 @@ button.mfp-close {
   .iti__flag {
     background-image: url("../img/tel-flags/flags@2x.png");
   }
+}
+
+.wide-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #F8F8FA;
 }
 
 /*--------------------END UI----------------------*/
@@ -3954,7 +3973,7 @@ button.mfp-close {
   }
 }
 
-.page-our-all__tags {
+.filter-tags {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3967,37 +3986,37 @@ button.mfp-close {
 }
 
 @media (max-width: 1170px) {
-  .page-our-all__tags {
+  .filter-tags {
     padding-top: -webkit-calc(39px + 11 * ((100vw - 320px) / 850));
     padding-top: calc(39px + 11 * ((100vw - 320px) / 850));
   }
 }
 
 @media (max-width: 1170px) {
-  .page-our-all__tags {
+  .filter-tags {
     padding-bottom: -webkit-calc(19px + 11 * ((100vw - 320px) / 850));
     padding-bottom: calc(19px + 11 * ((100vw - 320px) / 850));
   }
 }
 
-.page-our-all__tags .tag {
+.filter-tags .tag {
   margin-bottom: 20px;
   cursor: pointer;
 }
 
-.page-our-all__tags .tag:not(:last-child) {
+.filter-tags .tag:not(:last-child) {
   margin-right: 30px;
 }
 
 @media (max-width: 1170px) {
-  .page-our-all__tags .tag:not(:last-child) {
+  .filter-tags .tag:not(:last-child) {
     margin-right: -webkit-calc(9px + 21 * ((100vw - 320px) / 850));
     margin-right: calc(9px + 21 * ((100vw - 320px) / 850));
   }
 }
 
 @media only screen and (max-width: 576px) {
-  .page-our-all__tags .tag span {
+  .filter-tags .tag span {
     display: none;
   }
 }
@@ -4424,6 +4443,10 @@ button.mfp-close {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-top: 20px;
   margin-top: 20px;
   border-top: 1px solid #6F6F75;
@@ -4725,6 +4748,240 @@ button.mfp-close {
 }
 
 /*--------------------END enter-page----------------------*/
+/*--------------------contest-banner----------------------*/
+.contest-banner__wrapper {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #FFEF68;
+}
+
+@media (max-width: 1170px) {
+  .contest-banner__wrapper {
+    padding-top: -webkit-calc(40px + 30 * ((100vw - 320px) / 850));
+    padding-top: calc(40px + 30 * ((100vw - 320px) / 850));
+  }
+}
+
+@media (max-width: 1170px) {
+  .contest-banner__wrapper {
+    padding-bottom: -webkit-calc(40px + 30 * ((100vw - 320px) / 850));
+    padding-bottom: calc(40px + 30 * ((100vw - 320px) / 850));
+  }
+}
+
+.contest-banner__content {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(41.66667% - 30px);
+  width: calc(41.66667% - 30px);
+}
+
+@media screen and (max-width: 1100px) {
+  .contest-banner__content {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .contest-banner__content {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .contest-banner__content {
+    margin-bottom: 30px;
+  }
+}
+
+.contest-banner__content .tag {
+  margin-bottom: 10px;
+}
+
+.contest-banner__title {
+  font-size: 36px;
+  line-height: -webkit-calc(43.88/36);
+  line-height: calc(43.88/36);
+  margin-bottom: 10px;
+  font-family: "MontserratBold", sans-serif;
+}
+
+@media (max-width: 1170px) {
+  .contest-banner__title {
+    font-size: -webkit-calc(27px + 9 * ((100vw - 320px) / 850));
+    font-size: calc(27px + 9 * ((100vw - 320px) / 850));
+  }
+}
+
+.contest-banner__text {
+  margin-bottom: 10px;
+}
+
+.contest-banner__found {
+  margin-bottom: 30px;
+  font-family: "MontserratBold", sans-serif;
+}
+
+.contest-banner__logo {
+  margin-bottom: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.contest-banner__logos-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.contest-banner__img {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(50% - 30px);
+  width: calc(50% - 30px);
+  margin-left: -webkit-calc(8.33333% + 15px);
+  margin-left: calc(8.33333% + 15px);
+}
+
+@media screen and (max-width: 1100px) {
+  .contest-banner__img {
+    margin-left: -webkit-calc(0% + 15px);
+    margin-left: calc(0% + 15px);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .contest-banner__img {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
+.contest-banner__img ._fit {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 62.10526%;
+}
+
+@media only screen and (max-width: 991px) {
+  .contest-banner__img ._fit {
+    padding-bottom: 52.25%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .contest-banner__img ._fit {
+    padding-bottom: 90.39548%;
+  }
+}
+
+.contest-banner__img ._fit ._fit-img {
+  -o-object-position: left top;
+  object-position: left top;
+}
+
+/*--------------------END contest-banner----------------------*/
+/*--------------------contest-page----------------------*/
+.page-contest__container {
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 1170px) {
+  .page-contest__container {
+    padding-top: -webkit-calc(39px + 31 * ((100vw - 320px) / 850));
+    padding-top: calc(39px + 31 * ((100vw - 320px) / 850));
+  }
+}
+
+@media (max-width: 1170px) {
+  .page-contest__container {
+    padding-bottom: -webkit-calc(39px + 1 * ((100vw - 320px) / 850));
+    padding-bottom: calc(39px + 1 * ((100vw - 320px) / 850));
+  }
+}
+
+.page-contest__container h1 {
+  margin-bottom: 0;
+  font-size: 28px;
+  line-height: -webkit-calc(28/34);
+  line-height: calc(28/34);
+}
+
+.page-contest__container .filter-tags {
+  padding-top: 30px;
+  padding-bottom: 12.5px;
+}
+
+.contest-cards {
+  padding-top: 22.5px;
+}
+
+.contest-card {
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(33.33333% - 30px);
+  width: calc(33.33333% - 30px);
+}
+
+.contest-card .footer-tile-item {
+  padding-top: 0;
+  margin-bottom: 24px;
+  border-top: none;
+}
+
+.contest-card .footer-tile-item .footer-tile-item__title {
+  font-size: 18px;
+  margin-bottom: 0;
+  font-family: "MontserratBold", sans-serif;
+}
+
+.contest-card__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 23px;
+}
+
+.contest-card__date {
+  margin-right: 20px;
+}
+
+.contest-card__img {
+  padding-bottom: 70%;
+}
+
+/*--------------------END contest-page----------------------*/
 /*--------------------footer----------------------*/
 .footer {
   padding: 30px 0;

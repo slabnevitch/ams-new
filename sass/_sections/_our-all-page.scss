@@ -14,7 +14,7 @@
 		padding-right: 0;
 	}
 }
-.page-our-all__tags {
+.filter-tags {
 	display: flex;
 	flex-wrap: wrap;
 	@include adaptive-value('padding-top', 50, 39, 1);
@@ -352,6 +352,7 @@
 }
 .footer-tile-item {
 	display: flex;
+	align-items: center;
 	padding-top: 20px;
 	margin-top: 20px;
 	border-top: 1px solid #6F6F75;

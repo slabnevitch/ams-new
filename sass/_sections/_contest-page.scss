@@ -1,0 +1,59 @@
+/*--------------------contest-page----------------------*/
+.page-contest__container {
+	@include adaptive-value('padding-top', 70, 39, 1);
+	@include adaptive-value('padding-bottom', 40, 39, 1);
+	h1{
+		margin-bottom: 0;
+		font-size: 28px;
+		line-height: calc(28/34);
+	}
+	.filter-tags {
+		padding-top: 30px;		
+		padding-bottom: 12.5px;
+	}
+}
+.wide-container {}
+.wrapper-simple {}
+.tag {}
+.tag-full-bg {}
+.tag-landscape-empty {}
+.tag-reviews-empty {}
+.tag-revit-empty {}
+.wrapper-flex {}
+.contest-cards {
+	padding-top: 22.5px;
+}
+.contest-card {
+	padding: 20px 30px;
+	margin-bottom: 30px;
+	background-color: #fff;
+	border-radius: 10px;
+	@include col();
+	@include size(4);
+	
+	.footer-tile-item {
+		padding-top: 0;
+		margin-bottom: 24px;
+		border-top: none;
+		.footer-tile-item__title {
+			font-size: 18px;
+			margin-bottom: 0;
+			font-family: $bold;
+		}
+	}
+}
+.contest-card__header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 23px;
+}
+.contest-card__date {
+	margin-right: 20px;
+}
+.contest-card__img {
+	padding-bottom: prc(217, 310);
+}
+._fit {}
+.program-icon {}
+.footer-tile-item__text {}
+/*--------------------END contest-page----------------------*/ 
