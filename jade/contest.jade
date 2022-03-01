@@ -43,26 +43,28 @@ block content
 				h1 Прошлые конкурсы
 				
 				.filter-tags
-					.tag.tag-full-bg Всё вместе
-					.tag.tag-landscape-empty Истории #[span студентов]
-					.tag.tag-reviews-empty Отзывы
-					.tag.tag-revit-empty Работы
+					.tag.tag-autocad-bg Autocad
+					.tag.tag-archicad-empty Archicad
+					.tag.tag-3ds-empty 3Ds Max
+					.tag.tag-revit-empty Lumion
+					.tag.tag-revit-empty Revit
 				
 				.wrapper-flex.contest-cards
 					- var items = [{title: 'AUTOCAD', icon: "autocad", format: "png"}, {title: 'REVIT', icon: "revit", format: "png"}, {title: 'ARCHICAD', icon: "revit", format: "png"}, {title: 'AUTOCAD', icon: "3ds", format: "png"},{title: 'REVIT', icon: "lumion", format: "svg"},{title: 'ARCHICAD', icon: "archicad", format: "svg"}];
-						each item, i in items
-							.contest-card			
-								.contest-card__header
-									.contest-card__date 2021 год
-									.tag.tag-mini.tag-autocad-empty Autocad			
-								.contest-card__img._fit
-									img._fit-img(src=img + "contest-page/"+(i+1)+".jpg" alt="a;t")
-								.footer-tile-item
-									.program-icon
-										img(src=img + "program-icons/" + item.icon + "." + item.format alt="alt")
-									.footer-tile-item__text
-										.footer-tile-item__title AUTOCAD. Конкурс на лучший проект
-								.contest-card__count 1245 работ
+						- for (var n=0; n < 2; n++)
+							each item, i in items
+								.contest-card			
+									.contest-card__header
+										.contest-card__date 2021 год
+										.tag.tag-mini.tag-autocad-empty Autocad			
+									.contest-card__img._fit
+										img._fit-img(src=img + "contest-page/"+(i+1)+".jpg" alt="a;t")
+									.footer-tile-item
+										.program-icon
+											img(src=img + "program-icons/" + item.icon + "." + item.format alt="alt")
+										.footer-tile-item__text
+											.footer-tile-item__title AUTOCAD. Конкурс на лучший проект
+									.contest-card__count 1245 работ
 
 
 //- img(src=img + "demo.jpg")

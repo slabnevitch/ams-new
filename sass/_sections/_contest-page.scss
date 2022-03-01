@@ -2,6 +2,11 @@
 .page-contest__container {
 	@include adaptive-value('padding-top', 70, 39, 1);
 	@include adaptive-value('padding-bottom', 40, 39, 1);
+
+	@include max-screen($xs){
+		margin-top: 30px;	
+	}  
+
 	h1{
 		margin-bottom: 0;
 		font-size: 28px;
@@ -12,16 +17,12 @@
 		padding-bottom: 12.5px;
 	}
 }
-.wide-container {}
-.wrapper-simple {}
-.tag {}
-.tag-full-bg {}
-.tag-landscape-empty {}
-.tag-reviews-empty {}
-.tag-revit-empty {}
-.wrapper-flex {}
 .contest-cards {
 	padding-top: 22.5px;
+	@include max-screen($xs){
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 .contest-card {
 	padding: 20px 30px;
@@ -30,6 +31,14 @@
 	border-radius: 10px;
 	@include col();
 	@include size(4);
+	@include size-lg(6);
+	@include size-sm(12);
+
+	@include max-screen($xs){
+		margin-left: -20px;
+		margin-right: -20px;
+		width: calc(100% + 40px);
+	}  
 	
 	.footer-tile-item {
 		padding-top: 0;
