@@ -105,6 +105,9 @@
 		@include max-screen($md){
 			display: block;
 		}
+		@include max-screen(350px){
+		 	width: 50px;
+		}
 	}
 
 	@include max-screen($md){

@@ -98,6 +98,8 @@ h2{
 	&:not(:last-child){
 		&:after{
 			content: '/';
+			position: relative;
+			top: -3px;
 			display: inline-block;
 			vertical-align: bottom;
 			margin: 0 10px;

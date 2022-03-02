@@ -2587,6 +2587,8 @@ h2 {
 
 .breadcrumbs__item:not(:last-child):after {
   content: '/';
+  position: relative;
+  top: -3px;
   display: inline-block;
   vertical-align: bottom;
   margin: 0 10px;
@@ -3275,6 +3277,12 @@ button.mfp-close {
 @media only screen and (max-width: 991px) {
   .header__nav:before {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .header__nav:before {
+    width: 50px;
   }
 }
 
@@ -4602,7 +4610,6 @@ button.mfp-close {
   .page-reg-from-free .page-enter__pict {
     position: relative;
     width: 537px;
-    height: 170px;
     left: 0;
     right: auto;
     top: -40px;
