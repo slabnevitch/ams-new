@@ -199,6 +199,12 @@ h2{
 	}
 }
 .page404{
+
+	@include max-screen($md){
+		overflow-x: hidden;
+		height: 100%;
+		
+	}
 	.wrapper-simple{
 		position: relative;
 	}
@@ -217,6 +223,15 @@ h2{
 	@include max-screen($lg){
 		font-size: calc(200px + 50 * ((100vw - 320px) / 1600))
 	}  
+
+	@include max-screen($xs){
+		position: relative;
+		margin-bottom: 150px;
+		z-index: 2;
+	}
+	@include max-screen($xss){
+		font-size: 130px;
+	}
 }
 .page-inprogress{
 	.page404__title{
@@ -229,14 +244,25 @@ h2{
 	font-size: 36px;
 	line-height: 44px;
 	font-family: $bold;
+	span{
+		display: block;
+	}
 }
 .page404__pict{
 	position: absolute;
 	top: 50%;
 	margin-top: 50px;
-	transform: translateY(-50%);
 	right: -244px;
+	transform: translateY(-50%);
 	width: prc(1035, 1200);
+
+	@include max-screen($xs){
+		top: 0;
+		left: 20%;
+		transform: translateY(0);
+		transform: translateX(-20%);
+		width: 480px;
+	}
 
 	img{
 		max-width: 100%;

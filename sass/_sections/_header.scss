@@ -10,9 +10,6 @@
 
 	@include max-screen($md){
 		padding: 15px 0 0 0;
-		justify-content: flex-start;
-	}
-	@include max-screen($sm){
 		justify-content: space-between;
 	}
 }
@@ -106,7 +103,7 @@
 			display: block;
 		}
 		@include max-screen(350px){
-		 	width: 50px;
+		 	width: 40px;
 		}
 	}
 
@@ -139,13 +136,15 @@
 .mob-menu-close{
 	width: 36px;
 	height: 36px;
-	position: relative;
 	position: fixed;
 	top: 17px;
 	right: 20px;
 
 	@include min-screen($md){
 		display: none;
+	}
+	@include max-screen(350px){
+		right: 4px;
 	}
 	.icon{
 		@include absolute-center();
@@ -260,21 +259,14 @@
 	position: relative;
 	margin-left: 30px;
 
-	@include min-screen($md){
-		margin-right: -10px;
-
-	}
 	@include max-screen($md){
+		margin-right: -10px;
 		margin-left: auto;
 		margin-bottom: 28px;
 		position: relative;
-		top: 12px;
-	}
-
-	@include max-screen($sm){
-		position: relative;
 		top: 0;
 	}
+
 	.btn{
 		padding: 0 20px;
 
@@ -293,7 +285,7 @@
 	// margin-right: 10px;
 	max-width: 102px;
 	@include dots-family();
-	@include max-screen($sm){
+	@include max-screen($md){
 		font-family: $bold;
 		max-width: none;
 		white-space: normal;
@@ -326,7 +318,7 @@
 	width: 30px;
 	cursor: pointer;
 	
-	@include max-screen($sm){
+	@include max-screen($md){
 		display: none;
 	}  
 

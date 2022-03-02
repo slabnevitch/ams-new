@@ -2735,6 +2735,13 @@ h2 {
   font-size: 20px;
 }
 
+@media only screen and (max-width: 991px) {
+  .page404 {
+    overflow-x: hidden;
+    height: 100%;
+  }
+}
+
 .page404 .wrapper-simple {
   position: relative;
 }
@@ -2766,6 +2773,20 @@ h2 {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  .page404__title {
+    position: relative;
+    margin-bottom: 150px;
+    z-index: 2;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .page404__title {
+    font-size: 130px;
+  }
+}
+
 .page-inprogress .page404__title {
   color: #FFEF68;
 }
@@ -2778,15 +2799,33 @@ h2 {
   font-family: "MontserratBold", sans-serif;
 }
 
+.page404__text span {
+  display: block;
+}
+
 .page404__pict {
   position: absolute;
   top: 50%;
   margin-top: 50px;
+  right: -244px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: -244px;
   width: 86.25%;
+}
+
+@media only screen and (max-width: 576px) {
+  .page404__pict {
+    top: 0;
+    left: 20%;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transform: translateX(-20%);
+    -ms-transform: translateX(-20%);
+    transform: translateX(-20%);
+    width: 480px;
+  }
 }
 
 .page404__pict img {
@@ -3154,15 +3193,6 @@ button.mfp-close {
 @media only screen and (max-width: 991px) {
   .header__inner {
     padding: 15px 0 0 0;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-}
-
-@media only screen and (max-width: 767.98px) {
-  .header__inner {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
@@ -3282,7 +3312,7 @@ button.mfp-close {
 
 @media only screen and (max-width: 350px) {
   .header__nav:before {
-    width: 50px;
+    width: 40px;
   }
 }
 
@@ -3319,7 +3349,6 @@ button.mfp-close {
 .mob-menu-close {
   width: 36px;
   height: 36px;
-  position: relative;
   position: fixed;
   top: 17px;
   right: 20px;
@@ -3328,6 +3357,12 @@ button.mfp-close {
 @media only screen and (min-width: 991px) {
   .mob-menu-close {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .mob-menu-close {
+    right: 4px;
   }
 }
 
@@ -3476,23 +3511,11 @@ button.mfp-close {
   margin-left: 30px;
 }
 
-@media only screen and (min-width: 991px) {
-  .account-header {
-    margin-right: -10px;
-  }
-}
-
 @media only screen and (max-width: 991px) {
   .account-header {
+    margin-right: -10px;
     margin-left: auto;
     margin-bottom: 28px;
-    position: relative;
-    top: 12px;
-  }
-}
-
-@media only screen and (max-width: 767.98px) {
-  .account-header {
     position: relative;
     top: 0;
   }
@@ -3519,7 +3542,7 @@ button.mfp-close {
   text-overflow: ellipsis;
 }
 
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991px) {
   .account-header__name {
     font-family: "MontserratBold", sans-serif;
     max-width: none;
@@ -3571,7 +3594,7 @@ button.mfp-close {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991px) {
   .account-header__arrow {
     display: none;
   }
@@ -4493,7 +4516,6 @@ button.mfp-close {
 /*--------------------END our-all-page----------------------*/
 /*--------------------enter-page----------------------*/
 .page-enter {
-  height: 100%;
   overflow-x: hidden;
   padding-top: 100px;
   margin-bottom: 200px;
