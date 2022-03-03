@@ -1,0 +1,206 @@
+extends _misc/main
+block title
+	| Конкурс - новый
+	- var authorized = true;
+	- var headerMenu = true;
+block content
+	.wrapper-simple
+		ul.breadcrumbs
+			li.breadcrumbs__item
+				a(href="").breadcrumbs__link Главная
+			li.breadcrumbs__item
+				span.breadcrumbs__target Конкурсы
+
+	.page.page-contest.page-contest-new
+		include _blocks/contest-banner
+		
+		.wrapper-simple
+			.page-contest-new__top
+				h1 Приём работ 
+					br
+					| закончен
+
+				p.page-contest__resuls Результаты конкурса будут 
+					br
+					| опубликованы 7 декабря
+			
+			.page-contest__about
+				.page-contest__video
+					video(poster="img/contest-page/preview.jpg")
+						source(src="https://www.youtube.com/watch?v=dGt08ylXCj0&list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&index=3&t=0s", type="video/youtube")
+
+				.page-contest__description
+					.page-contest__block.block-page-contest
+						.block-page-contest__text
+							h2 О конкурсе
+							p.page-contest__resuls Конкурсные работы принимаются с 16 по 30 ноября включительно.
+
+							p Конкурс проводится среди студентов и подписчиков нашего учебного центра.
+							p 7 декабря будут оглашены результаты конкурса и выбраны победители на прямой трансляции на нашем сайте и YouTube канале. Участники конкурса получат приглашение на электронную почту.
+
+						.block-page-contest__num
+							div 1
+
+					.page-contest__block.block-page-contest
+						.block-page-contest__text
+							h2 Конкурсные работы
+
+							.block-page-contest__chapter
+								.tag.tag-autocad-empty Autocad
+								.block-page-contest__title Конкурсная работа по AutoCAD
+								
+								.block-page-contest__subtitle Состав работы:
+
+								ul.block-page-contest__list
+									li Электронный альбом (PDF, DWF) от 3 листов с проектом любого направления. Не обязательно присылать полный проект изделия или сооружения. Достаточно несколько характерных чертежей
+									li Исходники DWG.
+
+								.block-page-contest__subtitle Оценка:
+
+								ul.block-page-contest__list
+									li Оцениваться будет графическая составляющая проекта: рациональная компоновка видов на листах, сложность проекта, насыщенность деталями, единый стандарт оформления.
+									li Технические аспекты исходника DWG: применение блоков, слоев, листов, наборов параметров листов, стилей аннотаций.
+
+							.block-page-contest__chapter
+									.tag.tag-revit-empty Revit
+									.block-page-contest__title Конкурсная работа по AutoCAD
+									
+									.block-page-contest__subtitle Состав работы:
+
+									ul.block-page-contest__list
+										li Электронный альбом (PDF, DWF) от 3 листов с проектом любого направления. Не обязательно присылать полный проект изделия или сооружения. Достаточно несколько характерных чертежей
+										li Исходники DWG.
+
+									.block-page-contest__subtitle Оценка:
+
+									ul.block-page-contest__list
+										li Оцениваться будет графическая составляющая проекта: рациональная компоновка видов на листах, сложность проекта, насыщенность деталями, единый стандарт оформления.
+										li Технические аспекты исходника DWG: применение блоков, слоев, листов, наборов параметров листов, стилей аннотаций.
+
+						.block-page-contest__num
+							div 2
+
+					.page-contest__block.block-page-contest
+						.block-page-contest__text
+							h2 Как прислать работу
+							p.page-contest__resuls Подготовьте архив с конкурсной работой и загрузите его в облачное хранилище.
+
+							p Работы принимаем до 30 ноября. На e-mail: #[a(href="/").link merkulov@autocad-specialist.ru]
+							p В теме письма указать «Конкурс название программы», например, если присылайте проект по AutoCAD, то тема будет такой «Конкурс AutoCAD».
+							p В письме дайте ссылку на скачивание архива с конкурсной работой (Яндекс Диск, Google Диск, Dropbox или другие облачные хранилища), кратко опишите конкурсный проект.
+							p Также в письме укажите, проходили ли вы какой-либо курс или марафон в нашем учебном центре. Укажите его название.
+
+						.block-page-contest__num
+							div 3
+
+		include _blocks/prizes
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	// script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	// script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+	script(src="js/libs/mediaelement/mediaelement-and-player.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

@@ -134,4 +134,19 @@
 
 	});
 
+	// media-element
+	if($('video').length > 0){
+
+		$('video').mediaelementplayer({
+			// alwaysShowControls: true,
+			// controls: false,
+			// hideVideoControlsOnLoad: true,
+			videoVolume: 'horizontal',
+			features: ['playpause','progress','volume','fullscreen'],
+			stretching: 'responsive'
+		});
+
+	}
+	// END media-element
+
 })();

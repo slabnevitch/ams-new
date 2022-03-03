@@ -1,0 +1,25 @@
+.contest-banner
+	.contest-banner__wrapper
+		.wrapper-simple
+			.wrapper-flex
+				.contest-banner__content
+					.tag.tag-misc-empty Конкурс
+					.contest-banner__title Конкурс на лучший проект 2022
+					.contest-banner__text Ежегодный конкурс от учебного центра Алексея Меркулова.
+					.contest-banner__found Призовой фонд 100 000 ₽
+					.contest-banner__logos
+						.contest-banner__logos-row
+							- for (var i=0; i < 2; i++)
+								.contest-banner__logo
+									img(src=img + "contest-page/logos/"+(i+1)+".svg" alt="logo")
+
+						.contest-banner__logos-row
+							- for (var i=2; i < 4; i++)
+								.contest-banner__logo
+									img(src=img + "contest-page/logos/"+(i+1)+".svg" alt="logo")
+
+					.btn.btn-wht.btn-sm Участвовать
+
+				.contest-banner__img
+					._fit
+						img._fit-img(src=img + "/contest-page/banner.jpg" alt="aly")

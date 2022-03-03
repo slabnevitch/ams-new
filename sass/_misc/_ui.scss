@@ -486,5 +486,19 @@ button.mfp-close{
   max-width: 1440px;
   margin: 0 auto;
   background-color: #F8F8FA;
+
+  &--accent{
+  	background-color: $accent;
+  }
+}
+
+.mejs__overlay-button{
+	background: url($img + 'play-button.svg') no-repeat;
+  background-position: 0 0;
+  height: 100px;
+  width: 100px;
+}
+.mejs__overlay:hover > .mejs__overlay-button {
+    background-position: -100px -10px; 
 }
 /*--------------------END UI----------------------*/ 

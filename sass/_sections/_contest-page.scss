@@ -44,11 +44,11 @@
 		padding-top: 0;
 		margin-bottom: 24px;
 		border-top: none;
-		.footer-tile-item__title {
+	}
+	h2{
 			font-size: 18px;
 			margin-bottom: 0;
 			font-family: $bold;
-		}
 	}
 }
 .contest-card__header {
@@ -62,7 +62,121 @@
 .contest-card__img {
 	padding-bottom: prc(217, 310);
 }
-._fit {}
-.program-icon {}
-.footer-tile-item__text {}
+.page-contest-new{
+	h1{
+		margin-bottom: 0;
+	}
+}
+.page-contest__resuls {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 24px;
+	line-height: 136.02%;
+}
+.page-contest__about,
+.page-contest-new__top {
+	max-width: 870px;
+
+}
+.page-contest-new__top {
+	@include adaptive-value('padding-top', 100, 39, 1);
+}
+.page-contest__video {
+	margin-top: 40px;
+	@include adaptive-value('margin-bottom', 65, 30, 1);
+}
+.page-contest__description {
+}
+.page-contest__block {
+	@include row-flex();
+	@include adaptive-value('padding-top', 65, 30, 1);
+
+	&:not(:last-child){
+		border-bottom: 1px solid #6F6F75;
+		@include adaptive-value('padding-bottom', 50, 30, 1);
+	}
+
+	h2{
+		margin-bottom: 0;
+		font-size: 40px;
+		line-height: calc(49 / 40);
+	}
+}
+.block-page-contest {}
+.block-page-contest__text {
+	flex: 0 0 470px;
+	max-width: 470px;
+	margin-left: 15px;
+	margin-right: 15px;
+
+	p{
+		.link{
+			font-size: 13px;
+		}
+	}
+}
+.block-page-contest__num {
+	margin-left: 15px;
+	margin-right: 15px;
+	flex: 1 1 auto;
+	padding-right: 70px;
+	text-align: right;
+
+	div{
+		font-family: $bold;
+		font-size: 190px;
+		line-height: calc(232 / 190);
+		color: $accent;
+	}
+}
+.block-page-contest__chapter {
+
+
+	&:not(:last-of-type){
+			@include adaptive-value('margin-bottom', 50, 20, 1);
+	}
+
+	&:first-of-type{
+		@include adaptive-value('padding-top', 50, 20, 1);
+	}
+
+	.tag{
+		margin-bottom: 15px;
+	}
+
+}
+.block-page-contest__title {
+	margin-bottom: 20px;
+	font-family: $bold;
+	font-size: 28px;
+	line-height: calc(34/28);
+}
+.block-page-contest__subtitle {
+	margin-bottom: 10px;
+	font-size: 18px;
+	line-height: calc(22 / 18);
+	font-family: $bold;
+
+}
+.block-page-contest__list {
+	@include ol-custom();
+
+	&:not(:last-child){
+		margin-bottom: 20px;
+	}
+
+	li{
+		padding-left: 41px;
+
+		&:not(:last-child){
+			margin-bottom: 10px;
+		}
+
+		&:before{
+			position: absolute;
+			left: 15px;
+			top: 0;
+		}
+	}
+}
 /*--------------------END contest-page----------------------*/ 

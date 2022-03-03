@@ -1,0 +1,57 @@
+/*--------------------prizes----------------------*/
+.prizes {
+	margin-top: 32px;
+	@include adaptive-value('margin-bottom', 70, 39, 1);
+}
+.wide-container {}
+.wide-container--accent {}
+.wrapper-simple {}
+.prizes__content {
+	@extend .page-contest__about;
+	@include row-flex();
+	@include adaptive-value('padding-top', 70, 39, 1);
+	@include adaptive-value('padding-bottom', 70, 39, 1);
+}
+.prizes__text {
+	@extend .block-page-contest__text;
+
+	p{
+		&:first-child{
+			
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+		&:nth-child(){
+			
+		}
+		&:not(:last-child){
+		
+		}
+	}
+}
+.prizes__title {
+	margin-bottom: 10px;
+	font-size: 40px;
+	font-family: $bold;
+	line-height: calc(49/40);
+}
+.prizes__subtitle {
+	margin-bottom: 20px;
+	font-family: $bold;
+	font-size: 20px;
+	line-height: calc(24/20);
+}
+.prizes__descr {
+	@extend .page-contest__resuls;
+
+}
+.prizes__currency{
+	@extend .block-page-contest__num;
+	padding-right: 30px;
+	div{
+		color: $text;
+	}
+
+}
+/*--------------------END prizes----------------------*/ 
