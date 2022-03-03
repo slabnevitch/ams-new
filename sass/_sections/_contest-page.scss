@@ -179,4 +179,38 @@
 		}
 	}
 }
+.page-contest__info {}
+.info-page-contest {
+	@include adaptive-value('padding-bottom', 100, 39, 1);
+	@include adaptive-value('padding-top', 100, 39, 1);
+}
+.wrapper-simple {}
+.wrapper-flex {}
+.info-page-contest__block {
+	@include col();
+	@include size(5);
+
+
+	&:last-child{
+		@include shift-left(1);
+	}
+
+}
+.info-page-contest__title {
+	margin-bottom: 20px;
+	font-size: 28px;
+	line-height: calc(34/28);
+	font-family: $bold;
+}
+.info-page-contest__text {
+	font-size: 20px;
+	line-height: 136.02%;
+	&:first-child{
+		margin-top: 0;
+	}
+	&:last-child{
+		margin-bottom: 0;
+	}
+	
+}
 /*--------------------END contest-page----------------------*/ 

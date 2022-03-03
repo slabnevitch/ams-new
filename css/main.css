@@ -5738,6 +5738,14 @@ button.mfp-close {
   object-position: left top;
 }
 
+.contest-banner__video {
+  margin-top: 30px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
 /*--------------------END contest-banner----------------------*/
 /*--------------------contest-page----------------------*/
 .page-contest__container {
@@ -6043,6 +6051,61 @@ button.mfp-close {
   position: absolute;
   left: 15px;
   top: 0;
+}
+
+.info-page-contest {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+@media (max-width: 1170px) {
+  .info-page-contest {
+    padding-bottom: -webkit-calc(39px + 61 * ((100vw - 320px) / 850));
+    padding-bottom: calc(39px + 61 * ((100vw - 320px) / 850));
+  }
+}
+
+@media (max-width: 1170px) {
+  .info-page-contest {
+    padding-top: -webkit-calc(39px + 61 * ((100vw - 320px) / 850));
+    padding-top: calc(39px + 61 * ((100vw - 320px) / 850));
+  }
+}
+
+.info-page-contest__block {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(41.66667% - 30px);
+  width: calc(41.66667% - 30px);
+}
+
+.info-page-contest__block:last-child {
+  margin-left: -webkit-calc(8.33333% + 15px);
+  margin-left: calc(8.33333% + 15px);
+}
+
+.info-page-contest__title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  line-height: -webkit-calc(34/28);
+  line-height: calc(34/28);
+  font-family: "MontserratBold", sans-serif;
+}
+
+.info-page-contest__text {
+  font-size: 20px;
+  line-height: 136.02%;
+}
+
+.info-page-contest__text:first-child {
+  margin-top: 0;
+}
+
+.info-page-contest__text:last-child {
+  margin-bottom: 0;
 }
 
 /*--------------------END contest-page----------------------*/
