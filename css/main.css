@@ -6439,13 +6439,13 @@ button.mfp-close {
 /*--------------------END prizes----------------------*/
 /*--------------------lessons-page----------------------*/
 .page-lessons {
-  padding-top: 75px;
+  padding-top: 34px;
 }
 
 @media (max-width: 1170px) {
   .page-lessons {
-    padding-top: -webkit-calc(0px + 75 * ((100vw - 320px) / 850));
-    padding-top: calc(0px + 75 * ((100vw - 320px) / 850));
+    padding-top: -webkit-calc(0px + 34 * ((100vw - 320px) / 850));
+    padding-top: calc(0px + 34 * ((100vw - 320px) / 850));
   }
 }
 
@@ -6471,6 +6471,13 @@ button.mfp-close {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .lessons-cards {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .lesson-card {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -6489,6 +6496,31 @@ button.mfp-close {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-bottom: 30px;
+  text-decoration: none;
+  color: #2D2D2F;
+}
+
+@media screen and (max-width: 991px) {
+  .lesson-card {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .lesson-card {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .lesson-card {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: -webkit-calc(100% + 40px);
+    width: calc(100% + 40px);
+  }
 }
 
 .lesson-card__img {

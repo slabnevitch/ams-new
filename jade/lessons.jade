@@ -25,10 +25,10 @@ block content
 					.tag.tag-interior-empty Интерьеры
 					.tag.tag-landscape-empty Ладшафт
 				
-				.wrapper-flex
+				.wrapper-flex.lessons-cards
 					- var titles = ['Настройки отображения поверхности в Civil 3D', 'AutoCAD. Создаем план этажа/квартиры. Самый быстрый способ', '10 главных принципов AutoCAD, без которых ваша работа не эффективна. Часть №1', 'Настройки отображения поверхности в Civil 3D', '3ds Max + Corona Render', 'AutoCAD. Создаем план этажа/квартиры. Самый быстрый способ', 'Настройки отображения поверхности в Civil 3D', 'AutoCAD. Создаем план этажа/квартиры. Самый быстрый способ', 'AutoCAD. Создаем план этажа/квартиры. Самый быстрый способ', 'Настройки отображения поверхности в Civil 3D', 'AutoCAD. Создаем план этажа/квартиры. Самый быстрый способ', 'AutoCAD. Создаем план этажа/квартиры. Самый быстрый способ', 'Настройки отображения поверхности в Civil 3D', '3ds Max + Corona Render', 'AutoCAD. Создаем план этажа/квартиры. Самый быстрый способ'];
 					each item, i in titles
-						.lesson-card
+						a(href="/").lesson-card
 							.lesson-card__img._fit
 								img._fit-img(src=img + "/lessons-page/" + (i+1) + ".jpg" alt="alt")
 							.lesson-card__body

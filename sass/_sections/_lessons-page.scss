@@ -1,6 +1,6 @@
 /*--------------------lessons-page----------------------*/
 .page-lessons {
-	@include adaptive-value('padding-top', 75, 0, 1);
+	@include adaptive-value('padding-top', 34, 0, 1);
 	
 	.wide-container {
 
@@ -14,12 +14,28 @@
 .tag {}
 
 .wrapper-flex {}
+.lessons-cards{
+	@include max-screen($xss){
+		margin-left: 0;
+		margin-right: 0;
+	}  
+}
 .lesson-card {
 	@include col();
 	@include size(4);
+	@include size-md(6);
+	@include size-sm(12);
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 30px;
+	text-decoration: none;
+	color: $text;
+
+	@include max-screen($xss){
+		margin-left: -20px;
+		margin-right: -20px;
+		width: calc(100% + 40px);
+	}  
 }
 .lesson-card__img {
 	flex-shrink: 0;
@@ -31,6 +47,10 @@
 	flex: 1 1 auto;
 	padding: 15px 20px 0 20px;
 	background-color: #fff;
+
+	@include max-screen($xss){
+
+	}  
 
 	h2{
 		margin-top: 0;
