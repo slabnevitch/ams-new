@@ -5931,11 +5931,23 @@ button.mfp-close {
   margin-bottom: 0;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .page-contest-new h1 br {
+    display: none;
+  }
+}
+
 .page-contest__resuls, .prizes__descr {
   margin-top: 10px;
   margin-bottom: 20px;
   font-size: 24px;
   line-height: 136.02%;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .page-contest__resuls br, .prizes__descr br {
+    display: none;
+  }
 }
 
 .page-contest__about, .prizes__content,
@@ -5998,11 +6010,29 @@ button.mfp-close {
   }
 }
 
+@media only screen and (max-width: 767.98px) {
+  .page-contest__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
 .page-contest__block h2 {
   margin-bottom: 0;
   font-size: 40px;
+  font-size: 40px;
   line-height: -webkit-calc(49 / 40);
   line-height: calc(49 / 40);
+}
+
+@media (max-width: 1170px) {
+  .page-contest__block h2 {
+    font-size: -webkit-calc(36px + 4 * ((100vw - 320px) / 850));
+    font-size: calc(36px + 4 * ((100vw - 320px) / 850));
+  }
 }
 
 .block-page-contest__text, .prizes__text {
@@ -6013,6 +6043,15 @@ button.mfp-close {
   max-width: 470px;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .block-page-contest__text, .prizes__text {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
 }
 
 .block-page-contest__text p .link, .prizes__text p .link {
@@ -6030,12 +6069,25 @@ button.mfp-close {
   text-align: right;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .block-page-contest__num, .prizes__currency {
+    padding: 0;
+    text-align: left;
+  }
+}
+
 .block-page-contest__num div, .prizes__currency div {
   font-family: "MontserratBold", sans-serif;
   font-size: 190px;
   line-height: -webkit-calc(232 / 190);
   line-height: calc(232 / 190);
   color: #FFEF68;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .block-page-contest__num div, .prizes__currency div {
+    font-size: 100px;
+  }
 }
 
 .block-page-contest__chapter:not(:last-of-type) {
@@ -6322,16 +6374,33 @@ button.mfp-close {
   }
 }
 
+@media only screen and (max-width: 767.98px) {
+  .prizes__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
 .prizes__text p:last-child {
   margin-bottom: 0;
 }
 
 .prizes__title {
   margin-bottom: 10px;
-  font-size: 40px;
   font-family: "MontserratBold", sans-serif;
+  font-size: 40px;
   line-height: -webkit-calc(49/40);
   line-height: calc(49/40);
+}
+
+@media (max-width: 1170px) {
+  .prizes__title {
+    font-size: -webkit-calc(36px + 4 * ((100vw - 320px) / 850));
+    font-size: calc(36px + 4 * ((100vw - 320px) / 850));
+  }
 }
 
 .prizes__subtitle {

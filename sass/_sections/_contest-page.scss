@@ -65,6 +65,13 @@
 .page-contest-new{
 	h1{
 		margin-bottom: 0;
+
+		br{
+			@include max-screen($sm){
+				display: none;
+			}  
+
+		}
 	}
 }
 .page-contest__resuls {
@@ -72,6 +79,13 @@
 	margin-bottom: 20px;
 	font-size: 24px;
 	line-height: 136.02%;
+
+	br{
+		@include max-screen($sm){
+			display: none;
+		}  
+
+	}
 }
 .page-contest__about,
 .page-contest-new__top {
@@ -96,10 +110,19 @@
 		@include adaptive-value('padding-bottom', 50, 30, 1);
 	}
 
+	@include max-screen($sm){
+		flex-direction: column-reverse;
+	}  
+
 	h2{
 		margin-bottom: 0;
+		@include adaptive-value('font-size', 40, 36, 1);
 		font-size: 40px;
 		line-height: calc(49 / 40);
+
+		// @include max-screen($sm){
+		// 	font-size: 36px;
+		// }  
 	}
 }
 .block-page-contest {}
@@ -108,6 +131,10 @@
 	max-width: 470px;
 	margin-left: 15px;
 	margin-right: 15px;
+
+	@include max-screen($sm){
+		flex: 1 1 auto;
+	}  
 
 	p{
 		.link{
@@ -122,11 +149,20 @@
 	padding-right: 70px;
 	text-align: right;
 
+	@include max-screen($sm){
+		padding: 0;
+		text-align: left;
+	}
+
 	div{
 		font-family: $bold;
 		font-size: 190px;
 		line-height: calc(232 / 190);
 		color: $accent;
+
+		@include max-screen($sm){
+			font-size: 100px;
+		}  
 	}
 }
 .block-page-contest__chapter {

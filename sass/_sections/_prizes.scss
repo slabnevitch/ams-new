@@ -11,6 +11,10 @@
 	@include row-flex();
 	@include adaptive-value('padding-top', 70, 39, 1);
 	@include adaptive-value('padding-bottom', 70, 39, 1);
+
+	@include max-screen($sm){
+		flex-direction: column-reverse;
+	}  
 }
 .prizes__text {
 	@extend .block-page-contest__text;
@@ -32,8 +36,9 @@
 }
 .prizes__title {
 	margin-bottom: 10px;
-	font-size: 40px;
+
 	font-family: $bold;
+	@include adaptive-value('font-size', 40, 36, 1);
 	line-height: calc(49/40);
 }
 .prizes__subtitle {
