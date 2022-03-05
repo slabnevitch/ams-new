@@ -1,0 +1,129 @@
+/*--------------------profile-page----------------------*/
+.page {}
+.page-profile {
+	.wide-container {
+		@include adaptive-value('padding-top', 70, 39, 1);
+	}
+
+}
+.wrapper-simple {}
+.wrapper-flex {}
+.page-profile__user {
+	@include col();
+	@include size(9);
+	display: flex;
+	align-items: center;
+	@include adaptive-value('padding-bottom', 50, 39, 1);
+
+	h1{
+		flex: 1 1 auto;
+		font-size: 40px;
+		line-height: calc(49/40);
+	}
+}
+.page-profile__avatar {
+	text-align: center;
+	// flex: 1 1 auto;
+	flex-shrink: 0;
+	margin-right: 40px;
+}
+.page-profile__img {
+	width: 200px;
+	height: 200px;
+	margin-bottom: 10px;
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+
+	img{
+		@include absolute-center;
+	}
+}
+.link {}
+.page-profile__link {
+	font-size: 13px;
+}
+.page-profile__block {
+	@include col();
+	@include size(12);
+	border-top: 1px solid #DBDBDB;
+
+	@include adaptive-value('padding-top', 50, 39, 1);
+	@include adaptive-value('padding-bottom', 50, 39, 1);
+}
+.page-profile__text {
+	@include col();
+	@include size(5);
+}
+.page-profile__title {
+	margin-bottom: 10px;
+	font-size: 20px;
+line-height: 24px;
+	font-family: $bold;
+}
+.page-profile__prgf {
+	margin-top: 0;
+
+	&:last-of-type{
+		margin-bottom: 0;
+	}
+
+	// margin-bottom: 10px;
+}
+.page-profile__form {
+	@include col();
+	@include size(5);
+	@include shift-left(2);
+	
+	.form__label {
+
+		&:not(:last-of-type){
+			margin-bottom: 15px;
+		
+		}
+	}
+	.form__input {
+
+		max-width: 380px;
+	}
+	p{
+		max-width: 380px;
+		font-size: 14px;
+line-height: 18px;
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+}
+.form {}
+.page-profile__socials {}
+.socials-page-profile {}
+.page-profile__socials-row {
+	display: flex;
+	align-items: center;
+
+	&:not(:last-child){
+		margin-bottom: 15px;
+	}
+
+	.icon {
+		font-size: 20px;
+	}
+	.btn {
+		width: 160px;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+.page-profile__icon{
+	flex-shrink: 0;
+	width: 40px;
+	display: flex;
+	align-items: center;
+}
+.btn-mini {}
+
+.form__checkbox {}
+.form__false-checkbox {}
+.form__checkbox-label {}
+/*--------------------END profile-page----------------------*/ 

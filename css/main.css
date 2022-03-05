@@ -6596,6 +6596,211 @@ button.mfp-close {
 }
 
 /*--------------------END lessons-page----------------------*/
+/*--------------------profile-page----------------------*/
+.page-profile .wide-container {
+  padding-top: 70px;
+}
+
+@media (max-width: 1170px) {
+  .page-profile .wide-container {
+    padding-top: -webkit-calc(39px + 31 * ((100vw - 320px) / 850));
+    padding-top: calc(39px + 31 * ((100vw - 320px) / 850));
+  }
+}
+
+.page-profile__user {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(75% - 30px);
+  width: calc(75% - 30px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 1170px) {
+  .page-profile__user {
+    padding-bottom: -webkit-calc(39px + 11 * ((100vw - 320px) / 850));
+    padding-bottom: calc(39px + 11 * ((100vw - 320px) / 850));
+  }
+}
+
+.page-profile__user h1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  font-size: 40px;
+  line-height: -webkit-calc(49/40);
+  line-height: calc(49/40);
+}
+
+.page-profile__avatar {
+  text-align: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 40px;
+}
+
+.page-profile__img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  position: relative;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.page-profile__img img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.page-profile__link {
+  font-size: 13px;
+}
+
+.page-profile__block {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(100% - 30px);
+  width: calc(100% - 30px);
+  border-top: 1px solid #DBDBDB;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 1170px) {
+  .page-profile__block {
+    padding-top: -webkit-calc(39px + 11 * ((100vw - 320px) / 850));
+    padding-top: calc(39px + 11 * ((100vw - 320px) / 850));
+  }
+}
+
+@media (max-width: 1170px) {
+  .page-profile__block {
+    padding-bottom: -webkit-calc(39px + 11 * ((100vw - 320px) / 850));
+    padding-bottom: calc(39px + 11 * ((100vw - 320px) / 850));
+  }
+}
+
+.page-profile__text {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(41.66667% - 30px);
+  width: calc(41.66667% - 30px);
+}
+
+.page-profile__title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "MontserratBold", sans-serif;
+}
+
+.page-profile__prgf {
+  margin-top: 0;
+}
+
+.page-profile__prgf:last-of-type {
+  margin-bottom: 0;
+}
+
+.page-profile__form {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(41.66667% - 30px);
+  width: calc(41.66667% - 30px);
+  margin-left: -webkit-calc(16.66667% + 15px);
+  margin-left: calc(16.66667% + 15px);
+}
+
+.page-profile__form .form__label:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.page-profile__form .form__input {
+  max-width: 380px;
+}
+
+.page-profile__form p {
+  max-width: 380px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page-profile__form p:last-of-type {
+  margin-bottom: 0;
+}
+
+.page-profile__socials-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.page-profile__socials-row:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.page-profile__socials-row .icon {
+  font-size: 20px;
+}
+
+.page-profile__socials-row .btn {
+  width: 160px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.page-profile__icon {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/*--------------------END profile-page----------------------*/
 /*--------------------footer----------------------*/
 .footer {
   padding: 30px 0;
