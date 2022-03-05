@@ -52,9 +52,6 @@
 	margin-right: -15px;
 	
 }
-.btn {}
-.btn-wht {}
-.btn-sm {}
 .contest-banner__img {
 	@include col();
 	@include size(6);
@@ -72,7 +69,7 @@
 		}  
 		@include max-screen($xs){
 
-			padding-bottom: prc(320, 354);
+			padding-bottom: 110%;
 		}
 
 		._fit-img{
@@ -85,6 +82,16 @@
 		border-radius: 10px;
 		overflow: hidden;
 		padding-bottom: 0;
+
+		@include max-screen($md){
+			margin-top: 0;
+			
+		}  
+		@include max-screen($xs){
+			border-radius: 0;
+			margin-left: -20px;
+			margin-right: -20px;
+		}
 
 }
 /*--------------------END contest-banner----------------------*/ 
