@@ -13,10 +13,10 @@
 	// End ibg class
 	$(document).ready(function() {
 		console.log('jQuery document ready');
-			if($('.tile-item__photo').length > 0){
+			if($('.tile-item__photo').length > 0 || $('.gallery-photo').length > 0){
 		
 		// Magnific popup
-				$('.tile-item__photo').magnificPopup({
+				$('.tile-item__photo, .gallery-photo').magnificPopup({
 						type: 'inline',
 						preloader: false,
 						focus: '#name',

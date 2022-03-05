@@ -50,7 +50,43 @@ block content
 					.info-page-contest__block
 						.info-page-contest__title Работы
 						p.info-page-contest__text Работы оценивались по качеству и функциональность файла DWG: использование блоков с атрибутами, настройки слоёв, использование извлечений, настройки листов и печати и т.д.
-			
+
+		.finalists
+			.wide-container
+				.wrapper-simple
+					h1 Результаты #[span финалистов 2021] 
+						.tag.tag-autocad-bg Autocad
+				
+				.wrapper-simple
+					.wrapper-flex
+						- for (var i=0; i < 6; i++)
+							if i%2 !== 0
+								.finalists__card.card-finalists
+									.card-finalists__header
+										.user-card.user-card--horizontal.user-card--row
+											.tag.tag-mini.tag-misc-empty=(i+1) + " место"
+											.user-card__info								
+												.user-card__name Ирина Калинина
+												a(href="/").user-card__link
+													+icon('VK')
+													span ivanov
+
+									a(href="#popup-gallery-1").card-finalists__photo.gallery-photo._fit
+										img._fit-img(src=img + "/contest-page/finalists/" + (i+1) + ".jpg" alt="alt")
+							else
+								.finalists__card.card-finalists
+									.card-finalists__header
+										.user-card.user-card--horizontal.user-card--row
+											.tag.tag-mini.tag-misc-empty= (i+1) + " место"
+											.user-card__info								
+												.user-card__name Иван Иванов
+												a(href="/").user-card__link
+													+icon('VK')
+													span ivanov
+
+									a(href="#popup-gallery-1").card-finalists__photo.gallery-photo._fit
+										img._fit-img(src=img + "/contest-page/finalists/" + (i+1) + ".jpg" alt="alt")
+	include _misc/gallery-popup
 //- img(src=img + "demo.jpg")
 //- img(src=ico + "amex.svg")
 
@@ -84,10 +120,10 @@ block page-scripts
 	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
 		
 	//- magnific-popup--------------------------
-	// script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+	script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
 		
 	//- slick--------------------------
-	// script(src="js/libs/slick/slick.min.js")
+	script(src="js/libs/slick/slick.min.js")
 		
 	//- slick-master (без лишних контейнеров)--------------------------
 	//- script(src="js/libs/slick/slick.js")

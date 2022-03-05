@@ -382,6 +382,28 @@ line-height: calc(44/36);
 	}
 
 }
+.user-card--row{
+	align-items: center;
+
+	@include max-screen($sm){
+		display: block;
+	}
+	.tag{
+		margin-right: 20px;
+		@include max-screen($sm){
+			margin-bottom: 15px;
+		}
+	}
+	.user-card__info{
+			display: flex;
+			align-items: center;
+
+		}
+
+		.user-card__name{
+			margin-right: 10px;
+		}
+}
 .popup-gallery__slide{
 	padding-bottom: prc(720, 1110);
 }

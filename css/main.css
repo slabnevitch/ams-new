@@ -3819,6 +3819,44 @@ h2 {
   position: relative;
 }
 
+.user-card--row {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .user-card--row {
+    display: block;
+  }
+}
+
+.user-card--row .tag {
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .user-card--row .tag {
+    margin-bottom: 15px;
+  }
+}
+
+.user-card--row .user-card__info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.user-card--row .user-card__name {
+  margin-right: 10px;
+}
+
 .popup-gallery__slide {
   padding-bottom: 64.86486%;
 }
@@ -6054,22 +6092,7 @@ button.mfp-close {
 }
 
 .info-page-contest {
-  padding-bottom: 100px;
-  padding-top: 100px;
-}
-
-@media (max-width: 1170px) {
-  .info-page-contest {
-    padding-bottom: -webkit-calc(39px + 61 * ((100vw - 320px) / 850));
-    padding-bottom: calc(39px + 61 * ((100vw - 320px) / 850));
-  }
-}
-
-@media (max-width: 1170px) {
-  .info-page-contest {
-    padding-top: -webkit-calc(39px + 61 * ((100vw - 320px) / 850));
-    padding-top: calc(39px + 61 * ((100vw - 320px) / 850));
-  }
+  padding: 100px 0;
 }
 
 .info-page-contest__block {
@@ -6106,6 +6129,63 @@ button.mfp-close {
 
 .info-page-contest__text:last-child {
   margin-bottom: 0;
+}
+
+.finalists .wide-container {
+  padding-top: 77px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 1170px) {
+  .finalists .wide-container {
+    padding-top: -webkit-calc(49px + 28 * ((100vw - 320px) / 850));
+    padding-top: calc(49px + 28 * ((100vw - 320px) / 850));
+  }
+}
+
+@media (max-width: 1170px) {
+  .finalists .wide-container {
+    padding-bottom: -webkit-calc(0px + 40 * ((100vw - 320px) / 850));
+    padding-bottom: calc(0px + 40 * ((100vw - 320px) / 850));
+  }
+}
+
+.finalists h1 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: -webkit-calc(34/28)/16em;
+  line-height: calc(34/28)/16em;
+}
+
+.finalists h1 .tag {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+.card-finalists {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(50% - 30px);
+  width: calc(50% - 30px);
+  margin-bottom: 30px;
+  padding: 30px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.card-finalists__header {
+  margin-bottom: 20px;
+}
+
+.card-finalists__photo {
+  display: block;
+  padding-bottom: 64.90196%;
 }
 
 /*--------------------END contest-page----------------------*/

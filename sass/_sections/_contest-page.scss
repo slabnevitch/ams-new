@@ -181,11 +181,8 @@
 }
 .page-contest__info {}
 .info-page-contest {
-	@include adaptive-value('padding-bottom', 100, 39, 1);
-	@include adaptive-value('padding-top', 100, 39, 1);
+	padding: 100px 0;
 }
-.wrapper-simple {}
-.wrapper-flex {}
 .info-page-contest__block {
 	@include col();
 	@include size(5);
@@ -213,4 +210,52 @@
 	}
 	
 }
+.finalists {
+	.wide-container {
+		@include adaptive-value('padding-top', 77, 49, 1);
+		@include adaptive-value('padding-bottom', 40, 0, 1);
+	}
+	h1{
+		margin-bottom: 30px;
+		font-size: 28px;
+		line-height: em(calc(34/28));
+
+		.tag {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 16px;
+			margin-left: 20px;
+		}
+	}
+}
+.wrapper-flex {}
+.finalists__card {}
+.card-finalists {
+	@include col();
+	@include size(6);
+	margin-bottom: 30px;
+	padding: 30px;
+	border-radius: 10px;
+	background-color: #fff;
+}
+.card-finalists__header {
+	margin-bottom: 20px;
+}
+.user-card {}
+.user-card--horizontal {}
+.user-card--row {}
+.tag-mini {}
+.tag-misc-empty {}
+.user-card__info {}
+.user-card__name {}
+.user-card__link {}
+.icon {}
+.icon-VK {}
+.card-finalists__photo {
+	display: block;
+	padding-bottom: prc(331,510);
+}
+._fit {}
+._fit-img {}
+
 /*--------------------END contest-page----------------------*/ 
