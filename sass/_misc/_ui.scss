@@ -170,6 +170,7 @@ line-height: calc(24/20);
 		border: 1px solid #6F6F75;
 		font-family: $ibm-reg;
 		color: $text;
+		background-color: transparent;
 		@include placecolor($text);
 	}
 	&__checkbox {
@@ -465,6 +466,10 @@ line-height: calc(44/36);
 	background-color: $accent;
 	cursor: pointer;
 
+	&.wht{
+		background-color: #fff;
+	}
+
 	.icon{
 		@include absolute-center;
 	}
@@ -511,6 +516,18 @@ line-height: calc(44/36);
 
 		}
 
+	}
+}
+.white-nav{
+	.slider-arrow-prev,
+	.slider-arrow-next{
+		background-color: #fff;
+	}
+
+	.slick-dots{
+		button{
+			background-color: #fff;
+		}
 	}
 }
 button.mfp-close{

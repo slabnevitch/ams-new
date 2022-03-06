@@ -41,6 +41,28 @@ block content
 
 							button Если надо кнопка
 
+							.start-learning
+								.wrapper-flex
+									.start-learning__left
+										.start-learning__title Начни учиться бесплатно
+										p Зарегистрируйся в AMS3 и получи бесплатный доступ к интенсивам, курсам, коллекциям блоков, семейств, моделей и текстур
+
+										.btn.btn-wht.btn-sm Начать обучение
+
+									.start-learning__right
+										.your-choice
+											.your-choice__wrap
+												.your-choice__header
+													.tag.tag-mini.tag-autocad-bg Autocad
+													.tag.tag-mini.tag-base-bg Бесплатно
+												.your-choice__body
+													.your-choice__title Базовый курс по 3ds Max + Corona Render
+													.your-choice__img._fit
+														img._fit-img(src=img + 'you-selection.jpg' alt="alt")
+													.your-choice__bottom
+														.your-choice__label 13 уроков
+														.your-choice__label Без подготовки
+
 							h2 Заморозка/разморозка слоёв AutoCAD
 
 							p Заморозка слоя — действие аналогичное выкл./вкл. слоя. Объекты исчезают с экрана, однако при этом они полностью убираются из рабочего пространства. При разморозке слоя выполняется регенерация чертежа (его перерисовка), а значит, все элементы будут более адекватно и правильно отображаться на чертеже.
@@ -75,6 +97,8 @@ block content
 								|  Напишите нам.
 							a(href="/").btn.btn-accented Стать автором
 
+			include _blocks/start-learning
+			
 			.lessons-by-theme
 				.wide-container
 					.wrapper-simple
@@ -132,7 +156,7 @@ block page-scripts
 	script(src="js/libs/mediaelement/mediaelement-and-player.min.js")
 		
 	//- slick--------------------------
-	//- script(src="js/libs/slick/slick.min.js")
+	script(src="js/libs/slick/slick.min.js")
 		
 	//- slick-master (без лишних контейнеров)--------------------------
 	//- script(src="js/libs/slick-master/slick.js")

@@ -1,0 +1,69 @@
+/*--------------------start-learning----------------------*/
+.start-learning {
+	.wide-container {
+		background-color: $accent;
+	}
+
+}
+.wrapper-simple {}
+.wrapper-flex {}
+.start-learning__left {
+	@include col();
+	@include size(7);
+
+	p{
+		margin-top: 0;
+		margin-bottom: 50px;
+		font-size: 24px;
+		line-height: 136.02%;
+	}
+}
+.start-learning__title {
+	margin-bottom: 20px;
+	font-size: 48px;
+line-height: calc(59/48);
+font-family: $bold;
+}
+.btn {}
+.btn-wht {}
+.btn-sm {}
+.start-learning__right {
+	position: relative;
+	@include col();
+	@include size(5);
+	.your-choice {
+		position: static;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.slider-arrow-prev{
+		left: 0;
+	}
+	.slider-arrow-next{
+		right: 0;
+	}
+}
+.start-learning__slider {
+	.slick-slide{
+		text-align: center;
+
+		.your-choice__title{
+			text-align: left;
+		}
+	}
+}
+.your-choice__heading {}
+.your-choice__wrap {}
+.your-choice__header {}
+.tag {}
+.tag-mini {}
+.tag-autocad-bg {}
+.tag-base-bg {}
+.your-choice__body {}
+.your-choice__title {}
+.your-choice__img {}
+._fit {}
+._fit-img {}
+.your-choice__bottom {}
+.your-choice__label {}
+/*--------------------END start-learning----------------------*/ 

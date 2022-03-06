@@ -100,8 +100,6 @@
 				left: -27px;
 				top: 7px;
 			}
-
-
 		}
 	}
 	blockquote{
@@ -110,7 +108,25 @@
 		background-color: $gray-bg;
 		line-height: 22.4px;
 	}
+	.start-learning{
+		padding: 50px;
+		margin: 60px 0;
+		background-color: $accent;
 
+		&__title{
+			font-size: 36px;
+			line-height: calc(44/36);
+		}
+		p{
+			margin-bottom: 20px;
+			font-size: 16px;
+		}
+		.start-learning__left,
+		.start-learning__right {
+			@include size(6);
+		}
+
+	}
 }
 .article__caption {
 	@extend .content-page__caption;

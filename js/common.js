@@ -13,6 +13,18 @@
 	// End ibg class
 	$(document).ready(function() {
 		console.log('jQuery document ready');
+
+		// start-learning__slider
+		if($('.start-learning__slider').length > 0 ){
+			$('.start-learning__slider').slick({
+				prevArrow: $('.start-learning__slider').closest('.start-learning__right').find('.slider-arrow-prev'),
+				nextArrow: $('.start-learning__slider').closest('.start-learning__right').find('.slider-arrow-next'),
+				dots: true
+			});
+
+		}
+
+		// END start-learning__slider
 			if($('.tile-item__photo').length > 0 || $('.gallery-photo').length > 0){
 		
 		// Magnific popup
