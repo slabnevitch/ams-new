@@ -3,6 +3,16 @@
 .wrapper-flex {
 	// flex-wrap: initial;
 }
+.page-history {
+	.learn-in{
+		flex: 1 1 auto;
+		@include col();
+		margin-left: 300px;
+		@include max-screen($md){
+			margin-left: 15px;
+		} 
+	}
+}
 .page-history__top {
 	@include col();
 	@include size(12);
@@ -161,19 +171,16 @@
 	}
 }
 .learn-in{
-	flex: 1 1 auto;
-	@include col();
-	margin-left: 300px;
-	@include adaptive-value('margin-bottom', 100, 49, 1);
+	
+	
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@include adaptive-value('margin-bottom', 100, 49, 1);
 	@include adaptive-value('padding', 50, 40, 1);
 	background-color: $gray-bg;
 
-	@include max-screen($md){
-		margin-left: 15px;
-	} 
+	
 	@include max-screen($sm){
 		flex-direction: column;
 		align-items: flex-start;

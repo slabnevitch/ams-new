@@ -1,0 +1,207 @@
+extends _misc/main
+block title
+	| Статья
+	- var authorized = false;
+	- var headerMenu = true;
+block content
+	.wrapper-simple
+			ul.breadcrumbs
+				li.breadcrumbs__item
+					a(href="").breadcrumbs__link Главная
+				li.breadcrumbs__item
+					span.breadcrumbs__target Уроки и статьи
+
+	.page.page-article
+			.wrapper-simple
+				.wrapper-flex
+					.page-article__left
+						.user-card.user-card--vertical
+							.user-avatar
+								img(src=img + "user.jpg" alt="alt")								
+							.user-card__info
+								.user-card__name Иван Овидиопольский
+								.user-card__role Дизайнер в РА 100% в городе на дороге
+								.user-card__link
+									+icon('insta')
+									span ovidiop
+					.page-article__right
+						article.article
+							.tag.tag-autocad-bg Autocad
+							h1 Операции над слоями AutoCAD: выключение, заморозка, блокировка
+
+							p Отключение слоёв в Автокаде приводит к тому, что на экране исчезают объекты того или иного слоя. Т.е. происходит временное их скрытие с рабочего пространства.
+							p Вопрос: Как отключить слой в Автокаде?
+							p Достаточно в Диспетчере слоёв нажать на «лампочку», как показано на рис. ниже. Изображение лампочки изменится (она будет выключена).
+
+							video(poster="img/contest-page/preview.jpg")
+								source(src="https://www.youtube.com/watch?v=dGt08ylXCj0&list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&index=3&t=0s", type="video/youtube")
+
+							h3 Вопрос: Как отключить все слои в Автокаде?
+							p Для отключения слоёв служит команда «Откл» (она же СЛОЙОТКЛ), которая позволяет отключить слой выбранного объекта. Для быстрого выбора всех элементов чертежа можно воспользоваться сочетанием клавиш Ctrl+A.
+
+							button Если надо кнопка
+
+							h2 Заморозка/разморозка слоёв AutoCAD
+
+							p Заморозка слоя — действие аналогичное выкл./вкл. слоя. Объекты исчезают с экрана, однако при этом они полностью убираются из рабочего пространства. При разморозке слоя выполняется регенерация чертежа (его перерисовка), а значит, все элементы будут более адекватно и правильно отображаться на чертеже.
+
+							img(src="img/history-page/1.jpg" alt="alt")
+							.article__caption Описание картинки
+
+							h3 Вопрос: Как отключить все слои в Автокаде?
+
+							- var list = ['Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия', 'Кстати, непосредственные участники технического прогресса, вне зависимости от их уровня, должны быть объективно рассмотрены соответствующими инстанциями', 'Каждый из нас понимает очевидную вещь: дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании прогресса профессионального сообщества', 'Следует отметить, что граница обучения кадров играет определяющее значение для своевременного выполнения сверхзадачи'];
+							ol
+								each li in list
+									li= li
+
+							h3 Вопрос: Как отключить все слои в Автокаде?
+							ul
+								each li in list
+									li= li
+
+							blockquote Заморозка слоя — действие аналогичное выкл./вкл. слоя. Объекты исчезают с экрана, однако при этом они полностью убираются из рабочего пространства. При разморозке слоя выполняется регенерация чертежа (его перерисовка), а значит, все элементы будут более адекватно и правильно отображаться на чертеже.
+
+							h2 Включение/отключение слоёв в Автокаде
+
+							p Отключение слоёв в Автокаде приводит к тому, что на экране исчезают объекты того или иного слоя. Т.е. происходит временное их скрытие с рабочего пространства.
+							p Вопрос: Как отключить слой в Автокаде?
+							p Достаточно в Диспетчере слоёв нажать на «лампочку», как показано на рис. ниже. Изображение лампочки изменится (она будет выключена).
+						.learn-in
+							.learn-in__title Хотите стать автором 
+								br
+								| и зарабатывать на этом? 
+								br
+								|  Напишите нам.
+							a(href="/").btn.btn-accented Стать автором
+
+			.lessons-by-theme
+				.wide-container
+					.wrapper-simple
+						.lessons-by-theme__title Статьи и уроки по этой теме
+						
+						.wrapper-flex.lessons-cards
+							- var titles = ['Настройки отображения поверхности в Civil 3D', 'AutoCAD. Создаем план этажа/квартиры. Самый быстрый способ', '10 главных принципов AutoCAD, без которых ваша работа не эффективна. Часть №1'];
+							each item, i in titles
+								a(href="/").lesson-card
+									.lesson-card__img._fit
+										img._fit-img(src=img + "/lessons-page/" + (i+1) + ".jpg" alt="alt")
+									.lesson-card__body
+										h2= item
+										.lesson-card__text На уроках Алексей объясняет все доходчиво и понятно, а обратная связь помогает решит дополнительные вопросы, которые возникли в ходе обучения. Спасибо большое за полученные знания. Всем рекомендую.
+									.lesson-card__footer
+										.lesson-card__views
+											+icon('eye')
+											| 1245
+										.lesson-card__date 1.10.2021 г.
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+
+	script(src="js/libs/mediaelement/mediaelement-and-player.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

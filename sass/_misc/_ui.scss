@@ -14,6 +14,11 @@ h2{
 	font-size: 28px;
 	line-height: calc(34/28);
 }
+h3{
+	margin-bottom: 10px;
+	font-size: 20px;
+line-height: calc(24/20);
+}
 .tag{
 	display: inline-block;
 	padding: 5px 15px;
@@ -547,6 +552,8 @@ button.mfp-close{
 }
 
 .wide-container{
+	padding-top: 70px;
+	padding-bottom: 70px;
   max-width: 1440px;
   margin: 0 auto;
   background-color: #F8F8FA;
