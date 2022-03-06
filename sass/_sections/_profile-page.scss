@@ -3,6 +3,7 @@
 .page-profile {
 	.wide-container {
 		@include adaptive-value('padding-top', 70, 39, 1);
+		@include adaptive-value('padding-bottom', 87, 0, 1);
 	}
 
 }
@@ -11,13 +12,20 @@
 .page-profile__user {
 	@include col();
 	@include size(9);
+	@include size-sm(12);
 	display: flex;
 	align-items: center;
 	@include adaptive-value('padding-bottom', 50, 39, 1);
 
+	@include max-screen($sm){
+		display: block;
+	}
+
 	h1{
+		margin-bottom: 0;
 		flex: 1 1 auto;
 		font-size: 40px;
+		@include adaptive-value('font-size', 40, 19, 1);
 		line-height: calc(49/40);
 	}
 }
@@ -26,6 +34,12 @@
 	// flex: 1 1 auto;
 	flex-shrink: 0;
 	margin-right: 40px;
+
+	@include max-screen($sm){
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+	}
 }
 .page-profile__img {
 	width: 200px;
@@ -34,6 +48,17 @@
 	position: relative;
 	border-radius: 50%;
 	overflow: hidden;
+
+	@include max-screen($xs){
+		width: 150px;
+		height: 150px;
+		margin-right: 10px;
+		margin-bottom: 0;
+	}
+	@include max-screen(350px){
+		width: 90px;
+		height: 90px;
+	}
 
 	img{
 		@include absolute-center;
@@ -54,6 +79,11 @@
 .page-profile__text {
 	@include col();
 	@include size(5);
+	@include size-sm(12);
+
+	@include max-screen($sm){
+		margin-bottom: 30px;
+	}
 }
 .page-profile__title {
 	margin-bottom: 10px;
@@ -72,8 +102,10 @@ line-height: 24px;
 }
 .page-profile__form {
 	@include col();
-	@include size(5);
-	@include shift-left(2);
+	@include size(6);
+	@include shift-left(1);
+	@include size-sm(12);
+	@include shift-sm-left(0);
 	
 	.form__label {
 
@@ -85,6 +117,10 @@ line-height: 24px;
 	.form__input {
 
 		max-width: 380px;
+
+		@include max-screen($xs){
+			max-width: none;
+		}
 	}
 	p{
 		max-width: 380px;

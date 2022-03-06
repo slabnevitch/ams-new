@@ -154,6 +154,7 @@ h2{
 	&__label{
 		display: block;
 		margin-bottom: 30px;
+		position: relative;
 	}
 	&__input{
 		padding: 16px;
@@ -165,6 +166,38 @@ h2{
 		font-family: $ibm-reg;
 		color: $text;
 		@include placecolor($text);
+	}
+	&__checkbox {
+		@include checkbox();
+
+		&:checked + .form__false-checkbox{
+			background: $accent;
+			border-color: $accent;
+			.icon{
+				display: block;
+			}
+		}
+	}
+	&__false-checkbox {
+		position: relative;
+		width: 20px;
+		height: 20px;
+		margin-right: 12px;
+		display: inline-block;
+		vertical-align: middle;
+		background-color: transparent;
+		border-radius: 5px;
+		border: 1px solid #DBDBDB;
+
+		.icon{
+			@include absolute-center();
+			display: none;
+			font-size: 10px;
+			color: #2D2D2F;
+		}
+	}
+	&__checkbox-label {
+		vertical-align: middle;
 	}
 }
 .search{

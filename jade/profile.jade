@@ -9,7 +9,7 @@ block content
 			li.breadcrumbs__item
 				a(href="").breadcrumbs__link Главная
 			li.breadcrumbs__item
-				span.breadcrumbs__target Уроки и статьи
+				span.breadcrumbs__target Мой профиль
 
 	.page.page-profile
 		.wide-container
@@ -32,7 +32,7 @@ block content
 								p.page-profile__prgf Они нужны для получения доступа к платформу, получения сертификата и кураторам.
 
 							.page-profile__form
-								.form
+								form.form
 									label.form__label
 										input(autocomplete="off" type="text" name="name" class="form__input" placeholder="Имя")
 
@@ -80,7 +80,7 @@ block content
 								.page-profile__title Изменить пароль
 
 							.page-profile__form
-								.form
+								form.form
 									label.form__label
 										input(autocomplete="off" type="text" name="name" class="form__input" placeholder="Пароль")
 
@@ -97,13 +97,22 @@ block content
 									| вы хотите получать
 
 							.page-profile__form
-								.form
+								form.form
 									- var checks = ['Новости платформы', 'Ответ куратора', 'Акции'];
-									each item in checks
-										label.form__label
-											input(type="text" class="form__checkbox")
-											span.form__false-checkbox
-											span.form__checkbox-label= item
+									each item, i in checks
+
+										if i==0
+											label.form__label
+												input(type="checkbox" checked class="form__checkbox" name="name" + (i+1))
+												span.form__false-checkbox
+													+icon('check')
+												span.form__checkbox-label= item
+										else
+											label.form__label
+												input(type="checkbox" class="form__checkbox" name="name" + (i+1))
+												span.form__false-checkbox
+													+icon('check')
+												span.form__checkbox-label= item
 
 //- img(src=img + "demo.jpg")
 //- img(src=ico + "amex.svg")
