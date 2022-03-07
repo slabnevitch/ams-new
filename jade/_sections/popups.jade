@@ -1,0 +1,16 @@
+.popup.popup-demo-disabled#popup-demo-disabled
+		.popup__header
+			.popup__logo
+				img(src=img + "logo.svg" alt="alt")
+		.popup__body
+			.popup__title Восстановить пароль
+		
+			p.popup__text Укажите ваш email при регистрации.
+			p.popup__text На него будет выслано письмо с инструкцией по восстановлению пароля.
+
+			form.form
+				label.form__label
+					input(autocomplete="off" type="text" name="name" class="form__input" placeholder="Ваш email")
+
+				.form__bottom
+					button(type="button").btn.btn-accented Восстановить пароль
