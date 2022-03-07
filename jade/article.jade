@@ -17,7 +17,7 @@ block content
 					.page-article__left
 						.user-card.user-card--vertical
 							.user-avatar
-								img(src=img + "user.jpg" alt="alt")								
+								img(src=img + "profile-user.jpg" alt="alt")								
 							.user-card__info
 								.user-card__name Иван Овидиопольский
 								.user-card__role Дизайнер в РА 100% в городе на дороге
@@ -26,14 +26,14 @@ block content
 									span ovidiop
 					.page-article__right
 						article.article
-							.tag.tag-autocad-bg Autocad
+							.tag.tag-autocad-bg(data-da="page-article__left,768,first") Autocad
 							h1 Операции над слоями AutoCAD: выключение, заморозка, блокировка
 
 							p Отключение слоёв в Автокаде приводит к тому, что на экране исчезают объекты того или иного слоя. Т.е. происходит временное их скрытие с рабочего пространства.
 							p Вопрос: Как отключить слой в Автокаде?
 							p Достаточно в Диспетчере слоёв нажать на «лампочку», как показано на рис. ниже. Изображение лампочки изменится (она будет выключена).
 
-							video(poster="img/contest-page/preview.jpg")
+							video(poster="img/article-video-cover.jpg")
 								source(src="https://www.youtube.com/watch?v=dGt08ylXCj0&list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&index=3&t=0s", type="video/youtube")
 
 							h3 Вопрос: Как отключить все слои в Автокаде?
@@ -63,7 +63,7 @@ block content
 													.timer-window__label секунды
 
 
-										.btn.btn-wht.btn-sm Начать обучение
+										.btn.btn-wht.btn-sm(data-da="start-learning__right,991,last") Начать обучение
 
 									.start-learning__right
 										.your-choice
@@ -78,6 +78,34 @@ block content
 													.your-choice__bottom
 														.your-choice__label 13 уроков
 														.your-choice__label Без подготовки
+
+							.start-learning
+								.wrapper-flex
+									.start-learning__left
+										.start-learning__title Начни учиться бесплатно
+										p Зарегистрируйся в AMS3 и получи бесплатный доступ к интенсивам, курсам, коллекциям блоков, семейств, моделей и текстур
+
+										.timer-window
+											.timer-window__timer(data-date="2022-03-08 00:00:00" data-cookie="2,4,35")
+												.timer-window__block.timer-window__days
+													.timer-window__days-count 12
+													.timer-window__label дни
+												.timer-window__block
+													.timer-window__hour.timer-window__count 08
+													.timer-window__label часы
+												.timer-window__block
+													.timer-window__minute.timer-window__count 45
+													.timer-window__label минуты
+												.timer-window__block
+													.timer-window__second.timer-window__count 32
+													.timer-window__label секунды
+
+
+										.btn.btn-wht.btn-sm Начать обучение
+
+									.start-learning__right
+										.start-learning__img._fit
+											img._fit-img(src="img/contest-page/4.jpg" alt="alt")
 
 							h2 Заморозка/разморозка слоёв AutoCAD
 
@@ -190,7 +218,7 @@ block page-scripts
 	//- VANILLA JS===================================
 	script(src="js/timer.js")
 	//- dynamic-adaptive--------------------------
-	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+	script(src="js/libs/dynamic-adaptive/da.min.js")
 		
 	//- slideout--------------------------
 	//- script(src="js/libs/slideout/slideout.js")

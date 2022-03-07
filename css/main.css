@@ -6995,6 +6995,60 @@ button.mfp-close {
   flex: 0 0 270px;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .page-article__left {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+    margin-bottom: 41px;
+  }
+}
+
+.page-article__left .tag {
+  margin-bottom: 23px;
+}
+
+@media only screen and (max-width: 480px) {
+  .page-article__left .tag {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .page-article__left .user-card {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+
+.page-article__left .user-card .user-avatar {
+  width: 100px;
+  height: 100px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .page-article__left .user-card .user-avatar {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .page-article__left .user-card .user-avatar {
+    width: 64px;
+    height: 64px;
+  }
+}
+
 .page-article__right {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -7003,6 +7057,13 @@ button.mfp-close {
   margin-right: 15px;
   width: -webkit-calc(100% - 270px - 60px);
   width: calc(100% - 270px - 60px);
+}
+
+@media only screen and (max-width: 767.98px) {
+  .page-article__right {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
 }
 
 .article {
@@ -7015,6 +7076,18 @@ button.mfp-close {
 
 .article h1 {
   margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 991px) {
+  .article h1 {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .article h1 {
+    font-size: 28px;
+  }
 }
 
 .article h2 {
@@ -7102,16 +7175,43 @@ button.mfp-close {
   line-height: 22.4px;
 }
 
+@media only screen and (max-width: 576px) {
+  .article blockquote {
+    margin-top: 30px;
+  }
+}
+
 .article .start-learning {
   padding: 50px;
   margin: 60px 0;
   background-color: #FFEF68;
 }
 
+@media only screen and (max-width: 576px) {
+  .article .start-learning {
+    padding: 40px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .article .start-learning {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .article .start-learning__title {
   font-size: 36px;
   line-height: -webkit-calc(44/36);
   line-height: calc(44/36);
+}
+
+@media only screen and (max-width: 576px) {
+  .article .start-learning__title {
+    font-size: 28px;
+  }
 }
 
 .article .start-learning p {
@@ -7125,15 +7225,79 @@ button.mfp-close {
   width: calc(50% - 30px);
 }
 
+@media screen and (max-width: 991px) {
+  .article .start-learning .start-learning__left,
+  .article .start-learning .start-learning__right {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
+.article .start-learning .start-learning__right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+@media only screen and (max-width: 991px) {
+  .article .start-learning .start-learning__right {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+
+.article .start-learning .start-learning__right .start-learning__img {
+  padding-bottom: 0;
+  width: 320px;
+  height: 332px;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  .article .start-learning .start-learning__right .start-learning__img {
+    width: 100%;
+  }
+}
+
+.article .start-learning .start-learning__right .your-choice {
+  margin: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .article .start-learning .start-learning__right .your-choice {
+    margin-bottom: 20px;
+  }
+}
+
+.article .start-learning .timer-window {
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 991px) {
+  .article .start-learning .timer-window {
+    margin-bottom: 20px;
+  }
+}
+
 .lessons-by-theme__title {
   margin-bottom: 30px;
   font-family: "MontserratBold", sans-serif;
   font-size: 36px;
   line-height: 44px;
-}
-
-.timer-window {
-  margin-bottom: 50px;
 }
 
 .timer-window__timer {
@@ -7200,6 +7364,13 @@ button.mfp-close {
   background-color: #FFEF68;
 }
 
+@media only screen and (max-width: 576px) {
+  .start-learning .wide-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
 .start-learning__left {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -7210,11 +7381,38 @@ button.mfp-close {
   width: calc(58.33333% - 30px);
 }
 
+@media screen and (max-width: 1100px) {
+  .start-learning__left {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .start-learning__left {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .start-learning__left {
+    margin-bottom: 30px;
+  }
+}
+
 .start-learning__left p {
   margin-top: 0;
   margin-bottom: 50px;
   font-size: 24px;
   line-height: 136.02%;
+}
+
+@media only screen and (max-width: 576px) {
+  .start-learning__left p {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
 }
 
 .start-learning__title {
@@ -7223,6 +7421,18 @@ button.mfp-close {
   line-height: -webkit-calc(59/48);
   line-height: calc(59/48);
   font-family: "MontserratBold", sans-serif;
+}
+
+@media only screen and (max-width: 991px) {
+  .start-learning__title {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .start-learning__title {
+    font-size: 28px;
+  }
 }
 
 .start-learning__right {
@@ -7236,7 +7446,22 @@ button.mfp-close {
   width: calc(41.66667% - 30px);
 }
 
+@media screen and (max-width: 1100px) {
+  .start-learning__right {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .start-learning__right {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
 .start-learning__right .your-choice {
+  margin-bottom: 0;
   position: static;
   margin-left: auto;
   margin-right: auto;

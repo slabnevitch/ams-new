@@ -61,7 +61,7 @@
             <div class="wrapper-flex">
               <div class="page-article__left">
                 <div class="user-card user-card--vertical">
-                  <div class="user-avatar"><img src="img/user.jpg" alt="alt"></div>
+                  <div class="user-avatar"><img src="img/profile-user.jpg" alt="alt"></div>
                   <div class="user-card__info">
                     <div class="user-card__name">Иван Овидиопольский</div>
                     <div class="user-card__role">Дизайнер в РА 100% в городе на дороге</div>
@@ -75,12 +75,12 @@
               </div>
               <div class="page-article__right">
                 <article class="article">
-                  <div class="tag tag-autocad-bg">Autocad</div>
+                  <div data-da="page-article__left,768,first" class="tag tag-autocad-bg">Autocad</div>
                   <h1>Операции над слоями AutoCAD: выключение, заморозка, блокировка</h1>
                   <p>Отключение слоёв в Автокаде приводит к тому, что на экране исчезают объекты того или иного слоя. Т.е. происходит временное их скрытие с рабочего пространства.</p>
                   <p>Вопрос: Как отключить слой в Автокаде?</p>
                   <p>Достаточно в Диспетчере слоёв нажать на «лампочку», как показано на рис. ниже. Изображение лампочки изменится (она будет выключена).</p>
-                  <video poster="img/contest-page/preview.jpg">
+                  <video poster="img/article-video-cover.jpg">
                     <source src="https://www.youtube.com/watch?v=dGt08ylXCj0&amp;list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&amp;index=3&amp;t=0s" type="video/youtube">
                   </video>
                   <h3>Вопрос: Как отключить все слои в Автокаде?</h3>
@@ -111,7 +111,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="btn btn-wht btn-sm">Начать обучение</div>
+                        <div data-da="start-learning__right,991,last" class="btn btn-wht btn-sm">Начать обучение</div>
                       </div>
                       <div class="start-learning__right">
                         <div class="your-choice">
@@ -130,6 +130,38 @@
                             </div>
                           </div>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="start-learning">
+                    <div class="wrapper-flex">
+                      <div class="start-learning__left">
+                        <div class="start-learning__title">Начни учиться бесплатно</div>
+                        <p>Зарегистрируйся в AMS3 и получи бесплатный доступ к интенсивам, курсам, коллекциям блоков, семейств, моделей и текстур</p>
+                        <div class="timer-window">
+                          <div data-date="2022-03-08 00:00:00" data-cookie="2,4,35" class="timer-window__timer">
+                            <div class="timer-window__block timer-window__days">
+                              <div class="timer-window__days-count">12</div>
+                              <div class="timer-window__label">дни</div>
+                            </div>
+                            <div class="timer-window__block">
+                              <div class="timer-window__hour timer-window__count">08</div>
+                              <div class="timer-window__label">часы</div>
+                            </div>
+                            <div class="timer-window__block">
+                              <div class="timer-window__minute timer-window__count">45</div>
+                              <div class="timer-window__label">минуты</div>
+                            </div>
+                            <div class="timer-window__block">
+                              <div class="timer-window__second timer-window__count">32</div>
+                              <div class="timer-window__label">секунды</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="btn btn-wht btn-sm">Начать обучение</div>
+                      </div>
+                      <div class="start-learning__right">
+                        <div class="start-learning__img _fit"><img src="img/contest-page/4.jpg" alt="alt" class="_fit-img"></div>
                       </div>
                     </div>
                   </div>
@@ -461,6 +493,7 @@
     <script src="js/libs/jquery.cookie.min.js"></script>
     
     <script src="js/timer.js"></script>
+    <script src="js/libs/dynamic-adaptive/da.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
