@@ -47,6 +47,22 @@ block content
 										.start-learning__title Начни учиться бесплатно
 										p Зарегистрируйся в AMS3 и получи бесплатный доступ к интенсивам, курсам, коллекциям блоков, семейств, моделей и текстур
 
+										.timer-window
+											.timer-window__timer(data-date="2022-03-08 00:00:00" data-cookie="2,4,35")
+												.timer-window__block.timer-window__days
+													.timer-window__days-count 12
+													.timer-window__label дни
+												.timer-window__block
+													.timer-window__hour.timer-window__count 08
+													.timer-window__label часы
+												.timer-window__block
+													.timer-window__minute.timer-window__count 45
+													.timer-window__label минуты
+												.timer-window__block
+													.timer-window__second.timer-window__count 32
+													.timer-window__label секунды
+
+
 										.btn.btn-wht.btn-sm Начать обучение
 
 									.start-learning__right
@@ -158,6 +174,7 @@ block page-scripts
 	//- slick--------------------------
 	script(src="js/libs/slick/slick.min.js")
 		
+	script(src="js/libs/jquery.cookie.min.js")
 	//- slick-master (без лишних контейнеров)--------------------------
 	//- script(src="js/libs/slick-master/slick.js")
 
@@ -171,6 +188,7 @@ block page-scripts
 
 
 	//- VANILLA JS===================================
+	script(src="js/timer.js")
 	//- dynamic-adaptive--------------------------
 	//- script(src="js/libs/dynamic-adaptive/da.min.js")
 		
