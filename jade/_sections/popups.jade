@@ -3,14 +3,32 @@
 			.popup__logo
 				img(src=img + "logo.svg" alt="alt")
 		.popup__body
-			.popup__title Восстановить пароль
+			.popup__title
+				.nosmile-icon
+					img(src=ico + "/nonsmile.svg" alt="alt")
+				Пробный доступ 
+				br
+				| к курсу на 7 дней окончен
 		
-			p.popup__text Укажите ваш email при регистрации.
-			p.popup__text На него будет выслано письмо с инструкцией по восстановлению пароля.
+			p.popup__text Рекомендуем пройти полную программу обучения
 
-			form.form
-				label.form__label
-					input(autocomplete="off" type="text" name="name" class="form__input" placeholder="Ваш email")
+			-var list = ['Бесрочный доступ', 'Поддержка куратора 365 дней', 'Сертификаты международного образца', 'Библиотеки дополнительных материалов', 'Профессиональные работы в портфолио'];
+			ul.popup__list
+				each li in list
+					li= li
 
-				.form__bottom
-					button(type="button").btn.btn-accented Восстановить пароль
+
+			button.btn.btn-accented Выбрать курс
+
+
+.popup.popup-last-step#popup-last-step
+		.popup__header
+			.popup__logo
+				img(src=img + "logo.svg" alt="alt")
+		.popup__body
+			.popup__title Последний шаг
+		
+			p.popup__text На ваш почтовый адрес отправлено письмо с подтверждением регистрации. Перейдите в письме по ссылке "Начать обучение”
+
+			.popup-last-step__img
+				img(src="img/last-step.jpg" alt="a;t")
