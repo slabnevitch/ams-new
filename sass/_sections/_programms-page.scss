@@ -4,18 +4,78 @@
 
 }
 .wrapper-simple {}
-.programms-cards{
+.programms-cards-slider{
+	// @include max-screen($sm){
+	// 	margin-left: 10px;
+	// }
+	.slick-track{
+		@include min-screen($sm){
+			margin-left: -15px;
+			margin-right: -15px;
+			width: 100% !important;
+			display: flex;
+			flex-wrap: wrap;
+			transform: translate3d(0px, 0px, 0px) !important;
+		}
+		@include max-screen($sm){
+			// margin-left: 2%;
+		}
+		// @include max-screen($xs){
+		// 	margin-left: 12px;
+		// }
+		// @include max-screen($xss){
+		// 	margin-left: 5px;
+		// }
+	}
+
+	.slick-slide{
+		display: flex;
+		@include min-screen($sm){
+			float: none;
+			
+		}
+		&.slick-cloned{
+			@include min-screen($sm){
+				display: none;
+				
+			}
+		}
+	}
+
+	.programm-card {
+    	display: flex;
+
+    	@include min-screen($md){
+    		margin-bottom: 30px;
+    		width: calc(50% - 30px) !important;
+    		
+    	}
+    	// @include max-screen($sm){
+    	// 	margin-right: 0;
+    	// 	margin-left: 0;
+    	// 	padding-right: 30px;
+    		
+    	// }
+	}
 }
-.wrapper-flex {}
-.contest-cards {}
+
 .programms-filters {
 	@include col();
 	flex: 1 1 170px;
+
+	@include max-screen($sm){
+		display: none;
+	}
 }
 .programms-content {
 	@include col();
 	width: calc(100% - 170px - 60px);
 	flex-shrink: 0;
+
+	@include max-screen($sm){
+		width: calc(100% - 15px);
+		margin-right: 0;
+	}
 }
 .programms-filters__title {
 	margin-bottom: 20px;

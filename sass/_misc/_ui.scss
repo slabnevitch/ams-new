@@ -665,12 +665,11 @@ button.mfp-close{
 }
 
 .programm-card {
-	margin-bottom: 30px;
+	
 	min-height: 280px;
 	display: flex;
-	@include col();
-	@include size(6);
 	border-radius: 10px;
+	@include col();
 
 	text-decoration: none;
 	color: $text;
@@ -684,7 +683,7 @@ button.mfp-close{
 }
 .programm-card__content {
 	padding: 30px 5px 20px 20px;
-	flex: 0 0 prc(280, 470);
+	flex: 1 1 prc(280, 470);
 	display: flex;
 	position: relative;
 	flex-direction:column;
@@ -700,7 +699,7 @@ button.mfp-close{
 	margin-left: 10px;
 	padding-bottom: 0;
 	border-radius: 0 10px 10px;
-	flex: 0 0 prc(180, 470);
+	flex: 1 1 prc(180, 470);
 	overflow: hidden;
 }
 .programm-card__tags {

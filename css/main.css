@@ -4202,21 +4202,18 @@ button.mfp-close {
 }
 
 .programm-card {
-  margin-bottom: 30px;
   min-height: 280px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
-  width: -webkit-calc(50% - 30px);
-  width: calc(50% - 30px);
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
   text-decoration: none;
   color: #2D2D2F;
 }
@@ -4231,10 +4228,10 @@ button.mfp-close {
 
 .programm-card__content {
   padding: 30px 5px 20px 20px;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 59.57447%;
-  -ms-flex: 0 0 59.57447%;
-  flex: 0 0 59.57447%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 59.57447%;
+  -ms-flex: 1 1 59.57447%;
+  flex: 1 1 59.57447%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4259,10 +4256,10 @@ button.mfp-close {
   padding-bottom: 0;
   -webkit-border-radius: 0 10px 10px;
   border-radius: 0 10px 10px;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 38.29787%;
-  -ms-flex: 0 0 38.29787%;
-  flex: 0 0 38.29787%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 38.29787%;
+  -ms-flex: 1 1 38.29787%;
+  flex: 1 1 38.29787%;
   overflow: hidden;
 }
 
@@ -7679,6 +7676,57 @@ button.mfp-close {
 
 /*--------------------END start-learning----------------------*/
 /*--------------------_programms-page----------------------*/
+@media only screen and (min-width: 767.98px) {
+  .programms-cards-slider .slick-track {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: 100% !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-transform: translate3d(0px, 0px, 0px) !important;
+    transform: translate3d(0px, 0px, 0px) !important;
+  }
+}
+
+.programms-cards-slider .slick-slide {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (min-width: 767.98px) {
+  .programms-cards-slider .slick-slide {
+    float: none;
+  }
+}
+
+@media only screen and (min-width: 767.98px) {
+  .programms-cards-slider .slick-slide.slick-cloned {
+    display: none;
+  }
+}
+
+.programms-cards-slider .programm-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (min-width: 991px) {
+  .programms-cards-slider .programm-card {
+    margin-bottom: 30px;
+    width: -webkit-calc(50% - 30px) !important;
+    width: calc(50% - 30px) !important;
+  }
+}
+
 .programms-filters {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -7689,6 +7737,12 @@ button.mfp-close {
   -webkit-flex: 1 1 170px;
   -ms-flex: 1 1 170px;
   flex: 1 1 170px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .programms-filters {
+    display: none;
+  }
 }
 
 .programms-content {
@@ -7702,6 +7756,14 @@ button.mfp-close {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .programms-content {
+    width: -webkit-calc(100% - 15px);
+    width: calc(100% - 15px);
+    margin-right: 0;
+  }
 }
 
 .programms-filters__title {

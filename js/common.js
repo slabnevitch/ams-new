@@ -14,6 +14,37 @@
 	$(document).ready(function() {
 		console.log('jQuery document ready');
 
+		// programm cards slider
+
+		if($('.programms-cards-slider').length > 0){
+			$('.programms-cards-slider').slick({
+				dots: true,
+				slidesToShow: 1.04,
+				arrows: false,
+				responsive: [
+
+					{
+						breakpoint: 560,
+						settings: {
+
+							slidesPerRow: 2
+
+						}	
+					},
+					{
+						breakpoint: 400,
+						settings: {
+
+							rows: 1,
+							slidesPerRow: 1
+
+						}	
+					}
+				]
+			});
+		}
+		// END programm cards slider
+
 		// start-learning__slider
 		if($('.start-learning__slider').length > 0 ){
 			$('.start-learning__slider').slick({
