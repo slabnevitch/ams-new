@@ -160,6 +160,11 @@ line-height: calc(24/20);
 		display: block;
 		margin-bottom: 30px;
 		position: relative;
+
+		// &--check{
+		// 	display: flex;
+		// 	align-items: center;
+		// }
 	}
 	&__input{
 		padding: 16px;
@@ -657,5 +662,81 @@ button.mfp-close{
 }
 .mejs__overlay:hover > .mejs__overlay-button {
     background-position: -100px -10px; 
+}
+
+.programm-card {
+	margin-bottom: 30px;
+	min-height: 280px;
+	display: flex;
+	@include col();
+	@include size(6);
+	border-radius: 10px;
+
+	text-decoration: none;
+	color: $text;
+
+	&--pink{
+		background-color: #FFF1F1;
+		.program-icon {
+			background-color: #FFF1F1;
+		}
+	}
+}
+.programm-card__content {
+	padding: 30px 5px 20px 20px;
+	flex: 0 0 prc(280, 470);
+	display: flex;
+	position: relative;
+	flex-direction:column;
+		.program-icon{
+			position: absolute;
+
+			bottom: 10px;
+			right: -24px;
+			z-index: 2;		
+		}
+}
+.programm-card__img {
+	margin-left: 10px;
+	padding-bottom: 0;
+	border-radius: 0 10px 10px;
+	flex: 0 0 prc(180, 470);
+	overflow: hidden;
+}
+.programm-card__tags {
+	margin-bottom: 10px;
+	flex: 0 0 auto;
+}
+
+.programm-card__title {
+	font-family: $bold;
+	font-size: 24px;
+line-height: calc(29/24);
+}
+.programm-card__text{
+	font-size: 14px;
+	line-height: 18px;
+}
+.programm-card__body{
+	flex: 1 1 auto;
+	margin-bottom: 20;
+}
+.programm-card__bottom {
+	flex: 0 0 auto;
+	margin-top: auto;
+}
+.programm-card__exp {
+
+}
+.programm-card__params {
+	display: flex;
+	width: 100%;
+
+	div{
+
+		&:not(:last-child){
+			margin-right: 20px;
+		}
+	}
 }
 /*--------------------END UI----------------------*/ 

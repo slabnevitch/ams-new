@@ -1,0 +1,53 @@
+/*--------------------_programms-page----------------------*/
+.page {}
+.page-programms {
+
+}
+.wrapper-simple {}
+.programms-cards{
+}
+.wrapper-flex {}
+.contest-cards {}
+.programms-filters {
+	@include col();
+	flex: 1 1 170px;
+}
+.programms-content {
+	@include col();
+	width: calc(100% - 170px - 60px);
+	flex-shrink: 0;
+}
+.programms-filters__title {
+	margin-bottom: 20px;
+}
+.form {}
+.programms-filters__block {
+	margin-top: 30px;
+}
+.programms-filters__heading {
+	margin-bottom: 15px;
+	font-family: $bold;
+	font-size: 16px;
+line-height: 20px;
+}
+.form__label {
+	&:not(:last-child){
+		margin-bottom: 17px;
+		
+	}
+}
+.form__checkbox {}
+.form__false-checkbox {
+	margin-right: 9px;
+}
+.icon {}
+.icon-check {}
+.form__checkbox-label {
+	
+}
+.programms-filters__value {
+	color: $gray-text;
+	margin-left: 10px;
+}
+
+/*--------------------END _programms-page----------------------*/ 
