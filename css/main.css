@@ -7676,6 +7676,12 @@ button.mfp-close {
 
 /*--------------------END start-learning----------------------*/
 /*--------------------_programms-page----------------------*/
+@media only screen and (max-width: 767.98px) {
+  .programms-cards-slider .slick-list {
+    padding: 0 10% 0 0 !important;
+  }
+}
+
 @media only screen and (min-width: 767.98px) {
   .programms-cards-slider .slick-track {
     margin-left: -15px;
@@ -7712,6 +7718,10 @@ button.mfp-close {
   }
 }
 
+.programms-cards-slider .slick-dots li.slick-active button {
+  background-color: #FFEF68;
+}
+
 .programms-cards-slider .programm-card {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7721,9 +7731,61 @@ button.mfp-close {
 
 @media only screen and (min-width: 991px) {
   .programms-cards-slider .programm-card {
-    margin-bottom: 30px;
     width: -webkit-calc(50% - 30px) !important;
     width: calc(50% - 30px) !important;
+  }
+}
+
+@media only screen and (min-width: 767.98px) {
+  .programms-cards-slider .programm-card {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .programms-cards-slider .programm-card {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .programms-cards-slider .programm-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.programms-cards-slider .programm-card__img {
+  height: 280px;
+}
+
+@media only screen and (max-width: 480px) {
+  .programms-cards-slider .programm-card__img {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .programms-cards-slider .program-icon {
+    right: auto;
+    left: 50%;
+    bottom: -24px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .programms-cards-slider .programm-card__content {
+    padding-bottom: 30px;
   }
 }
 

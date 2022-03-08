@@ -8,6 +8,12 @@
 	// @include max-screen($sm){
 	// 	margin-left: 10px;
 	// }
+	.slick-list{
+		@include max-screen($sm){
+			padding:0 10% 0 0 !important;
+			
+		}
+	}
 	.slick-track{
 		@include min-screen($sm){
 			margin-left: -15px;
@@ -17,15 +23,6 @@
 			flex-wrap: wrap;
 			transform: translate3d(0px, 0px, 0px) !important;
 		}
-		@include max-screen($sm){
-			// margin-left: 2%;
-		}
-		// @include max-screen($xs){
-		// 	margin-left: 12px;
-		// }
-		// @include max-screen($xss){
-		// 	margin-left: 5px;
-		// }
 	}
 
 	.slick-slide{
@@ -41,21 +38,48 @@
 			}
 		}
 	}
-
+	.slick-dots li.slick-active button {
+   		 background-color: $accent;
+	}
 	.programm-card {
     	display: flex;
 
     	@include min-screen($md){
-    		margin-bottom: 30px;
     		width: calc(50% - 30px) !important;
     		
     	}
-    	// @include max-screen($sm){
-    	// 	margin-right: 0;
-    	// 	margin-left: 0;
-    	// 	padding-right: 30px;
+    	@include min-screen($sm){
+    		margin-bottom: 30px;
     		
-    	// }
+    	}
+    	@include max-screen($sm){
+    		margin-left: 0;
+    		margin-right: 30px;   		
+    	}
+    	@include max-screen($xss){
+    		flex-direction: column;
+    	}
+	}
+	.programm-card__img{
+		height: 280px;
+		@include max-screen($xss){
+			flex: 1 1 auto;
+			
+		}
+	}
+	.program-icon{
+		@include max-screen($xss){
+			right: auto;
+			left: 50%;
+			bottom: -24px;
+			transform: translateX(-50%);
+			
+		}
+	}
+	.programm-card__content{
+		@include max-screen($xss){
+			padding-bottom: 30px;
+		}
 	}
 }
 
