@@ -22,11 +22,14 @@ line-height: calc(24/20);
 .tag{
 	display: inline-block;
 	padding: 5px 15px;
+	margin-bottom: 10px;
 	font-family: $semi;
 	text-align: center;
 	line-height: calc(20 / 16);
 	border-radius: 50px;
 	border: 1px solid transparent;
+	text-decoration: none;
+	color: $text;
 
 	&-mini{
 		padding: 3px 10px;
@@ -73,6 +76,9 @@ line-height: calc(24/20);
 	}
 	&-landscape-empty{
 		border-color: #94D37E;
+	}
+	&-scketch-empty{
+		border-color: #56BCFF;
 	}
 	&-misc-bg{
 		background-color: #6B6B72;

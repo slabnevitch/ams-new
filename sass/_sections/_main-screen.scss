@@ -1,3 +1,118 @@
 /*--------------------_main-screen----------------------*/
+.main-screen {
+	@include adaptive-value('padding-top', 80, 45, 1);
+	@include adaptive-value('padding-bottom', 151, 59, 1);
+	overflow-x: hidden;
+}
+.wrapper-simple {
+	position: relative;
+}
+.main-screen__content {
+	max-width: 670px;
 
+	@include max-screen($sm){
+		max-width: none;
+	}  
+	h1{
+		position: relative;
+		margin-bottom: 20px;
+		z-index: 2;
+		
+		@include max-screen($xs){
+			font-size: 28px;
+		}  
+	}
+}
+.main-screen__mob-img{
+	display: none;
+	position: relative;
+	width: calc(100% + 30px);
+	margin-left: -15px;
+	margin-right: -15px;
+	height: 293px;
+	margin-bottom: 20px;
+
+	@include max-screen($sm){
+		display: block;
+	}
+	@include max-screen($xss){
+		width: calc(100% + 40px);
+		margin-left: -20px;
+		margin-right: -20px;
+		margin-top: -120px;
+	}
+
+	img{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		// height: 100%;
+		width: 100%;
+	}  
+}
+.main-screen__text {
+	@include adaptive-value('margin-bottom', 60, 29, 1);
+	font-size: 24px;
+	line-height: 136.02%;
+
+	@include max-screen($xs){
+		font-size: 20px;
+	}  
+}
+.main-screen__directions {}
+.directions-main-screen {}
+.directions-main-screen__title {
+	@include adaptive-value('margin-bottom', 30, 19, 1);
+	font-family: $bold;
+}
+.directions-main-screen__tags {}
+.directions-main-screen__tags-row {
+	@include adaptive-value('margin-bottom', 20, 9, 1);
+	display: flex;
+	flex-wrap: wrap;
+	
+	.tag {
+
+		&:not(:last-child){
+			@include adaptive-value('margin-right', 30, 9, 1);
+		}
+}
+.directions-main-screen__key {
+	margin-right: 15px;
+	font-size: 20px;
+	line-height: 136.02%;
+
+	@include max-screen($xs){
+		width: 100%;
+		margin-bottom: 10px;
+	}  
+}
+}
+.main-screen__img {
+	position: absolute;
+	// @include adaptive-value('bottom', 151, 59, 1);
+	bottom: 0;
+	left: prc(661, 1170);
+	width: prc(1073, 1170);
+	// height: prc(690, 1170);
+	height: 590px;
+
+	@include max-screen(1073px){
+		left: 70%;
+	} 
+	@include max-screen($sm){
+		display: none;
+	}  
+	img{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		max-width: 100%;
+		max-height: 100%;
+
+		@include max-screen($xss){
+			max-width: auto;
+		}  
+	}
+}
 /*--------------------END _main-screen----------------------*/ 

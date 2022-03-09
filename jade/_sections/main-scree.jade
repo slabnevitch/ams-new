@@ -1,31 +1,35 @@
 section.main-screen
 	.wrapper-simple
-		.wrapper-flex
-			.main-screen__content
-				h1 Образовательная платформа  по BIM, CAD, CG
+		.main-screen__content
+			h1 Образовательная платформа
+				br
+				| по BIM, CAD, CG
 
-				.main-screen__text Большие курсы и короткие интенсивы для новичков, практикующих специалистов и организаций
+			.main-screen__mob-img
+				img(src="img/main-page/main-visual-mob.svg" alt="alt")
 
-			.main-screen__directions.directions-main-screen
-				.directions-main-screen__title Выбери своё направление:
-				.directions-main-screen__tags
-					.directions-main-screen__tags-row
-						.directions-main-screen__key Проектирование:
-						.tag.tag-revit-empty Revit
-						.tag.tag-autocad-empty Autocad
-						.tag.tag-archicad-empty Archicad
+			.main-screen__text Большие курсы и короткие интенсивы для новичков, практикующих специалистов и организаций
 
-					.directions-main-screen__tags-row
-						.directions-main-screen__key Визуализация:
-						.tag.tag-3ds-empty 3Ds Max
-						.tag.tag-corona-empty Corona
-						.tag.tag-lumion-empty Lumion
+		.main-screen__directions.directions-main-screen
+			.directions-main-screen__title Выбери своё направление:
+			.directions-main-screen__tags
+				.directions-main-screen__tags-row
+					.directions-main-screen__key Проектирование:
+					a(href="/").tag.tag-revit-empty Revit
+					a(href="/").tag.tag-autocad-empty Autocad
+					a(href="/").tag.tag-archicad-empty Archicad
 
-					.directions-main-screen__tags-row
-						.directions-main-screen__key Дизайн:
-						.tag.tag-sketchup-empty SketchUp
-						.tag.tag-landscape-empty Ладшафт
-						.tag.tag-interior-empty Интерьеры
+				.directions-main-screen__tags-row
+					.directions-main-screen__key Визуализация:
+					a(href="/").tag.tag-3ds-empty 3Ds Max
+					a(href="/").tag.tag-corona-empty Corona
+					a(href="/").tag.tag-lumion-empty Lumion
 
-			.main-screen__img
-				img(src="img/main-page/main-visual.svg" alt="alt")
+				.directions-main-screen__tags-row
+					.directions-main-screen__key Дизайн:
+					.tag.tag-scketch-empty SketchUp
+					.tag.tag-landscape-empty Ладшафт
+					.tag.tag-interior-empty Интерьеры
+
+		.main-screen__img
+			img(src="img/main-page/main-visual.svg" alt="alt")
