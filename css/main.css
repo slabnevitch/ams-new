@@ -4202,7 +4202,7 @@ button.mfp-close {
 }
 
 .programm-card {
-  min-height: 280px;
+  min-height: 300px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4224,6 +4224,16 @@ button.mfp-close {
 
 .programm-card--pink .program-icon {
   background-color: #FFF1F1;
+}
+
+@media (any-hover: hover) {
+  .programm-card:hover .programm-card__title,
+  .programm-card:hover .programm-card__bottom {
+    display: none;
+  }
+  .programm-card:hover .programm-card__text {
+    display: block;
+  }
 }
 
 .programm-card__content {
@@ -4279,8 +4289,11 @@ button.mfp-close {
 }
 
 .programm-card__text {
+  max-height: 199px;
+  overflow: hidden;
   font-size: 14px;
   line-height: 18px;
+  display: none;
 }
 
 .programm-card__body {
@@ -7759,10 +7772,6 @@ button.mfp-close {
   }
 }
 
-.programms-cards-slider .programm-card__img {
-  height: 280px;
-}
-
 @media only screen and (max-width: 480px) {
   .programms-cards-slider .programm-card__img {
     -webkit-box-flex: 1;
@@ -7857,6 +7866,8 @@ button.mfp-close {
 }
 
 /*--------------------END _programms-page----------------------*/
+/*--------------------_main-screen----------------------*/
+/*--------------------END _main-screen----------------------*/
 /*--------------------footer----------------------*/
 .footer {
   padding: 30px 0;

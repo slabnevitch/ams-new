@@ -666,7 +666,7 @@ button.mfp-close{
 
 .programm-card {
 	
-	min-height: 280px;
+	min-height: 300px;
 	display: flex;
 	border-radius: 10px;
 	@include col();
@@ -678,6 +678,17 @@ button.mfp-close{
 		background-color: #FFF1F1;
 		.program-icon {
 			background-color: #FFF1F1;
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover{
+			.programm-card__title,
+			.programm-card__bottom{
+				display: none;
+			}
+			.programm-card__text{
+				display: block;
+			}
 		}
 	}
 }
@@ -713,8 +724,12 @@ button.mfp-close{
 line-height: calc(29/24);
 }
 .programm-card__text{
+	max-height: 199px;
+	overflow: hidden;
 	font-size: 14px;
 	line-height: 18px;
+	// @include dots-family-multi(9);
+	display: none;
 }
 .programm-card__body{
 	flex: 1 1 auto;
