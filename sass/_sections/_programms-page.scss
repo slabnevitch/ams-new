@@ -64,7 +64,7 @@
 		// height: 280px;
 		@include max-screen($xss){
 			flex: 1 1 auto;
-			
+			height: 280px;
 		}
 	}
 	.program-icon{

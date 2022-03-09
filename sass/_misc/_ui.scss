@@ -93,6 +93,21 @@ line-height: calc(24/20);
 		color: #fff;
 		background-color: #FF7878;
 	}
+	&-free-bg{
+		background-color: #B5EFA0;
+	}
+	&-archicad-bg{
+		color: #fff;
+		background-color: #86ADFF;
+	}
+	&-lumion-bg{
+		color: #fff;
+		background-color: #88AEC0;
+	}
+	&-3ds-bg{
+		color: #fff;
+		background-color: #5DC0C5;
+	}
 }
 .user-avatar{
 	width: 250px;
@@ -718,6 +733,11 @@ button.mfp-close{
 	border-radius: 0 10px 10px;
 	flex: 1 1 prc(180, 470);
 	overflow: hidden;
+
+	@include max-screen($xss){
+		margin-left: 0;
+		border-radius: 0 0 10px 10px;
+	}  
 }
 .programm-card__tags {
 	margin-bottom: 10px;

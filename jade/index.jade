@@ -7,6 +7,71 @@ block content
 	.page.index-page
 		include _sections/main-scree
 
+		.start-learning.start-learning-index
+			.wide-container
+				.wrapper-simple
+					.wrapper-flex
+						.start-learning__left
+							h2 Начни учиться бесплатно
+							p Зарегистрируйся в AMS3 и получи бесплатный доступ к интенсивам, курсам, коллекциям блоков, семейств, моделей и текстур
+
+							.btn.btn-wht.btn-sm Начать обучение
+
+						.start-learning__right
+							
+							.start-learning__slider-rows.white-nav
+								- for (var i=0; i < 2; i++)
+									a(href="#").your-choice
+										.your-choice__wrap
+											.your-choice__header
+												.tag.tag-mini.tag-autocad-bg Autocad
+												.tag.tag-mini.tag-base-bg Бесплатно
+											.your-choice__body
+												.your-choice__title Базовый курс Autocad
+											.your-choice__bottom
+												.your-choice__label 13 уроков
+												.your-choice__label Без подготовки
+
+									a(href="#").your-choice
+										.your-choice__wrap
+											.your-choice__header
+												.tag.tag-mini.tag-lumion-bg Lumion
+												.tag.tag-mini.tag-base-bg Бесплатно
+											.your-choice__body
+												.your-choice__title Иллюминация в Lumion 
+											.your-choice__bottom
+												.your-choice__label 13 уроков
+												.your-choice__label Без подготовки
+									
+									a(href="#").your-choice
+										.your-choice__wrap
+											.your-choice__header
+												.tag.tag-mini.tag-archicad-bg Archicad
+												.tag.tag-mini.tag-base-bg Бесплатно
+											.your-choice__body
+												.your-choice__title Марафон по Archicad
+											.your-choice__bottom
+												.your-choice__label 13 уроков
+												.your-choice__label Без подготовки
+									
+
+									a(href="#").your-choice
+										.your-choice__wrap
+											.your-choice__header
+												.tag.tag-mini.tag-3ds-bg 3Ds Max
+												.tag.tag-mini.tag-base-bg Бесплатно
+											.your-choice__body
+												.your-choice__title Базовый курс по 3ds Max + Corona Render
+											.your-choice__bottom
+												.your-choice__label 13 уроков
+												.your-choice__label Без подготовки
+
+							
+							.slider-arrow-prev.wht
+								+icon('chevron-left')
+							.slider-arrow-next.wht
+								+icon('chevron-right')
+
 //- img(src=img + "demo.jpg")
 //- img(src=ico + "amex.svg")
 
@@ -43,7 +108,7 @@ block page-scripts
 	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
 		
 	//- slick--------------------------
-	//- script(src="js/libs/slick/slick.min.js")
+	script(src="js/libs/slick/slick.min.js")
 		
 	//- slick-master (без лишних контейнеров)--------------------------
 	//- script(src="js/libs/slick-master/slick.js")

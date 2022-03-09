@@ -1,6 +1,6 @@
 /*--------------------enter-page----------------------*/
 .page-enter{
-	// height: 100%;	
+	height: 100%;	
 	overflow-x: hidden;
 	@include adaptive-value('padding-top', 100, 50, 1);
 	// margin-bottom: 200px;
@@ -155,6 +155,8 @@
 	top: 0;
 	right: 100px;
 	position: absolute;
+	text-decoration: none;
+	color: $text;
 
 	@include max-screen($md){
 		position: static;
@@ -165,6 +167,7 @@
 	}
 }
 .your-choice__heading{
+
 	font-size: 18px;
 	margin-bottom: 10px;
 	font-family: $semi;
@@ -179,19 +182,22 @@
 	padding: 23px 20px 13px 20px;
 
 	.tag{
-
+		margin-bottom: 0;
 		&:not(:last-child){
 			margin-right: 10px;
 		}
 	}
 }
 .tag {}
-.your-choice__body {}
+.your-choice__body {
+
+}
 .your-choice__title {
 	padding: 0 20px;
 	margin-bottom: 11px;
 	font-family: $semi;
 	line-height: 20px;
+	text-align: left;
 }
 .your-choice__img {
 	padding-bottom: prc(169,300);

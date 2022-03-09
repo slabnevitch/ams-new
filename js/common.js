@@ -33,6 +33,58 @@
 		}
 		// END programm cards slider
 
+		// main page start-learnig slider
+
+		if($('.start-learning__slider-rows').length > 0){
+			$('.start-learning__slider-rows').slick({
+			slidesToScroll: 2,
+			slidesToShow: 2,
+			loop: false,
+			rows: 2,
+			dots: true,
+			prevArrow: $('.start-learning-index').find('.slider-arrow-prev'),
+			nextArrow: $('.start-learning-index').find('.slider-arrow-next'),
+			responsive: [
+
+				{
+					breakpoint: 577,
+					settings: {
+						arrows: false,
+						slidesToShow: 1
+					}	
+				},
+				{
+					breakpoint: 768,
+					settings: {
+
+						// rows: 1,
+						slidesToShow: 1
+
+					}	
+				},
+				{
+					breakpoint: 900,
+					settings: {
+
+						// rows: 1,
+						slidesToShow: 2
+
+					}	
+				},
+				{
+					breakpoint: 1100,
+					settings: {
+
+						// rows: 1,
+						slidesToShow: 1
+
+					}	
+				}
+			]
+			});
+		}
+		// END main page start-learnig slider
+
 		// start-learning__slider
 		if($('.start-learning__slider').length > 0 ){
 			$('.start-learning__slider').slick({

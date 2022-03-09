@@ -3354,6 +3354,25 @@ h3 {
   background-color: #FF7878;
 }
 
+.tag-free-bg {
+  background-color: #B5EFA0;
+}
+
+.tag-archicad-bg {
+  color: #fff;
+  background-color: #86ADFF;
+}
+
+.tag-lumion-bg {
+  color: #fff;
+  background-color: #88AEC0;
+}
+
+.tag-3ds-bg {
+  color: #fff;
+  background-color: #5DC0C5;
+}
+
 .user-avatar {
   width: 250px;
   height: 250px;
@@ -4280,6 +4299,14 @@ button.mfp-close {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 480px) {
+  .programm-card__img {
+    margin-left: 0;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
 .programm-card__tags {
   margin-bottom: 10px;
   -webkit-box-flex: 0;
@@ -4645,6 +4672,7 @@ button.mfp-close {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   width: 680px;
+  background-color: #fff;
 }
 
 @media only screen and (max-width: 991px) {
@@ -5678,6 +5706,7 @@ button.mfp-close {
 /*--------------------END our-all-page----------------------*/
 /*--------------------enter-page----------------------*/
 .page-enter {
+  height: 100%;
   overflow-x: hidden;
   padding-top: 100px;
   margin-bottom: 200px;
@@ -5887,6 +5916,8 @@ button.mfp-close {
   top: 0;
   right: 100px;
   position: absolute;
+  text-decoration: none;
+  color: #2D2D2F;
 }
 
 @media only screen and (max-width: 991px) {
@@ -5922,6 +5953,10 @@ button.mfp-close {
   padding: 23px 20px 13px 20px;
 }
 
+.your-choice__header .tag {
+  margin-bottom: 0;
+}
+
 .your-choice__header .tag:not(:last-child) {
   margin-right: 10px;
 }
@@ -5931,6 +5966,7 @@ button.mfp-close {
   margin-bottom: 11px;
   font-family: "MontserratSemiBold", sans-serif;
   line-height: 20px;
+  text-align: left;
 }
 
 .your-choice__img {
@@ -7694,6 +7730,171 @@ button.mfp-close {
   text-align: left;
 }
 
+.index-page .start-learning .start-learning__left {
+  width: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 370px;
+  -ms-flex: 0 0 370px;
+  flex: 0 0 370px;
+}
+
+@media only screen and (max-width: 900px) {
+  .index-page .start-learning .start-learning__left {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+}
+
+.index-page .start-learning .start-learning__left h2 {
+  margin-bottom: 20px;
+  font-size: 48px;
+  line-height: -webkit-calc(59/48);
+  line-height: calc(59/48);
+}
+
+@media only screen and (max-width: 576px) {
+  .index-page .start-learning .start-learning__left h2 {
+    font-size: 28px;
+  }
+}
+
+.index-page .start-learning .start-learning__left p {
+  font-size: 20px;
+}
+
+.index-page .start-learning .start-learning__right {
+  width: -webkit-calc(100% - 370px - 60px);
+  width: calc(100% - 370px - 60px);
+  padding-left: 32px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .index-page .start-learning .start-learning__right {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .index-page .start-learning .start-learning__right {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .index-page .start-learning .start-learning__right {
+    margin-right: 0;
+    width: -webkit-calc(100% - 15px);
+    width: calc(100% - 15px);
+  }
+}
+
+.index-page .start-learning .start-learning__right .slider-arrow-prev, .index-page .start-learning .start-learning__right .slider-arrow-next {
+  margin-top: -70px;
+}
+
+@media only screen and (max-width: 900px) {
+  .index-page .start-learning .start-learning__right .slider-arrow-prev, .index-page .start-learning .start-learning__right .slider-arrow-next {
+    margin-top: -40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .index-page .start-learning .start-learning__right .slider-arrow-prev, .index-page .start-learning .start-learning__right .slider-arrow-next {
+    display: none;
+  }
+}
+
+.index-page .start-learning .start-learning__right .slider-arrow-prev {
+  left: 30px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .index-page .start-learning .start-learning__right .slider-arrow-prev {
+    left: 0;
+  }
+}
+
+.start-learning__slider-rows {
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.start-learning__slider-rows .slick-list {
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .start-learning__slider-rows .slick-list {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .start-learning__slider-rows .slick-list {
+    padding-right: 7% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .start-learning__slider-rows .slick-slide {
+    margin-right: 20px;
+  }
+}
+
+.start-learning__slider-rows .slick-slide > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .start-learning__slider-rows .slick-slide > div {
+    text-align: center;
+  }
+}
+
+.start-learning__slider-rows .slick-slide > div .your-choice__wrap {
+  height: 140px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.start-learning__slider-rows .slick-slide > div .your-choice__header {
+  padding-top: 20px;
+}
+
+.start-learning__slider-rows .slick-slide > div .your-choice__title {
+  margin-bottom: 0;
+  height: 40px;
+  overflow: hidden;
+}
+
+.start-learning__slider-rows .slick-slide > div .your-choice__body {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.start-learning__slider-rows .slick-slide > div .your-choice__bottom {
+  padding-bottom: 20px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-top: auto;
+}
+
 /*--------------------END start-learning----------------------*/
 /*--------------------_programms-page----------------------*/
 @media only screen and (max-width: 767.98px) {
@@ -7785,6 +7986,7 @@ button.mfp-close {
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
+    height: 280px;
   }
 }
 

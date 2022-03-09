@@ -79,17 +79,127 @@
 		}
 	}
 }
-.your-choice__heading {}
-.your-choice__header {}
-.tag {}
-.tag-mini {}
-.tag-autocad-bg {}
-.tag-base-bg {}
-.your-choice__body {}
-.your-choice__title {}
-.your-choice__img {}
-._fit {}
-._fit-img {}
-.your-choice__bottom {}
-.your-choice__label {}
+.index-page{
+	.start-learning{
+		.start-learning__left{
+			width: auto;
+			flex: 0 0 370px;
+
+			@include max-screen(900px){
+				flex: 1 1 auto;
+			}  
+
+			h2{
+		    margin-bottom: 20px;
+		    font-size: 48px;
+		    line-height: -webkit-calc(59/48);
+		    line-height: calc(59/48);
+
+		    @include max-screen($xs){
+		    	font-size: 28px;
+		    }  
+			}
+
+			p{
+				font-size: 20px;
+			}
+		}
+		.start-learning__right{
+			width: calc(100% - 370px - 60px);
+			padding-left: 32px;
+
+			@include max-screen($lg){
+				padding-left: 0;
+			}  
+			@include max-screen(900px){
+				width: calc(100% - 30px);
+				padding-left: 0;
+			} 
+
+			@include max-screen($xss){
+				margin-right: 0; 	
+				width: calc(100% - 15px);
+		  }   
+
+			.slider-arrow-prev, .slider-arrow-next{
+				margin-top: -70px;
+
+				@include max-screen(900px){
+					margin-top: -40px;
+				}  
+				@include max-screen($xss){
+					display: none;
+				}  
+			}
+			.slider-arrow-prev{
+				left: 30px;
+
+				@include max-screen($lg){
+					left: 0;
+				}  
+			}
+		}
+	}
+}
+.start-learning__slider-rows{
+	max-width: 640px;
+	margin-left: auto;
+	margin-right: auto;
+
+
+	.slick-list{
+		margin-left: 10px;
+
+		@include max-screen(1100px){
+			margin-left: 0;
+		}  
+		@include max-screen($xss){
+			padding-right: 7% !important;
+		}  
+	}
+	.slick-slide{
+
+		@include max-screen($xss){
+			margin-right: 20px;
+		}  
+
+		& > div{
+			// text-align: center;
+			&:not(:last-child){
+				margin-bottom: 20px;
+			}
+
+			@include max-screen(1100px){
+				text-align: center;
+			}  
+
+			.your-choice__wrap{
+				height: 140px;
+				display: flex;
+				flex-direction: column;
+			}
+			.your-choice__header{
+				padding-top: 20px;
+			}
+			.your-choice__title{
+				margin-bottom: 0;
+				height: 40px;
+				overflow: hidden;
+			}
+			.your-choice__body {
+				// display: flex;
+				// height: 100%;
+				flex: 1 1 auto;
+			}
+
+			.your-choice__bottom{
+				padding-bottom: 20px;
+				flex: 0 0 auto;
+				margin-top: auto;
+			}
+		}
+
+	}
+
+}
 /*--------------------END start-learning----------------------*/ 

@@ -244,6 +244,7 @@
 		top: 0;
 		flex: 1 1 auto;
 		width: 680px;
+		background-color: #fff;
 	}
 	@include max-screen($md){
 		display: flex;
