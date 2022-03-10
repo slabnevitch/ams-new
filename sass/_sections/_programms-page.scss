@@ -8,6 +8,13 @@
 	// @include max-screen($sm){
 	// 	margin-left: 10px;
 	// }
+
+	&.slick-dotted{
+		@include max-screen($sm){
+			margin-bottom: 30px;
+		}
+
+	}
 	.slick-list{
 		@include max-screen($sm){
 			padding:0 10% 0 0 !important;
@@ -29,6 +36,7 @@
 		display: flex;
 		@include min-screen($sm){
 			float: none;
+			height: auto;
 			
 		}
 		&.slick-cloned{
@@ -37,9 +45,6 @@
 				
 			}
 		}
-	}
-	.slick-dots li.slick-active button {
-   		 background-color: $accent;
 	}
 	.programm-card {
     	display: flex;
@@ -81,8 +86,68 @@
 			padding-bottom: 30px;
 		}
 	}
+	.slick-dots{
+		margin-top: 10px;
+		text-align: left;
+	}
 }
+.programms-choice-slider{
+	&.slick-dotted{
+		margin-bottom: 20px;
 
+	}
+	.slick-list{
+		@include max-screen($xs){
+			padding-right: 10% !important;
+			
+		}
+	}
+
+	.slick-track{
+
+			margin-left: -15px;
+			margin-right: -15px;
+		@include min-screen($sm){
+			width: 100% !important;
+			display: flex;
+			flex-wrap: wrap;
+			transform: translate3d(0px, 0px, 0px) !important;
+		}
+	}
+
+	.slick-slide{
+		margin-left: 15px;
+		margin-right: 15px;
+		max-width: calc(33.33333% - 30px);
+
+		@include max-screen($lg){
+			max-width: calc(50% - 30px);
+		}
+		@include min-screen($sm){
+			height: auto;
+			float: none;
+			margin-bottom: 20px;
+		}
+		@include max-screen($sm){
+			max-width: none;
+
+		}
+	}
+
+	&.slick-initialized .slick-slide{
+		display: flex;
+	}
+	.slick-cloned{
+		@include min-screen($sm){
+
+			display: none !important;
+		}
+	}
+	.slick-dots{
+		margin-top: 10px;
+		text-align: left;
+	}
+}
 .programms-filters {
 	@include col();
 	flex: 1 1 170px;
@@ -101,12 +166,20 @@
 		margin-right: 0;
 	}
 }
+.programms-content__block {
+	.btn{
+		@include min-screen($sm){
+			display: none;
+		}
+	}
+}
 .programms-filters__title {
 	margin-bottom: 20px;
 }
 .form {}
 .programms-filters__block {
 	margin-top: 30px;
+
 }
 .programms-filters__heading {
 	margin-bottom: 15px;

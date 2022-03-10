@@ -18,14 +18,40 @@
 
 		if($('.programms-cards-slider').length > 0){
 			$('.programms-cards-slider').slick({
-				
+				dots: false,
 				arrows: false,
+				adaptiveHeight: true,
 				responsive: [
 
 					{
 						breakpoint: 768,
 						settings: {
+							dots: true
+						}	
+					}
+				]
+			});
+		}
+
+		if($('.programms-choice-slider').length > 0){
+			$('.programms-choice-slider').slick({
+				dots: false,
+				arrows: false,
+				adaptiveHeight: true,
+				responsive: [
+
+					{
+						breakpoint: 577,
+						settings: {
 							dots: true,
+							slidesToShow: 1
+						}	
+					},
+					{
+						breakpoint: 768,
+						settings: {
+							dots: true,
+							slidesToShow: 2
 						}	
 					}
 				]

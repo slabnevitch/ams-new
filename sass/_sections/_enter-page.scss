@@ -23,7 +23,14 @@
 					display: none;
 				}  
 			} 
-		}			
+		}
+	.your-choice{
+		position: absolute;			
+		@include max-screen($md){
+			position: static;
+			margin-bottom: 40px;
+		}  
+	}
 
 }
 
@@ -154,14 +161,10 @@
 	max-width: 300px;
 	top: 0;
 	right: 100px;
-	position: absolute;
 	text-decoration: none;
 	color: $text;
 
-	@include max-screen($md){
-		position: static;
-		margin-bottom: 40px;
-	}  
+	
 	@include max-screen($xss){
 		max-width: none;
 	}

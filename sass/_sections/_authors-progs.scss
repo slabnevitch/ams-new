@@ -3,13 +3,7 @@
 	@include adaptive-value('margin-top', 65, 29, 1);
 	@include adaptive-value('margin-bottom', 65, 29, 1);
 
-	h2{
-		max-width: 670px;
-		@include adaptive-value('margin-bottom', 70, 29, 1);
-		@include adaptive-value('font-size', 56, 28, 1);
-		font-size: 56px;
-		line-height: 110%;
-	}
+	
 }
 .wrapper-simple {}
 .wrapper-flex {}

@@ -55,8 +55,8 @@ block content
 				.programms-content
 					h2 Курсы по Autocad
 					.programms-content__block
-						.programms-cards-slider
-							a(href="/").programm-card.programm-card--pink
+						.programms-cards-slider.dots-accented
+							a(href="/").programm-card.programm-card--autocad
 								.programm-card__content
 									.programm-card__tags
 										.tag.tag-mini.tag-autocad-bg Autocad
@@ -77,7 +77,7 @@ block content
 								.programm-card__img._fit
 									img._fit-img(src=img + "/programms-page/autocad/1.jpg" alt="alt")
 
-							a(href="/").programm-card.programm-card--pink
+							a(href="/").programm-card.programm-card--autocad
 								.programm-card__content
 									.programm-card__tags
 										.tag.tag-mini.tag-autocad-bg Autocad
@@ -98,7 +98,7 @@ block content
 								.programm-card__img._fit
 									img._fit-img(src=img + "/programms-page/autocad/2.jpg" alt="alt")
 
-							a(href="/").programm-card.programm-card--pink
+							a(href="/").programm-card.programm-card--autocad
 								.programm-card__content
 									.programm-card__tags
 										.tag.tag-mini.tag-autocad-bg Autocad
@@ -108,12 +108,69 @@ block content
 										.programm-card__title 3D моделирование в AutoCAD
 										.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
 
+									.programm-card__bottom
+										.programm-card__exp Без подготовки
+										.programm-card__params
+											div 13 уроков
+											div 20 часов
+
+									.program-icon
+										img(src=img + "program-icons/autocad.svg" alt="alt")
+
+								.programm-card__img._fit
+									img._fit-img(src=img + "/programms-page/autocad/3.jpg" alt="alt")
+							
+							a(href="/").programm-card.programm-card--autocad
+								.programm-card__content
+									.programm-card__tags
+										.tag.tag-mini.tag-autocad-bg Autocad
+										.tag.tag-mini.tag-full-bg Полный курс
+
+									.programm-card__body
+										.programm-card__title 3D моделирование в AutoCAD
+										.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
+
+									.programm-card__bottom
+										.programm-card__exp Без подготовки
+										.programm-card__params
+											div 13 уроков
+											div 20 часов
+
 									.program-icon
 										img(src=img + "program-icons/autocad.svg" alt="alt")
 
 								.programm-card__img._fit
 									img._fit-img(src=img + "/programms-page/autocad/3.jpg" alt="alt")
 
+						.programms-choice-slider.dots-accented
+							.your-choice
+								.your-choice__wrap
+									.your-choice__header
+										.tag.tag-mini.tag-autocad-bg Autocad
+										.tag.tag-mini.tag-base-bg Бесплатно
+									.your-choice__body
+										.your-choice__title Базовый курс по 3ds Max + Corona Render
+										.your-choice__img._fit
+											img._fit-img(src=img + 'you-selection.jpg' alt="alt")
+										.your-choice__bottom
+											.your-choice__label 13 уроков
+											.your-choice__label Без подготовки
+
+							- for (var i=0; i < 2; i++)
+								.your-choice
+										.your-choice__wrap
+											.your-choice__header
+												.tag.tag-mini.tag-autocad-bg Autocad
+												.tag.tag-mini.tag-base-bg Бесплатно
+											.your-choice__body
+												.your-choice__title Базовый курс по 3ds Max + Corona Render
+												.your-choice__img._fit
+													img._fit-img(src=img + 'programms-page/choice2.jpg' alt="alt")
+												.your-choice__bottom
+													.your-choice__label 13 уроков
+													.your-choice__label Без подготовки
+
+						button.btn.btn-bordered.btn-sm Показать ещё
 //- img(src=img + "demo.jpg")
 //- img(src=ico + "amex.svg")
 
