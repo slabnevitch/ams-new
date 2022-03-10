@@ -81,6 +81,9 @@
 }
 .index-page{
 	.start-learning{
+		@include adaptive-value('padding-top', 65, 29, 1);
+		@include adaptive-value('padding-bottom', 65, 29, 1);
+		
 		.start-learning__left{
 			width: auto;
 			flex: 0 0 370px;

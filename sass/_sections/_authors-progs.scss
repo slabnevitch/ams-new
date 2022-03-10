@@ -1,0 +1,155 @@
+/*--------------------authors-progs----------------------*/
+.authors-progs {
+	@include adaptive-value('margin-top', 65, 29, 1);
+	@include adaptive-value('margin-bottom', 65, 29, 1);
+
+	h2{
+		max-width: 670px;
+		@include adaptive-value('margin-bottom', 70, 29, 1);
+		@include adaptive-value('font-size', 56, 28, 1);
+		font-size: 56px;
+		line-height: 110%;
+	}
+}
+.wrapper-simple {}
+.wrapper-flex {}
+.feature {
+	@include col();
+	@include size(6);
+	@include size-sm(12);
+	padding-right: 70px;
+	@include adaptive-value('margin-bottom', 60, 29, 1);
+
+	
+	&:last-child{
+		@include max-screen($sm){
+			margin-bottom: 0;
+		}
+	}
+
+	@include max-screen($md){
+		padding-right: 0;
+	}
+
+}
+.pictogram {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 21px;
+	position: relative;
+
+	img{
+		@include absolute-center;
+		opacity: 0.7;
+	}
+	.icon {
+		@include absolute-center-old;
+		top: auto;
+		bottom: 0;
+		font-size: 37px;
+	}
+}
+.icon-check-rounded {}
+.feature__title {
+	margin-bottom: 10px;
+	font-family: $bold;
+	@include adaptive-value('font-size', 28, 19, 1);
+	line-height: calc(34/28);
+}
+.feature__text {
+
+	font-size: 18px;
+line-height: 150%;
+
+
+	&:not(:last-child){
+		margin-bottom: 10px;
+	}
+}
+.persons-slider-wrap{
+	position: relative;
+	@include col();
+	@include size(12);
+
+	@include max-screen(375px){
+		margin-right: 0;
+		width: calc(100% - 15px);
+	}
+
+	.slider-arrow-next{
+		right: -80px;
+		@include max-screen(1400px){
+			right: -60px;
+		}
+		@include max-screen($lg){
+			right: 0;
+		}
+		@include max-screen(375px){
+			display: none !important;
+		}
+	}
+	.slider-arrow-prev{
+		left: -80px;
+		@include max-screen(1400px){
+			left: -60px;
+		}
+		@include max-screen($lg){
+			left: 0;
+		}
+		@include max-screen(375px){
+			display: none !important;
+		}
+	}
+}
+.persons-slider {
+	margin-left: -15px;
+	margin-right: -15px;
+
+	.slick-list{
+		@include max-screen(375px){
+			padding-right: 20%;
+			
+		}
+	}
+	.slick-slide{
+		margin-left: 15px;
+		margin-right: 15px;
+
+	}
+	.slick-dots{
+		text-align: left;
+		margin-left: 15px;
+	}
+}
+.person {
+
+}
+.person__img {
+	padding-bottom: 0;
+	margin-bottom: 20px;
+	width: 145px;
+	height: 145px;
+	overflow: hidden;
+	border-radius: 10px;
+
+	img{
+		filter: grayscale(100%);
+	}
+}
+._fit {}
+.person__name {
+	text-align: left;
+	font-family: $bold;
+	font-size: 18px;
+	line-height: 22px;
+}
+.person__text {
+	text-align: left;
+	font-size: 14px;
+	line-height: 18px;
+
+	&:not(:last-child){
+		margin-bottom: 6px;
+	}
+}
+/*--------------------END authors-progs----------------------*/ 

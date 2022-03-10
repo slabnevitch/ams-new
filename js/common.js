@@ -96,6 +96,61 @@
 		}
 
 		// END start-learning__slider
+
+		// persons-slider
+
+		if($('.persons-slider').length > 0){
+			$('.persons-slider').slick({
+				slidesToScroll: 1,
+				slidesToShow: 4,
+				dots: true,
+				prevArrow: $('.authors-progs').find('.slider-arrow-prev'),
+				nextArrow: $('.authors-progs').find('.slider-arrow-next'),
+				responsive: [
+
+					{
+						breakpoint: 376,
+						settings: {
+							arrows: false,
+							slidesToShow:1,
+
+						}	
+					},
+					{
+						breakpoint: 481,
+						settings: {
+
+							slidesToShow:1,
+
+						}	
+					},
+					{
+						breakpoint: 577,
+						settings: {
+
+							slidesToShow:2,
+
+						}	
+					},
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow:2,
+						}	
+					},
+					{
+						breakpoint: 992,
+						settings: {
+							slidesToShow:3,
+						}	
+					}
+				]
+			});
+		}
+
+		// END persons-slider
+
+
 			if($('.tile-item__photo').length > 0 || $('.gallery-photo').length > 0){
 		
 		// Magnific popup

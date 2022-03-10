@@ -1,0 +1,52 @@
+section.authors-progs
+	.wrapper-simple
+		h2 Авторские программы обучения составленные профессионалами
+		.wrapper-flex
+			.feature
+				.pictogram
+					img(src="img/main-page/pictograms/polygon6.svg" alt="alt")
+					+icon('check-rounded')
+				.feature__title Только практикующие специалисты
+				.feature__text Наши преподаватели — это практикующие эксперты, у которых за плечами десятки реализованных проектов. 
+				.feature__text Учат современным методам работы и делятся многолетним опытом.
+
+			.feature
+				.pictogram
+					img(src="img/main-page/pictograms/ellipse.svg" alt="alt")
+					+icon('check-rounded')
+				.feature__title Под контролем методистов
+				.feature__text Методисты конторлируют преподавателей, чтобы сделать уроки: понятными для новичков, короткими и ёмкими, интересными и нескучными
+
+			.persons-slider-wrap
+				.persons-slider
+					- for (var i=0; i < 2; i++)
+						.person
+							.person__img._fit
+								img._fit-img(src="img/main-page/authors-progs/1.jpg" alt="alt")
+							.person__name Константин Константинопольский
+							.person__text Инженер-конструктор
+							.person__text АБВГД-бюро
+						.person
+							.person__img._fit
+								img._fit-img(src="img/main-page/authors-progs/2.jpg" alt="alt")
+							.person__name Настя Каменская
+							.person__text Инженер-конструктор
+							.person__text АБВГД-бюро
+						.person
+							.person__img._fit
+								img._fit-img(src="img/main-page/authors-progs/3.jpg" alt="alt")
+							.person__name Тимур Батый
+							.person__text Инженер-конструктор
+							.person__text АБВГД-бюро
+
+						.person
+							.person__img._fit
+								img._fit-img(src="img/main-page/authors-progs/4.jpg" alt="alt")
+							.person__name Александра Константинопольская
+							.person__text Инженер-конструктор
+							.person__text АБВГД-бюро
+
+				.slider-arrow-prev
+					+icon('chevron-left')
+				.slider-arrow-next
+					+icon('chevron-right')

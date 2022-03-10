@@ -1,7 +1,7 @@
 /*--------------------_main-screen----------------------*/
 .main-screen {
 	@include adaptive-value('padding-top', 80, 45, 1);
-	@include adaptive-value('padding-bottom', 151, 59, 1);
+	@include adaptive-value('padding-bottom', 65, 29, 1);
 	overflow-x: hidden;
 }
 .wrapper-simple {
