@@ -20,7 +20,6 @@
 			$('.programms-cards-slider').slick({
 				dots: false,
 				arrows: false,
-				adaptiveHeight: true,
 				responsive: [
 
 					{
@@ -37,7 +36,6 @@
 			$('.programms-choice-slider').slick({
 				dots: false,
 				arrows: false,
-				adaptiveHeight: true,
 				responsive: [
 
 					{
@@ -294,6 +292,9 @@
 			$target.prev().toggleClass('opened');
 			$target.text($target.text() === 'Читать полностью' ? 'Свернуть' : 'Читать полностью');
 
+		}
+		if(e.target.classList.contains('btn') && e.target.closest('.programms-content__block')){
+			$target.closest('.programms-content__block').toggleClass('expanded');
 		}
 
 	});

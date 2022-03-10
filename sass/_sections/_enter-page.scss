@@ -176,6 +176,9 @@
 	font-family: $semi;
 }
 .your-choice__wrap{
+	display: flex;
+	flex-direction: column;
+
 	background: #FFF1F1;
 	border-radius: 10px;
 }
@@ -193,7 +196,7 @@
 }
 .tag {}
 .your-choice__body {
-
+	flex: 1 1 auto;
 }
 .your-choice__title {
 	padding: 0 20px;
@@ -203,6 +206,7 @@
 	text-align: left;
 }
 .your-choice__img {
+	margin-top: auto;
 	padding-bottom: prc(169,300);
 }
 ._fit {}
@@ -212,6 +216,9 @@
 	justify-content: space-between;
 	padding: 10px 20px;
 	line-height: 18px;
+
+	flex: 0 0 auto;
+	margin-top: auto;
 }
 .your-choice__label {}
 

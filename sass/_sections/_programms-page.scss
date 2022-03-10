@@ -22,21 +22,21 @@
 		}
 	}
 	.slick-track{
+		display: flex;
+		flex-wrap: wrap;
 		@include min-screen($sm){
 			margin-left: -15px;
 			margin-right: -15px;
 			width: 100% !important;
-			display: flex;
-			flex-wrap: wrap;
 			transform: translate3d(0px, 0px, 0px) !important;
 		}
 	}
 
 	.slick-slide{
 		display: flex;
+		float: none;
+		height: auto;
 		@include min-screen($sm){
-			float: none;
-			height: auto;
 			
 		}
 		&.slick-cloned{
@@ -105,12 +105,12 @@
 
 	.slick-track{
 
+			display: flex;
+			flex-wrap: wrap;
 			margin-left: -15px;
 			margin-right: -15px;
 		@include min-screen($sm){
 			width: 100% !important;
-			display: flex;
-			flex-wrap: wrap;
 			transform: translate3d(0px, 0px, 0px) !important;
 		}
 	}
@@ -119,13 +119,13 @@
 		margin-left: 15px;
 		margin-right: 15px;
 		max-width: calc(33.33333% - 30px);
+		height: auto;
+		float: none;
 
 		@include max-screen($lg){
 			max-width: calc(50% - 30px);
 		}
 		@include min-screen($sm){
-			height: auto;
-			float: none;
 			margin-bottom: 20px;
 		}
 		@include max-screen($sm){
@@ -167,6 +167,38 @@
 	}
 }
 .programms-content__block {
+	&.expanded{
+		.programms-cards-slider{
+			.slick-list{
+				// height: auto !important;
+				padding: 0 0 0 0 !important;
+			}
+			.slick-track{
+				margin-left: 0;
+				margin-right: 15px;
+				width: calc(100% - 15px) !important;
+				transform: translate3d(0px, 0px, 0px) !important;
+
+				.slick-slide{
+					margin-right: 0;
+					width: 100% !important;
+					&:not(:last-child){
+						margin-bottom: 30px;
+					}
+					&.slick-cloned{
+						display: none;
+					}
+				}
+			}
+			.slick-dots{
+				display: none;
+			}
+		}
+
+		.btn{
+			display: none;
+		}
+	}
 	.btn{
 		@include min-screen($sm){
 			display: none;
