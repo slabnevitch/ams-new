@@ -55,6 +55,23 @@
 				]
 			});
 		}
+
+		if($('.popular-progs__slider').length > 0){
+			$('.popular-progs__slider').slick({
+				dots: false,
+				arrows: false,
+				responsive: [
+
+					{
+						breakpoint: 577,
+						settings: {
+							// slidesToShow: 1.06
+							dots: true,
+						}	
+					}
+				]
+			});
+		}
 		// END programm cards slider
 
 		// main page start-learnig slider
@@ -140,14 +157,14 @@
 
 						}	
 					},
-					{
-						breakpoint: 481,
-						settings: {
+					// {
+					// 	breakpoint: 481,
+					// 	settings: {
 
-							slidesToShow:1,
+					// 		slidesToShow:1,
 
-						}	
-					},
+					// 	}	
+					// },
 					{
 						breakpoint: 577,
 						settings: {

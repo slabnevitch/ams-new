@@ -1,24 +1,86 @@
 section.popular-progs.main-page-section
-	.wrapper-simple
-		h2 Популярные программы обучения
-		.wrapper-flex
-			a(href="/").programm-card.programm-card--autocad
-				.programm-card__content
-					.programm-card__tags
-						.tag.tag-mini.tag-autocad-bg Autocad
-						.tag.tag-mini.tag-full-bg Полный курс
+	.wide-container
+		.wrapper-simple
+			h2 Популярные программы обучения
+			.popular-progs__slider.dots-accented
+				a(href="/").popular-progs__card.card-popular-progs.bg-autocad
+					.card-popular-progs__content
+						.card-popular-progs__tags
+							.tag.tag-mini.tag-autocad-bg Autocad
+							.tag.tag-mini.tag-full-bg Полный курс
 
-					.programm-card__body
-						.programm-card__title Использование AutoCAD на 100%  Версия 2.0
-						.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
+						.card-popular-progs__body
+							.card-popular-progs__title Использование AutoCAD на 100%  Версия 2.0
 
-					.programm-card__bottom
-						.programm-card__exp Без подготовки
-						.programm-card__params
-							div 13 уроков
-							div 20 часов
-					.program-icon
-						img(src=img + "program-icons/autocad.svg" alt="alt")
+						.card-popular-progs__bottom
+							.card-popular-progs__exp Без подготовки
+							.card-popular-progs__params
+								div 13 уроков
+								div 20 часов
+						.program-icon
+							img(src=img + "program-icons/autocad.svg" alt="alt")
 
-				.programm-card__img._fit
-					img._fit-img(src=img + "/programms-page/autocad/1.jpg" alt="alt")
+					.card-popular-progs__img._fit
+						img._fit-img(src=img + "/main-page/popular/1.jpg" alt="alt")
+
+				a(href="/").popular-progs__card.card-popular-progs.bg-sketchup
+					.card-popular-progs__content
+						.card-popular-progs__tags
+							.tag.tag-mini.tag-sketch-bg SketchUp
+							.tag.tag-mini.tag-full-bg Полный курс
+
+						.card-popular-progs__body
+							.card-popular-progs__title Использование AutoCAD на 100%  Версия 2.0
+
+						.card-popular-progs__bottom
+							.card-popular-progs__exp Без подготовки
+							.card-popular-progs__params
+								div 13 уроков
+								div 20 часов
+						.program-icon
+							img(src=img + "program-icons/sketchup.svg" alt="alt")
+
+					.card-popular-progs__img._fit
+						img._fit-img(src=img + "/main-page/popular/2.jpg" alt="alt")
+
+				a(href="/").popular-progs__card.card-popular-progs.bg-3ds
+					.card-popular-progs__content
+						.card-popular-progs__tags
+							.tag.tag-mini.tag-3ds-bg 3Ds Max
+							.tag.tag-mini.tag-full-bg Полный курс
+
+						.card-popular-progs__body
+							.card-popular-progs__title 3ds Max & Corona Renderer  для дизайнеров интерьера и визуализаторов
+
+						.card-popular-progs__bottom
+							.card-popular-progs__exp Без подготовки
+							.card-popular-progs__params
+								div 13 уроков
+								div 20 часов
+						.program-icon
+							img(src=img + "program-icons/3ds.svg" alt="alt")
+
+					.card-popular-progs__img._fit
+						img._fit-img(src=img + "/main-page/popular/3.jpg" alt="alt")
+
+				a(href="/").popular-progs__card.card-popular-progs.bg-revit
+					.card-popular-progs__content
+						.card-popular-progs__tags
+							.tag.tag-mini.tag-3ds-bg 3Ds Max
+							.tag.tag-mini.tag-full-bg Полный курс
+
+						.card-popular-progs__body
+							.card-popular-progs__title Информационное моделирование в Revit
+
+						.card-popular-progs__bottom
+							.card-popular-progs__exp Без подготовки
+							.card-popular-progs__params
+								div 13 уроков
+								div 20 часов
+						.program-icon
+							img(src=img + "program-icons/revit.svg" alt="alt")
+
+					.card-popular-progs__img._fit
+						img._fit-img(src=img + "/main-page/popular/4.jpg" alt="alt")
+
+			a(href="#").btn.btn-accented Все курсы

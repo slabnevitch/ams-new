@@ -117,6 +117,10 @@ line-height: calc(24/20);
 		color: #fff;
 		background-color: #5DC0C5;
 	}
+	&-sketch-bg{
+		color: #fff;
+		background-color: #56BCFF;
+	}
 }
 .user-avatar{
 	width: 250px;
@@ -563,6 +567,7 @@ line-height: calc(44/36);
 	border-radius: 50%;
 	background-color: $accent;
 	cursor: pointer;
+	user-select: none;
 
 	&.wht{
 		background-color: #fff;
@@ -709,32 +714,27 @@ button.mfp-close{
 	text-decoration: none;
 	color: $text;
 
-	&--autocad{
-		background-color: #FFF1F1;
+	&.bg-autocad{
 		.program-icon {
 			background-color: #FFF1F1;
 		}
 	}
-	&--archicad{
-		background-color: #E8EFFF;
+	&.bg-archicad{
 		.program-icon {
 			background-color: #E8EFFF;
 		}
 	}
-	&--revit{
-		background-color: #EBF0F3;
+	&.bg-revit{
 		.program-icon {
 			background-color: #EBF0F3;
 		}
 	}
-	&--3ds{
-		background-color: #E5F7F8;
+	&.bg-3ds{
 		.program-icon {
 			background-color: #E5F7F8;
 		}
 	}
-	&--sketchup{
-		background-color: #E8F6FF;
+	&.bg-sketchup{
 		.program-icon {
 			background-color: #E8F6FF;
 		}
@@ -750,6 +750,21 @@ button.mfp-close{
 			}
 		}
 	}
+}
+.bg-autocad{
+	background-color: #FFF1F1;
+}
+.bg-archicad{
+	background-color: #E8EFFF;
+}
+.bg-revit{
+	background-color: #EBF0F3;
+}
+.bg-3ds{
+	background-color: #E5F7F8;
+}
+.bg-sketchup{
+	background-color: #E8F6FF;
 }
 .programm-card__content {
 	padding: 30px 5px 20px 20px;

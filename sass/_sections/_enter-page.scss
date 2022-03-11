@@ -169,37 +169,31 @@
 		max-width: none;
 	}
 
-	&--autocad{
+	&.bg-autocad{
 		.your-choice__wrap{
-			background-color: #FFF1F1;
+			background-color: #FFF1F1;	
 		}
-
 	}
-	&--archicad{
+	&.bg-archicad{
 		.your-choice__wrap{
-			background-color: #E8EFFF;
+			background-color: #E8EFFF;	
 		}
-
 	}
-	&--revit{
+	&.bg-revit{
 		.your-choice__wrap{
-			background-color: #EBF0F3;
+			background-color: #EBF0F3;	
 		}
-
 	}
-	&--3ds{
+	&.bg-3ds{
 		.your-choice__wrap{
-			background-color: #E5F7F8;
+			background-color: #E5F7F8;	
 		}
-
 	}
-	&--sketchup{
+	&.bg-sketchup{
 		.your-choice__wrap{
-			background-color: #E8F6FF;
+			background-color: #E8F6FF;	
 		}
-
 	}
-
 }
 .your-choice__heading{
 
