@@ -715,6 +715,30 @@ button.mfp-close{
 			background-color: #FFF1F1;
 		}
 	}
+	&--archicad{
+		background-color: #E8EFFF;
+		.program-icon {
+			background-color: #E8EFFF;
+		}
+	}
+	&--revit{
+		background-color: #EBF0F3;
+		.program-icon {
+			background-color: #EBF0F3;
+		}
+	}
+	&--3ds{
+		background-color: #E5F7F8;
+		.program-icon {
+			background-color: #E5F7F8;
+		}
+	}
+	&--sketchup{
+		background-color: #E8F6FF;
+		.program-icon {
+			background-color: #E8F6FF;
+		}
+	}
 	@media (any-hover: hover) {
 		&:hover{
 			.programm-card__title,

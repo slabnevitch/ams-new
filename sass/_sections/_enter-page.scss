@@ -168,6 +168,38 @@
 	@include max-screen($xss){
 		max-width: none;
 	}
+
+	&--autocad{
+		.your-choice__wrap{
+			background-color: #FFF1F1;
+		}
+
+	}
+	&--archicad{
+		.your-choice__wrap{
+			background-color: #E8EFFF;
+		}
+
+	}
+	&--revit{
+		.your-choice__wrap{
+			background-color: #EBF0F3;
+		}
+
+	}
+	&--3ds{
+		.your-choice__wrap{
+			background-color: #E5F7F8;
+		}
+
+	}
+	&--sketchup{
+		.your-choice__wrap{
+			background-color: #E8F6FF;
+		}
+
+	}
+
 }
 .your-choice__heading{
 
@@ -178,6 +210,7 @@
 .your-choice__wrap{
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 
 	background: #FFF1F1;
 	border-radius: 10px;
