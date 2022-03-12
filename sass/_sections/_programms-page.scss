@@ -8,12 +8,14 @@
 	// @include max-screen($sm){
 	// 	margin-left: 10px;
 	// }
+	@include max-screen($sm){
+		margin-bottom: 30px;
+	}
 
 	&.slick-dotted{
 		@include max-screen($sm){
 			margin-bottom: 30px;
 		}
-
 	}
 	.slick-list{
 		@include max-screen($sm){
@@ -190,6 +192,10 @@
 	}
 }
 .programms-content__block {
+
+	&:not(:last-child){
+		margin-bottom: 30px;
+	}
 	&.expanded{
 		.programms-cards-slider{
 			&.slick-dotted{

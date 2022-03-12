@@ -3440,6 +3440,11 @@ h3 {
   background-color: #56BCFF;
 }
 
+.tag-revit-bg {
+  color: #fff;
+  background-color: #4B92C6;
+}
+
 .user-avatar {
   width: 250px;
   height: 250px;
@@ -4420,6 +4425,10 @@ button.mfp-close {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+
+.programm-card__tags .tag:not(:last-child) {
+  margin-right: 10px;
 }
 
 .programm-card__title {
@@ -6036,6 +6045,8 @@ button.mfp-close {
   right: 100px;
   text-decoration: none;
   color: #2D2D2F;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -8071,6 +8082,12 @@ button.mfp-close {
 /*--------------------END start-learning----------------------*/
 /*--------------------_programms-page----------------------*/
 @media only screen and (max-width: 767.98px) {
+  .programms-cards-slider {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
   .programms-cards-slider.slick-dotted {
     margin-bottom: 30px;
   }
@@ -8335,6 +8352,10 @@ button.mfp-close {
     width: -webkit-calc(100% - 30px);
     width: calc(100% - 30px);
   }
+}
+
+.programms-content__block:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .programms-content__block.expanded .programms-cards-slider.slick-dotted {

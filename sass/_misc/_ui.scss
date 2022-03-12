@@ -121,6 +121,10 @@ line-height: calc(24/20);
 		color: #fff;
 		background-color: #56BCFF;
 	}
+	&-revit-bg{
+		color: #fff;
+		background-color: #4B92C6;
+	}
 }
 .user-avatar{
 	width: 250px;
@@ -795,6 +799,12 @@ button.mfp-close{
 .programm-card__tags {
 	margin-bottom: 10px;
 	flex: 0 0 auto;
+
+	.tag{
+		&:not(:last-child){
+			margin-right: 10px;
+		}
+	}
 }
 
 .programm-card__title {

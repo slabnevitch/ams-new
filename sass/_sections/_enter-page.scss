@@ -163,6 +163,7 @@
 	right: 100px;
 	text-decoration: none;
 	color: $text;
+	border-radius: 10px;
 
 	
 	@include max-screen($xss){
