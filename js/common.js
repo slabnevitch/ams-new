@@ -24,12 +24,6 @@
 				$checkboxes.each(function(i, item) {
 					checksStates.push($(item).prop('checked'));
 				});
-				
-				if(checkStates(checksStates)){
-					$filter.addClass('active');
-				}else{
-					$filter.removeClass('active');
-				}
 
 				if(checksStates.some(function(item) { return item;})){
 					$filter.addClass('active');

@@ -3450,6 +3450,11 @@ h3 {
   background-color: #4B92C6;
 }
 
+.tag-corona-bg {
+  color: #fff;
+  background-color: #FF886A;
+}
+
 .user-avatar {
   width: 250px;
   height: 250px;
@@ -6100,6 +6105,14 @@ button.mfp-close {
   background-color: #E8F6FF;
 }
 
+.your-choice.bg-lumion .your-choice__wrap {
+  background-color: #EEF5F2;
+}
+
+.your-choice.bg-corona .your-choice__wrap {
+  background-color: #EEF5F2;
+}
+
 .your-choice__heading {
   font-size: 18px;
   margin-bottom: 10px;
@@ -8302,6 +8315,7 @@ button.mfp-close {
   margin-right: 15px;
   height: auto;
   float: none;
+  min-height: 140px;
 }
 
 @media only screen and (min-width: 767.98px) {
@@ -8332,6 +8346,11 @@ button.mfp-close {
   .programms-choice-slider .slick-slide {
     max-width: none;
   }
+}
+
+.programms-choice-slider .slick-slide .your-choice__title {
+  max-height: 40px;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 767.98px) {
@@ -8648,7 +8667,6 @@ button.mfp-close {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 10px;
 }
 
 .tag-filters.active {
@@ -8658,8 +8676,14 @@ button.mfp-close {
   display: flex;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .tag-filters {
+    margin-bottom: 16px;
+  }
+}
+
 .tag-fllter {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
