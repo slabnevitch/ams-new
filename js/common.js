@@ -314,6 +314,14 @@
 			$target.closest('.programms-content__block').toggleClass('expanded');
 		}
 
+		if($(e.target).attr('id') === 'filter-open' || $(e.target).closest('#filter-open').length > 0){
+			$('.programms-filters').addClass('active');
+		}
+		if($(e.target).attr('id') === 'close-filter' || $(e.target).closest('#close-filter').length > 0){
+			console.log('close')
+			$('.programms-filters').removeClass('active');
+		}
+
 	});
 
 	// media-element

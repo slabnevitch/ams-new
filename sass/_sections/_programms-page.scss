@@ -1,7 +1,7 @@
 /*--------------------_programms-page----------------------*/
 .page {}
 .page-programms {
-
+	position: relative;
 }
 .wrapper-simple {}
 .programms-cards-slider{
@@ -180,6 +180,54 @@
 
 	@include max-screen($sm){
 		display: none;
+		position: fixed;
+		z-index: 99;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 30px;
+		overflow-y: auto;
+		background-color: $gray-bg;
+	}
+
+	&.active{
+
+		@include max-screen($sm){
+			display: block;
+		}
+
+		.programms-filters__close{
+			display: block;
+		}
+	}
+}
+.filter-open-icon{
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: $accent;
+
+	.icon{
+		@include absolute-center;
+		font-size: 18px;
+
+		@include max-screen(320px){
+			font-size: 14px;
+		}
+	}
+	@include min-screen($sm){
+		display: none;
+	}
+	@include max-screen(320px){
+		width: 40px;
+		height: 40px;
 	}
 }
 .programms-content {
@@ -192,10 +240,7 @@
 	}
 }
 .programms-content__block {
-
-	&:not(:last-child){
-		margin-bottom: 30px;
-	}
+	margin-bottom: 30px;
 	&.expanded{
 		.programms-cards-slider{
 			&.slick-dotted{
@@ -308,8 +353,26 @@
 }
 .programms-filters__title {
 	margin-bottom: 20px;
+
+	@include max-screen($sm){
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		padding: 30px;
+		background-color: $gray-bg;
+		z-index: 2;
+	}
 }
-.form {}
+.programms-filters__close{
+	position: fixed;
+	right: 30px;
+	top: 20px;
+	z-index: 3;
+	display: none;
+
+
+}
 .programms-filters__block {
 	margin-top: 30px;
 

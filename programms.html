@@ -61,16 +61,26 @@
         </div>
       </header>
       <div class="main-content">
-        <div class="wrapper-simple">
+        <div class="wrapper-simple breadcrumbs-iconed">
           <ul class="breadcrumbs">
             <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
-            <li class="breadcrumbs__item"><span class="breadcrumbs__target">Программы обучения</span></li>
+            <li class="breadcrumbs__item"><span class="breadcrumbs__target">Программы <span>бучения</span></span></li>
           </ul>
+          <div id="filter-open" class="filter-open-icon">
+                <svg class="icon icon-filter ">
+                  <use xlink:href="img/icons-svg/symbol/sprite.svg#filter"></use>
+                </svg>
+          </div>
         </div>
         <div class="page page-programms">
           <div class="wrapper-simple">
             <div class="wrapper-flex">
               <div class="programms-filters">
+                <div id="close-filter" class="programms-filters__close">
+                      <svg class="icon icon-close ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                      </svg>
+                </div>
                 <div class="programms-filters__title">Фильтры:</div>
                 <form class="form">
                   <div class="programms-filters__block">

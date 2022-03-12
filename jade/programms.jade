@@ -5,17 +5,24 @@ block title
 	- var authorized = true;
 	- var headerMenu = true;
 block content
-	.wrapper-simple
+	.wrapper-simple.breadcrumbs-iconed
 		ul.breadcrumbs
 			li.breadcrumbs__item
 				a(href="").breadcrumbs__link Главная
 			li.breadcrumbs__item
-				span.breadcrumbs__target Программы обучения
+				span.breadcrumbs__target Программы #[span бучения]
+		.filter-open-icon#filter-open
+			+icon('filter')
 
 	.page.page-programms
+
+
 		.wrapper-simple
 			.wrapper-flex
 				.programms-filters
+					.programms-filters__close#close-filter
+						+icon('close')
+
 					.programms-filters__title Фильтры:
 					- var checks1 = [{title: 'Revit', val: '15'}, {title: 'Autocad', val: '12'},{title: 'Archicad', val: '27'}, {title: '3Ds Max', val: '7'}, {title: 'Corona', val: '12'}, {title: 'Lumion', val: '3'}];
 					- var checks2 = ['Всем', 'Проектировщику', 'Архитектору', 'Дизайнеру', 'Визуализатору', 'Конструктору'];
