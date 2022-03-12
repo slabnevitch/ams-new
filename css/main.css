@@ -8643,6 +8643,50 @@ button.mfp-close {
   margin-left: 10px;
 }
 
+.tag-filters {
+  display: none;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.tag-filters.active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tag-fllter {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.tag-fllter:not(:last-child) {
+  margin-right: 20px;
+}
+
+.tag-fllter .icon {
+  font-size: 14px;
+  color: #6F6F75;
+  cursor: pointer;
+}
+
+.tag-fllter__val {
+  margin-right: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6F6F75;
+}
+
 /*--------------------END _programms-page----------------------*/
 /*--------------------_main-screen----------------------*/
 .main-screen {

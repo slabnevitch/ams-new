@@ -402,5 +402,34 @@ line-height: 20px;
 	color: $gray-text;
 	margin-left: 10px;
 }
+.tag-filters{
+	display: none;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
 
+	&.active{
+		display: flex;
+	}
+}
+.tag-fllter{
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+
+	&:not(:last-child){
+		margin-right: 20px;
+	}
+
+	.icon{
+		font-size: 14px;
+		color: #6F6F75;
+		cursor: pointer;
+	}
+}
+.tag-fllter__val{
+	margin-right: 5px;
+	font-size: 14px;
+line-height: 18px;
+	color: #6F6F75;
+}
 /*--------------------END _programms-page----------------------*/ 

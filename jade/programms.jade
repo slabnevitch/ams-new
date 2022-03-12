@@ -28,7 +28,8 @@ block content
 					- var checks2 = ['Всем', 'Проектировщику', 'Архитектору', 'Дизайнеру', 'Визуализатору', 'Конструктору'];
 
 					- var checks3 = [{title: 'Платные', val: '3'}, {title: 'Бесплатные', val: '3'}];
-					form.form
+					
+					form.form.programms-filters__form
 						.programms-filters__block
 							.programms-filters__heading Программа
 							each item, i in checks1
@@ -60,6 +61,13 @@ block content
 
 			
 				.programms-content
+					.tag-filters
+						- var filters = ['Autocad', '3Ds Max', 'Дизайнеру', 'Сбросить фильтр'];
+						each filter in filters
+							.tag-fllter
+								.tag-fllter__val= filter
+								+icon('close')
+
 					.programms-content__block
 						h2 Курсы по Autocad
 						.programms-cards-slider.dots-accented

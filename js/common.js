@@ -14,6 +14,33 @@
 	$(document).ready(function() {
 		console.log('jQuery document ready');
 
+		// programms filter toggle
+		if($('.programms-filters__form').length > 0 && $('.tag-filters').length > 0){
+			var $checkboxes = $('.programms-filters__form input[type="checkbox"]'),
+				$filter = $('.tag-filters');
+
+			$checkboxes.on('change', function(){
+				var checksStates = [];
+				$checkboxes.each(function(i, item) {
+					checksStates.push($(item).prop('checked'));
+				});
+				
+				if(checkStates(checksStates)){
+					$filter.addClass('active');
+				}else{
+					$filter.removeClass('active');
+				}
+
+				if(checksStates.some(function(item) { return item;})){
+					$filter.addClass('active');
+				}else{
+					$filter.removeClass('active');
+				}
+
+			});
+		}
+		// END programms filter toggle
+
 		// programm cards slider
 
 		if($('.programms-cards-slider').length > 0){
