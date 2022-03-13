@@ -1,0 +1,121 @@
+/*--------------------how-learning----------------------*/
+.how-learning {
+	@include adaptive-value('margin-top', 65, 29, 1);
+	@include adaptive-value('margin-bottom', 65, 29, 1);
+}
+.main-page-section {}
+.wrapper-simple {}
+.how-learning__video {
+	max-width: 934px;
+	@include adaptive-value('margin-bottom', 89, 49, 1);
+
+	@include max-screen($xs){
+		margin-left: -20px;
+		margin-right: -20px;
+		width: calc(100% + 40px);
+	}  
+}
+.wrapper-flex {}
+.how-learning__features {
+	@include ol-custom();
+	@include row-flex();
+	li{
+		&:before{
+			content: counter(myCounter) "";
+			position: absolute;
+			z-index: 2;
+			left: 0;
+			top: -11px;
+			font-size: 40px;
+			line-height: 49px;
+			font-family: $reg;
+
+			@include max-screen($lg){
+				left: 15px;
+			} 
+			@include max-screen($xs){
+				left: 0;
+			}  
+		}
+
+	}
+}
+.how-learning__feature {
+	@include col();
+	@include size(4);
+	@include size-md(6);
+	@include size-xs(12);
+	margin-bottom: 44px;
+	padding-left: 45px;
+
+
+	&:last-child{
+		@include max-screen($xs){
+			margin-bottom: 0;
+		}  
+	}
+
+	@include max-screen($lg){
+		padding-left: 60px;
+	}
+	@include max-screen($xs){
+		margin-bottom: 40px;
+		padding-left: 45px;
+	}  
+
+	&:after{
+		content: '';
+		position: absolute;
+		top: -21px;
+    left: -20px;
+		width: 40px;
+		height: 40px;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		@include max-screen($lg){
+			left: -5px;
+		}
+		@include max-screen($xs){
+			left: -20px;
+		}  
+	}
+
+	&:first-child{
+		&:after{
+			background-image: url($img + "main-page/pictograms/dec_shape.svg");		
+		}
+	}
+
+	&:nth-child(2){
+		&:after{
+			background-image: url($img + "main-page/pictograms/dec_shape-1.svg");		
+		}
+	}
+	&:nth-child(3){
+		&:after{
+			background-image: url($img + "main-page/pictograms/dec_shape-2.svg");		
+		}
+	}
+	&:nth-child(4){
+		&:after{
+			background-image: url($img + "main-page/pictograms/dec_shape-3.svg");		
+		}
+	}
+	&:nth-child(5){
+		&:after{
+			background-image: url($img + "main-page/pictograms/dec_shape-4.svg");		
+		}
+	}
+	&:nth-child(6){
+		&:after{
+			background-image: url($img + "main-page/pictograms/dec_shape-5.svg");		
+		}
+	}
+	&:not(:last-child){
+	
+	}
+
+}
+/*--------------------END how-learning----------------------*/ 

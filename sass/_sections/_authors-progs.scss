@@ -1,8 +1,21 @@
 /*--------------------authors-progs----------------------*/
-.authors-progs {
+.authors-progs{
 	@include adaptive-value('margin-top', 65, 29, 1);
 	@include adaptive-value('margin-bottom', 65, 29, 1);
 	
+}
+.benefits {
+	@include adaptive-value('padding-top', 22, 29, 1);
+	@include adaptive-value('margin-bottom', 65, 29, 1);
+	
+	.wide-container{
+		@include adaptive-value('padding-top', 70, 39, 1);
+		padding-bottom: 10px;
+
+		@include max-screen($sm){
+			padding-bottom: 40px;
+		}  
+	}
 }
 .wrapper-simple {}
 .wrapper-flex {}

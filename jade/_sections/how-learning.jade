@@ -1,0 +1,13 @@
+section.how-learning.main-page-section
+	.wrapper-simple
+		h2 Как проходит обучение в AMS
+
+		.how-learning__video
+			video(poster="img/main-page/how-img.jpg")
+				source(src="https://www.youtube.com/watch?v=dGt08ylXCj0&list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&index=3&t=0s", type="video/youtube")
+
+		ul.how-learning__features
+			-var features = ['Смотрите короткие видеоуроки в личном кабинете', 'Выполняете практические задания, получаете рекомендации и разбор ошибок от куратора', 'Обсуждаете с кураторами и сокурсниками рабочие кейсы', 'Выполняете дипломный проект', 'Получаете диплом международного образца от Автодеск, Графиксофт и AMS', 'Остаётесь в сообществе профессионалов, получаете заказы и выполняете совместные проеты'];
+			
+			each item in features
+				li.how-learning__feature= item
