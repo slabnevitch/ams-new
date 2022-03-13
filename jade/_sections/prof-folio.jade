@@ -1,0 +1,19 @@
+section.prof-folio.main-page-section
+	.wrapper-simple
+		h2 Профессиональное портфолио
+
+		.prof-folio__text Проекты уникальные, нет шаблонных. У работодателя не будет впечатления, что он видел точно такой же проект в другом портфолио.
+
+		.prof-folio__title Все работы и кейсы
+
+		.wrapper-flex.prof-folio__gallery
+			.prof-folio__grid
+				.wrapper-flex
+					- for (var i=0; i < 4; i++)
+						.prof-folio__tile._fit
+							img._fit-img(src="img/main-page/folio/" + (i+1) + ".jpg" alt="alo")
+			
+			.prof-folio__portrait._fit
+				img._fit-img(src="img/main-page/folio/5.jpg" alt="alo")
+
+		a(href="#").btn.btn-bordered Все работы и кейсы

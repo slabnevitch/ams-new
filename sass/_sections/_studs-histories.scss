@@ -1,0 +1,31 @@
+/*--------------------studs-histories----------------------*/
+.studs-histories {
+	@include adaptive-value('margin-top', 35, 29, 1);
+	@include adaptive-value('margin-bottom', 72, 29, 1);
+	
+	h2{
+		@include adaptive-value('margin-bottom', 30, 19, 1);
+		@include adaptive-value('font-size', 36, 27, 1);
+		line-height: calc(44 / 36);
+	}
+}
+.wrapper-flex {}
+.person {
+	@include col();
+	@include size(4);
+	@include size-md(6);
+	@include size-xs(12);
+	margin-bottom: 30px;
+}
+.person__img {}
+._fit {}
+._fit-img {}
+.person__name {}
+.person__text {}
+.person__more {
+	font-size: 13px;
+}
+.link {}
+.btn {}
+.btn-bordered {}
+/*--------------------END studs-histories----------------------*/ 
