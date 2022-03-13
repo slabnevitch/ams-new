@@ -1,0 +1,50 @@
+.digits
+	.wide-container
+		.wrapper-simple
+			.digits__title Цифры
+			.digits__header
+				.digits__years
+					.digits__lg 10 лет работы!
+					p Каждый год вы выпускаем тысячи специалистов, которые с успехом применяют полученные знания для построения карьеры, создания собственных бюро и студий и воплощения своих идей в реальность
+				
+				.digits__sm
+					.digits__block
+						.digits__animated 37 547
+						.digits__caption студентов
+						p прошли полные программы обучения
+
+					.digits__block
+						.digits__animated 750 000
+						.digits__caption человек
+						p прошли базовые интенсивы
+			
+			.digits__middle
+				.digits__xs
+					.digits__block
+						.digits__animated 1 500 000
+						.digits__caption просмотров
+						p наших уроков
+
+					.digits__block
+						.digits__animated 170 000
+						.digits__caption подписчиков
+						p Самый крупный канал в теме 
+						a(href="#").digits-link
+							+icon('Youtube')
+							| Подписаться
+
+					.digits__block
+						.digits__animated 61 000
+						.digits__caption подписчиков
+						p Сообщество Вконтакте
+						a(href="#").digits-link
+							+icon('VK')
+							| Подписаться
+			
+			.digits__bottom
+				p Наши клиенты:
+
+				.digits__logos
+					- for (var i=0; i < 6; i++)
+						.digits__logo
+							img(src="img/main-page/clients/" + (i+1) + ".svg" alt="alt")

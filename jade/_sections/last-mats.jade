@@ -1,0 +1,22 @@
+section.last-mats.main-page-section
+	.wrapper-simple
+		h2 Последние материалы сайта
+
+		.wrapper-flex
+			- var blocks = ['Уроки Autocad', 'Уроки 3ds max', 'Уроки Revit', 'Уроки ARCHICAD'];
+			each block in blocks
+				.last-mats__block.block-last-mats
+					.block-last-mats__title
+						a(href="#").block-last-mats__link
+							span= block
+							.link-icon
+								+icon('arrow-right')
+					
+					.block-last-mats__links
+						- var links = ['Настройки отображения поверхности в Civil 3D', 'AutoCAD. Создаем план этажа/квартиры. Самый быстрый...', '10 главных принципов AutoCAD, без которых ваша работа...'];
+						each link in links
+							.block-last-mats__row
+								a(href="#").block-last-mats__link
+									span= link
+									.link-icon
+										+icon('arrow-right')
