@@ -733,12 +733,16 @@ button.mfp-close{
 .programm-card {
 	
 	min-height: 300px;
-	display: flex;
 	border-radius: 10px;
 	@include col();
 
 	text-decoration: none;
 	color: $text;
+
+	&__top{
+		display: flex;
+
+	}
 
 	&.bg-autocad{
 		.program-icon {

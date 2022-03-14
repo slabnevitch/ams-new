@@ -4339,10 +4339,6 @@ button.mfp-close {
 
 .programm-card {
   min-height: 300px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   -webkit-box-sizing: border-box;
@@ -4352,6 +4348,13 @@ button.mfp-close {
   margin-right: 15px;
   text-decoration: none;
   color: #2D2D2F;
+}
+
+.programm-card__top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .programm-card.bg-autocad .program-icon {
@@ -8709,6 +8712,134 @@ button.mfp-close {
   font-size: 14px;
   line-height: 18px;
   color: #6F6F75;
+}
+
+.programm-action {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 70px;
+}
+
+@media (max-width: 1170px) {
+  .programm-action {
+    margin-bottom: -webkit-calc(29px + 41 * ((100vw - 320px) / 850));
+    margin-bottom: calc(29px + 41 * ((100vw - 320px) / 850));
+  }
+}
+
+.programm-action h1 {
+  margin-bottom: 20px;
+  font-size: 36px;
+  line-height: -webkit-calc(44/36);
+  line-height: calc(44/36);
+}
+
+@media only screen and (max-width: 576px) {
+  .programm-action h1 {
+    font-size: 28px;
+  }
+}
+
+.programm-action__block {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.programm-action__block:first-child {
+  width: -webkit-calc(41.66667% - 30px);
+  width: calc(41.66667% - 30px);
+}
+
+@media screen and (max-width: 1100px) {
+  .programm-action__block:first-child {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .programm-action__block:first-child {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .programm-action__block:first-child {
+    margin-bottom: 30px;
+  }
+}
+
+.programm-action__block:last-child {
+  width: -webkit-calc(50% - 30px);
+  width: calc(50% - 30px);
+  margin-left: -webkit-calc(8.33333% + 15px);
+  margin-left: calc(8.33333% + 15px);
+}
+
+@media screen and (max-width: 1100px) {
+  .programm-action__block:last-child {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .programm-action__block:last-child {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .programm-action__block:last-child {
+    margin-left: -webkit-calc(0% + 15px);
+    margin-left: calc(0% + 15px);
+  }
+}
+
+.programm-action__sale {
+  padding: 0 20px;
+  margin-bottom: 20px;
+  height: 64px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 36px;
+  font-family: "MontserratBold", sans-serif;
+  line-height: 44px;
+  background-color: #FFEF68;
+}
+
+.programm-action__text {
+  margin: 0;
+  font-size: 20px;
+  line-height: 136.02%;
+}
+
+@media only screen and (max-width: 576px) {
+  .programm-action__text {
+    font-size: 16px;
+  }
 }
 
 /*--------------------END _programms-page----------------------*/

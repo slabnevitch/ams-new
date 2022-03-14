@@ -1,0 +1,290 @@
+extends _misc/main
+block title
+	| Каталог курсов (акционный)
+
+	- var authorized = true;
+	- var headerMenu = true;
+block content
+	.wrapper-simple.breadcrumbs-iconed
+		ul.breadcrumbs
+			li.breadcrumbs__item
+				a(href="").breadcrumbs__link Главная
+			li.breadcrumbs__item
+				span.breadcrumbs__target Программы #[span обучения]
+		.filter-open-icon#filter-open
+			+icon('filter')
+
+	.page.page-programms
+
+
+		.wrapper-simple
+			.wrapper-flex
+				.programms-filters
+					.programms-filters__close#close-filter
+						+icon('close')
+
+					.programms-filters__title Фильтры:
+					- var checks1 = [{title: 'Revit', val: '15'}, {title: 'Autocad', val: '12'},{title: 'Archicad', val: '27'}, {title: '3Ds Max', val: '7'}, {title: 'Corona', val: '12'}, {title: 'Lumion', val: '3'}];
+					- var checks2 = ['Всем', 'Проектировщику', 'Архитектору', 'Дизайнеру', 'Визуализатору', 'Конструктору'];
+
+					- var checks3 = [{title: 'Платные', val: '3'}, {title: 'Бесплатные', val: '3'}];
+					
+					form.form.programms-filters__form
+						.programms-filters__block
+							.programms-filters__heading Программа
+							each item, i in checks1
+								label.form__label.form__label--check
+									input(type="checkbox" class="form__checkbox" name="name" + (i+1))
+									span.form__false-checkbox
+										+icon('check')
+									span.form__checkbox-label= item.title
+										span.programms-filters__value= item.val
+
+							.programms-filters__block
+								.programms-filters__heading Кому
+								each item, i in checks2
+									label.form__label.form__label--check
+										input(type="checkbox" class="form__checkbox" name="name" + (i+1))
+										span.form__false-checkbox
+											+icon('check')
+										span.form__checkbox-label= item
+
+							.programms-filters__block
+								.programms-filters__heading Доступность
+								each item, i in checks3
+									label.form__label.form__label--check
+										input(type="checkbox" class="form__checkbox" name="name" + (i+1))
+										span.form__false-checkbox
+											+icon('check')
+										span.form__checkbox-label= item.title
+											span.programms-filters__value= item.val
+
+			
+				.programms-content
+					.tag-filters
+						- var filters = ['Autocad', '3Ds Max', 'Дизайнеру', 'Сбросить фильтр'];
+						each filter in filters
+							.tag-fllter
+								.tag-fllter__val= filter
+								+icon('close')
+
+					.programm-action
+						.programm-action__block
+							.programm-action__sale -40%
+							h1 Акция  к дню строителя
+							.programm-action__text
+								| Проекты уникальные, нет шаблонных. У работодателя не будет впечатления, что он видел точно такой же проект в другом портфолио.
+						
+						.programm-action__block
+							.programm-action__video
+								video(poster="img/main-page/how-img.jpg")
+									source(src="https://www.youtube.com/watch?v=dGt08ylXCj0&list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&index=3&t=0s", type="video/youtube")
+		
+
+					.programms-content__block
+						h2 Курсы по Autocad
+						.programms-cards-slider.dots-accented
+							a(href="/").programm-card.bg-autocad
+								.programm-card-top
+									.programm-card__content
+										.programm-card__tags
+											.tag.tag-mini.tag-autocad-bg Autocad
+											.tag.tag-mini.tag-full-bg Полный курс
+
+										.programm-card__body
+											.programm-card__title Использование AutoCAD на 100%  Версия 2.0
+											.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
+
+										.programm-card__bottom
+											.programm-card__exp Без подготовки
+											.programm-card__params
+												div 13 уроков
+												div 20 часов
+										.program-icon
+											img(src=img + "program-icons/autocad.svg" alt="alt")
+
+									.programm-card__img._fit
+										img._fit-img(src=img + "/programms-page/autocad/1.jpg" alt="alt")
+
+							a(href="/").programm-card.bg-autocad
+								.programm-card-top
+									.programm-card__content
+										.programm-card__tags
+											.tag.tag-mini.tag-autocad-bg Autocad
+											.tag.tag-mini.tag-full-bg Полный курс
+
+										.programm-card__body
+											.programm-card__title 3D моделирование в AutoCAD
+											.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
+
+										.programm-card__bottom
+											.programm-card__exp Без подготовки
+											.programm-card__params
+												div 13 уроков
+												div 20 часов
+										.program-icon
+											img(src=img + "program-icons/autocad.svg" alt="alt")
+
+								.programm-card__img._fit
+									img._fit-img(src=img + "/programms-page/autocad/2.jpg" alt="alt")
+	
+
+					//- .programms-content__block
+					//- 	h2 Revit
+					//- 	.programms-cards-slider.dots-accented
+					//- 		a(href="/").programm-card.bg-revit
+					//- 			.programm-card__content
+					//- 				.programm-card__tags
+					//- 					.tag.tag-mini.tag-revit-bg Revit
+					//- 					.tag.tag-mini.tag-full-bg Полный курс
+
+					//- 				.programm-card__body
+					//- 					.programm-card__title Информационное моделирование в Revit
+					//- 					.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
+
+					//- 				.programm-card__bottom
+					//- 					.programm-card__exp Без подготовки
+					//- 					.programm-card__params
+					//- 						div 13 уроков
+					//- 						div 20 часов
+					//- 				.program-icon
+					//- 					img(src=img + "program-icons/revit.svg" alt="alt")
+
+					//- 			.programm-card__img._fit
+					//- 				img._fit-img(src=img + "/programms-page/revit/1.jpg" alt="alt")
+
+					//- 		a(href="/").programm-card.bg-revit
+					//- 			.programm-card__content
+					//- 				.programm-card__tags
+					//- 					.tag.tag-mini.tag-revit-bg Revit
+					//- 					.tag.tag-mini.tag-full-bg Полный курс
+
+					//- 				.programm-card__body
+					//- 					.programm-card__title Revit для дизайнеров интерьера
+					//- 					.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
+
+					//- 				.programm-card__bottom
+					//- 					.programm-card__exp Без подготовки
+					//- 					.programm-card__params
+					//- 						div 13 уроков
+					//- 						div 20 часов
+					//- 				.program-icon
+					//- 					img(src=img + "program-icons/revit.svg" alt="alt")
+
+					//- 			.programm-card__img._fit
+					//- 				img._fit-img(src=img + "/programms-page/revit/2.jpg" alt="alt")
+
+
+
+					//- 	button.btn.btn-bordered.btn-sm Показать ещё
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	// script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	// script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	script(src="js/libs/slick-master/slick.js")
+
+	script(src="js/libs/mediaelement/mediaelement-and-player.min.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================
