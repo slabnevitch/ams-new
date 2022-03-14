@@ -739,9 +739,17 @@ button.mfp-close{
 	text-decoration: none;
 	color: $text;
 
-	&__top{
+	&:not(.programm-card--promotional){
 		display: flex;
-
+	}
+	&--promotional{
+		display: flex;
+		flex-direction: column;
+	}
+	&__top{
+		width: 100%;
+		display: flex;
+		flex: 1 1 auto;
 	}
 
 	&.bg-autocad{
@@ -868,5 +876,115 @@ line-height: calc(29/24);
 			margin-right: 20px;
 		}
 	}
+}
+.programm-card__footer {
+	flex: 0 0 auto;
+	margin-top: auto;
+	border-top: 2px solid #fff;
+}
+.programm-card__inform{
+}
+.programm-card__prices {
+	padding: 20px 40px 0 40px;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: flex-end;
+
+	@include max-screen($xs){
+		display: block;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	p{
+		margin: 0;
+		font-size: 12px;
+		color: #6F6F75;
+	}
+}
+.programm-card__sale {}
+.sale-programm-card {
+	flex: 0 0 50%;
+	
+	@include max-screen($xs){
+		margin-bottom: 20px;
+		text-align: center;
+	}
+}
+.sale-programm-card__old {
+	font-family: $bold;
+	font-size: 20px;
+	line-height: 24px;
+	text-decoration: line-through;
+	color:  #FF886A;
+}
+.sale-programm-card__new {
+	font-family: $bold;
+	font-size: 20px;
+	line-height: 24px;
+}
+.programm-card__actual {
+	text-align: center;
+	p{
+		width: 100%;
+		text-align: center;
+	}
+}
+.actual-programm-card {
+
+	flex: 0 0 50%;
+}
+.actual-programm-card__values{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	width: 100%;
+
+	
+}
+.actual-programm-card__val {
+	font-family: $bold;
+	font-size: 28px;
+	line-height: calc(34/28);
+
+	// @include dots-family();
+}
+
+.programm-card__buttons {
+	padding: 0 40px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+
+	@include max-screen($xs){
+		display: block;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.btn-bordered {
+		border-color: $accent;
+
+		@include max-screen($xs){
+			margin-top: 20px;
+		}
+		@include max-screen(340px){
+			font-size: 14px;
+		}
+	}
+
+
+	@include max-screen($xs){
+		display: block;
+	}
+}
+.programm-card__terms {
+	padding: 5px 15px;
+	text-align: center;
+	color: #fff;
+	background-color: $red;
+	font-size: 14px;
+line-height: 17px;
+font-family: $semi;
+	border-radius: 0 0 10px 10px;
 }
 /*--------------------END UI----------------------*/ 

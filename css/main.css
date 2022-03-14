@@ -4350,11 +4350,35 @@ button.mfp-close {
   color: #2D2D2F;
 }
 
-.programm-card__top {
+.programm-card:not(.programm-card--promotional) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.programm-card--promotional {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.programm-card__top {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .programm-card.bg-autocad .program-icon {
@@ -4506,6 +4530,164 @@ button.mfp-close {
 
 .programm-card__params div:not(:last-child) {
   margin-right: 20px;
+}
+
+.programm-card__footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-top: auto;
+  border-top: 2px solid #fff;
+}
+
+.programm-card__prices {
+  padding: 20px 40px 0 40px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+@media only screen and (max-width: 576px) {
+  .programm-card__prices {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.programm-card__prices p {
+  margin: 0;
+  font-size: 12px;
+  color: #6F6F75;
+}
+
+.sale-programm-card {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+}
+
+@media only screen and (max-width: 576px) {
+  .sale-programm-card {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.sale-programm-card__old {
+  font-family: "MontserratBold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: line-through;
+  color: #FF886A;
+}
+
+.sale-programm-card__new {
+  font-family: "MontserratBold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.programm-card__actual {
+  text-align: center;
+}
+
+.programm-card__actual p {
+  width: 100%;
+  text-align: center;
+}
+
+.actual-programm-card {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50%;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+}
+
+.actual-programm-card__values {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.actual-programm-card__val {
+  font-family: "MontserratBold", sans-serif;
+  font-size: 28px;
+  line-height: -webkit-calc(34/28);
+  line-height: calc(34/28);
+}
+
+.programm-card__buttons {
+  padding: 0 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+  .programm-card__buttons {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.programm-card__buttons .btn-bordered {
+  border-color: #FFEF68;
+}
+
+@media only screen and (max-width: 576px) {
+  .programm-card__buttons .btn-bordered {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .programm-card__buttons .btn-bordered {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .programm-card__buttons {
+    display: block;
+  }
+}
+
+.programm-card__terms {
+  padding: 5px 15px;
+  text-align: center;
+  color: #fff;
+  background-color: #FF886A;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "MontserratSemiBold", sans-serif;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
 }
 
 /*--------------------END UI----------------------*/
@@ -8173,13 +8355,29 @@ button.mfp-close {
   }
 }
 
-.programms-cards-slider .slick-slide {
+.programms-cards-slider.slick-initialized .slick-slide.programm-card--promotional {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (min-width: 767.98px) {
+  .programms-cards-slider.slick-initialized .slick-slide.programm-card--promotional.slick-cloned {
+    display: none;
+  }
+}
+
+.programms-cards-slider .slick-slide {
   float: none;
   height: auto;
+}
+
+.programms-cards-slider .slick-slide:not(.programm-card--promotional) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media only screen and (min-width: 767.98px) {
@@ -8188,11 +8386,21 @@ button.mfp-close {
   }
 }
 
-.programms-cards-slider .programm-card {
+.programms-cards-slider .programm-card:not(.programm-card--promotional) {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (max-width: 480px) {
+  .programms-cards-slider .programm-card:not(.programm-card--promotional) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
 @media only screen and (min-width: 767.98px) {
@@ -8221,7 +8429,7 @@ button.mfp-close {
 }
 
 @media only screen and (max-width: 480px) {
-  .programms-cards-slider .programm-card {
+  .programms-cards-slider .programm-card__top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -8607,12 +8815,12 @@ button.mfp-close {
   display: none !important;
 }
 
-.programms-content__block.expanded .btn {
+.programms-content__block.expanded.btn {
   display: none;
 }
 
 @media only screen and (min-width: 767.98px) {
-  .programms-content__block .btn {
+  .programms-content__block > .btn {
     display: none;
   }
 }

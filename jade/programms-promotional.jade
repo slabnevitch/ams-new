@@ -84,96 +84,85 @@ block content
 					.programms-content__block
 						h2 Курсы по Autocad
 						.programms-cards-slider.dots-accented
-							a(href="/").programm-card.bg-autocad
-								.programm-card-top
-									.programm-card__content
-										.programm-card__tags
-											.tag.tag-mini.tag-autocad-bg Autocad
-											.tag.tag-mini.tag-full-bg Полный курс
+							- for (var i=0; i < 2 ; i++)
+								.programm-card.programm-card--promotional.bg-autocad
+									.programm-card__top
+										.programm-card__content
+											.programm-card__tags
+												.tag.tag-mini.tag-autocad-bg Autocad
+												.tag.tag-mini.tag-full-bg Полный курс
 
-										.programm-card__body
-											.programm-card__title Использование AutoCAD на 100%  Версия 2.0
-											.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
+											.programm-card__body
+												.programm-card__title Использование AutoCAD на 100%  Версия 2.0
+												.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
 
-										.programm-card__bottom
-											.programm-card__exp Без подготовки
-											.programm-card__params
-												div 13 уроков
-												div 20 часов
-										.program-icon
-											img(src=img + "program-icons/autocad.svg" alt="alt")
+											.programm-card__bottom
+												.programm-card__exp Без подготовки
+												.programm-card__params
+													div 13 уроков
+													div 20 часов
+											.program-icon
+												img(src=img + "program-icons/autocad.svg" alt="alt")
 
-									.programm-card__img._fit
-										img._fit-img(src=img + "/programms-page/autocad/1.jpg" alt="alt")
+										.programm-card__img._fit
+											img._fit-img(src=img + "/programms-page/autocad/1.jpg" alt="alt")
 
-							a(href="/").programm-card.bg-autocad
-								.programm-card-top
-									.programm-card__content
-										.programm-card__tags
-											.tag.tag-mini.tag-autocad-bg Autocad
-											.tag.tag-mini.tag-full-bg Полный курс
+									.programm-card__footer
+										.programm-card__prices
+											.programm-card__sale.sale-programm-card
+												.sale-programm-card__old 54 000 ₽
+												.sale-programm-card__new 27 000 ₽
+												p Единый платёж
+											.programm-card__actual.actual-programm-card
+												.actual-programm-card__values
+													.actual-programm-card__val 4500 ₽
+													.actual-programm-card__month / месяц
+												p Рассрочка на 6 месяцев
+										
+										.programm-card__buttons
+											a(href="#").btn.btn-accented Записаться
+											a(href="#").btn.btn-sm.btn-bordered Подробнее о курсе
+										
+										.programm-card__terms Осталось 20 мест из 100
 
-										.programm-card__body
-											.programm-card__title 3D моделирование в AutoCAD
-											.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
+							//- a(href="/").programm-card.programm-card--promotional.bg-autocad
+							//- 	span.programm-card__top
+							//- 		.programm-card__content
+							//- 			.programm-card__tags
+							//- 				.tag.tag-mini.tag-autocad-bg Autocad
+							//- 				.tag.tag-mini.tag-full-bg Полный курс
 
-										.programm-card__bottom
-											.programm-card__exp Без подготовки
-											.programm-card__params
-												div 13 уроков
-												div 20 часов
-										.program-icon
-											img(src=img + "program-icons/autocad.svg" alt="alt")
+							//- 			.programm-card__body
+							//- 				.programm-card__title Использование AutoCAD на 100%  Версия 2.0
+							//- 				.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
 
-								.programm-card__img._fit
-									img._fit-img(src=img + "/programms-page/autocad/2.jpg" alt="alt")
-	
+							//- 			.programm-card__bottom
+							//- 				.programm-card__exp Без подготовки
+							//- 				.programm-card__params
+							//- 					div 13 уроков
+							//- 					div 20 часов
+							//- 			.program-icon
+							//- 				img(src=img + "program-icons/autocad.svg" alt="alt")
 
-					//- .programms-content__block
-					//- 	h2 Revit
-					//- 	.programms-cards-slider.dots-accented
-					//- 		a(href="/").programm-card.bg-revit
-					//- 			.programm-card__content
-					//- 				.programm-card__tags
-					//- 					.tag.tag-mini.tag-revit-bg Revit
-					//- 					.tag.tag-mini.tag-full-bg Полный курс
+							//- 		.programm-card__img._fit
+							//- 			img._fit-img(src=img + "/programms-page/autocad/1.jpg" alt="alt")
 
-					//- 				.programm-card__body
-					//- 					.programm-card__title Информационное моделирование в Revit
-					//- 					.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
-
-					//- 				.programm-card__bottom
-					//- 					.programm-card__exp Без подготовки
-					//- 					.programm-card__params
-					//- 						div 13 уроков
-					//- 						div 20 часов
-					//- 				.program-icon
-					//- 					img(src=img + "program-icons/revit.svg" alt="alt")
-
-					//- 			.programm-card__img._fit
-					//- 				img._fit-img(src=img + "/programms-page/revit/1.jpg" alt="alt")
-
-					//- 		a(href="/").programm-card.bg-revit
-					//- 			.programm-card__content
-					//- 				.programm-card__tags
-					//- 					.tag.tag-mini.tag-revit-bg Revit
-					//- 					.tag.tag-mini.tag-full-bg Полный курс
-
-					//- 				.programm-card__body
-					//- 					.programm-card__title Revit для дизайнеров интерьера
-					//- 					.programm-card__text Идейные соображения высшего порядка, а также перспективное планирование предполагает независимые способы реализации инновационных методов управления процессами. В своём стремлении повысить качество жизни...
-
-					//- 				.programm-card__bottom
-					//- 					.programm-card__exp Без подготовки
-					//- 					.programm-card__params
-					//- 						div 13 уроков
-					//- 						div 20 часов
-					//- 				.program-icon
-					//- 					img(src=img + "program-icons/revit.svg" alt="alt")
-
-					//- 			.programm-card__img._fit
-					//- 				img._fit-img(src=img + "/programms-page/revit/2.jpg" alt="alt")
-
+							//- 	span.programm-card__footer
+							//- 		.programm-card__prices
+							//- 			.programm-card__sale.sale-programm-card
+							//- 				.sale-programm-card__old 54 000 ₽
+							//- 				.sale-programm-card__new 27 000 ₽
+							//- 				p Единый платёж
+							//- 			.programm-card__actual.actual-programm-card
+							//- 				.actual-programm-card__val 4500 ₽
+							//- 				.actual-programm-card__month / месяц
+							//- 				p Рассрочка на 6 месяцев
+									
+							//- 		.programm-card__buttons
+							//- 			a(href="#").btn.btn-accented Записаться
+							//- 			a(href="#").btn.btn-bordered Подробнее о курсе
+									
+							//- 		.programm-card__terms Осталось 20 мест из 100
 
 
 					//- 	button.btn.btn-bordered.btn-sm Показать ещё
