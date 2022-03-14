@@ -741,6 +741,18 @@ button.mfp-close{
 
 	&:not(.programm-card--promotional){
 		display: flex;
+
+		@media (any-hover: hover) {
+			&:hover{
+				.programm-card__title,
+				.programm-card__bottom{
+					display: none;
+				}
+				.programm-card__text{
+					display: block;
+				}
+			}
+		}
 	}
 	&--promotional{
 		display: flex;
@@ -777,17 +789,7 @@ button.mfp-close{
 			background-color: #E8F6FF;
 		}
 	}
-	@media (any-hover: hover) {
-		&:hover{
-			.programm-card__title,
-			.programm-card__bottom{
-				display: none;
-			}
-			.programm-card__text{
-				display: block;
-			}
-		}
-	}
+	
 }
 .bg-autocad{
 	background-color: #FFF1F1;
@@ -817,6 +819,30 @@ button.mfp-close{
 			right: -24px;
 			z-index: 2;		
 		}
+}
+.programm-card__sale-label{
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;	
+	position: absolute;
+	z-index: 2;
+	top: 16px;
+	right: -34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $red;
+	color: #fff;
+	font-size: 14px;
+line-height: 17px;
+font-family: $black;
+
+	@include max-screen($xss){
+		right: -10px;
+	}
+	@include max-screen(320px){
+		right: -24px;
+	}
 }
 .programm-card__img {
 	margin-left: 10px;
@@ -902,7 +928,7 @@ line-height: calc(29/24);
 		color: #6F6F75;
 	}
 }
-.programm-card__sale {}
+
 .sale-programm-card {
 	flex: 0 0 50%;
 	
