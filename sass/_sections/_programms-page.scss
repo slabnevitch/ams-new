@@ -522,4 +522,75 @@ line-height: 18px;
 		}
 }
 .programm-action__video {}
+
+.programms-previews {
+	@include row-flex();
+
+	.programms-preview {
+		@include col();
+		@include size(4);
+		@include size-md(6);
+		@include size-xs(12);
+
+		text-decoration: none;
+		color: $text;
+
+		&:not(:last-child){
+			@include max-screen($xs){
+				margin-bottom: 30px;
+			}  
+			
+		}
+	}
+}
+.programms-preview__img {
+	display: block;
+	padding-bottom: prc(168, 300);
+	margin-bottom: 10px;
+
+	.play-button{
+		width: 50px;
+		height: 50px;
+
+		.icon{
+			margin-left: 0;
+			font-size: 15px;
+		}
+	}
+}
+
+.programms-preview__text {}
+.programms-preview__title {
+	margin-bottom: 5px;
+	font-family: $semi;
+	font-size: 14px;
+	line-height: 17px;
+}
+.programms-preview__chapter {
+	margin-bottom: 5px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.status-programms-preview {
+	display: flex;
+	align-items: center;
+}
+.status-programms-preview__state {
+	border-radius: 5px;
+	flex: 1 1 auto;
+	background-color: #fff;
+}
+.status-programms-preview__line {
+	height: 6px;
+	border-radius: 5px;
+	background-color: $accent;
+}
+.status-programms-preview__val {
+	margin-left: 10px;
+	flex-shrink: 0;
+	font-family: $semi;
+	font-size: 14px;
+line-height: 17px;
+}
 /*--------------------END _programms-page----------------------*/ 

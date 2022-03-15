@@ -9366,6 +9366,117 @@ button.mfp-close {
   }
 }
 
+.programms-previews {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.programms-previews .programms-preview {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(33.33333% - 30px);
+  width: calc(33.33333% - 30px);
+  text-decoration: none;
+  color: #2D2D2F;
+}
+
+@media screen and (max-width: 991px) {
+  .programms-previews .programms-preview {
+    width: -webkit-calc(50% - 30px);
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .programms-previews .programms-preview {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .programms-previews .programms-preview:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.programms-preview__img {
+  display: block;
+  padding-bottom: 56%;
+  margin-bottom: 10px;
+}
+
+.programms-preview__img .play-button {
+  width: 50px;
+  height: 50px;
+}
+
+.programms-preview__img .play-button .icon {
+  margin-left: 0;
+  font-size: 15px;
+}
+
+.programms-preview__title {
+  margin-bottom: 5px;
+  font-family: "MontserratSemiBold", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.programms-preview__chapter {
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.status-programms-preview {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.status-programms-preview__state {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  background-color: #fff;
+}
+
+.status-programms-preview__line {
+  height: 6px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #FFEF68;
+}
+
+.status-programms-preview__val {
+  margin-left: 10px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-family: "MontserratSemiBold", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+}
+
 /*--------------------END _programms-page----------------------*/
 /*--------------------_main-screen----------------------*/
 .main-screen {
