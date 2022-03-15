@@ -3510,6 +3510,27 @@ h3 {
   }
 }
 
+.breadcrumbs-minimize {
+  margin-bottom: 50px;
+}
+
+.breadcrumbs-minimize .breadcrumbs__link {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.breadcrumbs-minimize .breadcrumbs__link .icon {
+  margin-right: 16px;
+  font-size: 12px;
+}
+
 .breadcrumbs__item {
   list-style-type: none;
 }

@@ -1,0 +1,175 @@
+extends _misc/main
+block title
+	| Платный курс. Разделы
+	- var authorized = true;
+	- var headerMenu = true;
+block content
+	.wrapper-simple
+		ul.breadcrumbs.breadcrumbs-minimize
+			li.breadcrumbs__item
+				a(href="").breadcrumbs__link.link
+					+icon('chevron-left')
+					| Программы обучения
+
+	.page.page-course
+		.wide-container
+			.wrapper-simple
+				.course-card
+					.course-card__info
+						.course-card__header
+							.tag.tag-mini.tag-autocad-bg Autocad
+							.tag.tag-mini.tag-full-bg Полный курс
+
+					.course-card__title Использование  AutoCAD на 100%
+					.course-card__text Обучение всем возможностям программы. Алгоритмы проектирования, расчётов.
+
+					.course-card__tags
+						-var tags = ['13 уроков', '20 домашних заданий', 'Без подготовки'];
+						each tag in tags
+							.tag.tag-mini.tag-misc-empty= tag
+					
+					.course-card__img._fit
+						img._fit-img(src="img/course-card-img.jpg" alt="alt")
+			
+				.page-course__preview
+					.programms-preview
+						a(href="/").programms-preview__img._fit
+							img._fit-img(src="img/programms-page/choice3.jpg" alt="alt")
+							.play-button
+								+icon('play')
+						
+						.programms-preview__text
+							.programms-preview__title Использование AutoCAD на 100%
+							.programms-preview__chapter 3.3. Обучение всем возможностям программы
+
+						.programms-preview__status.status-programms-preview
+							.status-programms-preview__state
+								.status-programms-preview__line(style="width: 34%")
+							.status-programms-preview__val 34%
+				
+				.course-chapters
+					.course-chapters__title Разделы
+					ul.accordion(data-accordion).course-chapters__content.content-course-chapters
+						// "data-accordion" добавляет поведение акордеона, т.е. при разворачивании одного эл-та. все остальные эл-ты. сворачиваются
+						// data-breakpoint="767.98" ширина экрана, меньше которой включается поведение аккордеона 
+						- var list = ['Введение', 'Использование AutoCAD', 'Обучение всем возможностям программы', 'Интерфейс', 'Примитивы черчения', 'Примитивы черчения', 'Алгоритмы проектирования', 'Инструменты редактирования', 'Выделение объектов и быстрый выбор', 'Слои', 'Свойства объектов', 'Навигация и виды', 'Текст и МТекст', 'Алгоритмы проектирования'];
+
+						each lhh, i in list
+							li.accordion__item.course-chapters__chapter.chapter-course-chapters(class=i<2 ? "viewed" : "")
+								.accordion__link.chapter-course-chapters__link= lhh
+								ul.accordion__content.course-chapter__sublist.hidden
+									- var sublist = ['Использование AutoCAD', 'Обучение всем возможностям программы', 'Алгоритмы проектирования', 'Использование AutoCAD'];
+									each sub, ind in sublist
+										li.course-chapters__subitem
+											a(href="").course-chapters__sublink= sub
+
+											
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	// script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	// script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================
