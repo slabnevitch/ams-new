@@ -4,6 +4,7 @@ block title
 
 	- var authorized = true;
 	- var headerMenu = true;
+	- var topTimer = true;
 block content
 	.wrapper-simple.breadcrumbs-iconed
 		ul.breadcrumbs
@@ -148,7 +149,7 @@ block content
 											img(src=img + "program-icons/autocad.svg" alt="alt")
 
 									.programm-card__img._fit
-										img._fit-img(src=img + "/programms-page/autocad/1.jpg" alt="alt")
+										img._fit-img(src=img + "/programms-page/autocad/2.jpg" alt="alt")
 
 								.programm-card__footer
 									.programm-card__prices
@@ -190,7 +191,7 @@ block content
 											img(src=img + "program-icons/autocad.svg" alt="alt")
 
 									.programm-card__img._fit
-										img._fit-img(src=img + "/programms-page/autocad/1.jpg" alt="alt")
+										img._fit-img(src=img + "/programms-page/autocad/3.jpg" alt="alt")
 
 								.programm-card__footer
 									.programm-card__prices
@@ -630,6 +631,8 @@ block page-scripts
 
 	script(src="js/libs/mediaelement/mediaelement-and-player.min.js")
 
+	script(src="js/libs/jquery.cookie.min.js")
+
 	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
 
 	//- superfish--------------------------
@@ -642,6 +645,7 @@ block page-scripts
 	//- VANILLA JS===================================
 	//- dynamic-adaptive--------------------------
 	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+	script(src="js/timer.js")
 		
 	//- slideout--------------------------
 	//- script(src="js/libs/slideout/slideout.js")

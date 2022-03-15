@@ -14,6 +14,34 @@
 	$(document).ready(function() {
 		console.log('jQuery document ready');
 
+		// number animation
+		if($('.digits__animated').length > 0){
+			var comma_separator_number_step = $.animateNumber.numberStepFactories.separator('')
+			$('.digits__animated').each(function(index, elem) {
+						var delay = index * 500,
+						$this = $(elem);
+						
+						// var timer = setTimeout(function(){
+							$this.animateNumber({
+								number: $this.attr('data-count'),
+							    // easing: 'easeInQuad', // require jquery.easing
+
+							    // optional custom step function
+							    // using here to keep '%' sign after number
+							    numberStep: comma_separator_number_step
+								},
+								{
+
+							    easing: 'linear',
+							    duration: 10000000
+
+								});
+						// }, delay);
+					});
+
+		}
+		// END number animation
+
 		// programms filter toggle
 		if($('.programms-filters__form').length > 0 && $('.tag-filters').length > 0){
 			var $checkboxes = $('.programms-filters__form input[type="checkbox"]'),

@@ -1,6 +1,10 @@
 /*------------------------------------------*/
 
-.header {}
+.header {
+	&.header-with-timer{
+		margin-top: 62px;
+	}
+}
 .wrapper-simple {}
 .header__inner {
 	padding: 30px 0 5px 0;

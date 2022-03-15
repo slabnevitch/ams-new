@@ -1,0 +1,153 @@
+/*--------------------top-timer----------------------*/
+.top-timer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: $accent;
+	z-index: 3;
+}
+.wrapper-simple {}
+.top-timer__content {
+	height: 62px;
+	padding: 8px 20px 8px 20px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	color: $text;
+	text-decoration: none;
+
+	@include max-screen($lg){
+		padding-left: 0;
+		padding-right: 0;
+	} 
+	@include max-screen($xs){
+		padding-bottom: 33px;
+		// align-items: flex-start;
+	}  
+	
+	.timer-window {
+		display: flex;
+		margin: 0 10px; 
+		align-items: center;
+
+		@include max-screen($xs){
+			margin-left: auto;
+			margin-right: 0;
+		}  
+	}
+	.timer-window__caption {
+		margin-right: 10px;
+		font-family: $bold;
+		@include adaptive-value('font-size', 20, 13, 1);
+		font-size: 20px;
+	line-height: calc(24 / 20);
+
+		@include max-screen($md){
+			display: none;
+		}  
+	}
+	.timer-window__days-count, .timer-window__count{
+		width: 42px;
+		height: 30px;
+		border-radius: 0;
+		margin-bottom: 0;
+
+		@include max-screen($sm){
+			width: 36px;
+			height: 26px;
+			font-size: 18px;
+		} 
+		@include max-screen($xs){
+			width: 30px;
+			height: 20px;
+			font-size: 16px;
+		}  
+		@include max-screen($xss){
+			width: 28px;
+			height: 18px;
+			font-size: 14px;
+		}  
+	}
+	.timer-window__timer {}
+	.timer-window__block {
+		&:not(:last-child) {
+    	margin-right: 10px;
+    	@include max-screen($xss){
+    		margin-right: 5px;
+    	}  
+		}
+	}
+	.timer-window__days {}
+	.timer-window__days-count {}
+	.timer-window__label{
+		margin-top: -2px;
+		font-family: $ibm-med;
+		@include max-screen($sm){
+			font-size: 10px;
+		}
+		@include max-screen($sm){
+			font-size: 10px;
+		}
+		@include max-screen($xs){
+			display: none;
+		}  
+	}
+	.timer-window__hour {}
+	.timer-window__count {}
+	.timer-window__minute {}
+	.timer-window__second {}
+}
+.top-timer__percents {
+	font-family: $bold;
+	@include adaptive-value('font-size', 56, 20, 1);
+line-height: 110%;
+
+	@include max-screen($xs){
+		font-size: 20px;
+	}  
+}
+.top-timer__slogan {
+	@include adaptive-value('margin-left', 30, 5, 1);
+	@include adaptive-value('margin-right', 30, 5, 1);
+	font-family: $bold;
+	@include adaptive-value('font-size', 28, 12, 1);
+	line-height: 1;
+	overflow: hidden;
+
+	@include dots-family-multi(2);
+
+	@include max-screen($xs){
+		// margin-top: 3px;
+		font-size: 14px;
+	}  
+	@include max-screen($xss){
+		// margin-top: 3px;
+		font-size: 12px;
+	}  
+}
+.top-timer__button {
+	display: inline-flex;
+	flex-shrink: 0;
+	align-items: center;
+	margin-left: auto;
+	padding: 0 15px;
+	text-align: center;
+	background-color: #2D2D2F;
+	color: #fff;
+	font-family: $semi;
+	border-radius: 5px;
+	@include adaptive-value('height', 44, 24, 1);
+	@include adaptive-value('font-size', 16, 10, 1);
+
+	@include max-screen($xs){
+		width: calc(100% - 40px);
+		position: absolute;
+		bottom: 5px;
+		left: 20px;
+		right: 20px;
+		height: 22px;
+		justify-content: center;
+	}  
+}
+/*--------------------END top-timer----------------------*/ 

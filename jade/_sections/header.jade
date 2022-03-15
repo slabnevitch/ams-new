@@ -1,4 +1,7 @@
-header.header
+if topTimer
+	include ../_blocks/top-timer
+
+header(class=topTimer ? "header header-with-timer" : "header")
 	.wrapper-simple
 		.header__inner
 			if headerMenu

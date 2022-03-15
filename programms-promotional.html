@@ -11,7 +11,34 @@
   </head>
   <body>
     <main id="panel" class="main">
-      <header class="header">
+      <div class="top-timer">
+        <div class="wrapper-simple"><a href="/" class="top-timer__content">
+            <div class="top-timer__percents">-35%</div>
+            <div class="top-timer__slogan">Распродажа на все курсы!</div>
+            <div class="timer-window">
+              <div class="timer-window__caption">Осталось:</div>
+              <div data-date="2022-03-24 00:00:00" class="timer-window__timer">
+                <div class="timer-window__block timer-window__days">
+                  <div class="timer-window__days-count">12</div>
+                  <div class="timer-window__label">дни</div>
+                </div>
+                <div class="timer-window__block">
+                  <div class="timer-window__hour timer-window__count">08</div>
+                  <div class="timer-window__label">часы</div>
+                </div>
+                <div class="timer-window__block">
+                  <div class="timer-window__minute timer-window__count">45</div>
+                  <div class="timer-window__label">минуты</div>
+                </div>
+                <div class="timer-window__block">
+                  <div class="timer-window__second timer-window__count">32</div>
+                  <div class="timer-window__label">секунды</div>
+                </div>
+              </div>
+            </div>
+            <div class="top-timer__button">Получить скидку</div></a></div>
+      </div>
+      <header class="header header-with-timer">
         <div class="wrapper-simple">
           <div class="header__inner">
             <button class="toggle-mnu">
@@ -283,7 +310,7 @@
                           <div class="programm-card__sale-label">-50%</div>
                           <div class="program-icon"><img src="img/program-icons/autocad.svg" alt="alt"></div>
                         </div>
-                        <div class="programm-card__img _fit"><img src="img//programms-page/autocad/1.jpg" alt="alt" class="_fit-img"></div>
+                        <div class="programm-card__img _fit"><img src="img//programms-page/autocad/2.jpg" alt="alt" class="_fit-img"></div>
                       </div>
                       <div class="programm-card__footer">
                         <div class="programm-card__prices">
@@ -324,7 +351,7 @@
                           <div class="programm-card__sale-label">-50%</div>
                           <div class="program-icon"><img src="img/program-icons/autocad.svg" alt="alt"></div>
                         </div>
-                        <div class="programm-card__img _fit"><img src="img//programms-page/autocad/1.jpg" alt="alt" class="_fit-img"></div>
+                        <div class="programm-card__img _fit"><img src="img//programms-page/autocad/3.jpg" alt="alt" class="_fit-img"></div>
                       </div>
                       <div class="programm-card__footer">
                         <div class="programm-card__prices">
@@ -785,7 +812,9 @@
     -->
     <script src="js/libs/slick-master/slick.js"></script>
     <script src="js/libs/mediaelement/mediaelement-and-player.min.js"></script>
+    <script src="js/libs/jquery.cookie.min.js"></script>
     
+    <script src="js/timer.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
