@@ -1,0 +1,175 @@
+/*--------------------course-paid----------------------*/
+.page-course {
+	.wide-container {
+		background-color: $gray-bg;
+
+		@include max-screen($sm){
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}  
+	}
+
+}
+.wrapper-simple {}
+.course-card {
+	display: flex;
+	align-items: center;
+
+	@include adaptive-value('margin-bottom', 30, 29, 1);
+
+	@include max-screen(800px){
+		flex-wrap: wrap;
+	}  
+}
+.course-card__info {
+	flex: 0 1 auto;
+	padding-right: 70px;
+	position: relative;
+
+	@include max-screen(800px){
+		flex: 1 1 auto;
+		padding-bottom: 50px;
+		padding-right: 0;
+	}  
+
+	.program-icon{
+		width: 64px;
+		height: 64px;
+		position: absolute;
+		z-index: 2;
+		right: -34px;
+		top: 50%;
+		margin-top: -34px;
+
+		@include max-screen(800px){
+			right: 0;
+			top: auto;
+			left: 0;
+			margin: auto;
+			bottom: -34px;
+			margin-top: 0;
+		}  
+	}
+}
+.course-card__header {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+	.tag {
+
+		&:not(:last-child){
+			margin-right: 10px;
+		}
+	}
+}
+
+.course-card__title {
+	margin-bottom: 10px;
+	font-family: $bold;
+	@include adaptive-value('font-size', 56, 1, 1);
+line-height: 110%;
+
+	@include max-screen(800px){
+		font-size: 48px;
+	}
+	@include max-screen($sm){
+	  	font-size: 36px;
+	  }
+  @include max-screen(350px){
+      	font-size: 30px;
+      }      
+}
+.course-card__text {
+	margin-bottom: 20px;
+	font-size: 20px;
+line-height: 136.02%;
+}
+.course-card__tags {
+	display: flex;
+	flex-wrap: wrap;
+
+	.tag{
+		&:not(:last-child){
+			margin-right: 10px;
+		}
+	}
+}
+.course-card__img {
+	flex: 0 0 400px;
+	padding-bottom: 34.2%;
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+
+	@include max-screen(800px){
+		flex: 1 1 auto;
+		padding-bottom: 52.52%;
+	}  
+
+	@include max-screen($xs){
+		padding-bottom: 100%;
+	}  
+	
+}
+
+.page-course__preview {
+	margin-bottom: 70px;
+	.programms-preview {
+		max-width: 640px;
+		display: flex;
+		align-items: center;
+
+		@include max-screen($xs){
+			flex-wrap: wrap;
+		}  
+	}
+	.programms-preview__img {
+		flex: 0 0 50%;
+		padding-bottom: 26.25%;
+		margin-right: 30px;
+		margin-bottom: 0;
+
+		@include max-screen($xs){
+			flex: 1 1 100%;
+			padding-bottom: prc(168, 300);
+			margin-bottom: 30px;
+			margin-right: 0;
+		} 
+	}
+	.programms-preview__text {
+		flex: 1 1 50%;
+
+		@include max-screen($xs){
+			flex: 1 1 100%;
+		}  
+	}
+
+}
+.page-course__title{
+	margin-bottom: 20px;
+	font-family: $bold;
+	font-size: 28px;
+	line-height: 34px;
+}
+
+
+.course-chapters {}
+.course-chapters__title {}
+.accordion {}
+.course-chapters__content {}
+.content-course-chapters {}
+.accordion__item {}
+.course-chapters__chapter {}
+.chapter-course-chapters {}
+.accordion__link {}
+.chapter-course-chapters__link {}
+.viewed {}
+.chapter-num {}
+.chapter-val {}
+.chapter-icons {}
+.chapter-icons__completed {}
+.icon {}
+.icon-check-chapter {}
+.chapter-icons__expand {}
+.icon-chevron-down {}
+/*--------------------END course-paid----------------------*/ 

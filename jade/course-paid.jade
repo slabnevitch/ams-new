@@ -20,18 +20,22 @@ block content
 							.tag.tag-mini.tag-autocad-bg Autocad
 							.tag.tag-mini.tag-full-bg Полный курс
 
-					.course-card__title Использование  AutoCAD на 100%
-					.course-card__text Обучение всем возможностям программы. Алгоритмы проектирования, расчётов.
+						.course-card__title Использование  AutoCAD на 100%
+						.course-card__text Обучение всем возможностям программы. Алгоритмы проектирования, расчётов.
 
-					.course-card__tags
-						-var tags = ['13 уроков', '20 домашних заданий', 'Без подготовки'];
-						each tag in tags
-							.tag.tag-mini.tag-misc-empty= tag
-					
+						.course-card__tags
+							-var tags = ['13 уроков', '20 домашних заданий', 'Без подготовки'];
+							each tag in tags
+								.tag.tag-mini.tag-misc-empty= tag
+
+						.program-icon
+							img(src=img + "program-icons/autocad.svg" alt="alt")
+
 					.course-card__img._fit
 						img._fit-img(src="img/course-card-img.jpg" alt="alt")
 			
 				.page-course__preview
+					.page-course__title Продолжить просмотр
 					.programms-preview
 						a(href="/").programms-preview__img._fit
 							img._fit-img(src="img/programms-page/choice3.jpg" alt="alt")
@@ -42,10 +46,10 @@ block content
 							.programms-preview__title Использование AutoCAD на 100%
 							.programms-preview__chapter 3.3. Обучение всем возможностям программы
 
-						.programms-preview__status.status-programms-preview
-							.status-programms-preview__state
-								.status-programms-preview__line(style="width: 34%")
-							.status-programms-preview__val 34%
+							.programms-preview__status.status-programms-preview
+								.status-programms-preview__state
+									.status-programms-preview__line(style="width: 34%")
+								.status-programms-preview__val 34%
 				
 				.course-chapters
 					.course-chapters__title Разделы
@@ -55,13 +59,27 @@ block content
 						- var list = ['Введение', 'Использование AutoCAD', 'Обучение всем возможностям программы', 'Интерфейс', 'Примитивы черчения', 'Примитивы черчения', 'Алгоритмы проектирования', 'Инструменты редактирования', 'Выделение объектов и быстрый выбор', 'Слои', 'Свойства объектов', 'Навигация и виды', 'Текст и МТекст', 'Алгоритмы проектирования'];
 
 						each lhh, i in list
-							li.accordion__item.course-chapters__chapter.chapter-course-chapters(class=i<2 ? "viewed" : "")
-								.accordion__link.chapter-course-chapters__link= lhh
+							li.accordion__item.course-chapters__chapter.chapter-course-chapters
+								.accordion__link.chapter-course-chapters__link(class=i<2 ? "viewed" : "")
+									.chapter-num= i+1 + "."
+									.chapter-val= lhh
+									.chapter-icons
+										.chapter-icons__completed
+											+icon('check-chapter')
+
+										.chapter-icons__expand
+											+icon('chevron-down')
+
 								ul.accordion__content.course-chapter__sublist.hidden
 									- var sublist = ['Использование AutoCAD', 'Обучение всем возможностям программы', 'Алгоритмы проектирования', 'Использование AutoCAD'];
 									each sub, ind in sublist
 										li.course-chapters__subitem
-											a(href="").course-chapters__sublink= sub
+											a(href="#").course-chapters__sublink(class=i<2 ? "viewed" : "")
+												.chapter-num= (i+1) + "." + (ind+1) + "."
+												.chapter-val= sub
+												.chapter-icons
+													.chapter-icons__completed
+														+icon('check-chapter')
 
 											
 //- img(src=img + "demo.jpg")
