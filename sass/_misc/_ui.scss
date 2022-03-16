@@ -1027,4 +1027,15 @@ line-height: 17px;
 font-family: $semi;
 	border-radius: 0 0 10px 10px;
 }
+.tippy-box{
+	color: $text;
+	background-color: $accent;
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.tippy-arrow{
+	color: $accent;
+}
+.tippy-content{
+	padding: 10px 20px;
+}
 /*--------------------END UI----------------------*/ 

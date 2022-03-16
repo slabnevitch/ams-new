@@ -310,7 +310,14 @@
 					});
 		}
 		// END Magnific popup
-	});
+		
+		// tippy
+			tippy('[data-tippy-content]', {
+				trigger: 'click'
+			});
+		// END tippy
+
+	});/*document.ready*/
 
 	if($('input#phone').length > 0){
 		var inputPhone = document.querySelector("input#phone");

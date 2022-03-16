@@ -53,19 +53,23 @@ block content
 				
 				.course-chapters
 					.course-chapters__title Разделы
-					ul.accordion(data-accordion).course-chapters__content.content-course-chapters
+					ul.accordion.course-chapters__content
 						// "data-accordion" добавляет поведение акордеона, т.е. при разворачивании одного эл-та. все остальные эл-ты. сворачиваются
 						// data-breakpoint="767.98" ширина экрана, меньше которой включается поведение аккордеона 
 						- var list = ['Введение', 'Использование AutoCAD', 'Обучение всем возможностям программы', 'Интерфейс', 'Примитивы черчения', 'Примитивы черчения', 'Алгоритмы проектирования', 'Инструменты редактирования', 'Выделение объектов и быстрый выбор', 'Слои', 'Свойства объектов', 'Навигация и виды', 'Текст и МТекст', 'Алгоритмы проектирования'];
 
 						each lhh, i in list
-							li.accordion__item.course-chapters__chapter.chapter-course-chapters
-								.accordion__link.chapter-course-chapters__link(class=i<2 ? "viewed" : "")
+							li.accordion__item.course-chapters__item
+								div(class= i<2 ? "accordion__link course-chapters__link viewed" : i==2 ? "course-chapters__link locked" : "accordion__link course-chapters__link" data-tippy-content=i==2 ? "Доступен с 15 мартобря" : false)
 									.chapter-num= i+1 + "."
 									.chapter-val= lhh
 									.chapter-icons
-										.chapter-icons__completed
-											+icon('check-chapter')
+										if i==2
+											.chapter-icons__locked
+												+icon('lock')
+										else
+											.chapter-icons__completed
+												+icon('check-chapter')
 
 										.chapter-icons__expand
 											+icon('chevron-down')
@@ -74,7 +78,7 @@ block content
 									- var sublist = ['Использование AutoCAD', 'Обучение всем возможностям программы', 'Алгоритмы проектирования', 'Использование AutoCAD'];
 									each sub, ind in sublist
 										li.course-chapters__subitem
-											a(href="#").course-chapters__sublink(class=i<2 ? "viewed" : "")
+											a(href="#").course-chapters__sublink(class=i<2 && ind == 0 ? "viewed" : "")
 												.chapter-num= (i+1) + "." + (ind+1) + "."
 												.chapter-val= sub
 												.chapter-icons
@@ -150,6 +154,11 @@ block page-scripts
 		
 	//- accordion--------------------------
 	script(src="js/libs/accordion/vanilla-accordion.js")
+
+	//- https://atomiks.github.io/tippyjs/
+	//- base using:  html: <button data-tippy-content="Tooltip">Text</button>; js: tippy('[data-tippy-content]');
+	script(src="js/libs/tippy/popper.min.js")
+	script(src="js/libs/tippy/tippy-bundle.umd.js")
 		
 	//- tabs--------------------------
 	//- script(src="js/libs/tabs/tabs-pure.js")
