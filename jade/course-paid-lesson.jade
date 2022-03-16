@@ -27,18 +27,18 @@ block content
 									+icon('chevron-left')
 								span.link Предыдущий урок
 
-							a(href="/").video-lesson__prev
+							a(href="/").video-lesson__next
 								span.link Предыдущий урок
 								.next-icon
 									+icon('chevron-right')
 						
 						.video-lesson__materials
-							a(href="/").video-lesson__material
+							a(href="/").video-lesson__material.link
 								+icon('download')
-								span.link Рабочие материалы
-							a(href="/").video-lesson__material
+								| Рабочие материалы
+							a(href="/").video-lesson__material.link
 								+icon('box')
-								span.link Бонусы											
+								| Бонусы											
 
 				.lesson__block.block-lesson
 					p К основным настройкам слоёв относятся следующие: вкл./выкл., заморозить/разморозить, блокировать, изолировать слой, управление видимостью объектов на слое (прозрачность)
@@ -73,6 +73,7 @@ block content
 						+icon('like')
 					a(href="/").mark-lesson__icon
 						+icon('unlike')
+		
 		.wide-container
 			.wrapper-simple
 				.lesson-chat
@@ -125,15 +126,17 @@ block content
 
 					.lesson-chat__form.form.form-lesson-chat
 						.form-lesson-chat__row
-							label.form__label
-								textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
+							textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
 
-							.file-icon
-								+icon('add-file')
+							label.form__label.form-lesson-chat__file
+								input(type="file")
+								.file-icon
+									+icon('add-file')
+								span.form-lesson-chat__add-file Прикрепить файл
 
 							button.btn.btn-sm.btn-accented Отправить
 
-						label.form__label
+						label.form__label.form-lesson-chat__field
 							input(type="file")
 							.form__file-fild Перетащите сюда файл
 
@@ -168,6 +171,8 @@ block page-scripts
 
 	//- jquery-UI--------------------------
 	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+
+	script(src="js/libs/mediaelement/mediaelement-and-player.min.js")
 		
 	//- magnific-popup--------------------------
 	// script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")

@@ -89,7 +89,334 @@
 	}
 }
 
-.lesson-card__date {
+.page-course-lesson {}
+.wrapper-simple {}
+.lesson {
+	@include adaptive-value('padding-bottom', 104, 59, 1);
+	h1{
+		@include adaptive-value('font-size', 28, 20, 1);
+		@include adaptive-value('margin-bottom', 40, 29, 1);
+		line-height: calc(34/28);
 
+	}
+
+
+}
+.lesson__chapter {
+	margin-bottom: 20px;
+	font-size: 18px;
+line-height: 150%;
+}
+.video-lesson {
+
+}
+.video-lesson__view {
+	@include adaptive-value('margin-bottom', 28, 25, 1);
+}
+.video-lesson__panel {
+	padding: 10px 30px;
+	margin-bottom: 41px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $gray-bg;
+	
+	a{
+		text-decoration: none;
+		color: $text;
+	}
+}
+.video-lesson__handler {
+	display: flex;
+	align-items: center;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+.video-lesson__prev,
+.video-lesson__next {
+	display: flex;
+	align-items: center;
+
+	&:first-child{
+		@include adaptive-value('margin-right', 50, 0, 1);
+	}
+
+}
+.prev-icon,
+.next-icon {
+	width: 40px;
+	height: 40px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: $accent;
+	border-radius: 50%;
+	position: relative;
+
+	.icon{
+		@include absolute-center;
+		font-size: 10px;
+	}
+}
+.video-lesson__materials {
+
+}
+.video-lesson__material {
+	&:first-child{
+		@include adaptive-value('margin-right', 30, 0, 1);
+	}
+
+	.icon {
+		margin-bottom: 2px;
+		vertical-align: middle;
+		margin-right: 6px;
+		font-size: 17px;
+	}
+
+}
+.block-lesson {
+	&:last-of-type{
+		margin-bottom: 60px;
+	}
+	p{
+		margin-top: 0;
+	}
+	.btn {
+		margin-top: 20px;
+		height: 36px;
+	}
+	ol{
+		@extend .block-page-contest__list;
+		li{
+			padding-left: 34px;
+			&:before{
+				left: 0;
+			}
+
+		}
+	}
+	ul{
+		padding-left: 41px;
+		li{
+			position: relative;
+			list-style-type: none;
+			margin-bottom: 10px;
+			font-size: 18px;
+			line-height: 150%;
+
+			&:before{
+				content: '';
+				width: 8px;
+				height: 8px;
+				background-color: #2D2D2F;
+				border-radius: 50%;
+				position: absolute;
+				left: -27px;
+				top: 7px;
+			}
+		}
+	}
+}
+.block-lesson__title {
+	margin-bottom: 10px;
+	margin-top: 30px;
+	font-family: $bold;
+	font-size: 20px;
+line-height: 24px;
+}
+
+.mark-lesson {
+	margin-top: 60px;
+	display: flex;
+	align-items: center;
+}
+.mark-lesson__label {
+	margin-right: 12px;
+	font-size: 20px;
+line-height: 24px;
+font-family: $bold;
+}
+.mark-lesson__icon {
+	display: flex;
+	align-items: center;
+	color: $text;
+	text-decoration: none;
+	.icon {
+		margin: 0 12px;
+		font-size: 27px;
+	}
+}
+.icon-unlike {}
+.wide-container {
+	@include max-screen($sm){
+		padding-bottom: 40px;
+		padding-top: 40px;
+	}
+}
+.lesson-chat {}
+.lesson-chat__title {
+	margin-bottom: 30px;
+	font-family: $bold;
+	font-size: 28px;
+	line-height: 34px;
+}
+.item-lesson-chat {
+	padding-bottom: 30px;
+	border-bottom: 1px solid rgba($gray-text, .3);
+
+	&:not(:last-child){
+		margin-bottom: 30px;
+		
+	}
+}
+.item-lesson-chat__header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.item-lesson-chat__avatar {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+	flex-shrink: 0;
+	margin-right: 10px;
+
+	img{
+		@include absolute-center;
+	}
+}
+.item-lesson-chat__user {
+	font-size: 14px;
+	line-height: 17px;
+}
+.item-lesson-chat__name {
+	font-family: $semi;
+
+	span{
+		
+	}
+}
+.item-lesson-chat__role {
+	margin-left: 10px;
+	color: $gray-text;
+	font-family:$ibm-reg;
+	font-size: 14px;
+}
+.item-lesson-chat__time {
+	color: $gray-text;
+
+}
+.item-lesson-chat__body {
+	p{
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+}
+.item-lesson-chat__write {
+	font-size: 13px;
+}
+.item-lesson-chat__img {
+	max-width: 507px;
+	margin-bottom: 10px;
+	img{
+		display: block;
+		max-width: 100%;
+	}
+}
+.lesson-chat__form {}
+.form {}
+.form-lesson-chat {
+	input[type="file"]{
+		@include checkbox;
+	}
+}
+.form-lesson-chat__row {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+
+	@include max-screen($xs){
+		flex-wrap: wrap;
+	}
+	.form__textarea{
+		padding: 16px;
+		height: 44px;
+		font-size: 14px;
+		line-height: 18px;
+		border-radius: 5px;
+		border: 1px solid #6F6F75;
+		font-family: $ibm-reg;
+		color: $text;
+		background-color: transparent;
+		@include placecolor($text);
+		display: block;
+		vertical-align: middle;
+		padding: 10px 16px 0 16px;
+		flex: 1 1 auto;
+		// max-width: 974px;
+		height: auto;
+		max-height: 44px;
+		resize: none;
+		outline: none;
+
+		@include max-screen($xs){
+			flex-basis: 100%;
+		}
+	}
+
+	
+	.form__label{
+		margin-bottom: 0;
+
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+
+	}
+	.file-icon {
+		width: 24px;
+		height: 24px;
+		margin-left: auto;
+		margin-right: 20px;
+		margin-left: 20px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 auto;
+
+		.icon{
+			font-size: 18px;
+		}
+	}
+	.btn {
+		flex-shrink: 0;
+
+	}
+}
+.form-lesson-chat__add-file{
+	vertical-align: middle;
+	margin-left: 5px;
+	font-family: $semi;
+	@include min-screen($xs){
+		display: none;
+		
+	}
+}
+.form-lesson-chat__field{
+	margin-bottom: 0;
+}
+.form__file-fild {
+	max-width: 985px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px dashed #6F6F75;
+	border-radius: 5px;
+	font-size: 14px;
+	line-height: 18px;
+	color: #2D2D2F;
+	cursor: pointer;
 }
 /*--------------------END lessons-page----------------------*/ 

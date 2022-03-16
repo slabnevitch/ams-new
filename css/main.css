@@ -7254,35 +7254,35 @@ button.mfp-close {
   font-family: "MontserratBold", sans-serif;
 }
 
-.block-page-contest__list, .article ol {
+.block-page-contest__list, .block-lesson ol, .article ol {
   counter-reset: myCounter;
   margin: 0;
   padding: 0;
 }
 
-.block-page-contest__list li, .article ol li {
+.block-page-contest__list li, .block-lesson ol li, .article ol li {
   position: relative;
   list-style-type: none;
 }
 
-.block-page-contest__list li:before, .article ol li:before {
+.block-page-contest__list li:before, .block-lesson ol li:before, .article ol li:before {
   counter-increment: myCounter;
   content: counter(myCounter) ".";
 }
 
-.block-page-contest__list:not(:last-child), .article ol:not(:last-child) {
+.block-page-contest__list:not(:last-child), .block-lesson ol:not(:last-child), .article ol:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.block-page-contest__list li, .article ol li {
+.block-page-contest__list li, .block-lesson ol li, .article ol li {
   padding-left: 41px;
 }
 
-.block-page-contest__list li:not(:last-child), .article ol li:not(:last-child) {
+.block-page-contest__list li:not(:last-child), .block-lesson ol li:not(:last-child), .article ol li:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.block-page-contest__list li:before, .article ol li:before {
+.block-page-contest__list li:before, .block-lesson ol li:before, .article ol li:before {
   position: absolute;
   left: 15px;
   top: 0;
@@ -7698,6 +7698,517 @@ button.mfp-close {
 .lesson-card__views .icon {
   font-size: 10px;
   margin-right: 6.33px;
+}
+
+.lesson {
+  padding-bottom: 104px;
+}
+
+@media (max-width: 1170px) {
+  .lesson {
+    padding-bottom: -webkit-calc(59px + 45 * ((100vw - 320px) / 850));
+    padding-bottom: calc(59px + 45 * ((100vw - 320px) / 850));
+  }
+}
+
+.lesson h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  line-height: -webkit-calc(34/28);
+  line-height: calc(34/28);
+}
+
+@media (max-width: 1170px) {
+  .lesson h1 {
+    font-size: -webkit-calc(20px + 8 * ((100vw - 320px) / 850));
+    font-size: calc(20px + 8 * ((100vw - 320px) / 850));
+  }
+}
+
+@media (max-width: 1170px) {
+  .lesson h1 {
+    margin-bottom: -webkit-calc(29px + 11 * ((100vw - 320px) / 850));
+    margin-bottom: calc(29px + 11 * ((100vw - 320px) / 850));
+  }
+}
+
+.lesson__chapter {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.video-lesson__view {
+  margin-bottom: 28px;
+}
+
+@media (max-width: 1170px) {
+  .video-lesson__view {
+    margin-bottom: -webkit-calc(25px + 3 * ((100vw - 320px) / 850));
+    margin-bottom: calc(25px + 3 * ((100vw - 320px) / 850));
+  }
+}
+
+.video-lesson__panel {
+  padding: 10px 30px;
+  margin-bottom: 41px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #F8F8FA;
+}
+
+.video-lesson__panel a {
+  text-decoration: none;
+  color: #2D2D2F;
+}
+
+.video-lesson__handler {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.video-lesson__prev,
+.video-lesson__next {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.video-lesson__prev:first-child,
+.video-lesson__next:first-child {
+  margin-right: 50px;
+}
+
+@media (max-width: 1170px) {
+  .video-lesson__prev:first-child,
+  .video-lesson__next:first-child {
+    margin-right: -webkit-calc(0px + 50 * ((100vw - 320px) / 850));
+    margin-right: calc(0px + 50 * ((100vw - 320px) / 850));
+  }
+}
+
+.prev-icon,
+.next-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #FFEF68;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+}
+
+.prev-icon .icon,
+.next-icon .icon {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+}
+
+.video-lesson__material:first-child {
+  margin-right: 30px;
+}
+
+@media (max-width: 1170px) {
+  .video-lesson__material:first-child {
+    margin-right: -webkit-calc(0px + 30 * ((100vw - 320px) / 850));
+    margin-right: calc(0px + 30 * ((100vw - 320px) / 850));
+  }
+}
+
+.video-lesson__material .icon {
+  margin-bottom: 2px;
+  vertical-align: middle;
+  margin-right: 6px;
+  font-size: 17px;
+}
+
+.block-lesson:last-of-type {
+  margin-bottom: 60px;
+}
+
+.block-lesson p {
+  margin-top: 0;
+}
+
+.block-lesson .btn {
+  margin-top: 20px;
+  height: 36px;
+}
+
+.block-lesson ol li {
+  padding-left: 34px;
+}
+
+.block-lesson ol li:before {
+  left: 0;
+}
+
+.block-lesson ul {
+  padding-left: 41px;
+}
+
+.block-lesson ul li {
+  position: relative;
+  list-style-type: none;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.block-lesson ul li:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #2D2D2F;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  left: -27px;
+  top: 7px;
+}
+
+.block-lesson__title {
+  margin-bottom: 10px;
+  margin-top: 30px;
+  font-family: "MontserratBold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.mark-lesson {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.mark-lesson__label {
+  margin-right: 12px;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "MontserratBold", sans-serif;
+}
+
+.mark-lesson__icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #2D2D2F;
+  text-decoration: none;
+}
+
+.mark-lesson__icon .icon {
+  margin: 0 12px;
+  font-size: 27px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .wide-container {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+}
+
+.lesson-chat__title {
+  margin-bottom: 30px;
+  font-family: "MontserratBold", sans-serif;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+.item-lesson-chat {
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(111, 111, 117, 0.3);
+}
+
+.item-lesson-chat:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.item-lesson-chat__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.item-lesson-chat__avatar {
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.item-lesson-chat__avatar img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.item-lesson-chat__user {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.item-lesson-chat__name {
+  font-family: "MontserratSemiBold", sans-serif;
+}
+
+.item-lesson-chat__role {
+  margin-left: 10px;
+  color: #6F6F75;
+  font-family: "IBMPlexSans-Regular", sans-serif;
+  font-size: 14px;
+}
+
+.item-lesson-chat__time {
+  color: #6F6F75;
+}
+
+.item-lesson-chat__body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.item-lesson-chat__write {
+  font-size: 13px;
+}
+
+.item-lesson-chat__img {
+  max-width: 507px;
+  margin-bottom: 10px;
+}
+
+.item-lesson-chat__img img {
+  display: block;
+  max-width: 100%;
+}
+
+.form-lesson-chat input[type="file"] {
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 1px;
+  height: 1px;
+  display: block;
+  left: 50%;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.form-lesson-chat__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+  .form-lesson-chat__row {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+.form-lesson-chat__row .form__textarea {
+  padding: 16px;
+  height: 44px;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #6F6F75;
+  font-family: "IBMPlexSans-Regular", sans-serif;
+  color: #2D2D2F;
+  background-color: transparent;
+  display: block;
+  vertical-align: middle;
+  padding: 10px 16px 0 16px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  height: auto;
+  max-height: 44px;
+  resize: none;
+  outline: none;
+}
+
+.form-lesson-chat__row .form__textarea::-webkit-input-placeholder {
+  color: #2D2D2F;
+  opacity: 1;
+}
+
+.form-lesson-chat__row .form__textarea::-moz-placeholder {
+  color: #2D2D2F;
+  opacity: 1;
+}
+
+.form-lesson-chat__row .form__textarea:-moz-placeholder {
+  color: #2D2D2F;
+  opacity: 1;
+}
+
+.form-lesson-chat__row .form__textarea:-ms-input-placeholder {
+  color: #2D2D2F;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 576px) {
+  .form-lesson-chat__row .form__textarea {
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+}
+
+.form-lesson-chat__row .form__label {
+  margin-bottom: 0;
+}
+
+.form-lesson-chat__row .form__label:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-lesson-chat__row .file-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.form-lesson-chat__row .file-icon .icon {
+  font-size: 18px;
+}
+
+.form-lesson-chat__row .btn {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.form-lesson-chat__add-file {
+  vertical-align: middle;
+  margin-left: 5px;
+  font-family: "MontserratSemiBold", sans-serif;
+}
+
+@media only screen and (min-width: 576px) {
+  .form-lesson-chat__add-file {
+    display: none;
+  }
+}
+
+.form-lesson-chat__field {
+  margin-bottom: 0;
+}
+
+.form__file-fild {
+  max-width: 985px;
+  height: 44px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 1px dashed #6F6F75;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #2D2D2F;
+  cursor: pointer;
 }
 
 /*--------------------END lessons-page----------------------*/
@@ -9235,15 +9746,15 @@ button.mfp-close {
   margin-top: 30px;
 }
 
+.programms-filters__block .form__label:not(:last-child) {
+  margin-bottom: 17px;
+}
+
 .programms-filters__heading {
   margin-bottom: 15px;
   font-family: "MontserratBold", sans-serif;
   font-size: 16px;
   line-height: 20px;
-}
-
-.form__label:not(:last-child) {
-  margin-bottom: 17px;
 }
 
 .form__false-checkbox {
