@@ -7767,6 +7767,14 @@ button.mfp-close {
   background-color: #F8F8FA;
 }
 
+@media only screen and (max-width: 991px) {
+  .video-lesson__panel {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
 .video-lesson__panel a {
   text-decoration: none;
   color: #2D2D2F;
@@ -7783,6 +7791,40 @@ button.mfp-close {
   align-items: center;
   margin-left: -10px;
   margin-right: -10px;
+}
+
+@media only screen and (max-width: 991px) {
+  .video-lesson__handler {
+    width: 100%;
+    padding: 10px 0;
+    margin-left: 0;
+    margin-right: 0;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    background-color: #F8F8FA;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .video-lesson__handler {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: -webkit-calc(100% + 40px);
+    width: calc(100% + 40px);
+  }
 }
 
 .video-lesson__prev,
@@ -7807,6 +7849,13 @@ button.mfp-close {
   .video-lesson__next:first-child {
     margin-right: -webkit-calc(0px + 50 * ((100vw - 320px) / 850));
     margin-right: calc(0px + 50 * ((100vw - 320px) / 850));
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .video-lesson__prev span,
+  .video-lesson__next span {
+    display: none;
   }
 }
 
@@ -7836,6 +7885,19 @@ button.mfp-close {
   font-size: 10px;
 }
 
+@media only screen and (max-width: 576px) {
+  .video-lesson__materials {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
 .video-lesson__material:first-child {
   margin-right: 30px;
 }
@@ -7847,6 +7909,12 @@ button.mfp-close {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  .video-lesson__material {
+    font-size: 14px;
+  }
+}
+
 .video-lesson__material .icon {
   margin-bottom: 2px;
   vertical-align: middle;
@@ -7854,7 +7922,7 @@ button.mfp-close {
   font-size: 17px;
 }
 
-.block-lesson:last-of-type {
+.block-lesson {
   margin-bottom: 60px;
 }
 
@@ -7908,7 +7976,6 @@ button.mfp-close {
 }
 
 .mark-lesson {
-  margin-top: 60px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8071,9 +8138,15 @@ button.mfp-close {
 
 @media only screen and (max-width: 576px) {
   .form-lesson-chat__row {
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 }
 
@@ -8123,9 +8196,8 @@ button.mfp-close {
 
 @media only screen and (max-width: 576px) {
   .form-lesson-chat__row .form__textarea {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 
@@ -8135,6 +8207,12 @@ button.mfp-close {
 
 .form-lesson-chat__row .form__label:last-of-type {
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 576px) {
+  .form-lesson-chat__row .form__label:last-of-type {
+    margin-bottom: 23px;
+  }
 }
 
 .form-lesson-chat__row .file-icon {
@@ -8159,6 +8237,14 @@ button.mfp-close {
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 576px) {
+  .form-lesson-chat__row .file-icon {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .form-lesson-chat__row .file-icon .icon {
@@ -8209,6 +8295,12 @@ button.mfp-close {
   line-height: 18px;
   color: #2D2D2F;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 991px) {
+  .form__file-fild {
+    display: none;
+  }
 }
 
 /*--------------------END lessons-page----------------------*/

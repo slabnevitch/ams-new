@@ -121,6 +121,11 @@ line-height: 150%;
 	justify-content: space-between;
 	background-color: $gray-bg;
 	
+	@include max-screen($md){
+		display: block;
+		padding: 0;
+		background-color: transparent;
+	}
 	a{
 		text-decoration: none;
 		color: $text;
@@ -131,6 +136,26 @@ line-height: 150%;
 	align-items: center;
 	margin-left: -10px;
 	margin-right: -10px;
+
+	@include max-screen($md){
+		width: 100%;
+		padding: 10px 0;
+		margin-left: 0;
+		margin-right: 0;
+		justify-content: space-between;
+		margin-bottom: 24px;
+		background-color: $gray-bg;
+	}
+	@include max-screen($xs){
+		display: inline-flex;
+		justify-content: flex-start;
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 10px;
+		padding-right: 10px;
+		width: calc(100% + 40px);
+	}
+
 }
 .video-lesson__prev,
 .video-lesson__next {
@@ -139,6 +164,11 @@ line-height: 150%;
 
 	&:first-child{
 		@include adaptive-value('margin-right', 50, 0, 1);
+	}
+	span{
+		@include max-screen($xs){
+			display: none;
+		}
 	}
 
 }
@@ -158,11 +188,18 @@ line-height: 150%;
 	}
 }
 .video-lesson__materials {
-
+	@include max-screen($xs){
+		display: flex;
+		justify-content: space-between;
+	}
 }
 .video-lesson__material {
 	&:first-child{
 		@include adaptive-value('margin-right', 30, 0, 1);
+	}
+
+	@include max-screen($xs){
+		font-size: 14px;
 	}
 
 	.icon {
@@ -174,9 +211,9 @@ line-height: 150%;
 
 }
 .block-lesson {
-	&:last-of-type{
+	// &:last-of-type{
 		margin-bottom: 60px;
-	}
+	// }
 	p{
 		margin-top: 0;
 	}
@@ -225,7 +262,6 @@ line-height: 24px;
 }
 
 .mark-lesson {
-	margin-top: 60px;
 	display: flex;
 	align-items: center;
 }
@@ -337,7 +373,8 @@ font-family: $bold;
 	margin-bottom: 20px;
 
 	@include max-screen($xs){
-		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 	.form__textarea{
 		padding: 16px;
@@ -361,7 +398,8 @@ font-family: $bold;
 		outline: none;
 
 		@include max-screen($xs){
-			flex-basis: 100%;
+			width: 100%;
+			margin-bottom: 20px;
 		}
 	}
 
@@ -371,7 +409,11 @@ font-family: $bold;
 
 		&:last-of-type{
 			margin-bottom: 0;
+			@include max-screen($xs){
+				margin-bottom: 23px;
+			}
 		}
+
 
 	}
 	.file-icon {
@@ -384,6 +426,12 @@ font-family: $bold;
 		align-items: center;
 		justify-content: center;
 		flex: 0 0 auto;
+		vertical-align: middle;
+
+		@include max-screen($xs){
+			margin-left: 0;
+			margin-right: 0;
+		}
 
 		.icon{
 			font-size: 18px;
@@ -418,5 +466,9 @@ font-family: $bold;
 	line-height: 18px;
 	color: #2D2D2F;
 	cursor: pointer;
+
+	@include max-screen($md){
+		display: none;
+	}
 }
 /*--------------------END lessons-page----------------------*/ 
