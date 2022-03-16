@@ -1,0 +1,253 @@
+extends _misc/main
+block title
+	| Платный курс. Урок
+	- var authorized = true;
+	- var headerMenu = true;
+block content
+	.wrapper-simple
+		ul.breadcrumbs.breadcrumbs-minimize
+			li.breadcrumbs__item
+				a(href="").breadcrumbs__link.link
+					+icon('chevron-left')
+					| Использование AutoCAD на 100%
+
+	.page.page-course.page-course-lesson
+		.wrapper-simple
+			.lesson
+				.lesson__chapter Раздел 8. Карта видов: оформление планов, разрезов, фасадов	
+				h1 23.1 Обучение всем возможностям программы	
+				.lesson__video.video-lesson
+					.video-lesson__view
+						video(poster="img/lesson-page/video.jpg")
+							source(src="https://www.youtube.com/watch?v=dGt08ylXCj0&list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&index=3&t=0s", type="video/youtube")
+					.video-lesson__panel
+						.video-lesson__handler
+							a(href="/").video-lesson__prev
+								.prev-icon
+									+icon('chevron-left')
+								span.link Предыдущий урок
+
+							a(href="/").video-lesson__prev
+								span.link Предыдущий урок
+								.next-icon
+									+icon('chevron-right')
+						
+						.video-lesson__materials
+							a(href="/").video-lesson__material
+								+icon('download')
+								span.link Рабочие материалы
+							a(href="/").video-lesson__material
+								+icon('box')
+								span.link Бонусы											
+
+				.lesson__block.block-lesson
+					p К основным настройкам слоёв относятся следующие: вкл./выкл., заморозить/разморозить, блокировать, изолировать слой, управление видимостью объектов на слое (прозрачность)
+					.block-lesson__title Общие материалы курса
+
+					p Отключение слоёв в Автокаде приводит к тому, что на экране исчезают объекты того или иного слоя. Т.е. происходит временное их скрытие с рабочего пространства.
+					p Вопрос: Как отключить слой в Автокаде?
+					p Достаточно в Диспетчере слоёв нажать на «лампочку», как показано на рис. ниже. Изображение лампочки изменится (она будет выключена).
+					
+					.block-lesson__title Вопрос: Как отключить все слои в Автокаде?
+
+					p Для отключения слоёв служит команда «Откл» (она же СЛОЙОТКЛ), которая позволяет отключить слой выбранного объекта. Для быстрого выбора всех элементов чертежа можно воспользоваться сочетанием клавиш Ctrl+A.
+
+					a(href="/").btn.btn-mini.btn-bordered Если надо кнопка
+
+				.lesson__block.block-lesson
+					.block-lesson__title Вопрос: Как отключить все слои в Автокаде?
+					- var list = ['Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия', 'Кстати, непосредственные участники технического прогресса, вне зависимости от их уровня, должны быть объективно рассмотрены соответствующими инстанциями', 'Каждый из нас понимает очевидную вещь: дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании прогресса профессионального сообщества', 'Следует отметить, что граница обучения кадров играет определяющее значение для своевременного выполнения сверхзадачи'];
+					ol
+						each li in list
+							li= li
+
+				.lesson__block.block-lesson
+					.block-lesson__title Вопрос: Как отключить все слои в Автокаде?
+					ul
+						each li in list
+							li= li
+
+				.lesson__mark.mark-lesson
+					span.mark-lesson__label Оцените урок:
+					a(href="/").mark-lesson__icon
+						+icon('like')
+					a(href="/").mark-lesson__icon
+						+icon('unlike')
+		.wide-container
+			.wrapper-simple
+				.lesson-chat
+					.lesson-chat__title Переписка с преподавателем (4)
+					
+					.lesson-chat__item.item-lesson-chat
+						.item-lesson-chat__header
+							.item-lesson-chat__avatar
+								img(src="img/lesson-page/user1.jpg" alt="alt")
+							.item-lesson-chat__user
+								.item-lesson-chat__name Константин Константинопольский
+									span.item-lesson-chat__role (Студент)
+								.item-lesson-chat__time 5 часов назад
+						
+						.item-lesson-chat__body 
+							p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
+
+						span.item-lesson-chat__write.link Ответить
+
+					.lesson-chat__item.item-lesson-chat
+						.item-lesson-chat__header
+							.item-lesson-chat__avatar
+								img(src="img/lesson-page/user2.jpg" alt="alt")
+							.item-lesson-chat__user
+								.item-lesson-chat__name Андрей Смирнов
+									span.item-lesson-chat__role (Преподаватель)
+								.item-lesson-chat__time 5 часов назад
+						
+						.item-lesson-chat__body
+							p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
+
+							.item-lesson-chat__img
+								img(src="img/lesson-page/chat-img.jpg" alt="alt")
+
+						span.item-lesson-chat__write.link Ответить
+
+					.lesson-chat__item.item-lesson-chat
+						.item-lesson-chat__header
+							.item-lesson-chat__avatar
+								img(src="img/lesson-page/user1.jpg" alt="alt")
+							.item-lesson-chat__user
+								.item-lesson-chat__name Константин Константинопольский
+									span.item-lesson-chat__role (Студент)
+								.item-lesson-chat__time 5 часов назад
+						
+						.item-lesson-chat__body 
+							p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
+
+						span.item-lesson-chat__write.link Ответить
+
+					.lesson-chat__form.form.form-lesson-chat
+						.form-lesson-chat__row
+							label.form__label
+								textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
+
+							.file-icon
+								+icon('add-file')
+
+							button.btn.btn-sm.btn-accented Отправить
+
+						label.form__label
+							input(type="file")
+							.form__file-fild Перетащите сюда файл
+
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	// script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	// script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	script(src="js/libs/accordion/vanilla-accordion.js")
+
+	//- https://atomiks.github.io/tippyjs/
+	//- base using:  html: <button data-tippy-content="Tooltip">Text</button>; js: tippy('[data-tippy-content]');
+	script(src="js/libs/tippy/popper.min.js")
+	script(src="js/libs/tippy/tippy-bundle.umd.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

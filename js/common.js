@@ -312,9 +312,11 @@
 		// END Magnific popup
 		
 		// tippy
+		if($('[data-tippy-content]').length > 0){
 			tippy('[data-tippy-content]', {
 				trigger: 'click'
 			});
+		}
 		// END tippy
 
 	});/*document.ready*/

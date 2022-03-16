@@ -2906,6 +2906,11 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
   width: 1em;
 }
 
+.icon-add-file {
+  font-size: 2rem;
+  width: 0.7em;
+}
+
 .icon-arrow-positive {
   font-size: 4.2rem;
   width: 1em;
@@ -2914,6 +2919,11 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 .icon-arrow-right {
   font-size: 1.4rem;
   width: 1em;
+}
+
+.icon-box {
+  font-size: 1.9rem;
+  width: 0.94737em;
 }
 
 .icon-burger {
@@ -2967,8 +2977,8 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 .icon-download {
-  font-size: 2.4rem;
-  width: 1em;
+  font-size: 1.7rem;
+  width: 1.41176em;
 }
 
 .icon-eye {
@@ -2983,6 +2993,11 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 
 .icon-insta {
   font-size: 1.6rem;
+  width: 1em;
+}
+
+.icon-like {
+  font-size: 3rem;
   width: 1em;
 }
 
@@ -3013,6 +3028,11 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 
 .icon-refresh {
   font-size: 4.2rem;
+  width: 1em;
+}
+
+.icon-unlike {
+  font-size: 3rem;
   width: 1em;
 }
 
