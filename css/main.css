@@ -4083,6 +4083,7 @@ h3 {
 
 .popup-gallery .popup__header .user-card .tag {
   margin-right: 20px;
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -4206,6 +4207,7 @@ h3 {
 
 .user-card--row .tag {
   margin-right: 20px;
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -5853,7 +5855,7 @@ button.mfp-close {
   text-align: center;
 }
 
-.content-page__caption, .article__caption {
+.content-page__caption {
   margin-top: 10px;
   margin-bottom: 20px;
   text-align: center;
@@ -6272,10 +6274,6 @@ button.mfp-close {
   }
 }
 
-.content-history__header {
-  margin-bottom: 10px;
-}
-
 .content-history__text h2 {
   margin-bottom: 10px;
 }
@@ -6371,6 +6369,10 @@ button.mfp-close {
     max-width: none;
     padding: 0;
   }
+}
+
+.tile-item__box .tag {
+  margin-bottom: 0;
 }
 
 .user-card--horizontal {
@@ -6980,6 +6982,10 @@ button.mfp-close {
   }
 }
 
+.page-contest__container.wide-container {
+  background-color: #F8F8FA;
+}
+
 @media only screen and (max-width: 576px) {
   .page-contest__container {
     margin-top: 30px;
@@ -7069,6 +7075,10 @@ button.mfp-close {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 23px;
+}
+
+.contest-card__header .tag {
+  margin-bottom: 0;
 }
 
 .contest-card__date {
@@ -7585,6 +7595,7 @@ button.mfp-close {
 }
 
 .page-lessons .wide-container {
+  background-color: #F8F8FA;
   padding-bottom: 70px;
 }
 
@@ -7595,15 +7606,8 @@ button.mfp-close {
   }
 }
 
-.filter-tags {
-  padding-top: 75px;
-}
-
-@media (max-width: 1170px) {
-  .filter-tags {
-    padding-top: -webkit-calc(39px + 36 * ((100vw - 320px) / 850));
-    padding-top: calc(39px + 36 * ((100vw - 320px) / 850));
-  }
+.page-lessons .wide-container .filter-tags {
+  padding-top: 0;
 }
 
 @media only screen and (max-width: 480px) {
@@ -8514,6 +8518,7 @@ button.mfp-close {
 .page-profile .wide-container {
   padding-top: 70px;
   padding-bottom: 87px;
+  background-color: #F8F8FA;
 }
 
 @media (max-width: 1170px) {
@@ -8972,6 +8977,13 @@ button.mfp-close {
   max-width: 100%;
 }
 
+.article img + span {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .article ul {
   padding-left: 41px;
 }
@@ -9182,6 +9194,14 @@ button.mfp-close {
 .timer-window__label {
   font-size: 12px;
   text-align: center;
+}
+
+.lessons-by-theme {
+  margin-top: 50px;
+}
+
+.lessons-by-theme .wide-container {
+  background-color: #F8F8FA;
 }
 
 /*--------------------END article-page----------------------*/

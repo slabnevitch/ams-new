@@ -227,7 +227,7 @@
 	}
 }
 .content-history__header{
-	margin-bottom: 10px;
+	
 }
 .content-history__text{
 	h2{
@@ -301,10 +301,10 @@
 		max-width: none;
 		padding: 0;
 	}
+	.tag {
+		margin-bottom: 0;
+	}
 }
-.tag {}
-.tag-reviews-empty {}
-.user-card {}
 .user-card--horizontal {
 	display: flex;
 }

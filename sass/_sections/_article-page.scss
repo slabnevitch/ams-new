@@ -113,6 +113,13 @@
 
 	img{
 		max-width: 100%;
+
+		&+span{
+			display: block;
+			margin-top: 10px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
 	}
 	ol{
 		@extend .block-page-contest__list;
@@ -218,9 +225,7 @@
 		}
 	}
 }
-.article__caption {
-	@extend .content-page__caption;
-}
+
 
 .lessons-by-theme__title{
 	margin-bottom: 30px;
@@ -263,5 +268,11 @@
 .timer-window__label {
 	font-size: 12px;
 	text-align: center;
+}
+.lessons-by-theme{
+	margin-top: 50px;
+	.wide-container{
+		background-color: $gray-bg;
+	}
 }
 /*--------------------END article-page----------------------*/ 

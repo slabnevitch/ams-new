@@ -4,6 +4,7 @@
 	.wide-container {
 		@include adaptive-value('padding-top', 70, 39, 1);
 		@include adaptive-value('padding-bottom', 87, 0, 1);
+		background-color: $gray-bg;
 	}
 
 }

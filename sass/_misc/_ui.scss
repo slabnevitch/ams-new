@@ -488,6 +488,7 @@ line-height: calc(44/36);
 			}
 			.tag{
 				margin-right: 20px;
+				margin-bottom: 0;
 				@include max-screen($sm){
 					margin-bottom: 15px;
 				}
@@ -581,6 +582,7 @@ line-height: calc(44/36);
 	}
 	.tag{
 		margin-right: 20px;
+		margin-bottom: 0;
 		@include max-screen($sm){
 			margin-bottom: 15px;
 		}

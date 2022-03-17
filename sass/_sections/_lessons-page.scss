@@ -3,17 +3,16 @@
 	@include adaptive-value('padding-top', 34, 0, 1);
 	
 	.wide-container {
-
+		background-color: $gray-bg;
 		@include adaptive-value('padding-bottom', 70, 39, 1);
+		
+		.filter-tags {
+			padding-top: 0;;
+		}
 	}
 }
-.wrapper-simple {}
-.filter-tags {
-	@include adaptive-value('padding-top', 75, 39, 1);
-}
-.tag {}
 
-.wrapper-flex {}
+
 .lessons-cards{
 	@include max-screen($xss){
 		margin-left: 0;

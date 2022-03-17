@@ -3,6 +3,9 @@
 	@include adaptive-value('padding-top', 70, 39, 1);
 	@include adaptive-value('padding-bottom', 40, 39, 1);
 
+	&.wide-container{
+		background-color: $gray-bg;
+	}
 	@include max-screen($xs){
 		margin-top: 30px;	
 	}  
@@ -55,6 +58,10 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: 23px;
+
+	.tag{
+		margin-bottom: 0;
+	}
 }
 .contest-card__date {
 	margin-right: 20px;
