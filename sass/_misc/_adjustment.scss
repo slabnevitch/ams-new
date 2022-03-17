@@ -7,6 +7,19 @@ html, body{
 	padding: 0;
 	height: 100%;
 	// overflow-x: hidden;
+
+	&.lesson-menu-opened{
+		.cover{
+			display: block;
+		}
+		.menu-page-course{
+			transform: translateX(0);
+		}
+
+		.lesson-menu-label{
+			right: -15px;
+		}
+	}
 }
 body{
 	font-family: $ibm-reg;

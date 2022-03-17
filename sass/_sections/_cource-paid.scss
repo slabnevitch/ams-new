@@ -259,7 +259,15 @@ line-height: 136.02%;
 	}
 }
 .hidden {}
+.course-chapters__item {
+	&:last-of-type{
+		.course-chapter__sublist{
+			padding-top: 20px;
+		}
+	}
+}
 .course-chapters__subitem {
+
 
 	&:not(:last-child){
 		margin-bottom: 10px;

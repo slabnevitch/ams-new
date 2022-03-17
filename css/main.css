@@ -3016,6 +3016,11 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
   width: 1em;
 }
 
+.icon-menu {
+  font-size: 1.6rem;
+  width: 1.25em;
+}
+
 .icon-nonsmile {
   font-size: 9.6rem;
   width: 1em;
@@ -3046,6 +3051,20 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+}
+
+html.lesson-menu-opened .cover, body.lesson-menu-opened .cover {
+  display: block;
+}
+
+html.lesson-menu-opened .menu-page-course, body.lesson-menu-opened .menu-page-course {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+html.lesson-menu-opened .lesson-menu-label, body.lesson-menu-opened .lesson-menu-label {
+  right: -15px;
 }
 
 body {
@@ -4801,6 +4820,17 @@ button.mfp-close {
 
 .tippy-content {
   padding: 10px 20px;
+}
+
+.cover {
+  display: none;
+  position: fixed;
+  z-index: 96;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /*--------------------END UI----------------------*/
@@ -7775,6 +7805,12 @@ button.mfp-close {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  .video-lesson__panel {
+    position: relative;
+  }
+}
+
 .video-lesson__panel a {
   text-decoration: none;
   color: #2D2D2F;
@@ -7827,6 +7863,12 @@ button.mfp-close {
   }
 }
 
+.video-lesson__handler .prev-icon,
+.video-lesson__handler .next-icon {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .video-lesson__prev,
 .video-lesson__next {
   display: -webkit-box;
@@ -7863,8 +7905,6 @@ button.mfp-close {
 .next-icon {
   width: 40px;
   height: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
   background-color: #FFEF68;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -7920,6 +7960,71 @@ button.mfp-close {
   vertical-align: middle;
   margin-right: 6px;
   font-size: 17px;
+}
+
+.lesson-menu-label {
+  position: fixed;
+  top: 325px;
+  right: 0;
+  z-index: 98;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 576px) {
+  .lesson-menu-label {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    z-index: 1;
+  }
+}
+
+.lesson-menu-label__desc {
+  padding: 30px 15px;
+  text-align: center;
+  background: #FFEF68;
+  font-family: "MontserratSemiBold", sans-serif;
+  font-size: 18px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 5px 5px 0px;
+  text-orientation: mixed;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 576px) {
+  .lesson-menu-label__desc {
+    display: none;
+  }
+}
+
+.lesson-menu-label__mob {
+  width: 40px;
+  height: 40px;
+  background-color: #FFEF68;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+}
+
+@media only screen and (min-width: 576px) {
+  .lesson-menu-label__mob {
+    display: none;
+  }
+}
+
+.lesson-menu-label__mob .icon {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  font-size: 20px;
 }
 
 .block-lesson {
@@ -8299,6 +8404,107 @@ button.mfp-close {
 
 @media only screen and (max-width: 991px) {
   .form__file-fild {
+    display: none;
+  }
+}
+
+.menu-page-course {
+  position: fixed;
+  z-index: 97;
+  width: 568px;
+  right: 0;
+  top: 0;
+  background-color: #F8F8FA;
+  height: 100%;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+@media only screen and (max-width: 576px) {
+  .menu-page-course {
+    width: 100%;
+    top: 0;
+    padding: 20px;
+  }
+}
+
+.menu-page-course__header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 50px 50px 20px 50px;
+  top: 0;
+  left: 0;
+  background-color: #F8F8FA;
+}
+
+@media only screen and (max-width: 576px) {
+  .menu-page-course__header {
+    padding: 20px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .menu-page-course__header {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .menu-page-course__header .next-icon {
+    display: none;
+  }
+}
+
+.menu-page-course__inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 100px;
+  padding: 100px 50px 50px 50px;
+  height: 100%;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 576px) {
+  .menu-page-course__inner {
+    padding: 70px 20px 20px 20px;
+  }
+}
+
+.menu-page-course__title {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: "MontserratBold", sans-serif;
+}
+
+@media only screen and (min-width: 576px) {
+  .menu-page-course__title span:first-child {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .menu-page-course__title span:last-child {
     display: none;
   }
 }
@@ -12728,6 +12934,10 @@ button.mfp-close {
   .course-chapter__sublist {
     padding-left: 30px;
   }
+}
+
+.course-chapters__item:last-of-type .course-chapter__sublist {
+  padding-top: 20px;
 }
 
 .course-chapters__subitem:not(:last-child) {

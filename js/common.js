@@ -376,9 +376,20 @@
 			$('.programms-filters').addClass('active');
 		}
 		if($(e.target).attr('id') === 'close-filter' || $(e.target).closest('#close-filter').length > 0){
-			console.log('close')
 			$('.programms-filters').removeClass('active');
 		}
+
+		// open lesson menu
+		if($(e.target).attr('id') === 'lesson-menu-open' || $(e.target).closest('#lesson-menu-open').length > 0){
+			$('html').toggleClass('lesson-menu-opened');
+		}
+		if($(e.target).attr('id') === 'lesson-menu-close' || $(e.target).closest('#lesson-menu-close').length > 0){
+				$('html').removeClass('lesson-menu-opened');
+		}
+		if($(e.target).hasClass('cover') && $('html').hasClass('lesson-menu-opened')){
+			$('html').removeClass('lesson-menu-opened');
+		}
+		// End open lesson menu
 
 	});
 

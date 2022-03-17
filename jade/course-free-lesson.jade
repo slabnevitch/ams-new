@@ -1,6 +1,6 @@
 extends _misc/main
 block title
-	| Платный курс. Урок
+	|  Бесплатный курс. Урок
 	- var authorized = true;
 	- var headerMenu = true;
 block content
@@ -81,69 +81,7 @@ block content
 		
 		.wide-container
 			.wrapper-simple
-				.lesson-chat
-					.lesson-chat__title Переписка с преподавателем (4)
-					
-					.lesson-chat__item.item-lesson-chat
-						.item-lesson-chat__header
-							.item-lesson-chat__avatar
-								img(src="img/lesson-page/user1.jpg" alt="alt")
-							.item-lesson-chat__user
-								.item-lesson-chat__name Константин Константинопольский
-									span.item-lesson-chat__role (Студент)
-								.item-lesson-chat__time 5 часов назад
-						
-						.item-lesson-chat__body 
-							p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
-
-						span.item-lesson-chat__write.link Ответить
-
-					.lesson-chat__item.item-lesson-chat
-						.item-lesson-chat__header
-							.item-lesson-chat__avatar
-								img(src="img/lesson-page/user2.jpg" alt="alt")
-							.item-lesson-chat__user
-								.item-lesson-chat__name Андрей Смирнов
-									span.item-lesson-chat__role (Преподаватель)
-								.item-lesson-chat__time 5 часов назад
-						
-						.item-lesson-chat__body
-							p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
-
-							.item-lesson-chat__img
-								img(src="img/lesson-page/chat-img.jpg" alt="alt")
-
-						span.item-lesson-chat__write.link Ответить
-
-					.lesson-chat__item.item-lesson-chat
-						.item-lesson-chat__header
-							.item-lesson-chat__avatar
-								img(src="img/lesson-page/user1.jpg" alt="alt")
-							.item-lesson-chat__user
-								.item-lesson-chat__name Константин Константинопольский
-									span.item-lesson-chat__role (Студент)
-								.item-lesson-chat__time 5 часов назад
-						
-						.item-lesson-chat__body 
-							p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
-
-						span.item-lesson-chat__write.link Ответить
-
-					.lesson-chat__form.form.form-lesson-chat
-						.form-lesson-chat__row
-							textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
-
-							label.form__label.form-lesson-chat__file
-								input(type="file")
-								.file-icon
-									+icon('add-file')
-								span.form-lesson-chat__add-file Прикрепить файл
-
-							button.btn.btn-sm.btn-accented Отправить
-
-						label.form__label.form-lesson-chat__field
-							input(type="file")
-							.form__file-fild Перетащите сюда файл
+				#anycomment-app
 
 		.page-course__menu.menu-page-course
 			.menu-page-course__header
@@ -238,6 +176,20 @@ block page-scripts
 
 
 	//- VANILLA JS===================================
+	script.
+		AnyComment = window.AnyComment || [];
+		AnyComment.Comments = [];
+		AnyComment.Comments.push({
+		"root": "anycomment-app",
+		"app_id": APP_ID,
+		"language": "ru"
+		})
+		var s = document.createElement("script");
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = "https://widget.anycomment.io/comment/embed.js";
+		var sa = document.getElementsByTagName("script")[0];
+		sa.parentNode.insertBefore(s, s.nextSibling);
 	//- dynamic-adaptive--------------------------
 	//- script(src="js/libs/dynamic-adaptive/da.min.js")
 		

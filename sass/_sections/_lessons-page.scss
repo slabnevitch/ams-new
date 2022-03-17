@@ -126,6 +126,9 @@ line-height: 150%;
 		padding: 0;
 		background-color: transparent;
 	}
+	@include max-screen($xs){
+		position: relative;
+	}
 	a{
 		text-decoration: none;
 		color: $text;
@@ -156,6 +159,12 @@ line-height: 150%;
 		width: calc(100% + 40px);
 	}
 
+	.prev-icon,
+	.next-icon {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
 }
 .video-lesson__prev,
 .video-lesson__next {
@@ -176,8 +185,6 @@ line-height: 150%;
 .next-icon {
 	width: 40px;
 	height: 40px;
-	margin-left: 10px;
-	margin-right: 10px;
 	background-color: $accent;
 	border-radius: 50%;
 	position: relative;
@@ -208,6 +215,52 @@ line-height: 150%;
 		margin-right: 6px;
 		font-size: 17px;
 	}
+
+}
+.lesson-menu-label{
+	position: fixed;
+	top: 325px;
+	right: 0;
+	z-index: 98;
+  transform: rotate(180deg);
+
+  @include max-screen($xs){
+  	position: absolute;
+  	right: 0;
+  	top: 10px;
+  	z-index: 1;
+  	// transform: translateY(-50%);
+  }  
+}										
+.lesson-menu-label__desc{
+	padding: 30px 15px ;
+	text-align: center;
+	background: $accent;
+	font-family: $semi;
+	font-size: 18px;
+	border-radius: 0px 5px 5px 0px ;
+	text-orientation: mixed;
+  writing-mode: vertical-rl;
+  cursor: pointer;
+
+	@include max-screen($xs){
+		display: none;
+	}  
+}										
+.lesson-menu-label__mob{
+	width: 40px;
+	height: 40px;
+	background-color: $accent;
+	border-radius: 50%;
+	position: relative;
+
+	@include min-screen($xs){
+		display: none;
+	} 
+	.icon{
+		@include absolute-center-old;
+		font-size: 20px;
+	}		
 
 }
 .block-lesson {
@@ -470,5 +523,86 @@ font-family: $bold;
 	@include max-screen($md){
 		display: none;
 	}
+}
+
+.menu-page-course{
+	position: fixed;
+	z-index: 97;
+	width: 568px;
+	right: 0;
+	top: 0;
+	background-color: $gray-bg;
+	height: 100%;
+	transform: translateX(100%);
+	transition: all 0.2s ease-in;
+
+	@include max-screen($xs){
+		width: 100%;
+		top: 0;
+		padding: 20px;
+	}  
+}
+.menu-page-course__header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	padding: 50px 50px 20px 50px;
+	top: 0;
+	left: 0;
+	background-color: $gray-bg;
+
+	@include max-screen($xs){
+		padding: 20px;
+
+	} 
+	@include min-screen($xs){
+		justify-content: flex-start; 	
+	}   
+
+	.next-icon{
+		@include min-screen($xs){
+			display: none;
+		}  
+	}
+}
+.menu-page-course__inner{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 100px;
+	padding: 100px 50px 50px 50px;
+	height: 100%;
+	overflow: auto;
+
+	@include max-screen($xs){
+		padding: 70px 20px 20px 20px;
+	}  
+}
+.menu-page-course__title{
+	font-size: 28px;
+line-height: 34px;
+font-family: $bold;
+	span{
+		&:first-child{
+			@include min-screen($xs){
+				display: none;
+			}  
+			
+		}
+		&:last-child{
+			@include max-screen($xs){
+				display: none;
+				
+			}  
+		}
+
+	}
+}
+.course-chapters__content{
+
 }
 /*--------------------END lessons-page----------------------*/ 

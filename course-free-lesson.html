@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Платный курс. Урок
+    <title> Бесплатный курс. Урок
     </title>
     <meta name="description" content="">
     <link rel="icon" href="img/favicon.png">
@@ -147,64 +147,7 @@
           </div>
           <div class="wide-container">
             <div class="wrapper-simple">
-              <div class="lesson-chat">
-                <div class="lesson-chat__title">Переписка с преподавателем (4)</div>
-                <div class="lesson-chat__item item-lesson-chat">
-                  <div class="item-lesson-chat__header">
-                    <div class="item-lesson-chat__avatar"><img src="img/lesson-page/user1.jpg" alt="alt"></div>
-                    <div class="item-lesson-chat__user">
-                      <div class="item-lesson-chat__name">Константин Константинопольский<span class="item-lesson-chat__role">(Студент)</span></div>
-                      <div class="item-lesson-chat__time">5 часов назад</div>
-                    </div>
-                  </div>
-                  <div class="item-lesson-chat__body"> 
-                    <p>Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия</p>
-                  </div><span class="item-lesson-chat__write link">Ответить</span>
-                </div>
-                <div class="lesson-chat__item item-lesson-chat">
-                  <div class="item-lesson-chat__header">
-                    <div class="item-lesson-chat__avatar"><img src="img/lesson-page/user2.jpg" alt="alt"></div>
-                    <div class="item-lesson-chat__user">
-                      <div class="item-lesson-chat__name">Андрей Смирнов<span class="item-lesson-chat__role">(Преподаватель)</span></div>
-                      <div class="item-lesson-chat__time">5 часов назад</div>
-                    </div>
-                  </div>
-                  <div class="item-lesson-chat__body">
-                    <p>Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия</p>
-                    <div class="item-lesson-chat__img"><img src="img/lesson-page/chat-img.jpg" alt="alt"></div>
-                  </div><span class="item-lesson-chat__write link">Ответить</span>
-                </div>
-                <div class="lesson-chat__item item-lesson-chat">
-                  <div class="item-lesson-chat__header">
-                    <div class="item-lesson-chat__avatar"><img src="img/lesson-page/user1.jpg" alt="alt"></div>
-                    <div class="item-lesson-chat__user">
-                      <div class="item-lesson-chat__name">Константин Константинопольский<span class="item-lesson-chat__role">(Студент)</span></div>
-                      <div class="item-lesson-chat__time">5 часов назад</div>
-                    </div>
-                  </div>
-                  <div class="item-lesson-chat__body"> 
-                    <p>Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия</p>
-                  </div><span class="item-lesson-chat__write link">Ответить</span>
-                </div>
-                <div class="lesson-chat__form form form-lesson-chat">
-                  <div class="form-lesson-chat__row">
-                    <textarea name="name" placeholder="Написать комментарий" class="form__textarea"></textarea>
-                    <label class="form__label form-lesson-chat__file">
-                      <input type="file">
-                      <div class="file-icon">
-                            <svg class="icon icon-add-file ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#add-file"></use>
-                            </svg>
-                      </div><span class="form-lesson-chat__add-file">Прикрепить файл</span>
-                    </label>
-                    <button class="btn btn-sm btn-accented">Отправить</button>
-                  </div>
-                  <label class="form__label form-lesson-chat__field">
-                    <input type="file">
-                    <div class="form__file-fild">Перетащите сюда файл</div>
-                  </label>
-                </div>
-              </div>
+              <div id="anycomment-app"></div>
             </div>
           </div>
           <div class="page-course__menu menu-page-course">
@@ -1143,6 +1086,21 @@
     <!-- script(src="js/libs/slick/slick.min.js")
     -->
     
+    <script>
+      AnyComment = window.AnyComment || [];
+      AnyComment.Comments = [];
+      AnyComment.Comments.push({
+      "root": "anycomment-app",
+      "app_id": APP_ID,
+      "language": "ru"
+      })
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      s.src = "https://widget.anycomment.io/comment/embed.js";
+      var sa = document.getElementsByTagName("script")[0];
+      sa.parentNode.insertBefore(s, s.nextSibling);
+    </script>
     <script src="js/libs/accordion/vanilla-accordion.js"></script>
     <script src="js/libs/tippy/popper.min.js"></script>
     <script src="js/libs/tippy/tippy-bundle.umd.js"></script>
