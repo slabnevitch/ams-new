@@ -60,8 +60,8 @@
           </div>
         </div>
       </header>
-      <div class="main-content">
-        <div id="popup-demo-disabled" class="popup popup-demo-disabled">
+      <div class="main-content"><a href="#popup-demo-disabled" class="popup-with-form">Пробный доступ</a><a href="#popup-last-step" class="popup-with-form">Последний шаг</a>
+        <div id="popup-demo-disabled" class="popup popup-demo-disabled mfp-hide">
           <div class="popup__header">
             <div class="popup__logo"><img src="img/logo.svg" alt="alt"></div>
           </div>
@@ -76,11 +76,10 @@
               <li>Сертификаты международного образца</li>
               <li>Библиотеки дополнительных материалов</li>
               <li>Профессиональные работы в портфолио</li>
-            </ul>
-            <button class="btn btn-accented">Выбрать курс</button>
+            </ul><a href="#" class="btn btn-accented">Выбрать курс</a>
           </div>
         </div>
-        <div id="popup-last-step" class="popup popup-last-step">
+        <div id="popup-last-step" class="popup popup-last-step mfp-hide">
           <div class="popup__header">
             <div class="popup__logo"><img src="img/logo.svg" alt="alt"></div>
           </div>
@@ -163,6 +162,8 @@
     <script src="js/libs/jquery/jquery-3.1.1.min.js"></script>
     
     <script src="js/libs/dynamic-adaptive/da.min.js"></script>
+    <script src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
+    <script src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

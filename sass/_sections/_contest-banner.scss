@@ -39,11 +39,32 @@
 
 }
 .contest-banner__logos {
+	@include max-screen($xss){
+		display: none;
+	}  
 }
 .contest-banner__logo {
+	display: flex;
+	align-items: center;
 	margin-bottom: 30px;
 	margin-left: 15px;
 	margin-right: 15px;
+}
+.contest-banner__logo-img{
+	margin-right: 13px;
+	flex-shrink:0;
+	// width: 32px;
+	height: 33px;
+
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+.contest-banner__logo-name{
+	font-size: 20px;
+	font-family: $ibm-med;
+	text-transform: uppercase;
 }
 .contest-banner__logos-row{
 	display: flex;
@@ -53,28 +74,34 @@
 	
 }
 .contest-banner__img {
+	margin-top: 30px;
 	@include col();
 	@include size(6);
 	@include shift-left(1);
 	@include shift-lg-left(0);
 	@include size-md(12);
+
+	@include max-screen($md){
+					margin-top: 0;
+	}  
 	
 	._fit {
 		border-radius: 10px;
 		overflow: hidden;
 		padding-bottom: prc(354, 570);
 
-		@include max-screen($md){
-			padding-bottom: 52.25%;
-		}  
-		@include max-screen($xs){
+		// @include max-screen($md){
 
-			padding-bottom: 110%;
-		}
+		// 	padding-bottom: 52.25%;
+		// }  
+		// @include max-screen($xs){
 
-		._fit-img{
-	    object-position: left top;
-		}
+		// 	padding-bottom: 110%;
+		// }
+
+		// ._fit-img{
+	 //    object-position: left top;
+		// }
 	}
 }
 .contest-banner__video{

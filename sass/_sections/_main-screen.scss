@@ -14,11 +14,13 @@
 		max-width: none;
 	}  
 	h1{
+		@include adaptive-value('padding-right', 180, 0, 1);
 		position: relative;
 		margin-bottom: 20px;
 		z-index: 2;
 		
 		@include max-screen($xs){
+			padding-right: 0;
 			font-size: 28px;
 		}  
 	}

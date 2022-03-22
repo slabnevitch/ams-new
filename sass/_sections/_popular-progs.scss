@@ -2,10 +2,12 @@
 .popular-progs {
 	@include adaptive-value('padding-top', 65, 29, 1);
 	@include adaptive-value('padding-bottom', 65, 29, 1);
+
+	.wide-container{
+		background-color: $gray-bg;
+	}
 }
-.main-page-section {}
-.wrapper-simple {}
-.wrapper-flex {}
+
 .popular-progs__slider{
 	
 	&.slick-dotted.slick-slider {

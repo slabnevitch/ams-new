@@ -33,7 +33,7 @@
 								{
 
 							    easing: 'linear',
-							    duration: 10000000
+							    duration: +$this.attr('data-count') * (+$this.attr('data-keff'))
 
 								});
 						// }, delay);

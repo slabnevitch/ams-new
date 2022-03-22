@@ -30,6 +30,19 @@
 		line-height: calc(49/40);
 	}
 }
+.page-profile__errors{
+	margin-bottom: 30px;
+	@include col();
+	@include size(6);
+	@include shift-left(6);
+	@include size-sm(12);
+	@include shift-sm-left(0);
+}
+.page-profile__error{
+	font-size: 14px;
+    line-height: 18px;
+    color: #FF7878;
+}
 .page-profile__avatar {
 	text-align: center;
 	// flex: 1 1 auto;
@@ -129,6 +142,11 @@ line-height: 24px;
 line-height: 18px;
 		&:last-of-type{
 			margin-bottom: 0;
+		}
+
+		a {
+		    text-decoration: none;
+		    color: $text;
 		}
 	}
 }

@@ -42,6 +42,11 @@
 	overflow: hidden;
 	border-radius: 10px 10px 0 0;
 }
+.lesson-card__label{
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+}
 .lesson-card__body{
 	flex: 1 1 auto;
 	padding: 15px 20px 0 20px;

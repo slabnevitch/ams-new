@@ -28,7 +28,7 @@ block content
 					- var items = [{title: 'AUTOCAD', icon: "autocad", format: "png"}, {title: 'REVIT', icon: "revit", format: "png"}, {title: 'ARCHICAD', icon: "revit", format: "png"}, {title: 'AUTOCAD', icon: "3ds", format: "png"},{title: 'REVIT', icon: "lumion", format: "svg"},{title: 'ARCHICAD', icon: "archicad", format: "svg"}];
 						- for (var n=0; n < 2; n++)
 							each item, i in items
-								.contest-card			
+								a(href="#").contest-card			
 									.contest-card__header
 										.contest-card__date 2021 год
 										.tag.tag-mini.tag-autocad-empty Autocad			
@@ -41,6 +41,7 @@ block content
 											h2 AUTOCAD. Конкурс на лучший проект
 									.contest-card__count 1245 работ
 
+				a(href="#").btn.btn-bordered Показать еще
 
 //- img(src=img + "demo.jpg")
 //- img(src=ico + "amex.svg")

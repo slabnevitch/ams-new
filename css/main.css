@@ -4111,6 +4111,12 @@ h3 {
   position: relative;
 }
 
+.popup-gallery__label {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
+}
+
 .popup-demo-disabled .popup__title {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4190,6 +4196,18 @@ h3 {
 
 .popup-last-step__img img {
   max-width: 100%;
+}
+
+.popup-demo-disabled button.mfp-close {
+  top: 0;
+  right: -60px;
+}
+
+@media only screen and (max-width: 991px) {
+  .popup-demo-disabled button.mfp-close {
+    top: 0;
+    right: 0;
+  }
 }
 
 .user-card--row {
@@ -4437,7 +4455,7 @@ button.mfp-close {
 }
 
 @media (any-hover: hover) {
-  .programm-card:not(.programm-card--promotional):hover .programm-card__title,
+  .programm-card:not(.programm-card--promotional):hover h3,
   .programm-card:not(.programm-card--promotional):hover .programm-card__bottom {
     display: none;
   }
@@ -4488,6 +4506,14 @@ button.mfp-close {
 
 .programm-card.bg-sketchup .program-icon {
   background-color: #E8F6FF;
+}
+
+.programm-card h3, .programm-card h2 {
+  margin: 0;
+  font-family: "MontserratBold", sans-serif;
+  font-size: 24px;
+  line-height: -webkit-calc(29/24);
+  line-height: calc(29/24);
 }
 
 .bg-autocad {
@@ -4605,13 +4631,6 @@ button.mfp-close {
 
 .programm-card__tags .tag:not(:last-child) {
   margin-right: 10px;
-}
-
-.programm-card__title {
-  font-family: "MontserratBold", sans-serif;
-  font-size: 24px;
-  line-height: -webkit-calc(29/24);
-  line-height: calc(29/24);
 }
 
 .programm-card__text {
@@ -5708,7 +5727,7 @@ button.mfp-close {
   }
 }
 
-.card-page-history h1 {
+.card-page-history h2 {
   margin-bottom: 0px;
   font-family: "MontserratBold", sans-serif;
   line-height: -webkit-calc(28/28);
@@ -5717,14 +5736,10 @@ button.mfp-close {
 }
 
 @media (max-width: 1170px) {
-  .card-page-history h1 {
+  .card-page-history h2 {
     font-size: -webkit-calc(15px + 13 * ((100vw - 320px) / 850));
     font-size: calc(15px + 13 * ((100vw - 320px) / 850));
   }
-}
-
-.card-page-history__header {
-  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 576px) {
@@ -5793,6 +5808,14 @@ button.mfp-close {
   .content-page-history {
     padding-left: 0;
   }
+}
+
+.content-page-history h1 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 28px;
+  line-height: -webkit-calc(34/28);
+  line-height: calc(34/28);
 }
 
 .content-page-history h2 {
@@ -5916,6 +5939,7 @@ button.mfp-close {
 }
 
 .learn-in__title {
+  max-width: 380px;
   margin-right: 15px;
   font-size: 28px;
   line-height: 34px;
@@ -6870,10 +6894,43 @@ button.mfp-close {
   font-family: "MontserratBold", sans-serif;
 }
 
+@media only screen and (max-width: 480px) {
+  .contest-banner__logos {
+    display: none;
+  }
+}
+
 .contest-banner__logo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 30px;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.contest-banner__logo-img {
+  margin-right: 13px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 33px;
+}
+
+.contest-banner__logo-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.contest-banner__logo-name {
+  font-size: 20px;
+  font-family: "IBMPlexSans-Medium", sans-serif;
+  text-transform: uppercase;
 }
 
 .contest-banner__logos-row {
@@ -6889,6 +6946,7 @@ button.mfp-close {
 }
 
 .contest-banner__img {
+  margin-top: 30px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -6914,28 +6972,17 @@ button.mfp-close {
   }
 }
 
+@media only screen and (max-width: 991px) {
+  .contest-banner__img {
+    margin-top: 0;
+  }
+}
+
 .contest-banner__img ._fit {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   overflow: hidden;
   padding-bottom: 62.10526%;
-}
-
-@media only screen and (max-width: 991px) {
-  .contest-banner__img ._fit {
-    padding-bottom: 52.25%;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .contest-banner__img ._fit {
-    padding-bottom: 110%;
-  }
-}
-
-.contest-banner__img ._fit ._fit-img {
-  -o-object-position: left top;
-  object-position: left top;
 }
 
 .contest-banner__video {
@@ -7021,6 +7068,8 @@ button.mfp-close {
   background-color: #fff;
   -webkit-border-radius: 10px;
   border-radius: 10px;
+  text-decoration: none;
+  color: #2D2D2F;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
@@ -7091,25 +7140,15 @@ button.mfp-close {
 
 .page-contest-new h1 {
   margin-bottom: 0;
-}
-
-@media only screen and (max-width: 767.98px) {
-  .page-contest-new h1 br {
-    display: none;
-  }
+  max-width: 345px;
 }
 
 .page-contest__resuls, .prizes__descr {
+  max-width: 316px;
   margin-top: 10px;
   margin-bottom: 20px;
   font-size: 24px;
   line-height: 136.02%;
-}
-
-@media only screen and (max-width: 767.98px) {
-  .page-contest__resuls br, .prizes__descr br {
-    display: none;
-  }
 }
 
 .page-contest__about, .prizes__content,
@@ -7421,6 +7460,7 @@ button.mfp-close {
 }
 
 .finalists h1 .tag {
+  margin-bottom: 0;
   display: inline-block;
   vertical-align: middle;
   font-size: 16px;
@@ -7431,6 +7471,10 @@ button.mfp-close {
   .finalists h1 .tag {
     display: none;
   }
+}
+
+.finalists .wide-container {
+  background-color: #F8F8FA;
 }
 
 @media only screen and (max-width: 480px) {
@@ -7492,6 +7536,12 @@ button.mfp-close {
 .card-finalists__photo {
   display: block;
   padding-bottom: 64.90196%;
+}
+
+.card-finalists__label {
+  position: absolute;
+  left: 20px;
+  bottom: 10px;
 }
 
 /*--------------------END contest-page----------------------*/
@@ -7670,6 +7720,12 @@ button.mfp-close {
   overflow: hidden;
   -webkit-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0;
+}
+
+.lesson-card__label {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
 }
 
 .lesson-card__body {
@@ -8593,6 +8649,39 @@ button.mfp-close {
   }
 }
 
+.page-profile__errors {
+  margin-bottom: 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(50% - 30px);
+  width: calc(50% - 30px);
+  margin-left: -webkit-calc(50% + 15px);
+  margin-left: calc(50% + 15px);
+}
+
+@media screen and (max-width: 767.98px) {
+  .page-profile__errors {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .page-profile__errors {
+    margin-left: -webkit-calc(0% + 15px);
+    margin-left: calc(0% + 15px);
+  }
+}
+
+.page-profile__error {
+  font-size: 14px;
+  line-height: 18px;
+  color: #FF7878;
+}
+
 .page-profile__avatar {
   text-align: center;
   -webkit-flex-shrink: 0;
@@ -8770,6 +8859,11 @@ button.mfp-close {
 
 .page-profile__form p:last-of-type {
   margin-bottom: 0;
+}
+
+.page-profile__form p a {
+  text-decoration: none;
+  color: #2D2D2F;
 }
 
 .page-profile__socials-row {
@@ -9020,6 +9114,9 @@ button.mfp-close {
 }
 
 .article .start-learning {
+  display: block;
+  text-decoration: none;
+  color: #2D2D2F;
   padding: 50px;
   margin: 60px 0;
   background-color: #FFEF68;
@@ -9592,7 +9689,7 @@ button.mfp-close {
 }
 
 @media only screen and (min-width: 767.98px) {
-  .programms-cards-slider .slick-slide.slick-cloned {
+  .programms-cards-slider .slick-slide.slick-cloned.programm-card {
     display: none;
   }
 }
@@ -10409,13 +10506,22 @@ button.mfp-close {
 }
 
 .main-screen__content h1 {
+  padding-right: 180px;
   position: relative;
   margin-bottom: 20px;
   z-index: 2;
 }
 
+@media (max-width: 1170px) {
+  .main-screen__content h1 {
+    padding-right: -webkit-calc(0px + 180 * ((100vw - 320px) / 850));
+    padding-right: calc(0px + 180 * ((100vw - 320px) / 850));
+  }
+}
+
 @media only screen and (max-width: 576px) {
   .main-screen__content h1 {
+    padding-right: 0;
     font-size: 28px;
   }
 }
@@ -10842,6 +10948,10 @@ button.mfp-close {
     padding-bottom: -webkit-calc(29px + 36 * ((100vw - 320px) / 850));
     padding-bottom: calc(29px + 36 * ((100vw - 320px) / 850));
   }
+}
+
+.popular-progs .wide-container {
+  background-color: #F8F8FA;
 }
 
 .popular-progs__slider.slick-dotted.slick-slider {
@@ -12610,6 +12720,38 @@ button.mfp-close {
   }
 }
 
+.course-card__info h1 {
+  margin-bottom: 10px;
+  font-family: "MontserratBold", sans-serif;
+  font-size: 56px;
+  line-height: 110%;
+}
+
+@media (max-width: 1170px) {
+  .course-card__info h1 {
+    font-size: -webkit-calc(1px + 55 * ((100vw - 320px) / 850));
+    font-size: calc(1px + 55 * ((100vw - 320px) / 850));
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .course-card__info h1 {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .course-card__info h1 {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .course-card__info h1 {
+    font-size: 30px;
+  }
+}
+
 .course-card__info .program-icon {
   width: 64px;
   height: 64px;
@@ -12644,38 +12786,6 @@ button.mfp-close {
 
 .course-card__header .tag:not(:last-child) {
   margin-right: 10px;
-}
-
-.course-card__title {
-  margin-bottom: 10px;
-  font-family: "MontserratBold", sans-serif;
-  font-size: 56px;
-  line-height: 110%;
-}
-
-@media (max-width: 1170px) {
-  .course-card__title {
-    font-size: -webkit-calc(1px + 55 * ((100vw - 320px) / 850));
-    font-size: calc(1px + 55 * ((100vw - 320px) / 850));
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .course-card__title {
-    font-size: 48px;
-  }
-}
-
-@media only screen and (max-width: 767.98px) {
-  .course-card__title {
-    font-size: 36px;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  .course-card__title {
-    font-size: 30px;
-  }
 }
 
 .course-card__text {
@@ -12740,6 +12850,8 @@ button.mfp-close {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  text-decoration: none;
+  color: #2D2D2F;
 }
 
 @media only screen and (max-width: 576px) {

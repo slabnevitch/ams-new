@@ -31,6 +31,11 @@ block content
 						a(href="/").lesson-card
 							.lesson-card__img._fit
 								img._fit-img(src=img + "/lessons-page/" + (i+1) + ".jpg" alt="alt")
+								if i < 12
+									img.lesson-card__label(src="img/programms-labels/" + (i+1) + ".svg" alt="alt")
+								else
+									img.lesson-card__label(src="img/programms-labels/" + (i-11) + ".svg" alt="alt")
+							
 							.lesson-card__body
 								h2= item
 								.lesson-card__text На уроках Алексей объясняет все доходчиво и понятно, а обратная связь помогает решит дополнительные вопросы, которые возникли в ходе обучения. Спасибо большое за полученные знания. Всем рекомендую.

@@ -56,7 +56,7 @@
 		float: none;
 		height: auto;
 
-		&.slick-cloned{
+		&.slick-cloned.programm-card{
 			@include min-screen($sm){
 				display: none;
 				

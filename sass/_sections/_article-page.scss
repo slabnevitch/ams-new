@@ -156,6 +156,9 @@
 		}  
 	}
 	.start-learning{
+		display: block;
+		text-decoration: none;
+		color: $text;
 		padding: 50px;
 		margin: 60px 0;
 		background-color: $accent;

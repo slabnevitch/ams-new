@@ -32,6 +32,23 @@
 		padding-right: 0;
 	}  
 
+	h1 {
+		margin-bottom: 10px;
+		font-family: $bold;
+		@include adaptive-value('font-size', 56, 1, 1);
+		line-height: 110%;
+
+		@include max-screen(800px){
+			font-size: 48px;
+		}
+		@include max-screen($sm){
+		  	font-size: 36px;
+		  }
+	  @include max-screen(350px){
+	      	font-size: 30px;
+	      }      
+	}
+
 	.program-icon{
 		width: 64px;
 		height: 64px;
@@ -63,22 +80,7 @@
 	}
 }
 
-.course-card__title {
-	margin-bottom: 10px;
-	font-family: $bold;
-	@include adaptive-value('font-size', 56, 1, 1);
-line-height: 110%;
 
-	@include max-screen(800px){
-		font-size: 48px;
-	}
-	@include max-screen($sm){
-	  	font-size: 36px;
-	  }
-  @include max-screen(350px){
-      	font-size: 30px;
-      }      
-}
 .course-card__text {
 	margin-bottom: 20px;
 	font-size: 20px;
@@ -118,6 +120,8 @@ line-height: 136.02%;
 		max-width: 640px;
 		display: flex;
 		align-items: center;
+		text-decoration: none;
+		color: $text;
 
 		@include max-screen($xs){
 			flex-wrap: wrap;

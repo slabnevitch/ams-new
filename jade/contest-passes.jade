@@ -12,7 +12,7 @@ block content
 				span.breadcrumbs__target Конкурсы
 
 	.page.page-contest.page-contest-passes
-		.contest-banner
+		//- .contest-banner
 			.contest-banner__wrapper
 				.wrapper-simple
 					.wrapper-flex
@@ -38,7 +38,7 @@ block content
 							.contest-banner__video
 								video(poster="img/contest-page/preview.jpg")
 									source(src="https://www.youtube.com/watch?v=dGt08ylXCj0&list=PLIV84uuUwBBDwLXOui4XYWwhe_47dc-Lg&index=3&t=0s", type="video/youtube")
-		
+		include _blocks/contest-banner
 		.page-contest__info.info-page-contest
 			.wrapper-simple
 				.wrapper-flex
@@ -54,8 +54,8 @@ block content
 		.finalists
 			.wide-container
 				.wrapper-simple
-					h1 Результаты #[span финалистов 2021] 
-						.tag.tag-autocad-bg Autocad
+					h1 Результаты финалистов 2021
+						span.tag.tag-autocad-bg Autocad
 				
 				.wrapper-simple
 					.wrapper-flex.finalists__cards
@@ -73,6 +73,7 @@ block content
 
 									a(href="#popup-gallery-1").card-finalists__photo.gallery-photo._fit
 										img._fit-img(src=img + "/contest-page/finalists/" + (i+1) + ".jpg" alt="alt")
+										img.card-finalists__label(src=img + "/programms-labels/" + (i+1) + ".svg" alt="alt")
 							else
 								.finalists__card.card-finalists
 									.card-finalists__header
@@ -84,8 +85,9 @@ block content
 													+icon('VK')
 													span ivanov
 
-									a(href="#popup-gallery-1").card-finalists__photo.gallery-photo._fit
+									a(href="#").card-finalists__photo._fit
 										img._fit-img(src=img + "/contest-page/finalists/" + (i+1) + ".jpg" alt="alt")
+										img.card-finalists__label(src=img + "/programms-labels/" + (i+1) + ".svg" alt="alt")
 	include _misc/gallery-popup
 //- img(src=img + "demo.jpg")
 //- img(src=ico + "amex.svg")

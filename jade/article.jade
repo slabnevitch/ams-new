@@ -41,7 +41,7 @@ block content
 
 							button Если надо кнопка
 
-							.start-learning
+							a(href="#").start-learning
 								.wrapper-flex
 									.start-learning__left
 										.start-learning__title Начни учиться бесплатно
@@ -95,7 +95,7 @@ block content
 							p Отключение слоёв в Автокаде приводит к тому, что на экране исчезают объекты того или иного слоя. Т.е. происходит временное их скрытие с рабочего пространства.
 							p Вопрос: Как отключить слой в Автокаде?
 							p Достаточно в Диспетчере слоёв нажать на «лампочку», как показано на рис. ниже. Изображение лампочки изменится (она будет выключена).
-						.start-learning(data-da="article,9999,9")
+						a(href="#").start-learning(data-da="article,9999,9")
 							.wrapper-flex
 								.start-learning__left
 									.start-learning__title Начни учиться бесплатно
@@ -133,11 +133,7 @@ block content
 													.your-choice__label 13 уроков
 													.your-choice__label Без подготовки
 						.learn-in
-							.learn-in__title Хотите стать автором 
-								br
-								| и зарабатывать на этом? 
-								br
-								|  Напишите нам.
+							.learn-in__title Хотите стать автором и зарабатывать на этом? Напишите нам.
 							a(href="/").btn.btn-accented Стать автором
 
 			include _blocks/start-learning
@@ -153,6 +149,7 @@ block content
 								a(href="/").lesson-card
 									.lesson-card__img._fit
 										img._fit-img(src=img + "/lessons-page/" + (i+1) + ".jpg" alt="alt")
+										img.lesson-card__label(src="img/programms-labels/" + (i+1) + ".svg" alt="alt")
 									.lesson-card__body
 										h2= item
 										.lesson-card__text На уроках Алексей объясняет все доходчиво и понятно, а обратная связь помогает решит дополнительные вопросы, которые возникли в ходе обучения. Спасибо большое за полученные знания. Всем рекомендую.

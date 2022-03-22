@@ -9,14 +9,26 @@
 					.contest-banner__found Призовой фонд 100 000 ₽
 					.contest-banner__logos
 						.contest-banner__logos-row
-							- for (var i=0; i < 2; i++)
-								.contest-banner__logo
-									img(src=img + "contest-page/logos/"+(i+1)+".svg" alt="logo")
+							.contest-banner__logo
+								.contest-banner__logo-img
+									img(src=img + "program-icons/autocad.svg" alt="logo")
+								.contest-banner__logo-name autocad
+
+							.contest-banner__logo
+								.contest-banner__logo-img
+									img(src=img + "program-icons/archicad.svg" alt="logo")
+								.contest-banner__logo-name archicad
 
 						.contest-banner__logos-row
-							- for (var i=2; i < 4; i++)
-								.contest-banner__logo
-									img(src=img + "contest-page/logos/"+(i+1)+".svg" alt="logo")
+							.contest-banner__logo
+								.contest-banner__logo-img
+									img(src=img + "program-icons/revit.svg" alt="logo")
+								.contest-banner__logo-name revit
+
+							.contest-banner__logo
+								.contest-banner__logo-img
+									img(src=img + "program-icons/3ds.svg" alt="logo")
+								.contest-banner__logo-name 3ds max
 
 					.btn.btn-wht.btn-sm Участвовать
 

@@ -32,6 +32,8 @@
 	margin-bottom: 30px;
 	background-color: #fff;
 	border-radius: 10px;
+	text-decoration: none;
+	color: $text;
 	@include col();
 	@include size(4);
 	@include size-lg(6);
@@ -72,27 +74,15 @@
 .page-contest-new{
 	h1{
 		margin-bottom: 0;
-
-		br{
-			@include max-screen($sm){
-				display: none;
-			}  
-
-		}
+		max-width: 345px;
 	}
 }
 .page-contest__resuls {
+	max-width: 316px;
 	margin-top: 10px;
 	margin-bottom: 20px;
 	font-size: 24px;
 	line-height: 136.02%;
-
-	br{
-		@include max-screen($sm){
-			display: none;
-		}  
-
-	}
 }
 .page-contest__about,
 .page-contest-new__top {
@@ -277,6 +267,7 @@
 		}
 
 		.tag {
+			margin-bottom: 0;
 			display: inline-block;
 			vertical-align: middle;
 			font-size: 16px;
@@ -289,7 +280,11 @@
 		}
 	}
 }
-.wrapper-flex {}
+.finalists{
+	.wide-container{
+		background-color: $gray-bg;
+	}
+}
 
 .finalists__cards{
 	@include max-screen($xss){
@@ -329,21 +324,15 @@
 .card-finalists__header {
 	margin-bottom: 20px;
 }
-.user-card {}
-.user-card--horizontal {}
-.user-card--row {}
-.tag-mini {}
-.tag-misc-empty {}
-.user-card__info {}
-.user-card__name {}
-.user-card__link {}
-.icon {}
-.icon-VK {}
 .card-finalists__photo {
 	display: block;
 	padding-bottom: prc(331,510);
 }
-._fit {}
-._fit-img {}
+.card-finalists__label{
+	position: absolute;
+	left: 20px;
+	bottom: 10px;
+}
+
 
 /*--------------------END contest-page----------------------*/ 
