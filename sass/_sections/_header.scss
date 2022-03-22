@@ -62,7 +62,7 @@
 		height: 100%;
 		background-color: $accent;
 		overflow-y: auto;
-		z-index: 3;
+		z-index: 90;
 	}
 	&.active{
 		@include max-screen($md){

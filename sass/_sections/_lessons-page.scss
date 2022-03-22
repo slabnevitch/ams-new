@@ -484,6 +484,7 @@ font-family: $bold;
 		justify-content: center;
 		flex: 0 0 auto;
 		vertical-align: middle;
+		cursor: pointer;
 
 		@include max-screen($xs){
 			margin-left: 0;
