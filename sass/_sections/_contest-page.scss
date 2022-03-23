@@ -259,13 +259,6 @@
 		font-size: 28px;
 		line-height: calc(34/28);
 
-		span{
-			@include max-screen($xs){
-				display: none;
-			}
-
-		}
-
 		.tag {
 			margin-bottom: 0;
 			display: inline-block;

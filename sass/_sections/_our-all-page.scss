@@ -252,6 +252,11 @@
 	 		margin-left: 20px;
 	 	}
 	 }
+	 .history{
+	 	break-inside:avoid;
+	 	column-span:all;
+	 	margin-top: 30px;
+	 }
 }
 .tile-item {
 	padding: 30px;

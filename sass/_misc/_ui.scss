@@ -948,11 +948,11 @@ font-family: $black;
 	display: flex;
 	align-items: flex-end;
 
-	@include max-screen(1100px){
-		display: block;
-	}
+	// @include max-screen(1100px){
+	// }
 	@include max-screen($md){
-		display: flex;
+		display: block;
+		// display: flex;
 	}
 	@include max-screen($xs){
 		display: block;
@@ -971,14 +971,10 @@ font-family: $black;
 	flex: 0 0 50%;
 	
 	@include max-screen(1100px){
-		text-align: center;
 	}
 	@include max-screen($md){
-		text-align: left;
-	}
-	@include max-screen($xs){
-		margin-bottom: 20px;
 		text-align: center;
+		margin-bottom: 20px;
 	}
 }
 .sale-programm-card__old {
@@ -1017,7 +1013,12 @@ font-family: $black;
 	font-size: 28px;
 	line-height: calc(34/28);
 
-	// @include dots-family();
+	@include max-screen($lg){
+		font-size: 22px;
+	}
+	@include max-screen($md){
+		font-size: 28px;
+	}
 }
 
 .programm-card__buttons {
