@@ -368,9 +368,12 @@
 			$target.text($target.text() === 'Читать полностью' ? 'Свернуть' : 'Читать полностью');
 
 		}
+		// programms-cards slider expand
 		if(e.target.classList.contains('btn') && e.target.closest('.programms-content__block')){
 			$target.closest('.programms-content__block').toggleClass('expanded');
+			$target.text($target.text() === 'Показать ещё' ? 'Вернуться в каталог' : 'Показать ещё');
 		}
+		// END programms-cards slider expand
 
 		if($(e.target).attr('id') === 'filter-open' || $(e.target).closest('#filter-open').length > 0){
 			$('.programms-filters').addClass('active');
