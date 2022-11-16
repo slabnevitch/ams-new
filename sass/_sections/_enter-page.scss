@@ -120,6 +120,12 @@
 	}
 	.form {
 		max-width: 370px;
+
+		.form__label{
+			&.hidden{
+				display: none;
+			}
+		}
 	}
 
 }

@@ -6726,6 +6726,10 @@ button.mfp-close {
   max-width: 370px;
 }
 
+.page-enter__content .form .form__label.hidden {
+  display: none;
+}
+
 .page-enter__text {
   margin-top: 0;
   margin-bottom: 30px;

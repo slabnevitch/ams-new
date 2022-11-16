@@ -306,6 +306,26 @@
 		}
 		// END tippy
 
+		// email message add after reg/enter
+			$('.page-enter .form .form__bottom .btn-accented').click(function(e) {
+				$('.page-enter__error')
+					.addClass('hidden');
+				
+				$(this).closest('.form')
+					.children()
+					.not('.page-enter__bottom')
+					.addClass('hidden');
+
+				$(this).closest('.page-enter__content')
+          .find('h1')
+          .after(`<div class="email-message">
+                  <div class="email-message__title">Проверьте почту</div>
+                  <div class="email-message__text">Чтобы подтвердить регистрацию на курс, перейдите по ссылке в письме. Мы отправили его на <a href="mailto:mail-example@mail.com" class="link">mail-example@mail.com</a></div>
+                  <div class="email-message__text">Если вы не получили письмо, напишите нам на <a href="mailto:merkulov@autocad-specialist.ru" class="link">merkulov@autocad-specialist.ru</a></div>
+          </div>`);
+			});
+		// END email message add after reg/enter
+
 	});/*document.ready*/
 
 	if($('input#phone').length > 0){
