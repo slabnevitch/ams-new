@@ -260,4 +260,36 @@
 }
 .your-choice__label {}
 
+/*--------------------email-message----------------------*/
+.email-message{
+	padding: 48px 30px;
+	margin-bottom: 30px;
+	max-width: 380px;
+	background: #F8F8FA;
+	border-radius: 10px;
+}
+.email-message__title {
+	margin-bottom: 14px;
+font-family: $semi;
+	font-size: 18px;
+	line-height: 140%;
+	color: #000000;
+}
+.email-message__text{
+	font-size: 16px;
+	line-height: 140%;
+	color: #2D2D2F;
+
+	&:not(:last-child){
+		margin-bottom: 12px;
+	}
+
+	.link{
+		// display: inline-block;
+		font-size: 14px;
+		line-height: 140%;
+		font-family: $reg;
+	}
+}
+/*--------------------END email-message----------------------*/ 
 /*--------------------END enter-page----------------------*/ 

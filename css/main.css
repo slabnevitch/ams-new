@@ -6881,6 +6881,41 @@ button.mfp-close {
   margin-top: auto;
 }
 
+/*--------------------email-message----------------------*/
+.email-message {
+  padding: 48px 30px;
+  margin-bottom: 30px;
+  max-width: 380px;
+  background: #F8F8FA;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.email-message__title {
+  margin-bottom: 14px;
+  font-family: "MontserratSemiBold", sans-serif;
+  font-size: 18px;
+  line-height: 140%;
+  color: #000000;
+}
+
+.email-message__text {
+  font-size: 16px;
+  line-height: 140%;
+  color: #2D2D2F;
+}
+
+.email-message__text:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.email-message__text .link {
+  font-size: 14px;
+  line-height: 140%;
+  font-family: "MontserratRegular", sans-serif;
+}
+
+/*--------------------END email-message----------------------*/
 /*--------------------END enter-page----------------------*/
 /*--------------------contest-banner----------------------*/
 .contest-banner__wrapper {
@@ -7886,11 +7921,46 @@ button.mfp-close {
 }
 
 .lesson__chapter {
-  margin-bottom: 20px;
   font-size: 18px;
   line-height: 150%;
 }
 
+/*--------------------sheildlable----------------------*/
+.lesson__header {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.lesson__shieldlabel {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 10px;
+  padding: 3px 10px;
+  border: 1px solid #6B6B72;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2D2D2F;
+  font-family: "MontserratSemiBold", sans-serif;
+}
+
+/*--------------------END sheildlable----------------------*/
 .video-lesson__view {
   margin-bottom: 28px;
 }

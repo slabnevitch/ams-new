@@ -107,10 +107,29 @@
 
 }
 .lesson__chapter {
-	margin-bottom: 20px;
 	font-size: 18px;
 line-height: 150%;
 }
+/*--------------------sheildlable----------------------*/
+.lesson__header{
+	margin-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-items: center;
+}
+.lesson__shieldlabel{
+	flex-shrink: 0;
+	margin-right: 10px;
+	padding: 3px 10px;
+	border: 1px solid #6B6B72;
+	border-radius: 50px;
+	font-size: 12px;
+	line-height: 15px;
+	color: #2D2D2F;
+	font-family: $semi;
+}
+/*--------------------END sheildlable----------------------*/ 
 .video-lesson {
 
 }
