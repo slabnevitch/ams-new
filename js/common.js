@@ -12,8 +12,6 @@
 		}
 	// End ibg class
 	$(document).ready(function() {
-		console.log('jQuery document ready');
-
 		// number animation
 		if($('.digits__animated').length > 0){
 			var comma_separator_number_step = $.animateNumber.numberStepFactories.separator('')
@@ -114,7 +112,6 @@
 					{
 						breakpoint: 577,
 						settings: {
-							// slidesToShow: 1.06
 							dots: true,
 						}	
 					}
@@ -206,14 +203,6 @@
 
 						}	
 					},
-					// {
-					// 	breakpoint: 481,
-					// 	settings: {
-
-					// 		slidesToShow:1,
-
-					// 	}	
-					// },
 					{
 						breakpoint: 577,
 						settings: {
@@ -260,7 +249,6 @@
 								}
 							},
 							open: function() {
-								console.log($(this.currItem.src).find('.popup-gallery__slider'));
 								var $slider = $(this.currItem.src).find('.popup-gallery__slider');
 
 								$slider.slick({
@@ -270,7 +258,6 @@
 								});
 						},
 						close: function() {
-							console.log(this.currItem.el);
 							$(this.currItem.src).find('.popup-gallery__slider').slick('unslick');
 						}
 					}
@@ -319,6 +306,26 @@
 		}
 		// END tippy
 
+		// email message add after reg/enter
+			$('.page-enter .form .form__bottom .btn-accented').click(function(e) {
+				$('.page-enter__error')
+					.addClass('hidden');
+				
+				$(this).closest('.form')
+					.children()
+					.not('.page-enter__bottom')
+					.addClass('hidden');
+
+				$(this).closest('.page-enter__content')
+          .find('h1')
+          .after(`<div class="email-message">
+                  <div class="email-message__title">Проверьте почту</div>
+                  <div class="email-message__text">Чтобы подтвердить регистрацию на курс, перейдите по ссылке в письме. Мы отправили его на <a href="mailto:mail-example@mail.com" class="link">mail-example@mail.com</a></div>
+                  <div class="email-message__text">Если вы не получили письмо, напишите нам на <a href="mailto:merkulov@autocad-specialist.ru" class="link">merkulov@autocad-specialist.ru</a></div>
+          </div>`);
+			});
+		// END email message add after reg/enter
+
 	});/*document.ready*/
 
 	if($('input#phone').length > 0){
@@ -337,7 +344,6 @@
 	
 	$(document).on('click', function(e) {
 		var $target = $(e.target);
-		console.log($target);
 
 		// click on account arrow
 		if($target.closest('.account-header__arrow').length > 0 || $target.closest('.account-header__name').length > 0){
@@ -400,9 +406,6 @@
 	if($('video').length > 0){
 
 		$('video').mediaelementplayer({
-			// alwaysShowControls: true,
-			// controls: false,
-			// hideVideoControlsOnLoad: true,
 			videoVolume: 'horizontal',
 			features: ['playpause','progress','volume','fullscreen'],
 			stretching: 'responsive'
