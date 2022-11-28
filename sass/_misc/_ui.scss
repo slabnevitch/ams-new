@@ -920,6 +920,15 @@ font-family: $black;
 	padding-top: 30px;
 	flex: 0 0 auto;
 	margin-top: auto;
+
+	.status-programms-preview{
+		margin-top: 5px;
+		margin-right: 20px;
+
+		@include min-screen(480px){
+			max-width: 70%;
+		}
+	}
 }
 .programm-card__exp {
 
