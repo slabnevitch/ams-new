@@ -4658,6 +4658,17 @@ button.mfp-close {
   margin-top: auto;
 }
 
+.programm-card__bottom .status-programms-preview {
+  margin-top: 5px;
+  margin-right: 20px;
+}
+
+@media only screen and (min-width: 480px) {
+  .programm-card__bottom .status-programms-preview {
+    max-width: 70%;
+  }
+}
+
 .programm-card__params {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6883,6 +6894,14 @@ button.mfp-close {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   margin-top: auto;
+}
+
+.your-choice__bottom .status-programms-preview {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  margin-left: 30px;
 }
 
 /*--------------------email-message----------------------*/
