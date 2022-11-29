@@ -18,57 +18,58 @@ block content
 		.wrapper-simple
 			.wrapper-flex
 				.programms-filters
-					.programms-filters__close#close-filter
-						+icon('close')
+					.programms-filters__wrapper
+						.programms-filters__close#close-filter
+							+icon('close')
 
-					.programms-filters__title Фильтры:
-					- var checks1 = [{title: 'Revit', val: '15'}, {title: 'Autocad', val: '12'},{title: 'Archicad', val: '27'}, {title: '3Ds Max', val: '7'}, {title: 'Corona', val: '12'}, {title: 'Lumion', val: '3'}];
-					- var checks2 = ['Всем', 'Проектировщику', 'Архитектору', 'Дизайнеру', 'Визуализатору', 'Конструктору'];
+						.programms-filters__title Фильтры:
+						- var checks1 = [{title: 'Revit', val: '15'}, {title: 'Autocad', val: '12'},{title: 'Archicad', val: '27'}, {title: '3Ds Max', val: '7'}, {title: 'Corona', val: '12'}, {title: 'Lumion', val: '3'}];
+						- var checks2 = ['Всем', 'Проектировщику', 'Архитектору', 'Дизайнеру', 'Визуализатору', 'Конструктору'];
 
-					- var checks3 = [{title: 'Платные', val: '3'}, {title: 'Бесплатные', val: '3'}];
-					
-					form.form.programms-filters__form
-						.programms-filters__block
-								label.form__label.form__label--check
-									input(type="checkbox" class="form__checkbox" name="name")
-									span.form__false-checkbox
-										+icon('check')
-									span.form__checkbox-label Мои курсы
-
-								label.form__label.form__label--check
-									input(type="checkbox" class="form__checkbox" name="name")
-									span.form__false-checkbox
-										+icon('check')
-									span.form__checkbox-label Все курсы
+						- var checks3 = [{title: 'Платные', val: '3'}, {title: 'Бесплатные', val: '3'}];
 						
-						.programms-filters__block
-							.programms-filters__heading Программа
-							each item, i in checks1
-								label.form__label.form__label--check
-									input(type="checkbox" class="form__checkbox" name="name" + (i+1))
-									span.form__false-checkbox
-										+icon('check')
-									span.form__checkbox-label= item.title
-										span.programms-filters__value= item.val
-
+						form.form.programms-filters__form
 							.programms-filters__block
-								.programms-filters__heading Кому
-								each item, i in checks2
 									label.form__label.form__label--check
-										input(type="checkbox" class="form__checkbox" name="name" + (i+1))
+										input(type="checkbox" class="form__checkbox" name="name")
 										span.form__false-checkbox
 											+icon('check')
-										span.form__checkbox-label= item
+										span.form__checkbox-label Мои курсы
 
+									label.form__label.form__label--check
+										input(type="checkbox" class="form__checkbox" name="name")
+										span.form__false-checkbox
+											+icon('check')
+										span.form__checkbox-label Все курсы
+							
 							.programms-filters__block
-								.programms-filters__heading Доступность
-								each item, i in checks3
+								.programms-filters__heading Программа
+								each item, i in checks1
 									label.form__label.form__label--check
 										input(type="checkbox" class="form__checkbox" name="name" + (i+1))
 										span.form__false-checkbox
 											+icon('check')
 										span.form__checkbox-label= item.title
 											span.programms-filters__value= item.val
+
+								.programms-filters__block
+									.programms-filters__heading Кому
+									each item, i in checks2
+										label.form__label.form__label--check
+											input(type="checkbox" class="form__checkbox" name="name" + (i+1))
+											span.form__false-checkbox
+												+icon('check')
+											span.form__checkbox-label= item
+
+								.programms-filters__block
+									.programms-filters__heading Доступность
+									each item, i in checks3
+										label.form__label.form__label--check
+											input(type="checkbox" class="form__checkbox" name="name" + (i+1))
+											span.form__false-checkbox
+												+icon('check')
+											span.form__checkbox-label= item.title
+												span.programms-filters__value= item.val
 
 			
 				.programms-content

@@ -229,6 +229,13 @@
 			display: block;
 		}
 	}
+
+	&__wrapper{
+		@include min-screen($sm){
+			position: sticky;
+			top: 0;
+		}
+	}
 }
 .filter-open-icon{
 	position: absolute;
