@@ -10079,6 +10079,14 @@ button.mfp-close {
   display: block;
 }
 
+@media only screen and (min-width: 767.98px) {
+  .programms-filters__wrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
 .filter-open-icon {
   position: absolute;
   right: 20px;
