@@ -12,6 +12,24 @@
 		}
 	// End ibg class
 	$(document).ready(function() {
+
+		// video iframe url copy
+		 if($('.video-wrapper .tile-item__media iframe').length > 0){
+		 	$('.video-wrapper .tile-item__media iframe').each(function(i, item) {
+			 	var $this = $(item),
+			 			$iframeParent = $this.closest('.tile-item__media'),
+			 			stringArray = $this.attr('src').split('/'),
+			 			filename = stringArray[stringArray.length - 1];
+
+	 			if($this.attr('title') === 'YouTube video player'){
+	 				$iframeParent.attr('href', 'http://www.youtube.com/watch?v=' + filename);
+	 			}else{
+	 				$iframeParent.attr('href', $this.attr('src'));
+	 			}
+		 	});
+		 }
+		 // END video iframe url copy
+		 
 		// number animation
 		if($('.digits__animated').length > 0){
 			var comma_separator_number_step = $.animateNumber.numberStepFactories.separator('')
