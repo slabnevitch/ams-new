@@ -79,71 +79,72 @@ block content
 					a(href="/").mark-lesson__icon
 						+icon('unlike')
 		
-		.wide-container
+		.wide-container.chat-container
 			.wrapper-simple
-				.lesson-chat
-					.lesson-chat__title Переписка с преподавателем (4)
+				include _blocks/new-chat
+				//- .lesson-chat
+				//- 	.lesson-chat__title Переписка с преподавателем (4)
 					
-					.lesson-chat__item.item-lesson-chat
-						.item-lesson-chat__header
-							.item-lesson-chat__avatar
-								img(src="img/lesson-page/user1.jpg" alt="alt")
-							.item-lesson-chat__user
-								.item-lesson-chat__name Константин Константинопольский
-									span.item-lesson-chat__role (Студент)
-								.item-lesson-chat__time 5 часов назад
+				//- 	.lesson-chat__item.item-lesson-chat
+				//- 		.item-lesson-chat__header
+				//- 			.item-lesson-chat__avatar
+				//- 				img(src="img/lesson-page/user1.jpg" alt="alt")
+				//- 			.item-lesson-chat__user
+				//- 				.item-lesson-chat__name Константин Константинопольский
+				//- 					span.item-lesson-chat__role (Студент)
+				//- 				.item-lesson-chat__time 5 часов назад
 						
-						.item-lesson-chat__body 
-							p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
+				//- 		.item-lesson-chat__body 
+				//- 			p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
 
-						a(href="#").item-lesson-chat__write.link Ответить
+				//- 		a(href="#").item-lesson-chat__write.link Ответить
 
-					.lesson-chat__item.item-lesson-chat
-						.item-lesson-chat__header
-							.item-lesson-chat__avatar
-								img(src="img/lesson-page/user2.jpg" alt="alt")
-							.item-lesson-chat__user
-								.item-lesson-chat__name Андрей Смирнов
-									span.item-lesson-chat__role (Преподаватель)
-								.item-lesson-chat__time 5 часов назад
+				//- 	.lesson-chat__item.item-lesson-chat
+				//- 		.item-lesson-chat__header
+				//- 			.item-lesson-chat__avatar
+				//- 				img(src="img/lesson-page/user2.jpg" alt="alt")
+				//- 			.item-lesson-chat__user
+				//- 				.item-lesson-chat__name Андрей Смирнов
+				//- 					span.item-lesson-chat__role (Преподаватель)
+				//- 				.item-lesson-chat__time 5 часов назад
 						
-						.item-lesson-chat__body
-							p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
+				//- 		.item-lesson-chat__body
+				//- 			p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
 
-							.item-lesson-chat__img
-								img(src="img/lesson-page/chat-img.jpg" alt="alt")
+				//- 			.item-lesson-chat__img
+				//- 				img(src="img/lesson-page/chat-img.jpg" alt="alt")
 
-						a(href="#").item-lesson-chat__write.link Ответить
+				//- 		a(href="#").item-lesson-chat__write.link Ответить
 
-					.lesson-chat__item.item-lesson-chat
-						.item-lesson-chat__header
-							.item-lesson-chat__avatar
-								img(src="img/lesson-page/user1.jpg" alt="alt")
-							.item-lesson-chat__user
-								.item-lesson-chat__name Константин Константинопольский
-									span.item-lesson-chat__role (Студент)
-								.item-lesson-chat__time 5 часов назад
+				//- 	.lesson-chat__item.item-lesson-chat
+				//- 		.item-lesson-chat__header
+				//- 			.item-lesson-chat__avatar
+				//- 				img(src="img/lesson-page/user1.jpg" alt="alt")
+				//- 			.item-lesson-chat__user
+				//- 				.item-lesson-chat__name Константин Константинопольский
+				//- 					span.item-lesson-chat__role (Студент)
+				//- 				.item-lesson-chat__time 5 часов назад
 						
-						.item-lesson-chat__body 
-							p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
+				//- 		.item-lesson-chat__body 
+				//- 			p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
 
-						a(href="#").item-lesson-chat__write.link Ответить
+				//- 		a(href="#").item-lesson-chat__write.link Ответить
 
-					.lesson-chat__form.form.form-lesson-chat
-						.form-lesson-chat__row
-							textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
+				//- 	.lesson-chat__form.form.form-lesson-chat
+				//- 		.form-lesson-chat__row
+				//- 			textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
 
-							label.form__label.form-lesson-chat__file
-								input(type="file")
-								span.file-icon
-									+icon('add-file')
-								span.form-lesson-chat__add-file Прикрепить файл
+				//- 			label.form__label.form-lesson-chat__file
+				//- 				input(type="file")
+				//- 				span.file-icon
+				//- 					+icon('add-file')
+				//- 				span.form-lesson-chat__add-file Прикрепить файл
 
-							button.btn.btn-sm.btn-accented Отправить
+				//- 			button.btn.btn-sm.btn-accented Отправить
 
-						label.form__label.form-lesson-chat__field
-							input(type="file")
-							span.form__file-fild Перетащите сюда файл
+				//- 		label.form__label.form-lesson-chat__field
+				//- 			input(type="file")
+				//- 			span.form__file-fild Перетащите сюда файл
 
 		.page-course__menu.menu-page-course
 			.menu-page-course__header
@@ -220,7 +221,7 @@ block page-scripts
 	script(src="js/libs/mediaelement/mediaelement-and-player.min.js")
 		
 	//- magnific-popup--------------------------
-	// script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+	script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
 		
 	//- slick--------------------------
 	// script(src="js/libs/slick/slick.min.js")

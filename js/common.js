@@ -248,7 +248,7 @@
 		// END persons-slider
 
 
-			if($('.tile-item__photo').length > 0 || $('.gallery-photo').length > 0){
+		if($('.tile-item__photo').length > 0 || $('.gallery-photo').length > 0){
 		
 		// Magnific popup
 				$('.tile-item__photo, .gallery-photo').magnificPopup({
@@ -280,6 +280,19 @@
 						}
 					}
 				});
+
+
+		}
+
+		if($('.item-lesson-chat__img').length > 0){
+			$('.item-lesson-chat__img').magnificPopup({
+				type: 'image',
+				closeOnContentClick: true,
+				mainClass: 'mfp-img-mobile',
+				image: {
+					verticalFit: true
+				}
+			});
 		}
 
 		if($('.popup-youtube').length > 0){
