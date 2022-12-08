@@ -1,7 +1,11 @@
 /*-----------magnific-popup-----------*/
+
 /* Magnific Popup CSS */
+
 @import url(../js/libs/slick/slick.css);
+
 @import url(../js/libs/slick/slick-theme.css);
+
 .mfp-bg {
   top: 0;
   left: 0;
@@ -67,7 +71,8 @@
   cursor: progress;
 }
 
-.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+.mfp-zoom-out-cur,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
   cursor: -webkit-zoom-out;
   cursor: zoom-out;
 }
@@ -308,6 +313,7 @@ button::-moz-focus-inner {
 }
 
 /* Main image in popup */
+
 img.mfp-img {
   width: auto;
   max-width: 100%;
@@ -321,6 +327,7 @@ img.mfp-img {
 }
 
 /* The shadow behind the image */
+
 .mfp-figure {
   line-height: 0;
 }
@@ -377,79 +384,10 @@ img.mfp-img {
   cursor: pointer;
 }
 
-@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
-  /**
-       * Remove all paddings around the image on small screen
-       */
-  .mfp-img-mobile .mfp-image-holder {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .mfp-img-mobile img.mfp-img {
-    padding: 0;
-  }
-  .mfp-img-mobile .mfp-figure:after {
-    top: 0;
-    bottom: 0;
-  }
-  .mfp-img-mobile .mfp-figure small {
-    display: inline;
-    margin-left: 5px;
-  }
-  .mfp-img-mobile .mfp-bottom-bar {
-    background: rgba(0, 0, 0, 0.6);
-    bottom: 0;
-    margin: 0;
-    top: auto;
-    padding: 3px 5px;
-    position: fixed;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .mfp-img-mobile .mfp-bottom-bar:empty {
-    padding: 0;
-  }
-  .mfp-img-mobile .mfp-counter {
-    right: 5px;
-    top: 3px;
-  }
-  .mfp-img-mobile .mfp-close {
-    top: 0;
-    right: 0;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    background: rgba(0, 0, 0, 0.6);
-    position: fixed;
-    text-align: center;
-    padding: 0;
-  }
-}
-
-@media all and (max-width: 900px) {
-  .mfp-arrow {
-    -webkit-transform: scale(0.75);
-    -ms-transform: scale(0.75);
-    transform: scale(0.75);
-  }
-  .mfp-arrow-left {
-    -webkit-transform-origin: 0;
-    -ms-transform-origin: 0;
-    transform-origin: 0;
-  }
-  .mfp-arrow-right {
-    -webkit-transform-origin: 100%;
-    -ms-transform-origin: 100%;
-    transform-origin: 100%;
-  }
-  .mfp-container {
-    padding-left: 6px;
-    padding-right: 6px;
-  }
-}
-
 /*-----------END magnific-popup-------*/
+
 /*-----------intTelInput-----------*/
+
 .iti {
   position: relative;
   display: inline-block;
@@ -469,7 +407,9 @@ img.mfp-img {
   visibility: hidden;
 }
 
-.iti input, .iti input[type=tel], .iti input[type=text] {
+.iti input,
+.iti input[type=tel],
+.iti input[type=text] {
   position: relative;
   z-index: 0;
   margin-top: 0 !important;
@@ -537,12 +477,6 @@ img.mfp-img {
   margin-bottom: -1px;
 }
 
-@media (max-width: 500px) {
-  .iti__country-list {
-    white-space: normal;
-  }
-}
-
 .iti__flag-box {
   display: inline-block;
   width: 20px;
@@ -567,21 +501,30 @@ img.mfp-img {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.iti__country-name, .iti__dial-code, .iti__flag-box {
+.iti__country-name,
+.iti__dial-code,
+.iti__flag-box {
   vertical-align: middle;
 }
 
-.iti__country-name, .iti__flag-box {
+.iti__country-name,
+.iti__flag-box {
   margin-right: 6px;
 }
 
-.iti--allow-dropdown input, .iti--allow-dropdown input[type=tel], .iti--allow-dropdown input[type=text], .iti--separate-dial-code input, .iti--separate-dial-code input[type=tel], .iti--separate-dial-code input[type=text] {
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type=tel],
+.iti--allow-dropdown input[type=text],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type=tel],
+.iti--separate-dial-code input[type=text] {
   padding-right: 6px;
   padding-left: 52px;
   margin-left: 0;
 }
 
-.iti--allow-dropdown .iti__flag-container, .iti--separate-dial-code .iti__flag-container {
+.iti--allow-dropdown .iti__flag-container,
+.iti--separate-dial-code .iti__flag-container {
   right: auto;
   left: 0;
 }
@@ -594,11 +537,13 @@ img.mfp-img {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.iti--allow-dropdown input[disabled] + .iti__flag-container:hover, .iti--allow-dropdown input[readonly] + .iti__flag-container:hover {
+.iti--allow-dropdown input[disabled] + .iti__flag-container:hover,
+.iti--allow-dropdown input[readonly] + .iti__flag-container:hover {
   cursor: default;
 }
 
-.iti--allow-dropdown input[disabled] + .iti__flag-container:hover .iti__selected-flag, .iti--allow-dropdown input[readonly] + .iti__flag-container:hover .iti__selected-flag {
+.iti--allow-dropdown input[disabled] + .iti__flag-container:hover .iti__selected-flag,
+.iti--allow-dropdown input[readonly] + .iti__flag-container:hover .iti__selected-flag {
   background-color: transparent;
 }
 
@@ -666,12 +611,6 @@ img.mfp-img {
 
 .iti__flag.iti__va {
   width: 15px;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .iti__flag {
-    background-size: 5652px 15px;
-  }
 }
 
 .iti__flag.iti__ac {
@@ -1974,22 +1913,21 @@ img.mfp-img {
   background-position: 20px 0;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .iti__flag {
-    background-image: url(../img/flags@2x.png);
-  }
-}
-
 .iti__flag.iti__np {
   background-color: transparent;
 }
 
 /*-----------END intTelInput-------*/
+
 /*--slick--*/
+
 /*--end slick--*/
+
 /*--mediaelement--*/
+
 /* Accessibility: hide screen reader texts (and prefer "top" for RTL languages).
 Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-how/ */
+
 .mejs__offscreen {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -2021,6 +1959,7 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 /* Hide native play button and control bar from iOS to favor plugin button */
+
 .mejs__container video::-webkit-media-controls,
 .mejs__container video::-webkit-media-controls-panel,
 .mejs__container video::-webkit-media-controls-panel-container,
@@ -2083,6 +2022,7 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 /* Start: LAYERS */
+
 .mejs__background {
   left: 0;
   position: absolute;
@@ -2184,7 +2124,9 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 /* End: LAYERS */
+
 /* Start: CONTROL BAR */
+
 .mejs__controls {
   bottom: 0;
   display: -webkit-box;
@@ -2235,6 +2177,7 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 /* :focus for accessibility */
+
 .mejs__button > button:focus {
   outline: dotted 1px #999;
 }
@@ -2249,7 +2192,9 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 /* End: CONTROL BAR */
+
 /* Start: Time (Current / Duration) */
+
 .mejs__time {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -2264,7 +2209,9 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 /* End: Time (Current / Duration) */
+
 /* Start: Play/Pause/Stop */
+
 .mejs__play > button {
   background-position: 0 0;
 }
@@ -2278,7 +2225,9 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 /* End: Play/Pause/Stop */
+
 /* Start: Progress Bar */
+
 .mejs__time-rail {
   direction: ltr;
   -webkit-box-flex: 1;
@@ -2327,6 +2276,7 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: 30px 0;
   }
@@ -2336,6 +2286,7 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: 30px 0;
   }
@@ -2484,7 +2435,9 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 /* End: Progress Bar */
+
 /* Start: Fullscreen */
+
 .mejs__fullscreen-button > button {
   background-position: -80px 0;
 }
@@ -2494,7 +2447,9 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 /* End: Fullscreen */
+
 /* Start: Mute/Volume */
+
 .mejs__mute > button {
   background-position: -60px 0;
 }
@@ -2606,7 +2561,9 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 /* End: Mute/Volume */
+
 /* Start: Track (Captions and Chapters) */
+
 .mejs__captions-button,
 .mejs__chapters-button {
   position: relative;
@@ -2740,7 +2697,9 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 /* End: Track (Captions and Chapters) */
+
 /* Start: Error */
+
 .mejs__overlay-error {
   position: relative;
 }
@@ -2771,8 +2730,109 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 /* End: Error */
+
 /*--end mediaelement--*/
+
 /*--slideout--*/
+
 /*--end slideout--*/
 
 /*# sourceMappingURL=maps/libs.css.map */
+
+@media all and (max-width: 900px) {
+  .mfp-arrow {
+    -webkit-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    transform: scale(0.75);
+  }
+
+  .mfp-arrow-left {
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+  }
+
+  .mfp-arrow-right {
+    -webkit-transform-origin: 100%;
+    -ms-transform-origin: 100%;
+    transform-origin: 100%;
+  }
+
+  .mfp-container {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+  /**
+       * Remove all paddings around the image on small screen
+       */
+
+  .mfp-img-mobile .mfp-image-holder {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mfp-img-mobile img.mfp-img {
+    padding: 0;
+  }
+
+  .mfp-img-mobile .mfp-figure:after {
+    top: 0;
+    bottom: 0;
+  }
+
+  .mfp-img-mobile .mfp-figure small {
+    display: inline;
+    margin-left: 5px;
+  }
+
+  .mfp-img-mobile .mfp-bottom-bar {
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    margin: 0;
+    top: auto;
+    padding: 3px 5px;
+    position: fixed;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .mfp-img-mobile .mfp-bottom-bar:empty {
+    padding: 0;
+  }
+
+  .mfp-img-mobile .mfp-counter {
+    right: 5px;
+    top: 3px;
+  }
+
+  .mfp-img-mobile .mfp-close {
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .iti__country-list {
+    white-space: normal;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-size: 5652px 15px;
+  }
+
+  .iti__flag {
+    background-image: url(../img/flags@2x.png);
+  }
+}
