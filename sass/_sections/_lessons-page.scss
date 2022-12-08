@@ -376,7 +376,7 @@ font-family: $bold;
 	line-height: 34px;
 }
 .item-lesson-chat {
-	padding-bottom: 30px;
+	// padding-bottom: 30px;
 
 	&:not(:last-child){
 		margin-bottom: 30px;
@@ -409,6 +409,32 @@ font-family: $bold;
 			@include max-screen($xs){
 				padding-left: 40px;
 			}
+		}
+
+		.form-lesson-chat__row{
+			@include max-screen($sm){
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.form__textarea{
+				@include max-screen($sm){
+					width: 100%;
+					margin-bottom: 20px;
+				}
+			}
+			.form__label:last-of-type {
+				@include max-screen($sm){
+			    	margin-bottom: 23px;
+				}
+			}
+
+		}
+
+		.form__file-fild {
+			max-width: none;
+			margin-right: 186px;
+
 		}
 
 	}

@@ -8346,10 +8346,6 @@ button.mfp-close {
   line-height: 34px;
 }
 
-.item-lesson-chat {
-  padding-bottom: 30px;
-}
-
 .item-lesson-chat:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -8385,6 +8381,38 @@ button.mfp-close {
   .item-lesson-chat > .item-lesson-chat .item-lesson-chat__header {
     padding-left: 40px;
   }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .item-lesson-chat > .item-lesson-chat .form-lesson-chat__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .item-lesson-chat > .item-lesson-chat .form-lesson-chat__row .form__textarea {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .item-lesson-chat > .item-lesson-chat .form-lesson-chat__row .form__label:last-of-type {
+    margin-bottom: 23px;
+  }
+}
+
+.item-lesson-chat > .item-lesson-chat .form__file-fild {
+  max-width: none;
+  margin-right: 186px;
 }
 
 .item-lesson-chat__header {

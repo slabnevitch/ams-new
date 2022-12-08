@@ -88,7 +88,21 @@
 						a(href="../img/lesson-page/chat-img.jpg").item-lesson-chat__img
 							img(src="img/lesson-page/chat-img.jpg" alt="alt")
 
-					a(href="#").item-lesson-chat__write.link Ответить
+					.lesson-chat__form.form.form-lesson-chat
+						.form-lesson-chat__row
+							textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
+
+							label.form__label.form-lesson-chat__file
+								input(type="file")
+								span.file-icon
+									+icon('add-file')
+								span.form-lesson-chat__add-file Прикрепить файл
+
+							button.btn.btn-sm.btn-accented Отправить
+
+						label.form__label.form-lesson-chat__field
+							input(type="file")
+							span.form__file-fild Перетащите сюда файл
 
 					.lesson-chat__item.item-lesson-chat
 						.item-lesson-chat__header
@@ -122,7 +136,21 @@
 								a(href="../img/lesson-page/chat-img.jpg").item-lesson-chat__img
 									img(src="img/lesson-page/chat-img.jpg" alt="alt")
 
-							a(href="#").item-lesson-chat__write.link Ответить
+							.lesson-chat__form.form.form-lesson-chat
+								.form-lesson-chat__row
+									textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
+
+									label.form__label.form-lesson-chat__file
+										input(type="file")
+										span.file-icon
+											+icon('add-file')
+										span.form-lesson-chat__add-file Прикрепить файл
+
+									button.btn.btn-sm.btn-accented Отправить
+
+								label.form__label.form-lesson-chat__field
+									input(type="file")
+									span.form__file-fild Перетащите сюда файл
 
 		
 	.lesson-chat__item.item-lesson-chat
