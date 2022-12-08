@@ -8360,6 +8360,18 @@ button.mfp-close {
 
 @media only screen and (max-width: 576px) {
   .item-lesson-chat > .item-lesson-chat {
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .item-lesson-chat > .item-lesson-chat {
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .item-lesson-chat > .item-lesson-chat {
     padding-left: 0;
   }
 }

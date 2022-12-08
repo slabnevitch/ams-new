@@ -390,6 +390,12 @@ font-family: $bold;
 		margin-bottom: 0;
 
 		@include max-screen($xs){
+			padding-left: 20px;
+		}
+		@include max-screen($xs){
+			padding-left: 15px;
+		}
+		@include max-screen(320px){
 			padding-left: 0;
 		}
 
