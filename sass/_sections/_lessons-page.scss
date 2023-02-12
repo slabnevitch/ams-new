@@ -518,6 +518,20 @@ font-family: $bold;
 		@include checkbox;
 	}
 }
+textarea::-moz-resizer,
+textarea::-webkit-resizer {
+			// background-color: #fff;
+			width: 100px;
+			height: 100px;
+			outline: 1px solid red;
+			position: relative;
+			right: 50px;
+			background-image:  url(../img/textarea-angle.svg);
+			background-position: center 0;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
 .form-lesson-chat__row {
 	display: flex;
 	align-items: center;
@@ -529,7 +543,7 @@ font-family: $bold;
 	}
 	.form__textarea{
 		padding: 16px;
-		height: 44px;
+		min-height: 160px;
 		font-size: 14px;
 		line-height: 18px;
 		border-radius: 5px;
@@ -544,16 +558,16 @@ font-family: $bold;
 		flex: 1 1 auto;
 		// max-width: 974px;
 		height: auto;
-		max-height: 44px;
-		resize: none;
+		resize: vertical;
 		outline: none;
+
 
 		@include max-screen($xs){
 			width: 100%;
 			margin-bottom: 20px;
 		}
 	}
-
+		
 	
 	.form__label{
 		margin-bottom: 0;

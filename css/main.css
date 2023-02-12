@@ -8537,6 +8537,19 @@ button.mfp-close {
   opacity: 0;
 }
 
+textarea::-moz-resizer,
+textarea::-webkit-resizer {
+  width: 100px;
+  height: 100px;
+  outline: 1px solid red;
+  position: relative;
+  right: 50px;
+  background-image: url(../img/textarea-angle.svg);
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .form-lesson-chat__row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8565,7 +8578,7 @@ button.mfp-close {
 
 .form-lesson-chat__row .form__textarea {
   padding: 16px;
-  height: 44px;
+  min-height: 160px;
   font-size: 14px;
   line-height: 18px;
   -webkit-border-radius: 5px;
@@ -8582,8 +8595,7 @@ button.mfp-close {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   height: auto;
-  max-height: 44px;
-  resize: none;
+  resize: vertical;
   outline: none;
 }
 
