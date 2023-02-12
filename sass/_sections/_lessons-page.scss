@@ -622,6 +622,10 @@ font-family: $bold;
 	@include max-screen($md){
 		display: none;
 	}
+
+	&.highlight{
+		border: 2px solid $accent;
+	}
 }
 
 .menu-page-course{

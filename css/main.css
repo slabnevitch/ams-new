@@ -8717,6 +8717,10 @@ button.mfp-close {
   }
 }
 
+.form__file-fild.highlight {
+  border: 2px solid #FFEF68;
+}
+
 .menu-page-course {
   position: fixed;
   z-index: 97;

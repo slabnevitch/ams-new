@@ -13,6 +13,51 @@
 	// End ibg class
 	$(document).ready(function() {
 
+		// input field drag
+		if(document.querySelectorAll('.form-lesson-chat__field') !== null){
+			var chatFormFileDrag = (function() {
+
+				var chatForms = document.querySelectorAll('.form-lesson-chat__field'),
+				events = ['dragenter', 'dragover', 'dragleave', 'drop'];
+
+				init = function() {
+					addEvents();
+
+				}
+				addEvents = function() {
+					Array.prototype.slice.call(chatForms).forEach(function(element, index) {
+						events.forEach( function(eventName) {
+							element.addEventListener(eventName, preventDefaults, false);
+						});
+
+						['dragenter', 'dragover'].forEach(eventName => {
+							element.addEventListener(eventName, inputHighlight, false);
+						});
+
+						['dragleave', 'drop'].forEach(eventName => {
+							element.addEventListener(eventName, inputUnhighlight, false);
+						});
+					});
+
+				}
+				preventDefaults = function(e) {
+					e.preventDefault();
+					e.stopPropagation();
+				}
+				inputHighlight = function(e) {
+					e.target.classList.add('highlight');
+					console.log('highlight')
+				}
+				inputUnhighlight = function(e) {
+					e.target.classList.remove('highlight');
+					console.log(e)
+				}
+				init();
+			})();
+		}
+
+		// END input field drag
+
 		// video iframe url copy
 		 if($('.video-wrapper .tile-item__media iframe').length > 0){
 		 	$('.video-wrapper .tile-item__media iframe').each(function(i, item) {
