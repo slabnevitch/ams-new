@@ -1,14 +1,38 @@
 /*=====================Chat-student=========================*/
 .lesson-chat{
 	@include adaptive-value('padding-top', 70, 30, 1);
+    @include adaptive-value('padding-bottom', 70, 30, 1);
 	background: $gray-bg;
+
+    p{
+        line-height: 150%;
+    }
+}
+.lesson-chat__title{
+    margin-bottom: 33px;
 }
 .form-lesson-chat__row{
 	align-items: flex-start;
+
+     .btn{
+        width: 132px;
+     }
+}
+.form-lesson-chat__file{
+    padding-top: 10px;
+}
+.form-lesson-chat__row{
+}
+.form-lesson-chat__area{
+    // outline: 1px solid red;
+    flex: 1 1 auto;
+    align-self: stretch;
 }
 .form-lesson-chat__row .form__textarea {
+    width: 100%;
     padding: 16px;
     min-height: 160px;
+    height: 100%;
     font-size: 14px;
     line-height: 18px;
     border-radius: 5px;
@@ -19,10 +43,7 @@
     display: block;
     vertical-align: middle;
     padding: 10px 16px 0 16px;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    height: auto;
-    resize: vertical;
+    resize: none;
     outline: none;
 }
 @import "../js/libs/jquery-ui-1.13.2.custom/jquery-ui.min";
@@ -31,14 +52,13 @@
 
 .ui-resizable-s {
     cursor: s-resize;
-    height: 7px;
-    width: 28px;
-    height: 28px;
-    // bottom: 0;
+    // width: 28px;
+    height: 30px;
+    bottom: 0;
     right: 50px;
-    left: auto;
+    left: 0;
     background-image: url(../img/textarea-angle.svg);
-    background-position: center;
+    background-position: calc(100% - 21px) top;
     background-repeat: no-repeat;
     background-size: 14px 14px;
 }

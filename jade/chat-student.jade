@@ -6,14 +6,15 @@ block title
 block content
 		.lesson-chat
 			.wrapper-simple
-				.lesson-chat__title Комментарии
+				.lesson-chat__title Общение с куратором
 
 				.lesson-chat__item.item-lesson-chat
 					p Задайте свой вопрос куратору в форме ниже
 
 					.lesson-chat__form.form.form-lesson-chat
 						.form-lesson-chat__row
-							textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
+							.form-lesson-chat__area
+								textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
 
 							label.form__label.form-lesson-chat__file
 								input(type="file")
@@ -26,6 +27,19 @@ block content
 						label.form__label.form-lesson-chat__field
 							input(type="file")
 							span.form__file-fild Перетащите сюда файл
+
+				.lesson-chat__title Общение с куратором
+				.lesson-chat__item.item-lesson-chat
+					.item-lesson-chat__header
+						.item-lesson-chat__avatar
+							img(src="img/lesson-page/user1.jpg" alt="alt")
+						.item-lesson-chat__user
+							.item-lesson-chat__name Константин Константинопольский
+								span.item-lesson-chat__role (Студент)
+							.item-lesson-chat__time 5 часов назад
+					
+					.item-lesson-chat__body
+						p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
 
 //- img(src=img + "demo.jpg")
 //- img(src=ico + "amex.svg")

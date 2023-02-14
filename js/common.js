@@ -59,7 +59,7 @@
 		// END input field drag
 
 		// reasizeable
-			$(".form-lesson-chat__row .form__textarea").resizable({
+			$(".form-lesson-chat__area").resizable({
 			    handles: 's',
 			    minHeight: 160,
 			    stop: function(event, ui) {
