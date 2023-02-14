@@ -58,6 +58,16 @@
 
 		// END input field drag
 
+		// reasizeable
+			$(".form-lesson-chat__row .form__textarea").resizable({
+			    handles: 's',
+			    minHeight: 160,
+			    stop: function(event, ui) {
+			        // $(this).css("width", '');
+			   }
+			});
+		//END reasizeable
+
 		// video iframe url copy
 		 if($('.video-wrapper .tile-item__media iframe').length > 0){
 		 	$('.video-wrapper .tile-item__media iframe').each(function(i, item) {
