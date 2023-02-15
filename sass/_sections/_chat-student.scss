@@ -7,9 +7,41 @@
 	// @include adaptive-value('padding-top', 70, 30, 1);
     // @include adaptive-value('padding-bottom', 70, 30, 1);
 
+
     p{
         line-height: 150%;
     }
+}
+.item-lesson-chat{
+    &--answered{
+        & > .item-lesson-chat__body{
+            padding-bottom: 23px;
+         }
+         .lesson-chat__item{
+           .item-lesson-chat__body{
+             padding-bottom: 0;
+             border-bottom: none; 
+         }
+         .item-lesson-chat__images {
+            max-width: 657px;
+        }
+        .chat-images__main {
+            flex: 0 0 prc(507, 657);
+            padding-bottom: 49.925%;
+            margin-right: 10px;
+        }
+        .chat-images__others {
+            flex: 0 0 calc(100% - prc(507, 657) - 10px);
+
+            .item-lesson-chat__img {
+                // flex: 0 0 calc(25% - 10px);
+
+                }
+            }
+        }
+
+     }
+
 }
 .lesson-chat__title{
     margin-bottom: 33px;
