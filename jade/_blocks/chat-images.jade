@@ -1,0 +1,9 @@
+.item-lesson-chat__images.chat-images
+	.chat-images__main._fit
+		a(href="img/chat/1.jpg").item-lesson-chat__img
+			img._fit-img(src="img/chat/1.jpg" alt="alt")
+	
+	.chat-images__others
+		- for(var i=1; i<5; i++)
+			a(href="img/chat/"+(i+1)+".jpg").item-lesson-chat__img._fit
+				img._fit-img(src="img/chat/"+(i+1)+".jpg" alt="alt")

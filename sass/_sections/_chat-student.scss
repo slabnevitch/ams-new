@@ -1,8 +1,11 @@
 /*=====================Chat-student=========================*/
-.lesson-chat{
-	@include adaptive-value('padding-top', 70, 30, 1);
-    @include adaptive-value('padding-bottom', 70, 30, 1);
+.bg_gray{
 	background: $gray-bg;
+
+}
+.lesson-chat{
+	// @include adaptive-value('padding-top', 70, 30, 1);
+    // @include adaptive-value('padding-bottom', 70, 30, 1);
 
     p{
         line-height: 150%;
@@ -16,6 +19,7 @@
 
      .btn{
         width: 132px;
+        font-size: 16px;
      }
 }
 .form-lesson-chat__file{
@@ -45,6 +49,82 @@
     padding: 10px 16px 0 16px;
     resize: none;
     outline: none;
+}
+.form__file-fild{
+    max-width: 974px;
+}
+.item-lesson-chat__actions{
+    .item-lesson-chat__write{
+
+        &:not(:last-child){
+            margin-right: 10px;
+        }
+    }
+}
+.item-lesson-chat__body{
+    padding-bottom: 27px;
+    border-bottom: 1px solid rgba($gray-text, .3);
+}
+.item-lesson-chat__body p{
+    margin-bottom: 5px;
+}
+.item-lesson-chat__ques{
+    padding-bottom: 13px;
+    p{
+        font-size: 18px;
+    }
+}
+.item-lesson-chat__images {
+    display: flex;
+    max-width: 732px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.chat-images {}
+.chat-images__main {
+    flex: 0 0 prc(582, 732);
+    padding-bottom: 51.368%;
+    margin-right: 10px;
+}
+.item-lesson-chat__img {
+    display: block;
+    margin-bottom: 0;
+    max-width: none;
+}
+._fit-img {}
+.chat-images__others {
+    flex: 0 0 calc(100% - prc(582, 732) - 10px);
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: wrap;
+    // max-height: 100%;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    overflow: hidden;
+    .item-lesson-chat__img {
+        // padding-bottom: prc(87, 140);
+        flex: 0 0 calc(25% - 10px);
+        padding-bottom: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+    }
+}
+.mfp-arrow{
+    .icon{
+        color: #fff;
+        font-size: 24px;
+    }
+
+    &.mfp-arrow-right{
+        .icon{
+            transform: rotate(180deg);
+        }
+    }
+    &:after,
+    &:before{
+        opacity: 0;
+    }
 }
 @import "../js/libs/jquery-ui-1.13.2.custom/jquery-ui.min";
 @import "../js/libs/jquery-ui-1.13.2.custom/jquery-ui.theme";

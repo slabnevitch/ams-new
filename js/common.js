@@ -59,13 +59,16 @@
 		// END input field drag
 
 		// reasizeable
-			$(".form-lesson-chat__area").resizable({
-			    handles: 's',
-			    minHeight: 160,
-			    stop: function(event, ui) {
-			        // $(this).css("width", '');
-			   }
-			});
+			if($(".form-lesson-chat__area").length > 0){
+				$(".form-lesson-chat__area").resizable({
+				    handles: 's',
+				    minHeight: 160,
+				    stop: function(event, ui) {
+				        // $(this).css("width", '');
+				   }
+				});
+
+			}
 		//END reasizeable
 
 		// video iframe url copy
@@ -339,14 +342,26 @@
 
 		}
 
-		if($('.item-lesson-chat__img').length > 0){
-			$('.item-lesson-chat__img').magnificPopup({
-				type: 'image',
-				closeOnContentClick: true,
-				mainClass: 'mfp-img-mobile',
-				image: {
-					verticalFit: true
-				}
+		if($('.item-lesson-chat__images').length > 0){
+			$('.item-lesson-chat__images').each(function(i,elem) {
+				$(elem).magnificPopup({
+					delegate: 'a',
+					type: 'image',
+					tLoading: 'Loading image #%curr%...',
+					mainClass: 'mfp-img-mobile',
+					fixedContentPos: false,
+					gallery: {
+						enabled: true,
+						navigateByImgClick: true,
+						preload: [0,1], // Will preload 0 - before current, and 1 after the current image
+						arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"><svg class="icon icon-chevron-left "><use xlink:href="img/icons-svg/symbol/sprite.svg#chevron-left"></use></svg></button>', // markup of an arrow button
+						tCounter: '<span class="mfp-counter">%curr% из %total%</span>'
+					},
+					image: {
+						tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+					}
+				});
+
 			});
 		}
 
