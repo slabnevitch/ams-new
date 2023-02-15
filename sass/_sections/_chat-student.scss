@@ -54,7 +54,14 @@
 
 }
 .lesson-chat__title{
+    
     margin-bottom: 33px;
+
+    @include max-screen($xs){
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: calc(34/28);
+    }
 }
 .form-lesson-chat__row{
 	align-items: flex-start;
@@ -87,7 +94,7 @@
         background-size: 14px 14px;
 
         @include max-screen($md){
-            display: none;
+            display: none !important;
         }
     }
 }

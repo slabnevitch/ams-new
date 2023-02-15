@@ -11280,6 +11280,13 @@ textarea::-webkit-resizer {
 .lesson-chat__title {
   margin-bottom: 33px;
 }
+@media only screen and (max-width: 576px) {
+  .lesson-chat__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.2142857143;
+  }
+}
 
 .form-lesson-chat__row {
   -ms-flex-align: start;
@@ -11314,7 +11321,7 @@ textarea::-webkit-resizer {
 }
 @media only screen and (max-width: 991px) {
   .form-lesson-chat__area .ui-resizable-s {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -13677,6 +13684,233 @@ a.ui-button:active,
 }
 
 /*===================== end Chat-student======================*/
+/*=====================chat-curator=========================*/
+.curator-search {
+  position: relative;
+  -ms-flex: 0 0 304px;
+  flex: 0 0 304px;
+  margin-left: 15px;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media only screen and (max-width: 991px) {
+  .curator-search {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.lesson-chat__title--flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+@media only screen and (max-width: 991px) {
+  .lesson-chat__title--flex {
+    display: block;
+  }
+}
+
+.curator-search__label {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.curator-search__input {
+  display: block;
+  height: 44px;
+  width: 100%;
+  border: 1px solid #6F6F75;
+  padding: 10px 45px 10px 16px;
+  font-family: "IBMPlexSans-Regular", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  border-radius: 5px;
+  color: #6F6F75;
+  background-color: transparent;
+}
+.curator-search__input::-webkit-input-placeholder {
+  color: #2D2D2F;
+  opacity: 1;
+}
+.curator-search__input::-moz-placeholder {
+  color: #2D2D2F;
+  opacity: 1;
+}
+.curator-search__input:-moz-placeholder {
+  color: #2D2D2F;
+  opacity: 1;
+}
+.curator-search__input:-ms-input-placeholder {
+  color: #2D2D2F;
+  opacity: 1;
+}
+.curator-search__input:focus + .curator-search__del {
+  display: block;
+}
+
+.curator-search__send {
+  position: relative;
+  -ms-flex: 0 0 34px;
+  flex: 0 0 34px;
+}
+@media (any-hover: hover) {
+  .curator-search__send {
+    cursor: pointer;
+  }
+}
+.curator-search__send .icon {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  left: 10px;
+  font-size: 21px;
+}
+
+.curator-search__del {
+  position: absolute;
+  height: 100%;
+  width: 24px;
+  height: 24px;
+  right: 16px;
+  top: 50%;
+  margin-top: -12px;
+  display: none;
+}
+.curator-search__del .icon {
+  font-size: 10px;
+  color: #2D2D2F;
+}
+
+.item-lesson-chat__toggler {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 11px 16px 10px 16px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 991px) {
+  .item-lesson-chat__toggler {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .item-lesson-chat__toggler {
+    height: 60px;
+  }
+}
+@media (any-hover: hover) {
+  .item-lesson-chat__toggler {
+    cursor: pointer;
+  }
+}
+
+.item-lesson-chat__indicators {
+  display: -ms-flexbox;
+  display: flex;
+}
+@media only screen and (max-width: 991px) {
+  .item-lesson-chat__indicators {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+.item-lesson-chat__wait {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 124px;
+  height: 36px;
+  background: #FF7878;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.item-lesson-chat__arrow {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  margin-left: 16px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+@media only screen and (max-width: 991px) {
+  .item-lesson-chat__arrow {
+    margin-left: auto;
+  }
+}
+.item-lesson-chat__arrow .icon {
+  font-size: 8px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+}
+
+.lesson-chat__item--bg {
+  background-color: #fff;
+  border-radius: 5px;
+}
+.lesson-chat__item--bg:not(:last-child) {
+  margin-bottom: 10px;
+}
+.lesson-chat__item--bg .item-lesson-chat .item-lesson-chat__body {
+  padding-top: 10px;
+}
+.lesson-chat__item--bg .item-lesson-chat .form__file-fild {
+  max-width: 731px;
+}
+.lesson-chat__item--bg .item-lesson-chat__header {
+  margin-bottom: 0;
+}
+.lesson-chat__item--bg .item-lesson-chat__body {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.lesson-chat__item--bg > .item-lesson-chat__body {
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-top: -3px;
+  padding-bottom: 12px;
+  border-bottom: none;
+}
+.lesson-chat__item--bg .item-lesson-chat__ques {
+  padding-bottom: 23px;
+}
+.lesson-chat__item--bg .form-lesson-chat__area {
+  max-width: 731px;
+}
+.lesson-chat__item--bg .form__file-fild {
+  max-width: 731px;
+}
+.lesson-chat__item.active .item-lesson-chat__arrow {
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/*===================== end chat-curator======================*/
 /*--------------------footer----------------------*/
 .footer {
   padding: 30px 0;
