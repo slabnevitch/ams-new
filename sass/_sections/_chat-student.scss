@@ -29,9 +29,19 @@
             flex: 0 0 prc(507, 657);
             padding-bottom: 49.925%;
             margin-right: 10px;
+
+            @include max-screen($sm){
+                flex:0 0 100%;
+                margin-right: 0;
+
+            }
         }
         .chat-images__others {
             flex: 0 0 calc(100% - prc(507, 657) - 10px);
+
+            @include max-screen($sm){
+                flex: 1 1 auto;
+            }
 
             .item-lesson-chat__img {
                 // flex: 0 0 calc(25% - 10px);
@@ -63,6 +73,23 @@
     // outline: 1px solid red;
     flex: 1 1 auto;
     align-self: stretch;
+
+    .ui-resizable-s {
+        cursor: s-resize;
+        // width: 28px;
+        height: 30px;
+        bottom: 0;
+        right: 50px;
+        left: 0;
+        background-image: url(../img/textarea-angle.svg);
+        background-position: calc(100% - 21px) top;
+        background-repeat: no-repeat;
+        background-size: 14px 14px;
+
+        @include max-screen($md){
+            display: none;
+        }
+    }
 }
 .form-lesson-chat__row .form__textarea {
     width: 100%;
@@ -111,12 +138,21 @@
     max-width: 732px;
     margin-top: 10px;
     margin-bottom: 5px;
+
+    @include max-screen($sm){
+       flex-wrap: wrap; 
+    }
 }
 .chat-images {}
 .chat-images__main {
-    flex: 0 0 prc(582, 732);
     padding-bottom: 51.368%;
-    margin-right: 10px;
+    margin-bottom: 10px;
+    flex: 0 0 100%;
+    @include min-screen($sm){
+        flex: 0 0 prc(582, 732);
+         margin-right: 10px;
+        margin-bottom: 0;
+    }
 }
 .item-lesson-chat__img {
     display: block;
@@ -125,21 +161,47 @@
 }
 ._fit-img {}
 .chat-images__others {
-    flex: 0 0 calc(100% - prc(582, 732) - 10px);
     display: flex;
-    flex-direction: column;
-    // flex-wrap: wrap;
-    // max-height: 100%;
-    margin-top: -5px;
-    margin-bottom: -5px;
-    overflow: hidden;
-    .item-lesson-chat__img {
-        // padding-bottom: prc(87, 140);
-        flex: 0 0 calc(25% - 10px);
-        padding-bottom: 0;
-        margin-top: 5px;
-        margin-bottom: 5px;
+    flex: 1 1 auto;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: -10px;
 
+    .item-lesson-chat__img {
+        padding-bottom: prc(55,140);
+        flex: 0 0 calc(100% - 10px);
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+
+        @include min-screen(375px){
+            flex: 0 0 calc(50% - 10px);
+            padding-bottom: prc(30,140);
+            
+        }
+
+        @include min-screen($sm){
+            padding-bottom: 0;
+            flex: 0 0 calc(25% - 10px);
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+    }
+    @include max-screen($sm){
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    @include min-screen($sm){
+         flex: 0 0 calc(100% - prc(582, 732) - 10px);
+         flex-wrap: nowrap;
+        overflow: hidden;
+        margin-bottom: 0;
+         flex-direction: column;
+        margin-top: -5px;
+        margin-bottom: -5px;
     }
 }
 .mfp-arrow{
@@ -162,16 +224,4 @@
 @import "../js/libs/jquery-ui-1.13.2.custom/jquery-ui.theme";
 @import "../js/libs/jquery-ui-1.13.2.custom/jquery-ui.structure.min";
 
-.ui-resizable-s {
-    cursor: s-resize;
-    // width: 28px;
-    height: 30px;
-    bottom: 0;
-    right: 50px;
-    left: 0;
-    background-image: url(../img/textarea-angle.svg);
-    background-position: calc(100% - 21px) top;
-    background-repeat: no-repeat;
-    background-size: 14px 14px;
-}
 /*===================== end Chat-student======================*/ 

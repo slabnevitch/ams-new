@@ -11260,9 +11260,22 @@ textarea::-webkit-resizer {
   padding-bottom: 49.925%;
   margin-right: 10px;
 }
+@media only screen and (max-width: 767.98px) {
+  .item-lesson-chat--answered .lesson-chat__item .chat-images__main {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-right: 0;
+  }
+}
 .item-lesson-chat--answered .lesson-chat__item .chat-images__others {
   -ms-flex: 0 0 calc(22.8310502283% - 10px);
   flex: 0 0 calc(22.8310502283% - 10px);
+}
+@media only screen and (max-width: 767.98px) {
+  .item-lesson-chat--answered .lesson-chat__item .chat-images__others {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
 }
 .lesson-chat__title {
   margin-bottom: 33px;
@@ -11287,6 +11300,22 @@ textarea::-webkit-resizer {
   -ms-flex-item-align: stretch;
   -ms-grid-row-align: stretch;
   align-self: stretch;
+}
+.form-lesson-chat__area .ui-resizable-s {
+  cursor: s-resize;
+  height: 30px;
+  bottom: 0;
+  right: 50px;
+  left: 0;
+  background-image: url(../img/textarea-angle.svg);
+  background-position: calc(100% - 21px) top;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+}
+@media only screen and (max-width: 991px) {
+  .form-lesson-chat__area .ui-resizable-s {
+    display: none;
+  }
 }
 
 .form-lesson-chat__row .form__textarea {
@@ -11339,12 +11368,26 @@ textarea::-webkit-resizer {
   margin-top: 10px;
   margin-bottom: 5px;
 }
+@media only screen and (max-width: 767.98px) {
+  .item-lesson-chat__images {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
 
 .chat-images__main {
-  -ms-flex: 0 0 79.5081967213%;
-  flex: 0 0 79.5081967213%;
   padding-bottom: 51.368%;
-  margin-right: 10px;
+  margin-bottom: 10px;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+@media only screen and (min-width: 767.98px) {
+  .chat-images__main {
+    -ms-flex: 0 0 79.5081967213%;
+    flex: 0 0 79.5081967213%;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
 }
 
 .item-lesson-chat__img {
@@ -11354,22 +11397,60 @@ textarea::-webkit-resizer {
 }
 
 .chat-images__others {
-  -ms-flex: 0 0 calc(20.4918032787% - 10px);
-  flex: 0 0 calc(20.4918032787% - 10px);
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin-top: -5px;
-  margin-bottom: -5px;
-  overflow: hidden;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -10px;
 }
 .chat-images__others .item-lesson-chat__img {
-  -ms-flex: 0 0 calc(25% - 10px);
-  flex: 0 0 calc(25% - 10px);
-  padding-bottom: 0;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding-bottom: 39.2857142857%;
+  -ms-flex: 0 0 calc(100% - 10px);
+  flex: 0 0 calc(100% - 10px);
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 375px) {
+  .chat-images__others .item-lesson-chat__img {
+    -ms-flex: 0 0 calc(50% - 10px);
+    flex: 0 0 calc(50% - 10px);
+    padding-bottom: 21.4285714286%;
+  }
+}
+@media only screen and (min-width: 767.98px) {
+  .chat-images__others .item-lesson-chat__img {
+    padding-bottom: 0;
+    -ms-flex: 0 0 calc(25% - 10px);
+    flex: 0 0 calc(25% - 10px);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .chat-images__others {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+}
+@media only screen and (min-width: 767.98px) {
+  .chat-images__others {
+    -ms-flex: 0 0 calc(20.4918032787% - 10px);
+    flex: 0 0 calc(20.4918032787% - 10px);
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-bottom: 0;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
 }
 
 .mfp-arrow .icon {
@@ -13593,18 +13674,6 @@ a.ui-button:active,
   height: 9px;
   right: -5px;
   top: -5px;
-}
-
-.ui-resizable-s {
-  cursor: s-resize;
-  height: 30px;
-  bottom: 0;
-  right: 50px;
-  left: 0;
-  background-image: url(../img/textarea-angle.svg);
-  background-position: calc(100% - 21px) top;
-  background-repeat: no-repeat;
-  background-size: 14px 14px;
 }
 
 /*===================== end Chat-student======================*/
