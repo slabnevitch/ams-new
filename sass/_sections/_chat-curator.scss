@@ -75,12 +75,20 @@
 	margin-top: -12px;
 	display: none;
 
+	@media (any-hover: hover) { //только для устройств с ховером
+			cursor: pointer;
+		}
+
 	.icon{
 		font-size: 10px;
 		color: $text;
 	}
 }
+.item-lesson-chat__header {
+	padding-right: 36px;
+}
 .item-lesson-chat__toggler{
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	padding: 11px 16px 10px 16px;
@@ -118,15 +126,17 @@
 	height: 36px;
 	background: #FF7878;
 	border-radius: 5px;
-
+	margin-right: 39px;
 	color: #fff;
 	font-size: 14px;
 	line-height: 18px;
 }
 .item-lesson-chat__arrow{
+	position: absolute;
+	right: 16px;
+	top: 18px;
 	width: 24px;
 	height: 24px;
-	position: relative;
 	margin-left: 16px;
 	flex-shrink: 0;
 	align-self: center;
@@ -141,6 +151,11 @@
 	}
 }
 .lesson-chat__item{
+	&--nomatch{
+		.item-lesson-chat__body{
+			border-bottom: none;
+		}
+	}
 	&--bg{
 		background-color: #fff;
 		border-radius: 5px;

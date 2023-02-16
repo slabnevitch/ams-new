@@ -4,6 +4,7 @@ block title
 	- var authorized = false;
 	- var headerMenu = true;
 block content
+	// Comments_curator_null
 	.wide-container.bg_gray
 		.lesson-chat
 			.wrapper-simple
@@ -16,6 +17,8 @@ block content
 									+icon('close')
 							button(type="button").curator-search__send
 								+icon('magnifier')
+	
+	// Comments_curator_questions_close
 	.wide-container.bg_gray
 		.lesson-chat
 			.wrapper-simple
@@ -45,6 +48,61 @@ block content
 									+icon('chevron-down')
 						
 						.accordion__content.item-lesson-chat__body.hidden
+							p Господа, экономическая повестка сегодняшнего дня значительной степени обусловливает важность форм воздействия
+							include _blocks/chat-images
+							
+							.item-lesson-chat__actions
+								a(href="#").item-lesson-chat__write.link Ответить
+
+					.accordion__item.lesson-chat__item.lesson-chat__item--bg.item-lesson-chat
+						.accordion__link.item-lesson-chat__toggler
+							.item-lesson-chat__header
+								.item-lesson-chat__avatar
+									img(src="img/lesson-page/user1.jpg" alt="alt")
+								.item-lesson-chat__user
+									.item-lesson-chat__name Константин Константинопольский
+										span.item-lesson-chat__role (konstantin.k@mail.com)
+									.item-lesson-chat__time 5 часов назад
+							.item-lesson-chat__indicators
+								button(type="button").item-lesson-chat__arrow
+									+icon('chevron-down')
+						
+						.accordion__content.item-lesson-chat__body.hidden
+							p Господа, экономическая повестка сегодняшнего дня значительной степени обусловливает важность форм воздействия
+							include _blocks/chat-images
+							
+							.item-lesson-chat__actions
+								a(href="#").item-lesson-chat__write.link Ответить
+
+	// Comments_curator_question_open
+	.wide-container.bg_gray
+		.lesson-chat
+			.wrapper-simple
+				.lesson-chat__title.lesson-chat__title--flex Общение со студентами
+						.item-lesson-chat__search.curator-search
+							label.curator-search__label
+								input(autocomplete="off" type="text" name="" class="curator-search__input" placeholder="Поиск по Email")
+								button(type="button").curator-search__del
+									+icon('close')
+							button(type="button").curator-search__send
+								+icon('magnifier')
+
+				.accordion
+					.accordion__item.lesson-chat__item.lesson-chat__item--bg.item-lesson-chat.active
+						.accordion__link.item-lesson-chat__toggler
+							.item-lesson-chat__header
+								.item-lesson-chat__avatar
+									img(src="img/lesson-page/user1.jpg" alt="alt")
+								.item-lesson-chat__user
+									.item-lesson-chat__name Константин Константинопольский
+										span.item-lesson-chat__role (konstantin.k@mail.com)
+									.item-lesson-chat__time 5 часов назад
+							.item-lesson-chat__indicators
+								.item-lesson-chat__wait Ждёт ответа
+								button(type="button").item-lesson-chat__arrow
+									+icon('chevron-down')
+						
+						.accordion__content.item-lesson-chat__body
 							p Господа, экономическая повестка сегодняшнего дня значительной степени обусловливает важность форм воздействия
 							include _blocks/chat-images
 							
@@ -119,6 +177,7 @@ block content
 									.item-lesson-chat__actions
 										a(href="#").item-lesson-chat__write.link Редактировать
 										a(href="#").item-lesson-chat__write.link Удалить
+	
 	// Comments_curator_questions
 	.wide-container.bg_gray
 		.lesson-chat
@@ -284,105 +343,106 @@ block content
 						button(type="button").curator-search__send
 							+icon('magnifier')
 
-				.accordion__item.lesson-chat__item.lesson-chat__item--bg.item-lesson-chat.active
-					.accordion__link.item-lesson-chat__toggler
-						.item-lesson-chat__header
-							.item-lesson-chat__avatar
-								img(src="img/lesson-page/user1.jpg" alt="alt")
-							.item-lesson-chat__user
-								.item-lesson-chat__name Валентина Валентиновская
-									span.item-lesson-chat__role (valentina.v@mail.com)
-								.item-lesson-chat__time 5 часов назад
-						.item-lesson-chat__indicators
-							button(type="button").item-lesson-chat__arrow
-								+icon('chevron-down')
-					
-					.accordion__content.item-lesson-chat__body
-						p Господа, экономическая повестка сегодняшнего дня значительной степени обусловливает важность форм воздействия
+				.accordion
+					.accordion__item.lesson-chat__item.lesson-chat__item--bg.item-lesson-chat.active
+						.accordion__link.item-lesson-chat__toggler
+							.item-lesson-chat__header
+								.item-lesson-chat__avatar
+									img(src="img/lesson-page/user1.jpg" alt="alt")
+								.item-lesson-chat__user
+									.item-lesson-chat__name Валентина Валентиновская
+										span.item-lesson-chat__role (valentina.v@mail.com)
+									.item-lesson-chat__time 5 часов назад
+							.item-lesson-chat__indicators
+								button(type="button").item-lesson-chat__arrow
+									+icon('chevron-down')
 						
-						include _blocks/chat-images
+						.accordion__content.item-lesson-chat__body
+							p Господа, экономическая повестка сегодняшнего дня значительной степени обусловливает важность форм воздействия
+							
+							include _blocks/chat-images
 
-						.lesson-chat__item.item-lesson-chat
+							.lesson-chat__item.item-lesson-chat
+								.item-lesson-chat__header
+									.item-lesson-chat__avatar
+										img(src="img/lesson-page/lisa.jpg" alt="alt")
+									.item-lesson-chat__user
+										.item-lesson-chat__name Лиза Три
+											span.item-lesson-chat__role (Куратор)
+										.item-lesson-chat__time 5 часов назад
+								
+								.item-lesson-chat__body 
+									p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
+
+									.item-lesson-chat__actions
+										a(href="#").item-lesson-chat__write.link Редактировать
+										a(href="#").item-lesson-chat__write.link Удалить
+
+					.accordion__item.lesson-chat__item.lesson-chat__item--bg.item-lesson-chat.active
+						.accordion__link.item-lesson-chat__toggler
 							.item-lesson-chat__header
 								.item-lesson-chat__avatar
-									img(src="img/lesson-page/lisa.jpg" alt="alt")
+									img(src="img/lesson-page/user1.jpg" alt="alt")
 								.item-lesson-chat__user
-									.item-lesson-chat__name Лиза Три
-										span.item-lesson-chat__role (Куратор)
+									.item-lesson-chat__name Валентина Валентиновская
+										span.item-lesson-chat__role (valentina.v@mail.com)
 									.item-lesson-chat__time 5 часов назад
-							
-							.item-lesson-chat__body 
-								p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
+							.item-lesson-chat__indicators
+								button(type="button").item-lesson-chat__arrow
+									+icon('chevron-down')
+						
+						.accordion__content.item-lesson-chat__body
+							p Господа, экономическая повестка сегодняшнего дня значительной степени обусловливает важность форм воздействия
 
-								.item-lesson-chat__actions
-									a(href="#").item-lesson-chat__write.link Редактировать
-									a(href="#").item-lesson-chat__write.link Удалить
+							.lesson-chat__item.item-lesson-chat
+								.item-lesson-chat__header
+									.item-lesson-chat__avatar
+										img(src="img/lesson-page/lisa.jpg" alt="alt")
+									.item-lesson-chat__user
+										.item-lesson-chat__name Лиза Три
+											span.item-lesson-chat__role (Куратор)
+										.item-lesson-chat__time 5 часов назад
+								
+								.item-lesson-chat__body 
+									p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
 
-				.accordion__item.lesson-chat__item.lesson-chat__item--bg.item-lesson-chat.active
-					.accordion__link.item-lesson-chat__toggler
-						.item-lesson-chat__header
-							.item-lesson-chat__avatar
-								img(src="img/lesson-page/user1.jpg" alt="alt")
-							.item-lesson-chat__user
-								.item-lesson-chat__name Валентина Валентиновская
-									span.item-lesson-chat__role (valentina.v@mail.com)
-								.item-lesson-chat__time 5 часов назад
-						.item-lesson-chat__indicators
-							button(type="button").item-lesson-chat__arrow
-								+icon('chevron-down')
-					
-					.accordion__content.item-lesson-chat__body
-						p Господа, экономическая повестка сегодняшнего дня значительной степени обусловливает важность форм воздействия
+									.item-lesson-chat__actions
+										a(href="#").item-lesson-chat__write.link Редактировать
+										a(href="#").item-lesson-chat__write.link Удалить
 
-						.lesson-chat__item.item-lesson-chat
+					.accordion__item.lesson-chat__item.lesson-chat__item--bg.item-lesson-chat.active
+						.accordion__link.item-lesson-chat__toggler
 							.item-lesson-chat__header
 								.item-lesson-chat__avatar
-									img(src="img/lesson-page/lisa.jpg" alt="alt")
+									img(src="img/lesson-page/user1.jpg" alt="alt")
 								.item-lesson-chat__user
-									.item-lesson-chat__name Лиза Три
-										span.item-lesson-chat__role (Куратор)
+									.item-lesson-chat__name Валентина Валентиновская
+										span.item-lesson-chat__role (valentina.v@mail.com)
 									.item-lesson-chat__time 5 часов назад
-							
-							.item-lesson-chat__body 
-								p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
+							.item-lesson-chat__indicators
+								button(type="button").item-lesson-chat__arrow
+									+icon('chevron-down')
+						
+						.accordion__content.item-lesson-chat__body
+							p Господа, экономическая повестка сегодняшнего дня значительной степени обусловливает важность форм воздействия
 
-								.item-lesson-chat__actions
-									a(href="#").item-lesson-chat__write.link Редактировать
-									a(href="#").item-lesson-chat__write.link Удалить
+							.lesson-chat__item.item-lesson-chat
+								.item-lesson-chat__header
+									.item-lesson-chat__avatar
+										img(src="img/lesson-page/lisa.jpg" alt="alt")
+									.item-lesson-chat__user
+										.item-lesson-chat__name Лиза Три
+											span.item-lesson-chat__role (Куратор)
+										.item-lesson-chat__time 5 часов назад
+								
+								.item-lesson-chat__body 
+									p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
 
-				.accordion__item.lesson-chat__item.lesson-chat__item--bg.item-lesson-chat.active
-					.accordion__link.item-lesson-chat__toggler
-						.item-lesson-chat__header
-							.item-lesson-chat__avatar
-								img(src="img/lesson-page/user1.jpg" alt="alt")
-							.item-lesson-chat__user
-								.item-lesson-chat__name Валентина Валентиновская
-									span.item-lesson-chat__role (valentina.v@mail.com)
-								.item-lesson-chat__time 5 часов назад
-						.item-lesson-chat__indicators
-							button(type="button").item-lesson-chat__arrow
-								+icon('chevron-down')
-					
-					.accordion__content.item-lesson-chat__body
-						p Господа, экономическая повестка сегодняшнего дня значительной степени обусловливает важность форм воздействия
+									include _blocks/chat-images
 
-						.lesson-chat__item.item-lesson-chat
-							.item-lesson-chat__header
-								.item-lesson-chat__avatar
-									img(src="img/lesson-page/lisa.jpg" alt="alt")
-								.item-lesson-chat__user
-									.item-lesson-chat__name Лиза Три
-										span.item-lesson-chat__role (Куратор)
-									.item-lesson-chat__time 5 часов назад
-							
-							.item-lesson-chat__body 
-								p Господа, экономическая повестка сегодняшнего дня в значительной степени обусловливает важность форм воздействия
-
-								include _blocks/chat-images
-
-								.item-lesson-chat__actions
-									a(href="#").item-lesson-chat__write.link Редактировать
-									a(href="#").item-lesson-chat__write.link Удалить
+									.item-lesson-chat__actions
+										a(href="#").item-lesson-chat__write.link Редактировать
+										a(href="#").item-lesson-chat__write.link Удалить
 
 	// Comments_curator_answer_question
 	.wide-container.bg_gray
@@ -457,7 +517,7 @@ block content
 								a(href="#").item-lesson-chat__write.link Ответить
 
 	// Comments_curator_answer_question
-	.wide-container.bg_gray
+	//- .wide-container.bg_gray
 		.lesson-chat
 			.wrapper-simple
 				.lesson-chat__title.lesson-chat__title--flex Общение со студентами
@@ -614,6 +674,23 @@ block content
 							p Господа, экономическая повестка сегодняшнего дня значительной степени обусловливает важность форм воздействия
 							.item-lesson-chat__actions
 								a(href="#").item-lesson-chat__write.link Ответить
+
+	// Comments_curator_answer_search_fail
+	.wide-container.bg_gray
+		.lesson-chat
+			.wrapper-simple
+				.lesson-chat__item.lesson-chat__item--nomatch.item-lesson-chat
+					.lesson-chat__title.lesson-chat__title--flex Общение со студентами
+						.item-lesson-chat__search.curator-search
+							label.curator-search__label
+								input(autocomplete="off" type="text" name="" class="curator-search__input" placeholder="Поиск по Email")
+								button(type="button").curator-search__del
+									+icon('close')
+							button(type="button").curator-search__send
+								+icon('magnifier')
+
+					.item-lesson-chat__body
+						p Не найдено совпадний
 //- img(src=img + "demo.jpg")
 //- img(src=ico + "amex.svg")
 
