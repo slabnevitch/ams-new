@@ -14,7 +14,11 @@ block content
 	.page.page-course.page-course-lesson
 		.wrapper-simple
 			.lesson
-				.lesson__chapter Раздел 8. Карта видов: оформление планов, разрезов, фасадов	
+				.lesson__header
+					.lesson__shieldlabel Онлайн курс
+					.lesson__chapter Раздел 8. Карта видов: оформление планов, разрезов, фасадов
+						.lesson-menu-label__mob(data-lesson-menu-toggle)
+							+icon('menu')
 				h1 23.1 Обучение всем возможностям программы	
 				.lesson__video.video-lesson
 					.video-lesson__view
@@ -40,7 +44,7 @@ block content
 								+icon('box')
 								| Бонусы	
 
-						.lesson-menu-label#lesson-menu-open										
+						.lesson-menu-label(data-lesson-menu-toggle)										
 							.lesson-menu-label__desc Список уроков										
 							.lesson-menu-label__mob
 								+icon('menu')									
@@ -148,9 +152,11 @@ block content
 
 		.page-course__menu.menu-page-course
 			.menu-page-course__header
-				.next-icon#lesson-menu-close
+				.next-icon(data-course-menu-close)
 					+icon("chevron-right")
 				.menu-page-course__title #[span Разделы] #[span Меню курса]
+				button(type="button" data-course-menu-close).menu-page-course__close
+					+icon('close')
 			
 			.menu-page-course__inner
 				ul.accordion.course-chapters__content

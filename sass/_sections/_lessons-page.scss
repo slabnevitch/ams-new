@@ -723,4 +723,61 @@ font-family: $bold;
 	width: auto;
 	top: 0;
 }
+/*--------------------кнопки меню курса----------------------*/
+.menu-page-course__close{
+	@include absolute-center-old;
+	left: auto;
+	top: auto;
+	bottom: 20px;
+	right: 50px;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background-color: $text;
+	border: none;
+
+	@include max-screen($xs){
+		display: none;
+	}
+
+
+	@media (any-hover: hover) { //только для устройств с ховером
+		cursor: pointer;
+	}
+
+	.icon{
+		@include absolute-center;
+		font-size: 15px;
+		color: $accent;
+	}
+}
+.lesson__header{
+	position: relative;
+	.lesson-menu-label__mob{
+		position: absolute;
+		right: 0;
+		width: 60px;
+		height: 60px;
+
+		@include max-screen($xs){
+			display: none;
+		}
+
+		@include min-screen($xs){
+			display: block;
+		}
+
+		.icon{
+			font-size: 24px;
+		}
+	}
+
+}
+.lesson h1{
+	@include min-screen($xs){
+		padding-right: 65px;
+		
+	}
+}
+/*--------------------END кнопки меню курса----------------------*/ 
 /*--------------------END lessons-page----------------------*/ 

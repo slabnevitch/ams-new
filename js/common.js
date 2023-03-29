@@ -490,10 +490,10 @@
 		}
 
 		// open lesson menu
-		if($(e.target).attr('id') === 'lesson-menu-open' || $(e.target).closest('#lesson-menu-open').length > 0){
+		if($(e.target).attr('data-lesson-menu-toggle') || $(e.target).closest('[data-lesson-menu-toggle]').length > 0){
 			$('html').toggleClass('lesson-menu-opened');
 		}
-		if($(e.target).attr('id') === 'lesson-menu-close' || $(e.target).closest('#lesson-menu-close').length > 0){
+		if($(e.target).attr('data-course-menu-close') || $(e.target).closest('[data-course-menu-close]').length > 0){
 				$('html').removeClass('lesson-menu-opened');
 		}
 		if($(e.target).hasClass('cover') && $('html').hasClass('lesson-menu-opened')){
