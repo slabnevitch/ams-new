@@ -1,6 +1,6 @@
 extends _misc/main
 block title
-	| интерфейс студента
+	| Файлы
 	- var authorized = true;
 	- var headerMenu = true;
 block content
@@ -28,6 +28,10 @@ block content
 						label.form__label.form-lesson-chat__field
 							input(type="file")
 							span.form__file-fild Перетащите сюда файл
+
+					.loaded-files
+						.loaded-file
+							.loaded-file__img
 
 				.lesson-chat__item.item-lesson-chat
 					.lesson-chat__title Общение с куратором
