@@ -354,7 +354,7 @@
     max-width: 582px;
 }
 .chat-attached-file {
-    margin-top: 10px;
+    margin: 10px 0;
     padding: 15px;
     display: flex;
     align-items: center;
@@ -391,6 +391,51 @@
     background-color: $accent;
     border-radius: 5px;
 }
+.popup-file-size-error {
+    position: relative;
+    margin: 0 auto;
+    max-width: 570px;
+    padding: 40px 15px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    font-family: $ibm-reg;
+
+    .btn{
+        font-size: 18px;
+        height: 55px;
+    }
+}
+.popup-file-size-error__icon {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $accent;
+    font-weight: 600;
+    font-size: 32px;
+    font-family: $ibm-med;
+    border-radius: 50%;
+}
+.popup-file-size-error__title {
+    margin-bottom: 10px;
+    font-family: $bold;
+    font-size: 28px;
+    line-height: 34px;
+}
+.popup-file-size-error__message {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.popup-file-size-error__text {
+    max-width: 395px;
+    margin: 0 auto 30px auto;
+
+}
+.btn {}
+.btn-accented {}
 /*--------------------END files-loaded----------------------*/ 
 @import "../js/libs/jquery-ui-1.13.2.custom/jquery-ui.min";
 @import "../js/libs/jquery-ui-1.13.2.custom/jquery-ui.theme";

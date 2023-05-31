@@ -78,7 +78,28 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#add-file"></use>
                             </svg></span><span class="form-lesson-chat__add-file">Прикрепить файл</span>
                     </label>
-                    <button class="btn btn-sm btn-accented">Отправить</button>
+                    <button data-file-size-error class="btn btn-sm btn-accented">Отправить</button>
+                  </div>
+                  <label class="form__label form-lesson-chat__field">
+                    <input type="file"><span class="form__file-fild">Перетащите сюда файл</span>
+                  </label>
+                </div>
+              </div>
+              <div class="lesson-chat__item item-lesson-chat">
+                <div class="lesson-chat__title">Общение с куратором</div>
+                <p>Задайте свой вопрос куратору в форме ниже</p>
+                <div class="lesson-chat__form form form-lesson-chat">
+                  <div class="form-lesson-chat__row">
+                    <div class="form-lesson-chat__area">
+                      <textarea name="name" placeholder="Написать комментарий" class="form__textarea"></textarea>
+                    </div>
+                    <label class="form__label form-lesson-chat__file">
+                      <input type="file"><span class="file-icon">
+                            <svg class="icon icon-add-file ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#add-file"></use>
+                            </svg></span><span class="form-lesson-chat__add-file">Прикрепить файл</span>
+                    </label>
+                    <button data-file-size-error class="btn btn-sm btn-accented">Отправить</button>
                   </div>
                   <!-- label.form__label.form-lesson-chat__field-->
                   <!-- 	input(type="file")-->
@@ -130,7 +151,7 @@
               <div class="lesson-chat__item item-lesson-chat">
                 <div class="lesson-chat__title">Общение с куратором</div>
                 <p>Задайте свой вопрос куратору в форме ниже</p>
-                <form action="#" class="lesson-chat__form form form-lesson-chat">
+                <div class="lesson-chat__form form form-lesson-chat">
                   <div class="form-lesson-chat__row">
                     <div class="form-lesson-chat__area">
                       <textarea name="name" placeholder="Написать комментарий" class="form__textarea"></textarea>
@@ -141,53 +162,53 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#add-file"></use>
                             </svg></span><span class="form-lesson-chat__add-file">Прикрепить файл</span>
                     </label>
-                    <button class="btn btn-sm btn-accented">Отправить</button>
+                    <button data-file-size-error class="btn btn-sm btn-accented">Отправить</button>
                   </div>
                   <!-- label.form__label.form-lesson-chat__field-->
                   <!-- 	input(type="file")-->
                   <!-- 	span.form__file-fild Перетащите сюда файл-->
-                </form>
-                <div class="loaded-files">
-                  <div class="loaded-file loaded-file--complete">
-                    <button type="button" class="loaded-file__remove">
-                          <svg class="icon icon-close ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
-                          </svg>
-                    </button>
-                    <div class="loaded-file__img _fit"><img src="img/chat/loaded-1.jpg" alt="alt" class="_fit-img">
+                  <div class="loaded-files">
+                    <div class="loaded-file loaded-file--complete">
+                      <button type="button" class="loaded-file__remove">
+                            <svg class="icon icon-close ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                            </svg>
+                      </button>
+                      <div class="loaded-file__img _fit"><img src="img/chat/loaded-1.jpg" alt="alt" class="_fit-img">
+                      </div>
+                      <div class="loaded-file__info">
+                        <div class="loaded-file__size">5,3 МБ</div><img src="img/chat/downloading.svg" alt="alt" class="loaded-file__preloader">
+                      </div>
                     </div>
-                    <div class="loaded-file__info">
-                      <div class="loaded-file__size">5,3 МБ</div><img src="img/chat/downloading.svg" alt="alt" class="loaded-file__preloader">
+                    <div class="loaded-file loaded-file--complete">
+                      <button type="button" class="loaded-file__remove">
+                            <svg class="icon icon-close ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                            </svg>
+                      </button>
+                      <div class="loaded-file__img _fit"><img src="img/chat/loaded-2.jpg" alt="alt" class="_fit-img">
+                      </div>
+                      <div class="loaded-file__info">
+                        <div class="loaded-file__size">3,31 МБ</div><img src="img/chat/downloading.svg" alt="alt" class="loaded-file__preloader">
+                      </div>
                     </div>
+                    <div class="loaded-file loaded-file--complete">
+                      <button type="button" class="loaded-file__remove">
+                            <svg class="icon icon-close ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                            </svg>
+                      </button>
+                      <div class="loaded-file__img _fit"><img src="img/chat/ico-doc.svg" class="loaded-file__icon">
+                        <div class="loaded-file__name">Курсовая работа Константин Константинопольский.max</div>
+                      </div>
+                      <div class="loaded-file__info">
+                        <div class="loaded-file__size">236 КБ</div><img src="img/chat/downloading.svg" alt="alt" class="loaded-file__preloader">
+                      </div>
+                    </div>
+                    <label class="form__label form-lesson-chat__file loaded-files__add">
+                      <input type="file"><span class="loaded-files__plus"><img src="img/chat/ico_plus-add.svg"></span>
+                    </label>
                   </div>
-                  <div class="loaded-file loaded-file--complete">
-                    <button type="button" class="loaded-file__remove">
-                          <svg class="icon icon-close ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
-                          </svg>
-                    </button>
-                    <div class="loaded-file__img _fit"><img src="img/chat/loaded-2.jpg" alt="alt" class="_fit-img">
-                    </div>
-                    <div class="loaded-file__info">
-                      <div class="loaded-file__size">3,31 МБ</div><img src="img/chat/downloading.svg" alt="alt" class="loaded-file__preloader">
-                    </div>
-                  </div>
-                  <div class="loaded-file loaded-file--complete">
-                    <button type="button" class="loaded-file__remove">
-                          <svg class="icon icon-close ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
-                          </svg>
-                    </button>
-                    <div class="loaded-file__img _fit"><img src="img/chat/ico-doc.svg" class="loaded-file__icon">
-                      <div class="loaded-file__name">Курсовая работа Константин Константинопольский.max</div>
-                    </div>
-                    <div class="loaded-file__info">
-                      <div class="loaded-file__size">236 КБ</div><img src="img/chat/downloading.svg" alt="alt" class="loaded-file__preloader">
-                    </div>
-                  </div>
-                  <label class="form__label form-lesson-chat__file loaded-files__add">
-                    <input type="file"><span class="loaded-files__plus"><img src="img/chat/ico_plus-add.svg"></span>
-                  </label>
                 </div>
               </div>
               <div class="lesson-chat__item item-lesson-chat">
@@ -213,7 +234,6 @@
                       <div class="chat-attached-file__size">236 КБ</div><a href="#" class="chat-attached-file__download"><img src="img/chat/ico_file-download.svg" alt="alt"></a>
                     </div>
                   </div>
-                  <div class="item-lesson-chat__actions"><a href="#" class="item-lesson-chat__write link">Редактировать</a><a href="#" class="item-lesson-chat__write link">Удалить</a></div>
                 </div>
                 <div class="lesson-chat__form form form-lesson-chat">
                   <div class="item-lesson-chat__ques">
@@ -238,6 +258,13 @@
               </div>
             </div>
           </div>
+        </div>
+        <div id="error-file-size" class="popup-file-size-error mfp-hide">
+          <div class="popup-file-size-error__icon">!</div>
+          <div class="popup-file-size-error__title">Слишком большой файл</div>
+          <div class="popup-file-size-error__message">Ограничение на загрузку файла 10 MB</div>
+          <p class="popup-file-size-error__text">Если вы хотите отправить большой файл, загрузите его в облако (например, Яндекс Диск или Google Drive) и прикрепите ссылку в комментариях.</p>
+          <button id="file-size-error-close" type="button" class="btn btn-accented">Понятно</button>
         </div>
       </div>
       <footer class="footer">

@@ -397,6 +397,27 @@
 						}
 					});
 		}
+
+			// popup downloaded file size error
+			if($('[data-file-size-error]').length > 0){
+				$('[data-file-size-error]').on('click', function(e){
+					$.magnificPopup.open({
+					  items: {
+					    src: $('#error-file-size')
+					  },
+					  type: 'inline'
+
+					  // You may add options here, they're exactly the same as for $.fn.magnificPopup call
+					  // Note that some settings that rely on click event (like disableOn or midClick) will not work here
+					}, 0);
+				});
+
+				$('#file-size-error-close').on('click', function() {
+					$.magnificPopup.close();
+				});
+			}
+			//END popup downloaded file size error
+
 		// END Magnific popup
 		
 		// tippy

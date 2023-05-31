@@ -11705,7 +11705,7 @@ textarea::-webkit-resizer {
 }
 
 .chat-attached-file {
-  margin-top: 10px;
+  margin: 10px 0;
   padding: 15px;
   display: -ms-flexbox;
   display: flex;
@@ -11755,6 +11755,55 @@ textarea::-webkit-resizer {
   height: 30px;
   background-color: #FFEF68;
   border-radius: 5px;
+}
+
+.popup-file-size-error {
+  position: relative;
+  margin: 0 auto;
+  max-width: 570px;
+  padding: 40px 15px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "IBMPlexSans-Regular", sans-serif;
+}
+.popup-file-size-error .btn {
+  font-size: 18px;
+  height: 55px;
+}
+
+.popup-file-size-error__icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 30px auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #FFEF68;
+  font-weight: 600;
+  font-size: 32px;
+  font-family: "IBMPlexSans-Medium", sans-serif;
+  border-radius: 50%;
+}
+
+.popup-file-size-error__title {
+  margin-bottom: 10px;
+  font-family: "MontserratBold", sans-serif;
+  font-size: 28px;
+  line-height: 34px;
+}
+
+.popup-file-size-error__message {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.popup-file-size-error__text {
+  max-width: 395px;
+  margin: 0 auto 30px auto;
 }
 
 /*--------------------END files-loaded----------------------*/

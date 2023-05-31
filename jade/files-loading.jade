@@ -7,6 +7,27 @@ block content
 	.wide-container.bg_gray
 		.lesson-chat
 			.wrapper-simple
+				.lesson-chat__item.item-lesson-chat
+					.lesson-chat__title Общение с куратором
+					p Задайте свой вопрос куратору в форме ниже
+
+					.lesson-chat__form.form.form-lesson-chat
+						.form-lesson-chat__row
+							.form-lesson-chat__area
+								textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
+
+							label.form__label.form-lesson-chat__file
+								input(type="file")
+								span.file-icon
+									+icon('add-file')
+								span.form-lesson-chat__add-file Прикрепить файл
+
+							button.btn.btn-sm.btn-accented(data-file-size-error) Отправить
+
+						label.form__label.form-lesson-chat__field
+							input(type="file")
+							span.form__file-fild Перетащите сюда файл
+
 
 				.lesson-chat__item.item-lesson-chat
 					.lesson-chat__title Общение с куратором
@@ -23,39 +44,39 @@ block content
 									+icon('add-file')
 								span.form-lesson-chat__add-file Прикрепить файл
 
-							button.btn.btn-sm.btn-accented Отправить
+							button.btn.btn-sm.btn-accented(data-file-size-error) Отправить
 
 						// label.form__label.form-lesson-chat__field
 						// 	input(type="file")
 						// 	span.form__file-fild Перетащите сюда файл
 
 					- const files = [{size: '5,3 МБ'}, {size: '3,31 МБ'}, {size: '236 КБ', name: 'Курсовая работа Константин Константинопольский.max'}];
-					.loaded-files
-						each file, ind in files
-							.loaded-file
-								button.loaded-file__remove(type="button")
-									+icon('close')
-								.loaded-file__img._fit
-									if file.name
-										img.loaded-file__icon(src="img/chat/ico-doc.svg")
-										.loaded-file__name= file.name
-									else
-										img._fit-img(src="img/chat/loaded-"+(ind+1)+".jpg" alt="alt")
-								
-								.loaded-file__info
-									.loaded-file__size= file.size 
-									img.loaded-file__preloader(src="img/chat/downloading.svg" alt="alt")
+						.loaded-files
+							each file, ind in files
+								.loaded-file
+									button.loaded-file__remove(type="button")
+										+icon('close')
+									.loaded-file__img._fit
+										if file.name
+											img.loaded-file__icon(src="img/chat/ico-doc.svg")
+											.loaded-file__name= file.name
+										else
+											img._fit-img(src="img/chat/loaded-"+(ind+1)+".jpg" alt="alt")
+									
+									.loaded-file__info
+										.loaded-file__size= file.size 
+										img.loaded-file__preloader(src="img/chat/downloading.svg" alt="alt")
 
-						label.form__label.form-lesson-chat__file.loaded-files__add
-							input(type="file")
-							span.loaded-files__plus
-								img(src="img/chat/ico_plus-add.svg")
+							label.form__label.form-lesson-chat__file.loaded-files__add
+								input(type="file")
+								span.loaded-files__plus
+									img(src="img/chat/ico_plus-add.svg")
 
 				.lesson-chat__item.item-lesson-chat
 					.lesson-chat__title Общение с куратором
 					p Задайте свой вопрос куратору в форме ниже
 
-					form(action="#").lesson-chat__form.form.form-lesson-chat
+					.lesson-chat__form.form.form-lesson-chat
 						.form-lesson-chat__row
 							.form-lesson-chat__area
 								textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
@@ -66,33 +87,33 @@ block content
 									+icon('add-file')
 								span.form-lesson-chat__add-file Прикрепить файл
 
-							button.btn.btn-sm.btn-accented Отправить
+							button.btn.btn-sm.btn-accented(data-file-size-error) Отправить
 
 						// label.form__label.form-lesson-chat__field
 						// 	input(type="file")
 						// 	span.form__file-fild Перетащите сюда файл
 
 					
-					.loaded-files
-						each file, ind in files
-							.loaded-file.loaded-file--complete
-								button.loaded-file__remove(type="button")
-									+icon('close')
-								.loaded-file__img._fit
-									if file.name
-										img.loaded-file__icon(src="img/chat/ico-doc.svg")
-										.loaded-file__name= file.name
-									else
-										img._fit-img(src="img/chat/loaded-"+(ind+1)+".jpg" alt="alt")
-								
-								.loaded-file__info
-									.loaded-file__size= file.size 
-									img.loaded-file__preloader(src="img/chat/downloading.svg" alt="alt")
+						.loaded-files
+							each file, ind in files
+								.loaded-file.loaded-file--complete
+									button.loaded-file__remove(type="button")
+										+icon('close')
+									.loaded-file__img._fit
+										if file.name
+											img.loaded-file__icon(src="img/chat/ico-doc.svg")
+											.loaded-file__name= file.name
+										else
+											img._fit-img(src="img/chat/loaded-"+(ind+1)+".jpg" alt="alt")
+									
+									.loaded-file__info
+										.loaded-file__size= file.size 
+										img.loaded-file__preloader(src="img/chat/downloading.svg" alt="alt")
 
-						label.form__label.form-lesson-chat__file.loaded-files__add
-							input(type="file")
-							span.loaded-files__plus
-								img(src="img/chat/ico_plus-add.svg")
+							label.form__label.form-lesson-chat__file.loaded-files__add
+								input(type="file")
+								span.loaded-files__plus
+									img(src="img/chat/ico_plus-add.svg")
 
 
 
@@ -120,10 +141,6 @@ block content
 							
 								a(href="#").chat-attached-file__download
 									img(src="img/chat/ico_file-download.svg" alt="alt")
-
-						.item-lesson-chat__actions
-							a(href="#").item-lesson-chat__write.link Редактировать
-							a(href="#").item-lesson-chat__write.link Удалить
 					
 
 					.lesson-chat__form.form.form-lesson-chat
@@ -145,6 +162,14 @@ block content
 						label.form__label.form-lesson-chat__field
 							input(type="file")
 							span.form__file-fild Перетащите сюда файл
+
+	.popup-file-size-error#error-file-size.mfp-hide
+		.popup-file-size-error__icon !
+		.popup-file-size-error__title Слишком большой файл
+		.popup-file-size-error__message Ограничение на загрузку файла 10 MB
+		p.popup-file-size-error__text Если вы хотите отправить большой файл, загрузите его в облако (например, Яндекс Диск или Google Drive) и прикрепите ссылку в комментариях.
+		button#file-size-error-close.btn.btn-accented(type="button") Понятно
+
 
 //- img(src=img + "demo.jpg")
 //- img(src=ico + "amex.svg")
