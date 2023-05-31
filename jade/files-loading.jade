@@ -25,13 +25,76 @@ block content
 
 							button.btn.btn-sm.btn-accented Отправить
 
-						label.form__label.form-lesson-chat__field
-							input(type="file")
-							span.form__file-fild Перетащите сюда файл
+						// label.form__label.form-lesson-chat__field
+						// 	input(type="file")
+						// 	span.form__file-fild Перетащите сюда файл
 
+					- const files = [{size: '5,3 МБ'}, {size: '3,31 МБ'}, {size: '236 КБ', name: 'Курсовая работа Константин Константинопольский.max'}];
 					.loaded-files
-						.loaded-file
-							.loaded-file__img
+						each file, ind in files
+							.loaded-file
+								button.loaded-file__remove(type="button")
+									+icon('close')
+								.loaded-file__img._fit
+									if file.name
+										img.loaded-file__icon(src="img/chat/ico-doc.svg")
+										.loaded-file__name= file.name
+									else
+										img._fit-img(src="img/chat/loaded-"+(ind+1)+".jpg" alt="alt")
+								
+								.loaded-file__info
+									.loaded-file__size= file.size 
+									img.loaded-file__preloader(src="img/chat/downloading.svg" alt="alt")
+
+						label.form__label.form-lesson-chat__file.loaded-files__add
+							input(type="file")
+							span.loaded-files__plus
+								img(src="img/chat/ico_plus-add.svg")
+
+				.lesson-chat__item.item-lesson-chat
+					.lesson-chat__title Общение с куратором
+					p Задайте свой вопрос куратору в форме ниже
+
+					form(action="#").lesson-chat__form.form.form-lesson-chat
+						.form-lesson-chat__row
+							.form-lesson-chat__area
+								textarea(name="name" class="form__textarea" placeholder="Написать комментарий")
+
+							label.form__label.form-lesson-chat__file
+								input(type="file")
+								span.file-icon
+									+icon('add-file')
+								span.form-lesson-chat__add-file Прикрепить файл
+
+							button.btn.btn-sm.btn-accented Отправить
+
+						// label.form__label.form-lesson-chat__field
+						// 	input(type="file")
+						// 	span.form__file-fild Перетащите сюда файл
+
+					
+					.loaded-files
+						each file, ind in files
+							.loaded-file.loaded-file--complete
+								button.loaded-file__remove(type="button")
+									+icon('close')
+								.loaded-file__img._fit
+									if file.name
+										img.loaded-file__icon(src="img/chat/ico-doc.svg")
+										.loaded-file__name= file.name
+									else
+										img._fit-img(src="img/chat/loaded-"+(ind+1)+".jpg" alt="alt")
+								
+								.loaded-file__info
+									.loaded-file__size= file.size 
+									img.loaded-file__preloader(src="img/chat/downloading.svg" alt="alt")
+
+						label.form__label.form-lesson-chat__file.loaded-files__add
+							input(type="file")
+							span.loaded-files__plus
+								img(src="img/chat/ico_plus-add.svg")
+
+
 
 				.lesson-chat__item.item-lesson-chat
 					.lesson-chat__title Общение с куратором
@@ -41,12 +104,23 @@ block content
 						.item-lesson-chat__user
 							.item-lesson-chat__name Константин Константинопольский
 								span.item-lesson-chat__role (Студент)
-							.item-lesson-chat__time 5 часов назад
+							.item-lesson-chat__time 5 часов назад
 					
 					.item-lesson-chat__body
 						p Господа, экономическая повестка сегодняшнего дня значительной степени обусловливает важность форм воздействия
 						include _blocks/chat-images
 						
+						.chat-attached-files
+							.chat-attached-file
+								.chat-attached-file__icon
+									img(src="img/chat/ico-doc.svg")
+								
+								.chat-attached-file__name Курсовая работа Константин Константинопольский.max
+								.chat-attached-file__size 236 КБ
+							
+								a(href="#").chat-attached-file__download
+									img(src="img/chat/ico_file-download.svg" alt="alt")
+
 						.item-lesson-chat__actions
 							a(href="#").item-lesson-chat__write.link Редактировать
 							a(href="#").item-lesson-chat__write.link Удалить

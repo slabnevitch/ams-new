@@ -227,6 +227,171 @@
         opacity: 0;
     }
 }
+/*--------------------files-loaded----------------------*/
+.loaded-files {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+}
+.loaded-file {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    width: 140px;
+    position: relative;
+    padding: 10px 10px 15px 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.loaded-file__remove {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accent;
+    z-index: 2;
+
+    .loaded-file--complete &{
+        display: block;
+    }
+    
+    .icon-close  {
+        font-size: 7px;
+        @include absolute-center;
+    }
+
+    @media (any-hover: hover) { //только для устройств с ховером
+            cursor: pointer;
+        }
+}
+.loaded-file__img {
+    // padding-bottom: prc(80,120);
+    padding-bottom: 0;
+    height: 80px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+    // outline: 1px solid;
+}
+
+.loaded-file__info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.loaded-file__size {
+    margin-right: 10px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #6F6F75;
+}
+.loaded-file__preloader {
+    width: 20px;
+    height: 20px;
+    animation: rotation 3s linear infinite;
+
+    .loaded-file--complete &{
+        display: none;
+    }
+}
+.form__label {}
+.form-lesson-chat__file {}
+.loaded-files__add{
+    width: 60px;
+    min-height: 140px;
+    margin-bottom: 0;
+    padding-top: 0;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    background-color: $accent;
+    border-radius: 5px;
+
+    @media (any-hover: hover) { //только для устройств с ховером
+            cursor: pointer;
+        }
+
+    input[type="file"]{
+        @include checkbox();
+    }
+}
+.loaded-files__plus{
+    @include absolute-center;
+    width: 12px;
+    height: 12px;
+    img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.loaded-file__icon {
+    margin-top: 5px;
+    width: 16px;
+    height: 20px;
+}
+.loaded-file__name {
+   position: absolute;
+   max-width: 100%;
+   display: block;
+   left: 0;
+   bottom: 20px;
+    @include dots-family();
+    font-family: $ibm-med;
+    font-size: 14px;
+}
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+.chat-attached-files {
+    max-width: 582px;
+}
+.chat-attached-file {
+    margin-top: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+.chat-attached-file__icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 20px;
+    margin-right: 10px;
+}
+.chat-attached-file__name {
+    @include dots-family();
+    flex: 1 1 auto;
+    margin-right: 15px;
+    font-size: 14px;
+    font-family: $ibm-med;
+}
+.chat-attached-file__size {
+    flex: 0 0 auto;
+    margin-right: 15px;
+    font-size: 12px;
+    color: #6F6F75;
+
+}
+.chat-attached-file__download {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: $accent;
+    border-radius: 5px;
+}
+/*--------------------END files-loaded----------------------*/ 
 @import "../js/libs/jquery-ui-1.13.2.custom/jquery-ui.min";
 @import "../js/libs/jquery-ui-1.13.2.custom/jquery-ui.theme";
 @import "../js/libs/jquery-ui-1.13.2.custom/jquery-ui.structure.min";

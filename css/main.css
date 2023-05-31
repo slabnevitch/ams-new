@@ -11544,6 +11544,220 @@ textarea::-webkit-resizer {
   opacity: 0;
 }
 
+/*--------------------files-loaded----------------------*/
+.loaded-files {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+}
+
+.loaded-file {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  width: 140px;
+  position: relative;
+  padding: 10px 10px 15px 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.loaded-file__remove {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #FFEF68;
+  z-index: 2;
+}
+.loaded-file--complete .loaded-file__remove {
+  display: block;
+}
+.loaded-file__remove .icon-close {
+  font-size: 7px;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media (any-hover: hover) {
+  .loaded-file__remove {
+    cursor: pointer;
+  }
+}
+
+.loaded-file__img {
+  padding-bottom: 0;
+  height: 80px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.loaded-file__info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.loaded-file__size {
+  margin-right: 10px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #6F6F75;
+}
+
+.loaded-file__preloader {
+  width: 20px;
+  height: 20px;
+  animation: rotation 3s linear infinite;
+}
+.loaded-file--complete .loaded-file__preloader {
+  display: none;
+}
+
+.loaded-files__add {
+  width: 60px;
+  min-height: 140px;
+  margin-bottom: 0;
+  padding-top: 0;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  background-color: #FFEF68;
+  border-radius: 5px;
+}
+@media (any-hover: hover) {
+  .loaded-files__add {
+    cursor: pointer;
+  }
+}
+.loaded-files__add input[type=file] {
+  position: absolute;
+  box-sizing: border-box;
+  width: 1px;
+  height: 1px;
+  display: block;
+  left: 50%;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.loaded-files__plus {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+}
+.loaded-files__plus img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.loaded-file__icon {
+  margin-top: 5px;
+  width: 16px;
+  height: 20px;
+}
+
+.loaded-file__name {
+  position: absolute;
+  max-width: 100%;
+  display: block;
+  left: 0;
+  bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "IBMPlexSans-Medium", sans-serif;
+  font-size: 14px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.chat-attached-files {
+  max-width: 582px;
+}
+
+.chat-attached-file {
+  margin-top: 10px;
+  padding: 15px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+
+.chat-attached-file__icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 16px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.chat-attached-file__name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  margin-right: 15px;
+  font-size: 14px;
+  font-family: "IBMPlexSans-Medium", sans-serif;
+}
+
+.chat-attached-file__size {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin-right: 15px;
+  font-size: 12px;
+  color: #6F6F75;
+}
+
+.chat-attached-file__download {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #FFEF68;
+  border-radius: 5px;
+}
+
+/*--------------------END files-loaded----------------------*/
 /*! jQuery UI - v1.13.2 - 2023-02-14
 * http://jqueryui.com
 * Includes: core.css, resizable.css, theme.css
