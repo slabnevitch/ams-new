@@ -397,6 +397,27 @@
 						}
 					});
 		}
+
+			// popup downloaded file size error
+			if($('[data-file-size-error]').length > 0){
+				$('[data-file-size-error]').on('click', function(e){
+					$.magnificPopup.open({
+					  items: {
+					    src: $('#error-file-size')
+					  },
+					  type: 'inline'
+
+					  // You may add options here, they're exactly the same as for $.fn.magnificPopup call
+					  // Note that some settings that rely on click event (like disableOn or midClick) will not work here
+					}, 0);
+				});
+
+				$('#file-size-error-close').on('click', function() {
+					$.magnificPopup.close();
+				});
+			}
+			//END popup downloaded file size error
+
 		// END Magnific popup
 		
 		// tippy
@@ -490,10 +511,10 @@
 		}
 
 		// open lesson menu
-		if($(e.target).attr('id') === 'lesson-menu-open' || $(e.target).closest('#lesson-menu-open').length > 0){
+		if($(e.target).attr('data-lesson-menu-toggle') || $(e.target).closest('[data-lesson-menu-toggle]').length > 0){
 			$('html').toggleClass('lesson-menu-opened');
 		}
-		if($(e.target).attr('id') === 'lesson-menu-close' || $(e.target).closest('#lesson-menu-close').length > 0){
+		if($(e.target).attr('data-course-menu-close') || $(e.target).closest('[data-course-menu-close]').length > 0){
 				$('html').removeClass('lesson-menu-opened');
 		}
 		if($(e.target).hasClass('cover') && $('html').hasClass('lesson-menu-opened')){
