@@ -1,0 +1,101 @@
+/*--------------------vacancies----------------------*/
+.vacancy {
+	padding: 30px;
+	margin-bottom: 30px;
+	background-color: #fff;
+
+
+}
+.vacancy__header {
+	display: flex;
+	margin-bottom: 25px;
+	position: relative;
+
+	@include max-screen($md){
+		flex-direction: column-reverse;
+	
+	}
+	@include min-screen($md){
+		flex-wrap: wrap;
+	}
+}
+.vacancy__title {
+	margin-bottom: 0;
+	flex: 1 1 auto;
+	max-width: 720px;
+
+	@include max-screen($xs){
+		font-size: 20px;
+	}
+
+	@include min-screen($md){
+		margin-right: 185px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+.vacancy__logo {
+	// margin-bottom: 25px;
+	width: 170px;
+	max-height: 92px;
+
+	@include min-screen($md){
+		height: 92px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		text-align: right;
+		// flex: 0 0 170px;
+		
+	}
+	@include max-screen($md){
+		margin-bottom: 25px;
+	}
+
+	img{
+		max-height: 92px;
+		max-width: 100%;
+		vertical-align: top;
+	}
+}
+.vacancy__rate {
+	margin-bottom: 25px;
+	font-size: 20px;
+	font-family: $ibm-reg;
+	line-height: 136.023%;
+}
+.vacancy__body {
+}
+.vacancy__requirements {
+	margin-left: 18px;
+	margin-bottom: 25px;
+}
+.vacancy__requirement {
+	line-height: 140%;
+}
+.vacancy__content {
+
+	@include min-screen($sm){
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+}
+.vacancy__description {
+	flex: 1 1 auto;
+	max-width: 672px;
+	margin-bottom: 0;
+	margin-right: 30px;
+	line-height: 140%;
+
+	@include max-screen($sm){
+		margin-bottom: 25px;
+	}
+}
+.vacancy__more {
+	height: 55px;
+	flex-shrink: 0;
+	font-size: 18px;
+}
+
+/*--------------------END vacancies----------------------*/ 
