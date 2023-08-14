@@ -11732,6 +11732,73 @@ a.ui-button:active,
 
 /*===================== end chat-curator======================*/
 
+/*--------------------vacancies----------------------*/
+
+.vacancy {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #fff;
+}
+
+.vacancy__header {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.vacancy__title {
+  margin-bottom: 0;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  max-width: 720px;
+}
+
+.vacancy__logo {
+  width: 170px;
+  max-height: 92px;
+}
+
+.vacancy__logo img {
+  max-height: 92px;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.vacancy__rate {
+  margin-bottom: 25px;
+  font-size: 20px;
+  font-family: "IBMPlexSans-Regular", sans-serif;
+  line-height: 136.023%;
+}
+
+.vacancy__requirements {
+  margin-left: 18px;
+  margin-bottom: 25px;
+}
+
+.vacancy__requirement {
+  line-height: 140%;
+}
+
+.vacancy__description {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  max-width: 672px;
+  margin-bottom: 0;
+  margin-right: 30px;
+  line-height: 140%;
+}
+
+.vacancy__more {
+  height: 55px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+/*--------------------END vacancies----------------------*/
+
 /*--------------------footer----------------------*/
 
 .footer {
@@ -11999,6 +12066,15 @@ a.ui-button:active,
     margin-top: -5px;
     margin-bottom: -5px;
   }
+
+  .vacancy__content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (min-width: 991px) {
@@ -12059,6 +12135,27 @@ a.ui-button:active,
 
   .item-lesson-chat__toggler {
     height: 60px;
+  }
+
+  .vacancy__header {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .vacancy__title {
+    margin-right: 185px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .vacancy__logo {
+    height: 92px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
   }
 }
 
@@ -13044,6 +13141,15 @@ a.ui-button:active,
     margin-left: auto;
   }
 
+  .vacancy__header {
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .vacancy__logo {
+    margin-bottom: 25px;
+  }
+
   .footer__left {
     margin-bottom: 20px;
   }
@@ -13631,6 +13737,10 @@ a.ui-button:active,
   .chat-images__others {
     margin-left: -5px;
     margin-right: -5px;
+  }
+
+  .vacancy__description {
+    margin-bottom: 25px;
   }
 
   .footer__left .socials {
@@ -14271,6 +14381,10 @@ a.ui-button:active,
     margin-bottom: 20px;
     font-size: 20px;
     line-height: 1.2142857143;
+  }
+
+  .vacancy__title {
+    font-size: 20px;
   }
 }
 
