@@ -4889,9 +4889,35 @@ button.mfp-close {
   text-decoration: none;
   color: #2D2D2F;
   border-radius: 10px;
+  /*--------------------карточка-ссылка----------------------*/
+  position: relative;
+  /*--------------------END карточка-ссылка----------------------*/
 }
 
+/*--------------------карточка-ссылка----------------------*/
+
+.user-card__user {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*--------------------END карточка-ссылка----------------------*/
+
+/*--------------------карточка-ссылка----------------------*/
+
+.history__link {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*--------------------END карточка-ссылка----------------------*/
+
 .history__card {
+  position: relative;
   -ms-flex: 0 0 170px;
   flex: 0 0 170px;
   max-width: 170px;
@@ -4943,6 +4969,9 @@ button.mfp-close {
 }
 
 .user-card__courses {
+  /*--------------------карточка-ссылка----------------------*/
+  position: relative;
+  /*--------------------END карточка-ссылка----------------------*/
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid #6F6F75;
@@ -4963,6 +4992,10 @@ button.mfp-close {
 /*--------------------END user-card----------------------*/
 
 .history__content {
+  /*--------------------карточка-ссылка----------------------*/
+  position: relative;
+  color: inherit;
+  /*--------------------END карточка-ссылка----------------------*/
   -ms-flex: 1 1 calc(20% - 30px);
   flex: 1 1 calc(20% - 30px);
   box-sizing: border-box;
@@ -4977,6 +5010,9 @@ button.mfp-close {
 }
 
 .history__images {
+  /*--------------------карточка-ссылка----------------------*/
+  position: relative;
+  /*--------------------END карточка-ссылка----------------------*/
   box-sizing: border-box;
   word-wrap: break-word;
   margin-left: 15px;
@@ -11740,18 +11776,18 @@ a.ui-button:active,
   background-color: #fff;
 }
 
+.vacancy h2 {
+  margin-bottom: 0;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  max-width: 720px;
+}
+
 .vacancy__header {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 25px;
   position: relative;
-}
-
-.vacancy__title {
-  margin-bottom: 0;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  max-width: 720px;
 }
 
 .vacancy__logo {
@@ -11772,12 +11808,12 @@ a.ui-button:active,
   line-height: 136.023%;
 }
 
-.vacancy__requirements {
+.vacancy__body ul {
   margin-left: 18px;
   margin-bottom: 25px;
 }
 
-.vacancy__requirement {
+.vacancy__body li vacancy__requirement {
   line-height: 140%;
 }
 
@@ -12137,15 +12173,15 @@ a.ui-button:active,
     height: 60px;
   }
 
-  .vacancy__header {
+  .vacancy h2 {
+    margin-right: 185px;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
-  .vacancy__title {
-    margin-right: 185px;
-    display: -ms-flexbox;
-    display: flex;
+  .vacancy__header {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
@@ -14383,7 +14419,7 @@ a.ui-button:active,
     line-height: 1.2142857143;
   }
 
-  .vacancy__title {
+  .vacancy h2 {
     font-size: 20px;
   }
 }
