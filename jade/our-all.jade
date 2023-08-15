@@ -22,24 +22,28 @@ block content
 
 			.wrapper-simple.page-our-all__content-wrapper
 				.page-our-all__content
-					a(href="#").history
+					div.history
+						a(href="#").history__link
 						div.history__card
 							.user-card.user-card--vertical
-								.user-avatar
-									img(src=img + "user.jpg" alt="alt")								
-								.user-card__info
-									.user-card__name Иван Овидиопольский
-									.user-card__role Дизайнер
-									.user-card__link
-										+icon('insta')
-										span ovidiop
+								a(href="#").user-card__user
+									.user-avatar
+										img(src=img + "user.jpg" alt="alt")								
+									.user-card__info
+										.user-card__name Иван Овидиопольский
+										.user-card__role Дизайнер
+										.user-card__link
+											+icon('insta')
+											span ovidiop
 								.user-card__courses
-									.user-card__finished Пройденные курсы:
+									a(href="#").user-card__finished Пройденные курсы:
 									ul.user-card__list
-										li 3ds Max + CORONA. Для дизайнеров и визуализаторов
-										li AutoCAD PRO. Адаптация
+										li
+											a(href="#") 3ds Max + CORONA. Для дизайнеров и визуализаторов
+										li
+											a(href="#") AutoCAD PRO. Адаптация
 						
-						div.history__content.content-history
+						a(href="#").history__content.content-history
 							.content-history__header
 								.tag.tag-landscape-empty История
 							.content-history__text
@@ -49,7 +53,7 @@ block content
 
 								span.read-more.link Читать полностью
 						
-						div.history__images
+						a(href="#").history__images
 							.history__image._fit
 								img._fit-img(src=img + "/our-all-page/1.jpg" alt="zlg")
 							.history__image._fit

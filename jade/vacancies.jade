@@ -19,15 +19,15 @@ block content
 				each vac, ind in vacs
 					.vacancy
 						.vacancy__header
-							h2.vacancy__title= vac.name
+							h2= vac.name
 							.vacancy__logo
 								img(src="img/vacancy-page/"+(ind+1)+".svg" alt="alt") 
 						.vacancy__rate= vac.rate
 						
 						.vacancy__body
-							ul.vacancy__requirements
+							ul
 								each req in vac.reqs
-									li.vacancy__requirement= req
+									li= req
 
 							.vacancy__content
 								p.vacancy__description= vac.descr

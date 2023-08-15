@@ -43,6 +43,10 @@
 	color: $text;
 	border-radius: 10px;
 
+	/*--------------------карточка-ссылка----------------------*/
+	position: relative;
+	/*--------------------END карточка-ссылка----------------------*/ 
+
 	// &:first-of-type{
 	// 	.history__card{
 	// 		padding-top: calc(117px - 34px);
@@ -80,7 +84,25 @@
 
 	}
 }
+/*--------------------карточка-ссылка----------------------*/
+.user-card__user{
+	color: inherit;
+	text-decoration: none;
+}
+/*--------------------END карточка-ссылка----------------------*/ 
+
+/*--------------------карточка-ссылка----------------------*/
+.history__link {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+	/*--------------------END карточка-ссылка----------------------*/ 
 .history__card {
+	position: relative;
 	flex: 0 0 170px;
 	max-width: 170px;
 	@include col();
@@ -132,6 +154,9 @@
 .icon {}
 .icon-insta {}
 .user-card__courses {
+	/*--------------------карточка-ссылка----------------------*/
+	position: relative;
+	/*--------------------END карточка-ссылка----------------------*/ 
 	margin-top: 20px;
 	padding-top: 20px;
 	border-top: 1px solid #6F6F75;
@@ -151,6 +176,10 @@
 
 /*--------------------END user-card----------------------*/ 
 .history__content {
+	/*--------------------карточка-ссылка----------------------*/
+	position: relative;
+	color: inherit;
+	/*--------------------END карточка-ссылка----------------------*/ 
 	flex: 1 1 calc(20% - 30px);
 	@include col();
 
@@ -170,6 +199,9 @@
 	}
 }
 .history__images {
+	/*--------------------карточка-ссылка----------------------*/
+	position: relative;
+	/*--------------------END карточка-ссылка----------------------*/ 
 	@include col();
 	flex: 1 1 calc(8% - 30px);
 	@include max-screen($md){
