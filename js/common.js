@@ -1,4 +1,11 @@
 (function() {
+	// before-after slider
+	if($('.ba-slider').length > 0){
+		$('.ba-slider').each(function(){
+		    $(this).beforeAfter();
+		});
+	}
+	//END before-after slider
 
 	// ibg class
 		if('objectFit' in document.documentElement.style === false){
