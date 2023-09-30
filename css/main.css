@@ -2755,6 +2755,66 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 
 /* End: Error */
 /*--end mediaelement--*/
+/*--before-after--*/
+.ba-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.ba-slider img {
+  width: 100%;
+  display: block;
+  max-width: none;
+}
+
+.ba-slider .resize {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
+.ba-slider .handle {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  margin-left: -2px;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: ew-resize;
+}
+
+.ba-slider .handle:after {
+  position: absolute;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  content: "⇔";
+  color: #fff;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  line-height: 64px;
+  background: #ffb800;
+  border: 1px solid #e6a600;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.5), inset 0 60px 50px -30px #ffd466;
+}
+
+.ba-slider .handle.ba-draggable:after {
+  width: 48px;
+  height: 48px;
+  margin: -24px 0 0 -24px;
+  line-height: 50px;
+  font-size: 30px;
+}
+
+/*--end before-after--*/
 /*--slideout--*/
 /*--end slideout--*/
 .icon {
@@ -5304,6 +5364,9 @@ button.mfp-close {
 .content-page-history img {
   max-width: 100%;
 }
+.content-page-history .ba-slider img {
+  max-width: none;
+}
 .content-page-history figure {
   display: inline-block;
   max-width: 100%;
@@ -5377,6 +5440,85 @@ button.mfp-close {
   }
 }
 
+/*--------------------ba-slider CUSTOM----------------------*/
+.page-history__content .ba-slider {
+  margin: 30px 0;
+}
+
+.ba-slider .handle {
+  width: 2px;
+  background-color: #FFEF68;
+}
+.ba-slider .handle:hover .ba-slider__arrow .icon, .ba-slider .handle:active .ba-slider__arrow .icon {
+  opacity: 1;
+}
+.ba-slider .handle:after {
+  content: "";
+  width: 10px;
+  height: 40px;
+  margin: 0;
+  right: 0;
+  -ms-transform: translateX(calc(50% - 1px));
+  transform: translateX(calc(50% - 1px));
+  margin-top: -20px;
+  background-color: #FFEF68;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  line-height: normal;
+}
+
+.ba-slider .handle.ba-draggable:after {
+  width: 10px;
+  height: 40px;
+  margin: 0;
+  margin-top: -20px;
+  line-height: inherit;
+  line-height: normal;
+}
+
+.ba-slider__arrows {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-transform: translateX(calc(-50% - 3px));
+  transform: translateX(calc(-50% - 3px));
+  height: 24px;
+  width: 48px;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.ba-slider__arrow {
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+  position: relative;
+  margin: 0 5px;
+}
+.ba-slider__arrow .icon {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  color: #fff;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.ba-draggable .ba-slider__arrow .icon {
+  opacity: 1;
+}
+
+/*--------------------END ba-slider CUSTOM----------------------*/
 /*--------------------END history-page----------------------*/
 /*--------------------our-all-page----------------------*/
 .page-our-all__container {
