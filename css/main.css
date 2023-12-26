@@ -2944,6 +2944,11 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
   width: 1.4117647059em;
 }
 
+.icon-email {
+  font-size: 1.5rem;
+  width: 1em;
+}
+
 .icon-eye {
   font-size: 1.2rem;
   width: 1.3333333333em;
