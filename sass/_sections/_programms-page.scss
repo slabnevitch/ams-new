@@ -601,4 +601,126 @@ line-height: 18px;
 	font-size: 14px;
 line-height: 17px;
 }
+
+/*--------------------online-learning----------------------*/
+.online-learning {
+	padding: 50px;
+	display: flex;
+	column-gap: 50px;
+	row-gap: 30px;
+	margin-bottom: 50px;
+	background-color: $accent;
+
+	@include max-screen($lg){
+		column-gap: 30px;
+	}
+	@include max-screen($lg){
+		padding: 30px 20px;
+	}
+	@include max-screen($xs){
+		flex-direction: column;
+	}
+
+	h1{
+		margin-bottom: 20px;
+		font-size: 28px;
+		font-family: $bold;
+
+		@include max-screen($md){
+
+			font-size: 24px;
+		}
+
+		@include max-screen(320px){
+			font-size: 21px;
+			
+		}
+
+	}
+}
+.online-learning__content {
+	flex: 1 1 auto;
+}
+.online-learning__text {
+	margin-top: 0;
+	margin-bottom: 50px;
+	font-size: 20px;
+	font-family: $ibm-reg;
+	line-height: 136%;
+
+	@include max-screen($md){
+		margin-bottom: 20px;
+		line-height: 140%;
+		font-size: 16px;
+	}
+}
+.online-learning__btn {
+	@extend .btn;
+	height: 61px;
+	padding-inline: 36px;
+	font-size: 18px;
+	column-gap: 10px;
+	color: #fff;
+	font-family: $semi;
+	background-color: #40C351;
+
+	@include max-screen($md){
+		padding-inline: 20px;
+		font-size: 15px;
+	}
+	@include max-screen($xs){
+		width: 100%;
+	}
+	@include max-screen(320px){
+		font-size: 12px;
+		
+	}
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				background-color: lighten(#40C351, 5%);
+
+			}
+		}
+
+
+	img{
+		width: 24px;
+		height: 24px;
+
+		@include max-screen($xs){
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+
+.online-learning__img {
+	flex: 0 0 290px;
+	aspect-ratio: 290/287;
+	padding-bottom: 0;
+	border-radius: 10px;
+	overflow: hidden;
+
+	@include max-screen($md){
+		flex-basis: 200px;
+	}
+	@include max-screen($xs){
+		flex-basis: auto;
+		aspect-ratio: 280/200;
+	}
+}
+.online-learning__label {
+	@extend .programm-card__sale-label;
+	top: 10px;
+	left: 10px;
+
+	@include min-screen($sm){
+		width: 60px;
+		height: 60px;
+		font-size: 18px;
+	}
+}
+._fit-img {}
+/*--------------------END online-learning----------------------*/ 
 /*--------------------END _programms-page----------------------*/ 
