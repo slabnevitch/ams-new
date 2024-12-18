@@ -16,6 +16,32 @@ block content
 
 	.page.page-programms
 
+		.wrapper-simple
+			.learning-banner
+				.learning-banner__content
+					.learning-banner__badges
+						- var bages = ['Revit', 'Archicad', '3ds Max', 'Autocad', 'Twinmotion'];
+						each item in bages
+							.learning-banner__badge= item
+					
+					.learning-banner__title Обучаем дизайну интерьера, архитектуре, 3d-визуализации и проектированию
+					
+					p.learning-banner__text Обучитесь программам, сделайте портфолио, с которым сможете трудоустроиться или зарабатывать удалённо!
+					
+					.learning-banner__features
+						- var features = ['Бессрочный доступ', 'Поддержка 365 дней', 'Сообщество специалистов в Telegram'];
+						each item in features
+							.learning-banner__feature= item
+
+					.learning-banner__bottom
+						a(href="#").btn.learning-banner__btn Получить консультацию
+				
+				.learning-banner__img
+					.learning-banner__pict._fit
+						picture
+							source(srcset="img/programms-page/learning-banner-mob.png" media="(max-width: 576px)")
+							img.img._fit-img(src="img/programms-page/learning-2.jpg" alt="alt")
+						// img._fit-img(src="img/programms-page/learning-2.jpg" alt="alt")
 
 		.wrapper-simple
 			.wrapper-flex
@@ -79,8 +105,6 @@ block content
 						.online-learning__img._fit
 							.online-learning__label -60%
 							img._fit-img(src="img/programms-page/learning-2.jpg" alt="alt")
-
-
 					
 					.programms-content__block
 						h2 Курсы по Autocad

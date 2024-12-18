@@ -723,4 +723,134 @@ line-height: 17px;
 }
 ._fit-img {}
 /*--------------------END online-learning----------------------*/ 
+
+/*--------------------learning-banner----------------------*/
+.learning-banner {
+	margin-bottom: 76px;
+	display: flex;
+	background-color: #C7EFEF;
+
+	@include max-screen($sm){
+		flex-direction: column;
+		margin-bottom: 70px;
+	}
+}
+.learning-banner__content {
+	padding: 50px 0 50px 50px;
+	flex: 0 0 52%;
+
+	@include max-screen($sm){
+		padding: 20px 20px 0 20px;
+		flex: 0 0 auto;
+	}
+
+}
+.learning-banner__title{
+	margin-bottom: 20px;
+	font-size: 32px;
+	line-height: calc(40 / 32);
+	font-family: $bold;
+
+	@include max-screen($xs){
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+}
+.learning-banner__badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: 30px;
+
+	@include max-screen($xs){
+		margin-bottom: 20px;
+	}
+}
+.learning-banner__badge {
+	padding: 3px 20px;
+	font-size: 16px;
+	font-family: $ibm-reg;
+	background-color: #fff;
+	border-radius: 50px;
+
+	@include max-screen($xs){
+		padding: 3px 12px;
+		font-size: 12px;
+	}
+
+}
+.learning-banner__text {
+	margin-bottom: 30px;
+	font-size: 20px;
+	font-family: $ibm-reg;
+
+	@include max-screen($xs){
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+}
+.learning-banner__features {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.learning-banner__feature {
+	padding: 3px 10px;
+	font-size: 14px;
+	font-family: $semi;
+	background-color: $accent;
+	border-radius: 50px;
+
+	@include max-screen($xs){
+		font-size: 12px;
+	}
+}
+.learning-banner__bottom{
+	margin-top: 40px;
+
+	@include max-screen($sm){
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+.learning-banner__btn {
+	height: 54px;
+	width: 100%;
+	max-width: 309px;
+	background-color: #FF6A6B;
+	color: #fff;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				background-color: lighten(#FF6A6B, 5%);
+			}
+		}
+}
+.learning-banner__img {
+	padding-bottom: 0;
+	flex: 0 0 48%;
+
+	@include max-screen($sm){
+		flex: 0 0 auto;
+		aspect-ratio: 400/320;
+	}
+
+	@include max-screen($xs){
+		margin-left: -20px;
+		margin-right: -20px;
+		transform: translateY(20px);
+	}
+	
+	@include min-screen($sm){
+		padding-left: 30px;
+		
+	}
+}
+.learning-banner__pict{
+	padding-bottom: 0;
+	height: 100%;
+
+
+}
+/*--------------------END learning-banner----------------------*/ 
 /*--------------------END _programms-page----------------------*/ 
