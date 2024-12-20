@@ -9510,6 +9510,7 @@ textarea::-webkit-resizer {
 /*--------------------END online-learning----------------------*/
 /*--------------------learning-banner----------------------*/
 .learning-banner {
+  position: relative;
   margin-bottom: 76px;
   display: -ms-flexbox;
   display: flex;
@@ -9523,10 +9524,34 @@ textarea::-webkit-resizer {
   }
 }
 
+.learning-banner__decor {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-bottom: 0;
+}
+@media only screen and (max-width: 767.98px) {
+  .learning-banner__decor {
+    display: none;
+  }
+}
+
+.learning-banner__bg {
+  z-index: 1;
+}
+
+.learning-banner__snow {
+  z-index: 2;
+}
+
 .learning-banner__content {
   padding: 50px 0 50px 50px;
   -ms-flex: 0 0 52%;
   flex: 0 0 52%;
+  position: relative;
+  z-index: 3;
 }
 @media only screen and (max-width: 767.98px) {
   .learning-banner__content {
@@ -9637,6 +9662,8 @@ textarea::-webkit-resizer {
   padding-bottom: 0;
   -ms-flex: 0 0 48%;
   flex: 0 0 48%;
+  position: relative;
+  z-index: 3;
 }
 @media only screen and (max-width: 767.98px) {
   .learning-banner__img {
@@ -9662,6 +9689,11 @@ textarea::-webkit-resizer {
 .learning-banner__pict {
   padding-bottom: 0;
   height: 100%;
+}
+@media only screen and (min-width: 576px) {
+  .learning-banner__pict ._fit-img {
+    object-position: left center;
+  }
 }
 
 /*--------------------END learning-banner----------------------*/
